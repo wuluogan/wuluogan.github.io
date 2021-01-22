@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Git | WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="配置," />
+  
+
+  <meta name="description" content="Git本地多处分散保存多处分散保存是Git的特点，同一个Git库，我们可以保存在多个服务器上。比如我的有些代码就保存在GitHub，GitLab以及BitBucket上。如果其中一个不能用了，其它的还能用，也不会出问题。 但是在实际使用时，我们有时并不想把代码保存到网上，因为一旦东西放到网上，这东西很可能就不属于你个人的了。当然本地也有中毒的风险，但比放网上的风险还是少一些。 有些人在本地建用Gi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="http://wulgs.com/2020/12/23/git/index.html">
+<meta property="og:site_name" content="WLG">
+<meta property="og:description" content="Git本地多处分散保存多处分散保存是Git的特点，同一个Git库，我们可以保存在多个服务器上。比如我的有些代码就保存在GitHub，GitLab以及BitBucket上。如果其中一个不能用了，其它的还能用，也不会出问题。 但是在实际使用时，我们有时并不想把代码保存到网上，因为一旦东西放到网上，这东西很可能就不属于你个人的了。当然本地也有中毒的风险，但比放网上的风险还是少一些。 有些人在本地建用Gi">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-12-23T06:15:03.000Z">
+<meta property="article:modified_time" content="2021-01-21T12:54:13.660Z">
+<meta property="article:author" content="wlg">
+<meta property="article:tag" content="配置">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?6498077fc398d6e15e583378b7bd67c9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">W</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">W</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E6%9C%AC%E5%9C%B0%E5%A4%9A%E5%A4%84%E5%88%86%E6%95%A3%E4%BF%9D%E5%AD%98"><span class="toc-text">Git本地多处分散保存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%91%EF%BC%8E%E5%AE%89%E8%A3%85Git"><span class="toc-text">１．安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%92%EF%BC%8E%E6%96%B0%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%AE%E5%BD%95"><span class="toc-text">２．新建Git服务器目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%93%EF%BC%8E%E6%96%B0%E5%BB%BAGit%E5%BA%93%E7%9B%AE%E5%BD%95"><span class="toc-text">３．新建Git库目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%94%EF%BC%8E%E5%88%9D%E5%A7%8B%E5%8C%96Git%E5%BA%93"><span class="toc-text">４．初始化Git库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%95%EF%BC%8EClone%E4%BB%A3%E7%A0%81%E5%BA%93"><span class="toc-text">５．Clone代码库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%90%8C%E6%97%B6Push%E5%88%B0%E5%A4%9A%E4%B8%AA%E4%BB%A3%E7%A0%81%E5%BA%93"><span class="toc-text">Git同时Push到多个代码库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%87%BAGit%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-text">导出Git修改的代码</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-git" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Git</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2020.12.23</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="Git本地多处分散保存"><a href="#Git本地多处分散保存" class="headerlink" title="Git本地多处分散保存"></a>Git本地多处分散保存</h2><p>多处分散保存是Git的特点，同一个Git库，我们可以保存在多个服务器上。比如我的有些代码就保存在GitHub，GitLab以及BitBucket上。如果其中一个不能用了，其它的还能用，也不会出问题。</p>
+<p>但是在实际使用时，我们有时并不想把代码保存到网上，因为一旦东西放到网上，这东西很可能就不属于你个人的了。当然本地也有中毒的风险，但比放网上的风险还是少一些。</p>
+<p>有些人在本地建用GitLab建Git服务器，其实如果是简单的单用户使用，完全没必要建Git服务器，GitLab的配置也蛮花时间的。</p>
+<p>最简单的方法是把服务器代码建在其它硬盘（当然也可以同一硬盘，但为了数据的安全性，最好是不同硬盘，因为不同硬盘同时坏的可能性比中头等奖还小），然后用Git Clone 把代码取出来就行。具体如下：</p>
+<h3 id="１．安装Git"><a href="#１．安装Git" class="headerlink" title="１．安装Git"></a>１．安装Git</h3><p>下载地址如下，可以下载便携版（Portable）：</p>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+<p>把Git安装好（或者解压好）之后，把<code>git.exe</code>所在目录设置到环境变量<code>PATH</code>里。</p>
+<h3 id="２．新建Git服务器目录"><a href="#２．新建Git服务器目录" class="headerlink" title="２．新建Git服务器目录"></a>２．新建Git服务器目录</h3><p>比如，我们想把所有Git服务器库内容保存在<code>E:\Git\repository</code>下的话，就把这个目录建好。</p>
+<h3 id="３．新建Git库目录"><a href="#３．新建Git库目录" class="headerlink" title="３．新建Git库目录"></a>３．新建Git库目录</h3><p>比如，我们想建一个叫<code>test.git</code>的库目录，直接在Git服务器目录<code>E:\Git\repository</code>下新建文件夹<code>test.git</code>就行。</p>
+<h3 id="４．初始化Git库"><a href="#４．初始化Git库" class="headerlink" title="４．初始化Git库"></a>４．初始化Git库</h3><p>在命令提示行进入Git库目录<code>E:\Git\repository\test.git</code>，用以下命令初始化Git库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init --bare</span><br></pre></td></tr></table></figure>
+<p>如果是已经存在Git库，可以使用以下命令初始化Git库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --bare D:\Project\Test E:\Git\repository\test.git</span><br></pre></td></tr></table></figure>
+<h3 id="５．Clone代码库"><a href="#５．Clone代码库" class="headerlink" title="５．Clone代码库"></a>５．Clone代码库</h3><p>然后我们在其它目录（例：<code>D:\Project\Test</code>），可以把之后新建的代码库Clone。</p>
+<p>如果是命令行操作的话，命令行如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone E:\Git\repository\test.git D:\Project\Test</span><br></pre></td></tr></table></figure>
+<p>这样，就可以像使用服务器一样的实现多处分散保存。在Commit代码之后直接PUSH，就会把代码提交到Git库目录<code>E:\Git\repository\test.git</code>。</p>
+<h2 id="Git同时Push到多个代码库"><a href="#Git同时Push到多个代码库" class="headerlink" title="Git同时Push到多个代码库"></a>Git同时Push到多个代码库</h2><p>之前个人代码一般用两个代码库（Bitbucket、GitLab）来管理，这样万一出问题，也不会提交不上去。之前的方法是添加两个Remote，虽然用TortoiseGit能同时Push到两个代码库，但用SourceTree来管理的话，就有些不方便了。</p>
+<p>最近狠了狠心，买了个GitHub，用SourceTree来管理就更不方便了。在网上找了一个，发现其实是可以实现的。用一个主库，其它做为副库即可管理。意思就是，取代码只从主库取，Push时同时Push到其它库。</p>
+<p>其方法就是修改<code>.git</code>文件夹下的<code>config</code>文件，添加<code>pushurl</code>。比如我有一个<code>test</code>的项目，同时保存在GitHub、Bitbucket、GitLab。那么<code>config</code>文件<code>remote</code>部分的内容可以这样设置。</p>
+<p>其中，<code>url</code>为主库的Git地址。<code>pushurl</code>为包括主库在内的所有库的Git地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[remote &quot;origin&quot;]</span><br><span class="line">    url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;yutuo&#x2F;test.git</span><br><span class="line">    fetch &#x3D; +refs&#x2F;heads&#x2F;*:refs&#x2F;remotes&#x2F;origin&#x2F;*</span><br><span class="line">    pushurl &#x3D; https:&#x2F;&#x2F;github.com&#x2F;yutuo&#x2F;test.git</span><br><span class="line">    pushurl &#x3D; https:&#x2F;&#x2F;gitlab.com&#x2F;yutuo&#x2F;test.git</span><br><span class="line">    pushurl &#x3D; https:&#x2F;&#x2F;bitbucket.org&#x2F;yutuo&#x2F;test.git</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="导出Git修改的代码"><a href="#导出Git修改的代码" class="headerlink" title="导出Git修改的代码"></a>导出Git修改的代码</h2><p>在实际开发中，有时候需要提交差分代码（只提交修改过的代码），之前我的做法是一个一个文件地复制，这种方法速度慢，而且容易出错。</p>
+<p>在网上找了一下，其实用Git的功能就可以实现差分代码提交。用简单的话来说，就是用<code>git diff</code>开取出两个版本之间的差异文件，用<code>git archive</code>来打包差异文件。该方法只能在Bash下执行，所以在Windows下，要用到Git自带的Bash。</p>
+<p>其执行命令如下：</p>
+<p>git archive -o <strong>导出文件名.zip</strong> <strong>导出版本号</strong> $(git diff –name-only <strong>旧版本号</strong>..<strong>新版本号</strong>)</p>
+<p>一般来说，<strong>导出版本号</strong>和<strong>新版本号</strong>是一样的，例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git archive -o patch.zip 035b375 $(git diff --name-only 69351d6..035b375)</span><br></pre></td></tr></table></figure>
+<p>Git的版本号比较长，有40位，一般来说，取前七位就行。</p>
+<p>导出的ZIP是按目录生成的，这样提交差分代码时也非常方便。</p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2020/12/23/hexo/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2020/12/23/idea/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+    <div id="comment" class="vcomment" ></div>
+    <script>
+        var notify = 'false' == true ? true : false;
+        var verify = 'false' == true ? true : false;
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+        window.valine = new Valine({
+            el: '.vcomment',
+            notify: notify,
+            verify: verify,
+            appId: "XnX0L0I0WYtoaudFpAJ0tNHx-gzGzoHsz",
+            appKey: "Qe57EX87DwuUNuubxJCeYju6",
+            avatar:'mm',
+            placeholder: "说点什么吧！",
+            guest_info:guest_info,
+            pageSize:'10'
+        });
+        //增加以下六行代码去除 power by valine
+        var infoEle = document.querySelector('.vpower ');
+        if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+            var comment =  document.getElementById('comment');
+            comment.removeChild(infoEle);
+            // infoEle.childNodes.forEach(function(item) {
+            //     item.parentNode.removeChild(item);
+            // });
+        }
+    </script>
+  
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

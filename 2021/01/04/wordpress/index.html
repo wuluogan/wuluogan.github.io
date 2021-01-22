@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Category: 记录 | WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="配置," />
+  
+
+  <meta name="description" content="WordPress操作修改数据库的表前缀在Wordpress的实际应用中，有时候为了在一个数据库里安装多个Wordpress，就需要修改默认的表前缀。当然修改前缀的机会不多，但也有。其修改步骤如下： 1.修改表名 把Wordpress数据库中以旧前缀开头的表全部改成新前缀开头的表名。我们可以用MySQL的SQL语句： RENAME TABLE tbl_name TO new_tbl_name; 来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WordPress">
+<meta property="og:url" content="http://wulgs.com/2021/01/04/wordpress/index.html">
+<meta property="og:site_name" content="WLG">
+<meta property="og:description" content="WordPress操作修改数据库的表前缀在Wordpress的实际应用中，有时候为了在一个数据库里安装多个Wordpress，就需要修改默认的表前缀。当然修改前缀的机会不多，但也有。其修改步骤如下： 1.修改表名 把Wordpress数据库中以旧前缀开头的表全部改成新前缀开头的表名。我们可以用MySQL的SQL语句： RENAME TABLE tbl_name TO new_tbl_name; 来">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-01-04T09:04:00.000Z">
+<meta property="article:modified_time" content="2021-01-21T12:54:13.669Z">
+<meta property="article:author" content="wlg">
+<meta property="article:tag" content="配置">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?6498077fc398d6e15e583378b7bd67c9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">W</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">W</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#WordPress%E6%93%8D%E4%BD%9C"><span class="toc-text">WordPress操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%A1%A8%E5%89%8D%E7%BC%80"><span class="toc-text">修改数据库的表前缀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0ID%E5%92%8C%E8%AF%84%E8%AE%BAID%E9%87%8D%E6%96%B0%E6%95%B4%E7%90%86"><span class="toc-text">文章ID和评论ID重新整理</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-wordpress" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">WordPress</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2021.01.04</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="WordPress操作"><a href="#WordPress操作" class="headerlink" title="WordPress操作"></a>WordPress操作</h2><h3 id="修改数据库的表前缀"><a href="#修改数据库的表前缀" class="headerlink" title="修改数据库的表前缀"></a>修改数据库的表前缀</h3><p>在Wordpress的实际应用中，有时候为了在一个数据库里安装多个Wordpress，就需要修改默认的表前缀。当然修改前缀的机会不多，但也有。<br>其修改步骤如下：</p>
+<p><strong>1.修改表名</strong></p>
+<p>把Wordpress数据库中以旧前缀开头的表全部改成新前缀开头的表名。<br>我们可以用MySQL的SQL语句： RENAME TABLE tbl_name TO new_tbl_name; 来修改表名。<br>你也可以用附录中的工具来自动生成SQL语句再执行。</p>
+<p><strong>2.修改wp-config.php文件</strong></p>
+<p>在wp-config.php文件中，找到下面这一行（XXX表示你的旧前缀）。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$table_prefix</span>  = <span class="string">&#x27;XXX&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>把其修改为你的新前缀（YYY表示你的旧前缀）</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$table_prefix</span>  = <span class="string">&#x27;YYY&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p><strong>3. 更新MySQL数据库</strong></p>
+<p>这一步不执行的话，在登陆之后会显示“您没有足够的权限访问这个页面。”的错误提示。<br>这一步的主要操作是把options表和usermeta表里的旧前缀全部改成新前缀。<br>执行用SQL如下，在执行前，请把<code>&#123;old&#125;</code>替换成你的旧前缀，把<code>&#123;new&#125;</code>替换成你的新前缀。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UPDATE &#123;new&#125;options SET option_name = REPLACE(option_name,&#x27;&#123;old&#125;user_roles&#x27;,&#x27;&#123;new&#125;user_roles&#x27;);</span><br><span class="line">UPDATE &#123;new&#125;usermeta SET meta_key = REPLACE(meta_key,&#x27;&#123;old&#125;&#x27;,&#x27;&#123;new&#125;&#x27;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="文章ID和评论ID重新整理"><a href="#文章ID和评论ID重新整理" class="headerlink" title="文章ID和评论ID重新整理"></a>文章ID和评论ID重新整理</h3><p>最近发现我博客里的文章ID乱得一团糟，历史记录、自动保存记录一堆。因为我的博客URL不是以ID为名的，整理ID也不会影响URL。所以就想整理一下，看看有四百多篇文章，要手动改也太费事了。在网上找了一下，找到一个思路，直接用PHP和SQL来实现更新。</p>
+<p>因为他的代码不行执行，所以我修改了一下他的代码，并扩展了一些自己的方法。代码主要实现四个功能。<strong>注意，因为以下处理都操作了数据库，请执行前一定要先备份数据库</strong></p>
+<ul>
+<li>删除历史记录、自动保存记录</li>
+<li>重新整理文章ID</li>
+<li>重新整理评论ID</li>
+<li>重新整理<code>wp_options</code>的ID</li>
+<li>重新整理<code>wp_terms</code>的termsID</li>
+</ul>
+<p>下面，一个一个的介绍，你可以选择一个或者多下保存成PHP文件，上传到wordpress目录，然后在浏览器里访问一下就行。</p>
+<p><strong>删除历史记录、自动保存记录</strong></p>
+<p>这个要操作三个表：<code>wp_posts</code>、<code>wp_term_relationships</code>和<code>wp_postmeta</code>，主要就是删除<code>wp_posts</code>中<code>post_type</code>是<code>revision</code>的数据以及<code>post_status</code>是<code>auto-draft</code>的数据。</p>
+<p>其PHP代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require_once</span>( <span class="string">&#x27;./wp-config.php&#x27;</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delete_revision_autosave_post</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> <span class="variable">$wpdb</span>;</span><br><span class="line">    <span class="variable">$sql</span> = <span class="string">&quot;delete a,b,c from &quot;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&quot;posts a &quot;</span></span><br><span class="line">           . <span class="string">&quot;left join &quot;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&quot;term_relationships b on (a.id = b.object_id) &quot;</span></span><br><span class="line">           . <span class="string">&quot;left join &quot;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&quot;postmeta c on (a.id = c.post_id) &quot;</span></span><br><span class="line">           . <span class="string">&quot;where a.post_type = &#x27;revision&#x27; or post_status=&#x27;auto-draft&#x27;&quot;</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$sql</span>);</span><br><span class="line">&#125;</span><br><span class="line">delete_revision_autosave_post();</span><br></pre></td></tr></table></figure>
+<p><strong>重新整理文章ID</strong></p>
+<p>这个要操作四个表：<code>wp_posts</code>、<code>wp_term_relationships</code>、<code>wp_postmeta</code>和<code>wp_comments</code>。主要是更新postId。</p>
+<p>因为我想把所有页面放到文章前，所以代码多了点。其PHP代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require_once</span>( <span class="string">&#x27;./wp-config.php&#x27;</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update_post_id</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> <span class="variable">$wpdb</span>;</span><br><span class="line">    <span class="variable">$buffer_count</span> = <span class="number">10000</span>;</span><br><span class="line">    <span class="variable">$add_post_id_query</span> = <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;posts set id = id + &#x27;</span> . <span class="variable">$buffer_count</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$add_post_id_query</span>);</span><br><span class="line">    <span class="variable">$add_post_id_query</span> = <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_relationships set object_id = object_id + &#x27;</span> . <span class="variable">$buffer_count</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$add_post_id_query</span>);</span><br><span class="line">    <span class="variable">$add_post_id_query</span> = <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;postmeta set post_id = post_id + &#x27;</span> . <span class="variable">$buffer_count</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$add_post_id_query</span>);</span><br><span class="line">    <span class="variable">$add_post_id_query</span> = <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;comments set comment_post_id = comment_post_id + &#x27;</span> . <span class="variable">$buffer_count</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$add_post_id_query</span>);</span><br><span class="line">    <span class="variable">$sql_query</span> = <span class="string">&#x27;select id from &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;posts order by post_type, id&#x27;</span>;</span><br><span class="line">    <span class="variable">$all_post_ids</span> = <span class="variable">$wpdb</span>-&gt;get_results( <span class="variable">$sql_query</span> );</span><br><span class="line">    <span class="variable">$new_post_id</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (is_array(<span class="variable">$all_post_ids</span>)) &#123;</span><br><span class="line">        <span class="keyword">foreach</span>(<span class="variable">$all_post_ids</span> <span class="keyword">as</span> <span class="variable">$post_id_obj</span>) &#123;</span><br><span class="line">            <span class="variable">$post_id</span> = <span class="variable">$post_id_obj</span>-&gt;id;</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;posts set id = &#x27;</span> . <span class="variable">$new_post_id</span> . <span class="string">&#x27; where id = &#x27;</span> . <span class="variable">$post_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_relationships set object_id = &#x27;</span> . <span class="variable">$new_post_id</span> . <span class="string">&#x27; where object_id = &#x27;</span> . <span class="variable">$post_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;postmeta set post_id = &#x27;</span> . <span class="variable">$new_post_id</span> . <span class="string">&#x27; where post_id = &#x27;</span> . <span class="variable">$post_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;comments set comment_post_id = &#x27;</span> . <span class="variable">$new_post_id</span> . <span class="string">&#x27; where comment_post_id = &#x27;</span> . <span class="variable">$post_id</span> );</span><br><span class="line">            ++<span class="variable">$new_post_id</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">$wpdb</span>-&gt;query(<span class="string">&#x27;alter table &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;posts AUTO_INCREMENT = &#x27;</span> . <span class="variable">$new_post_id</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">update_post_id();</span><br></pre></td></tr></table></figure>
+<p>如果只需要把ID连续，代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require_once</span>( <span class="string">&#x27;./wp-config.php&#x27;</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update_post_id</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> <span class="variable">$wpdb</span>;</span><br><span class="line">    <span class="variable">$sql_query</span> = <span class="string">&#x27;select id from &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;posts order by id&#x27;</span>;</span><br><span class="line">    <span class="variable">$all_post_ids</span> = <span class="variable">$wpdb</span>-&gt;get_results( <span class="variable">$sql_query</span> );</span><br><span class="line">    <span class="variable">$new_post_id</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (is_array(<span class="variable">$all_post_ids</span>)) &#123;</span><br><span class="line">        <span class="keyword">foreach</span>(<span class="variable">$all_post_ids</span> <span class="keyword">as</span> <span class="variable">$post_id_obj</span>) &#123;</span><br><span class="line">            <span class="variable">$post_id</span> = <span class="variable">$post_id_obj</span>-&gt;id;</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;posts set id = &#x27;</span> . <span class="variable">$new_post_id</span> . <span class="string">&#x27; where id = &#x27;</span> . <span class="variable">$post_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_relationships set object_id = &#x27;</span> . <span class="variable">$new_post_id</span> . <span class="string">&#x27; where object_id = &#x27;</span> . <span class="variable">$post_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;postmeta set post_id = &#x27;</span> . <span class="variable">$new_post_id</span> . <span class="string">&#x27; where post_id = &#x27;</span> . <span class="variable">$post_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;comments set comment_post_id = &#x27;</span> . <span class="variable">$new_post_id</span> . <span class="string">&#x27; where comment_post_id = &#x27;</span> . <span class="variable">$post_id</span> );</span><br><span class="line">            ++<span class="variable">$new_post_id</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">$wpdb</span>-&gt;query(<span class="string">&#x27;alter table &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;posts AUTO_INCREMENT = &#x27;</span> . <span class="variable">$new_post_id</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">update_post_id();</span><br></pre></td></tr></table></figure>
+<p><strong>重新整理评论ID</strong></p>
+<p>代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require_once</span>( <span class="string">&#x27;./wp-config.php&#x27;</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update_comment_id</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> <span class="variable">$wpdb</span>;</span><br><span class="line">    <span class="variable">$sql_query</span> = <span class="string">&#x27;select comment_id from &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;comments order by comment_id&#x27;</span>;</span><br><span class="line">    <span class="variable">$all_comment_ids</span> = <span class="variable">$wpdb</span>-&gt;get_results( <span class="variable">$sql_query</span> );</span><br><span class="line">    <span class="variable">$new_comment_id</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (is_array(<span class="variable">$all_comment_ids</span>)) &#123;</span><br><span class="line">        <span class="keyword">foreach</span>(<span class="variable">$all_comment_ids</span> <span class="keyword">as</span> <span class="variable">$comment_id_obj</span>) &#123;</span><br><span class="line">            <span class="variable">$comment_id</span> = <span class="variable">$comment_id_obj</span>-&gt;comment_id;</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;comments set comment_id = &#x27;</span> . <span class="variable">$new_comment_id</span> . <span class="string">&#x27; where comment_id = &#x27;</span> . <span class="variable">$comment_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;comments set comment_parent = &#x27;</span> . <span class="variable">$new_comment_id</span> . <span class="string">&#x27; where comment_parent = &#x27;</span> . <span class="variable">$comment_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;commentmeta set comment_id = &#x27;</span> . <span class="variable">$new_comment_id</span> . <span class="string">&#x27; where comment_id = &#x27;</span> . <span class="variable">$comment_id</span>);</span><br><span class="line">            ++<span class="variable">$new_comment_id</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">$wpdb</span>-&gt;query(<span class="string">&#x27;alter table &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;comments AUTO_INCREMENT = &#x27;</span> . <span class="variable">$new_comment_id</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">update_comment_id();</span><br></pre></td></tr></table></figure>
+<p><strong>重新整理<code>wp_options</code>的ID</strong></p>
+<p>代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require_once</span>( <span class="string">&#x27;./wp-config.php&#x27;</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update_option_id</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> <span class="variable">$wpdb</span>;</span><br><span class="line">    <span class="variable">$sql_query</span> = <span class="string">&#x27;select option_id from &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;options order by option_id&#x27;</span>;</span><br><span class="line">    <span class="variable">$all_option_ids</span> = <span class="variable">$wpdb</span>-&gt;get_results( <span class="variable">$sql_query</span> );</span><br><span class="line">    <span class="variable">$new_option_id</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (is_array(<span class="variable">$all_option_ids</span>)) &#123;</span><br><span class="line">        <span class="keyword">foreach</span>(<span class="variable">$all_option_ids</span> <span class="keyword">as</span> <span class="variable">$option_id_obj</span>) &#123;</span><br><span class="line">            <span class="variable">$option_id</span> = <span class="variable">$option_id_obj</span>-&gt;option_id;</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;options set option_id = &#x27;</span> . <span class="variable">$new_option_id</span> . <span class="string">&#x27; where option_id = &#x27;</span> . <span class="variable">$option_id</span> );</span><br><span class="line">            ++<span class="variable">$new_option_id</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">$wpdb</span>-&gt;query(<span class="string">&#x27;alter table &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;options AUTO_INCREMENT = &#x27;</span> . <span class="variable">$new_option_id</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">update_option_id();</span><br></pre></td></tr></table></figure>
+<p><strong>重新整理<code>wp_terms</code>的termsID</strong></p>
+<p>我想把分类排在标签之前，所以代码多了点。代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require_once</span>( <span class="string">&#x27;./wp-config.php&#x27;</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update_term_id</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> <span class="variable">$wpdb</span>;</span><br><span class="line">    <span class="variable">$buffer_count</span> = <span class="number">10000</span>;</span><br><span class="line">    <span class="variable">$add_term_id_query</span> = <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;terms set term_id = term_id + &#x27;</span> . <span class="variable">$buffer_count</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$add_term_id_query</span>);</span><br><span class="line">    <span class="variable">$add_term_id_query</span> = <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;termmeta set term_id = term_id + &#x27;</span> . <span class="variable">$buffer_count</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$add_term_id_query</span>);</span><br><span class="line">    <span class="variable">$add_term_id_query</span> = <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_taxonomy set term_id = term_id + &#x27;</span> . <span class="variable">$buffer_count</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$add_term_id_query</span>);</span><br><span class="line">    <span class="variable">$add_term_id_query</span> = <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_taxonomy set parent = parent + &#x27;</span> . <span class="variable">$buffer_count</span> . <span class="string">&#x27;where parent &gt; 0&#x27;</span>;</span><br><span class="line">    <span class="variable">$wpdb</span>-&gt;query(<span class="variable">$add_term_id_query</span>);</span><br><span class="line">    <span class="variable">$sql_query</span> = <span class="string">&#x27;select t.term_id from &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;terms t inner join &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_taxonomy m &#x27;</span></span><br><span class="line">                 . <span class="string">&#x27;on t.term_id = m.term_id order by m.taxonomy, m.parent, t.name, m.term_id&#x27;</span>;</span><br><span class="line">    <span class="variable">$all_term_ids</span> = <span class="variable">$wpdb</span>-&gt;get_results( <span class="variable">$sql_query</span> );</span><br><span class="line">    <span class="variable">$new_term_id</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (is_array(<span class="variable">$all_term_ids</span>)) &#123;</span><br><span class="line">        <span class="keyword">foreach</span>(<span class="variable">$all_term_ids</span> <span class="keyword">as</span> <span class="variable">$term_id_obj</span>) &#123;</span><br><span class="line">            <span class="variable">$term_id</span> = <span class="variable">$term_id_obj</span>-&gt;term_id;</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;terms set term_id = &#x27;</span> . <span class="variable">$new_term_id</span> . <span class="string">&#x27; where term_id = &#x27;</span> . <span class="variable">$term_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;termmeta set term_id = &#x27;</span> . <span class="variable">$new_term_id</span> . <span class="string">&#x27; where term_id = &#x27;</span> . <span class="variable">$term_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_taxonomy set term_id = &#x27;</span> . <span class="variable">$new_term_id</span> . <span class="string">&#x27; where term_id = &#x27;</span> . <span class="variable">$term_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_taxonomy set parent = &#x27;</span> . <span class="variable">$new_term_id</span> . <span class="string">&#x27; where parent = &#x27;</span> . <span class="variable">$term_id</span> );</span><br><span class="line">            ++<span class="variable">$new_term_id</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">$wpdb</span>-&gt;query(<span class="string">&#x27;alter table &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;terms AUTO_INCREMENT = &#x27;</span> . <span class="variable">$new_term_id</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">update_term_id();</span><br></pre></td></tr></table></figure>
+<p>如果仅仅是整理ID，代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require_once</span>( <span class="string">&#x27;./wp-config.php&#x27;</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update_term_id</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> <span class="variable">$wpdb</span>;</span><br><span class="line">    <span class="variable">$sql_query</span> = <span class="string">&#x27;select term_id from &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;terms order by term_id&#x27;</span>;</span><br><span class="line">    <span class="variable">$all_term_ids</span> = <span class="variable">$wpdb</span>-&gt;get_results( <span class="variable">$sql_query</span> );</span><br><span class="line">    <span class="variable">$new_term_id</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (is_array(<span class="variable">$all_term_ids</span>)) &#123;</span><br><span class="line">        <span class="keyword">foreach</span>(<span class="variable">$all_term_ids</span> <span class="keyword">as</span> <span class="variable">$term_id_obj</span>) &#123;</span><br><span class="line">            <span class="variable">$term_id</span> = <span class="variable">$term_id_obj</span>-&gt;term_id;</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;terms set term_id = &#x27;</span> . <span class="variable">$new_term_id</span> . <span class="string">&#x27; where term_id = &#x27;</span> . <span class="variable">$term_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;termmeta set term_id = &#x27;</span> . <span class="variable">$new_term_id</span> . <span class="string">&#x27; where term_id = &#x27;</span> . <span class="variable">$term_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_taxonomy set term_id = &#x27;</span> . <span class="variable">$new_term_id</span> . <span class="string">&#x27; where term_id = &#x27;</span> . <span class="variable">$term_id</span> );</span><br><span class="line">            <span class="variable">$wpdb</span>-&gt;query( <span class="string">&#x27;update &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;term_taxonomy set parent = &#x27;</span> . <span class="variable">$new_term_id</span> . <span class="string">&#x27; where parent = &#x27;</span> . <span class="variable">$term_id</span> );</span><br><span class="line">            ++<span class="variable">$new_term_id</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">$wpdb</span>-&gt;query(<span class="string">&#x27;alter table &#x27;</span> . <span class="variable">$wpdb</span>-&gt;prefix .<span class="string">&#x27;terms AUTO_INCREMENT = &#x27;</span> . <span class="variable">$new_term_id</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">update_term_id();</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2020/12/26/work-experience/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2021/01/04/weekly-202102/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+    <div id="comment" class="vcomment" ></div>
+    <script>
+        var notify = 'false' == true ? true : false;
+        var verify = 'false' == true ? true : false;
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+        window.valine = new Valine({
+            el: '.vcomment',
+            notify: notify,
+            verify: verify,
+            appId: "XnX0L0I0WYtoaudFpAJ0tNHx-gzGzoHsz",
+            appKey: "Qe57EX87DwuUNuubxJCeYju6",
+            avatar:'mm',
+            placeholder: "说点什么吧！",
+            guest_info:guest_info,
+            pageSize:'10'
+        });
+        //增加以下六行代码去除 power by valine
+        var infoEle = document.querySelector('.vpower ');
+        if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+            var comment =  document.getElementById('comment');
+            comment.removeChild(infoEle);
+            // infoEle.childNodes.forEach(function(item) {
+            //     item.parentNode.removeChild(item);
+            // });
+        }
+    </script>
+  
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

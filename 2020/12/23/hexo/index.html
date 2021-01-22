@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo | WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="配置," />
+  
+
+  <meta name="description" content="基本配置插入图片在hexo中使用文章资源文件夹需要在config.yaml文件中更改一下配置： 1post_asset_folder: true 当该配置被应用后，使用hexo new命令创建新文章时，会生成相同名字的文件夹，也就是文章资源文件夹。  由于项目会生成新的文件目录，同时会解析Markdown中的图片路径，会导致一个问题。 如在一个文件目录下，博客名为1.md，相应的存在一个1文件夹存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://wulgs.com/2020/12/23/hexo/index.html">
+<meta property="og:site_name" content="WLG">
+<meta property="og:description" content="基本配置插入图片在hexo中使用文章资源文件夹需要在config.yaml文件中更改一下配置： 1post_asset_folder: true 当该配置被应用后，使用hexo new命令创建新文章时，会生成相同名字的文件夹，也就是文章资源文件夹。  由于项目会生成新的文件目录，同时会解析Markdown中的图片路径，会导致一个问题。 如在一个文件目录下，博客名为1.md，相应的存在一个1文件夹存">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-12-23T06:15:03.000Z">
+<meta property="article:modified_time" content="2021-01-21T12:54:13.660Z">
+<meta property="article:author" content="wlg">
+<meta property="article:tag" content="配置">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?6498077fc398d6e15e583378b7bd67c9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">W</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">W</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="toc-text">插入图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-text">管理系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86"><span class="toc-text">文章加密</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-text">主题配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E7%94%A8"><span class="toc-text">启用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%87%E7%BA%A7"><span class="toc-text">升级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="toc-text">配置主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E7%94%A8%E9%A1%B5%E9%9D%A2"><span class="toc-text">启用页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE"><span class="toc-text">个性化设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E6%9C%8D%E5%8A%A1"><span class="toc-text">第三方服务</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-hexo" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Hexo</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2020.12.23</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>在hexo中使用<strong>文章资源文件夹</strong>需要在<code>config.yaml</code>文件中更改一下配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>当该配置被应用后，使用<code>hexo new</code>命令创建新文章时，会生成相同名字的文件夹，也就是文章资源文件夹。</p>
+<blockquote>
+<p>由于项目会生成新的文件目录，同时会解析Markdown中的图片路径，会导致一个问题。</p>
+<p>如在一个文件目录下，博客名为<code>1.md</code>，相应的存在一个<code>1</code>文件夹存放图片<code>image.jpg</code>。</p>
+<p>在Typora编辑器中，普通的md文件使用<code>![](1/image.jpg)</code>能在编辑器中正常显示图片。</p>
+<p>在hexo中，按理说应该是使用<code>![](image.jpg)</code>，但网页中却无法正常显示。</p>
+<p>此时应该使用这样的方式来引入图片：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img image.jpg 这是一张图片 %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>插件<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>解决了这个问题。可以只用<code>npm install hexo-renderer-marked</code>命令直接安装，之后在<code>config.yaml</code>中更改配置如下：</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>之后就可以在使用<code>![](image.jpg)</code>的方式愉快的插入图片了。</p>
+<p>但我们知道部署后，文件路径是不同的，所以当我们插入完所有的图片后，我们还需要删除每个图片路径中的<code>文件名/</code>。</p>
+<p>在Typora编辑器中，使用<code>&lt;C-f&gt;</code>快捷键，将所有的<code>文章名/</code>替换为空即可删除。</p>
+<h3 id="管理系统"><a href="#管理系统" class="headerlink" title="管理系统"></a>管理系统</h3><p>hexo-admin 是一个Hexo博客引擎的管理用户界面插件.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a><del>文章加密</del></h3><p><strong>安装</strong></p>
+<ul>
+<li><code>npm install --save hexo-blog-encrypt</code></li>
+<li>或者 <code>yarn add hexo-blog-encrypt</code> (需要安装 <a target="_blank" rel="noopener" href="https://yarnpkg.com/en/">Yarn</a>)</li>
+</ul>
+<p><strong>快速开始</strong></p>
+<ol>
+<li>首先在 <strong>站点配置文件</strong> 中启用该插件:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">encrypt:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>然后在你的文章的头部添加上对应的字段，如 password, abstract, message</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">---</span></span><br><span class="line"><span class="selector-tag">title</span>: 文章加密</span><br><span class="line"><span class="selector-tag">date</span>: 2019<span class="selector-tag">-01-04T22</span><span class="selector-pseudo">:20</span><span class="selector-pseudo">:13.000Z</span></span><br><span class="line"><span class="selector-tag">category</span>: 教程</span><br><span class="line"><span class="selector-tag">tags</span>:</span><br><span class="line">  <span class="selector-tag">-</span> 博客</span><br><span class="line">  <span class="selector-tag">-</span> <span class="selector-tag">Hexo</span></span><br><span class="line"><span class="selector-tag">keywords</span>: 博客文章密码</span><br><span class="line"><span class="selector-tag">password</span>: <span class="selector-tag">TloveY</span></span><br><span class="line"><span class="selector-tag">abstract</span>: 密码：<span class="selector-tag">TloveY</span></span><br><span class="line"><span class="selector-tag">message</span>:  输入密码，查看文章</span><br><span class="line"><span class="selector-tag">---</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>password: 是该博客加密使用的密码</li>
+<li>abstract: 是该博客的摘要，会显示在博客的列表页</li>
+<li>message: 这个是博客查看时，密码输入框上面的描述性文字</li>
+</ul>
+<ol>
+<li>如果你想对 TOC 也进行加密，则在 article.ejs 中将 TOC 的生成代码修改成如下：</li>
+</ol>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span>(post.toc == <span class="literal">true</span>)&#123; %&gt;</span><br><span class="line">    &lt;div id=<span class="string">&quot;toc-div&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;toc-article&quot;</span> &lt;% <span class="keyword">if</span> (post.encrypt == <span class="literal">true</span>) &#123; %&gt;style=<span class="string">&quot;display:none&quot;</span> &lt;% &#125; %&gt;&gt;</span><br><span class="line">        &lt;strong <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;toc-title&quot;</span>&gt;Index&lt;/strong&gt;</span><br><span class="line">        &lt;% <span class="keyword">if</span> (post.encrypt == <span class="literal">true</span>) &#123; %&gt;</span><br><span class="line">            &lt;%- toc(post.origin) %&gt;</span><br><span class="line">        &lt;% &#125; <span class="keyword">else</span> &#123; %&gt;</span><br><span class="line">            &lt;%- toc(post.content) %&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;%- post.content %&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>然后使用 <em>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</em>，来查看效果。</li>
+</ol>
+<p><strong>自定义</strong></p>
+<ol>
+<li>如果你对默认的主题不满意，或者希望修改默认的提示和摘要内容，你可以添加如下配置在 <strong>站点配置文件</strong> 中。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">encrypt:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  default_abstract: 这是一篇加密文章，内容可能是个人情感宣泄或者收费技术。如果你确实想看，请与我联系。</span><br><span class="line">  default_message: 输入密码，查看文章。</span><br></pre></td></tr></table></figure>
+<p>这样，对于每一篇需要加密的文章就不必都在在头部添加 <strong>abstract</strong> 和 <strong>message</strong> 字段了，脚本会自动添加默认的内容填充。</p>
+<ol>
+<li>如果你希望对某一篇特定的文章做特殊处理（如本文的 <strong>abstract</strong> ，可以在对应文章的头部添加</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">---</span></span><br><span class="line"><span class="selector-tag">title</span>: 文章加密</span><br><span class="line"><span class="selector-tag">date</span>: 2019<span class="selector-tag">-01-04T22</span><span class="selector-pseudo">:20</span><span class="selector-pseudo">:13.000Z</span></span><br><span class="line"><span class="selector-tag">category</span>: 教程</span><br><span class="line"><span class="selector-tag">tags</span>:</span><br><span class="line">  <span class="selector-tag">-</span> 博客</span><br><span class="line">  <span class="selector-tag">-</span> <span class="selector-tag">Hexo</span></span><br><span class="line"><span class="selector-tag">keywords</span>: 博客文章密码</span><br><span class="line"><span class="selector-tag">password</span>: <span class="selector-tag">TloveY</span></span><br><span class="line"><span class="selector-tag">abstract</span>: 密码：<span class="selector-tag">TloveY</span></span><br><span class="line"><span class="selector-tag">---</span></span><br></pre></td></tr></table></figure>
+<p>此时，博客头部的 <strong>abstract</strong> 会覆盖 <strong>站点配置文件</strong> 的 <strong>default_abstract</strong> 实现自定义。</p>
+<p><strong>存在问题</strong></p>
+<ul>
+<li>如果你开启了 <strong>字数统计功能</strong> 的话，那么本文的字数会显得比实际值大。</li>
+<li>加密文章内部分脚本会失效，已知 <strong>代码复制</strong> 失效。</li>
+</ul>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> my-blog</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> git@github.com:forsigner/fexo.git themes/fexo</span></span><br></pre></td></tr></table></figure>
+<h3 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h3><p>打开博客根目录的 <code>_config.yml</code> 设为 <code>theme: fexo</code></p>
+<h3 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> themes/fexo</span><br><span class="line"><span class="variable">$</span> git commit <span class="literal">-am</span> <span class="string">&#x27;update&#x27;</span></span><br><span class="line"><span class="variable">$</span> git pull</span><br></pre></td></tr></table></figure>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>主题配置全部在<code>theme/fexo</code>里面完成，所里下面所有配置指的是配置<code>theme/fexo/_config.yml</code>。</p>
+<p><strong>设置基本信息</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">blog_name:</span> Forsigner</span><br><span class="line"><span class="symbol">slogan:</span> Find the bug of the world</span><br></pre></td></tr></table></figure>
+<p><strong>设置头像</strong></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># relative url</span></span><br><span class="line">avatar: <span class="regexp">/images/</span>avatar.jpg</span><br><span class="line"><span class="comment"># or absolute url</span></span><br><span class="line">avatar: https:<span class="regexp">//</span>avatars0.githubusercontent.com<span class="regexp">/u/</span><span class="number">2668081</span>?v=<span class="number">3</span>&amp;s=<span class="number">460</span></span><br></pre></td></tr></table></figure>
+<p><strong>设置favicon</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">favicon:</span> /favicon.ico</span><br></pre></td></tr></table></figure>
+<p><strong>设置关键词</strong></p>
+<p>关键词主要作用是优化SEO</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">keywords:</span> forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript</span><br></pre></td></tr></table></figure>
+<p><strong>设置首页内容</strong></p>
+<p>你可以设置是否在首页直接显示文章</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">init_page_content:</span> HOME_NAV  <span class="meta"># HOME_NAV | POST</span></span><br></pre></td></tr></table></figure>
+<p><strong>设置首页导航</strong></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">home_nav</span>:</span><br><span class="line">  - <span class="attribute">name</span>: Blog</span><br><span class="line">    <span class="attribute">url</span>: /archives</span><br><span class="line">  - <span class="attribute">name</span>: Github</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner</span></span><br><span class="line">    <span class="attribute">target</span>: _blank</span><br><span class="line">  - <span class="attribute">name</span>: Douban</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">http</span>:<span class="comment">//www.douban.com/people/forsigner/</span></span><br><span class="line">    <span class="attribute">target</span>: _blank</span><br><span class="line">  - <span class="attribute">name</span>: Twitter</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//twitter.com/forsigner</span></span><br><span class="line">    <span class="attribute">target</span>: _blank</span><br></pre></td></tr></table></figure>
+<p><strong>设置页面导航</strong></p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">page_nav:</span><br><span class="line">  -<span class="ruby"> 博客: <span class="regexp">/archives/</span></span></span><br><span class="line"><span class="ruby">  - 分类: <span class="regexp">/category/</span></span></span><br><span class="line"><span class="ruby">  - 标签: <span class="regexp">/tag/</span></span></span><br><span class="line"><span class="ruby">  - 友链: <span class="regexp">/link/</span></span></span><br><span class="line"><span class="ruby">  - 关于: <span class="regexp">/about/</span></span></span><br><span class="line"><span class="ruby">  - <span class="symbol">RSS:</span> /atom.xml</span></span><br></pre></td></tr></table></figure>
+<p><strong>设置页面导航样式</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">page_nav_style:</span> CIRCLE  <span class="meta"># CIRCLE|ROUND_RECT</span></span><br></pre></td></tr></table></figure>
+<p><strong>设置面包屑</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">breadcrumb:</span></span><br><span class="line">  <span class="attr">isShow:</span> <span class="literal">true</span> <span class="comment"># true|fase</span></span><br></pre></td></tr></table></figure>
+<p><strong>设置盒子</strong></p>
+<p>你可设置盒子是否显示和其显示的文字</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toolbox:</span></span><br><span class="line">  <span class="attr">isShow:</span> <span class="literal">true</span> <span class="comment"># true|fase</span></span><br><span class="line">  <span class="attr">text:</span> <span class="string">盒子</span></span><br></pre></td></tr></table></figure>
+<p><strong>搜索页面 Slogan</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search_slogan:</span></span><br><span class="line">  <span class="attr">isShow:</span> <span class="literal">true</span> <span class="comment"># true|fase</span></span><br><span class="line">  <span class="attr">text:</span> <span class="string">Can</span> <span class="string">you</span> <span class="string">find</span> <span class="string">the</span> <span class="string">bug</span> <span class="string">of</span> <span class="string">world</span> <span class="string">~</span></span><br></pre></td></tr></table></figure>
+<p><strong>友链页面 Slogan</strong></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">link_slogan</span>:</span><br><span class="line">  <span class="attribute">isShow</span>: true # true|fase</span><br><span class="line">  <span class="attribute">text</span>: 交换友链可以邮件 forsigner<span class="variable">@gmail</span>.com</span><br></pre></td></tr></table></figure>
+<p><strong>设置文章标题对齐方式</strong></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pos<span class="variable">t:</span></span><br><span class="line">  header_align: <span class="keyword">center</span> # <span class="keyword">left</span>|<span class="keyword">center</span></span><br></pre></td></tr></table></figure>
+<h3 id="启用页面"><a href="#启用页面" class="headerlink" title="启用页面"></a>启用页面</h3><p>你可以启用你想要的页面，在开启关于、友链、项目的页面后，你可以对这些设置这些页面的内容</p>
+<p><strong>启用分类页面</strong></p>
+<ol>
+<li>在博客根目录执行 <code>hexo new page category</code></li>
+<li>修改<code>my-blog/source/category/index.md</code>里面的内容:</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">category</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">category</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p><strong>启用标签页面</strong></p>
+<ol>
+<li>在博客根目录执行 <code>hexo new page tag</code></li>
+<li>修改<code>my-blog/source/tag/index.md</code>里面的内容:</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">tag</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">tag</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p><strong>启用友链页面</strong></p>
+<ol>
+<li>在博客根目录执行 <code>hexo new page link</code></li>
+<li>修改<code>my-blog/source/link/index.md</code>里面的内容:</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">link</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">link</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p>启用友链页面后，可以设置类似以下格式的内容</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">link</span>:</span><br><span class="line">  - <span class="attribute">name</span>: 织网</span><br><span class="line">    <span class="attribute">info</span>: 身体和灵魂，总有一个在路上</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">http</span>:<span class="comment">//zheng-ji.info/</span></span><br><span class="line">    <span class="attribute">avatar</span>: <span class="attribute">https</span>:<span class="comment">//avatars3.githubusercontent.com/u/1414745?v=3&amp;s=460</span></span><br><span class="line">  - <span class="attribute">name</span>: Dongyado</span><br><span class="line">    <span class="attribute">info</span>: 生命不止，折腾不息</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">http</span>:<span class="comment">//dongyado.com/</span></span><br><span class="line">    <span class="attribute">avatar</span>: <span class="attribute">https</span>:<span class="comment">//avatars0.githubusercontent.com/u/6274940?v=3&amp;s=460</span></span><br><span class="line">  - <span class="attribute">name</span>: OrangeCoder</span><br><span class="line">    <span class="attribute">info</span>: android ffmpeg nodejs gradle</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">http</span>:<span class="comment">//orangecoder.com/</span></span><br><span class="line">    <span class="attribute">avatar</span>: <span class="attribute">https</span>:<span class="comment">//avatars0.githubusercontent.com/u/2263785?v=3&amp;s=460</span></span><br><span class="line">  - <span class="attribute">name</span>: EverET</span><br><span class="line">    <span class="attribute">info</span>: 好记性不如烂笔头</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">http</span>:<span class="comment">//everet.org/about-me/</span></span><br><span class="line">    <span class="attribute">avatar</span>: <span class="attribute">https</span>:<span class="comment">//avatars1.githubusercontent.com/u/1559563?v=3&amp;s=460</span></span><br></pre></td></tr></table></figure>
+<p><strong>启用关于页面</strong></p>
+<ol>
+<li>在博客根目录执行 <code>hexo new page about</code></li>
+<li>修改<code>my-blog/source/about/index.md</code>里面的内容:</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p>启用关于页面后，可以设置类似以下格式的内容:</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">about</span>:</span><br><span class="line">  - <span class="attribute">type</span>: me</span><br><span class="line">    <span class="attribute">icon</span>: icon-user</span><br><span class="line">    <span class="attribute">text_value</span>:</span><br><span class="line">    - <span class="string">&quot;Scut，1991，Spring.&quot;</span></span><br><span class="line">    - <span class="string">&quot;喜欢设计，擅长编程，喜欢睡懒觉.&quot;</span></span><br><span class="line">    - <span class="string">&quot;前端开发工程师，常用 HTML / CSS / JavaScript.&quot;</span></span><br><span class="line">  - <span class="attribute">type</span>: Github</span><br><span class="line">    <span class="attribute">icon</span>: icon-github</span><br><span class="line">    <span class="attribute">text_key</span>: Github</span><br><span class="line">    <span class="attribute">text_value</span>: <span class="string">&quot;@forsigner&quot;</span></span><br><span class="line">    <span class="attribute">text_value_url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner</span></span><br><span class="line">  - <span class="attribute">type</span>: weibo</span><br><span class="line">    <span class="attribute">icon</span>: icon-weibo</span><br><span class="line">    <span class="attribute">text_key</span>: 微博</span><br><span class="line">    <span class="attribute">text_value</span>: <span class="string">&quot;@forsigner&quot;</span></span><br><span class="line">    <span class="attribute">text_value_url</span>: <span class="attribute">http</span>:<span class="comment">//weibo.com/u/1847075964</span></span><br><span class="line">  - <span class="attribute">type</span>: mail</span><br><span class="line">    <span class="attribute">icon</span>: icon-mail</span><br><span class="line">    <span class="attribute">text_key</span>: Gmail</span><br><span class="line">    <span class="attribute">text_value</span>: <span class="string">&quot;forsigner@gmail.com&quot;</span></span><br><span class="line">  - <span class="attribute">type</span>: location</span><br><span class="line">    <span class="attribute">icon</span>: icon-location</span><br><span class="line">    <span class="attribute">text_value</span>: 珠海</span><br></pre></td></tr></table></figure>
+<p><strong>启用项目页面</strong></p>
+<ol>
+<li>在博客根目录执行 <code>hexo new page project</code></li>
+<li>修改<code>my-blog/source/project/index.md</code>里面的内容:</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">project</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">project</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p>启用项目页面后，可以设置类似以下格式的内容</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">project</span>:</span><br><span class="line">  - <span class="attribute">type</span>: personal</span><br><span class="line">    <span class="attribute">name</span>: fexo</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner/fexo</span></span><br><span class="line">    <span class="attribute">intro</span>: A minimalist design theme for hexo</span><br><span class="line">  # - <span class="attribute">type</span>: company</span><br><span class="line">  #   <span class="attribute">name</span>: Fexo</span><br><span class="line">  #   <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner/fexo</span></span><br><span class="line">  #   <span class="attribute">intro</span>: A minimalist design theme for hexo</span><br><span class="line">  - <span class="attribute">type</span>: personal</span><br><span class="line">    <span class="attribute">name</span>: beside</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner/beside</span></span><br><span class="line">    <span class="attribute">intro</span>: I need you beside me</span><br><span class="line">  - <span class="attribute">type</span>: personal</span><br><span class="line">    <span class="attribute">name</span>: web-fontmin</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner/web-fontmin</span></span><br><span class="line">    <span class="attribute">intro</span>: 字体子集化，在线提取你需要的字体</span><br><span class="line">  - <span class="attribute">type</span>: personal</span><br><span class="line">    <span class="attribute">name</span>: magic-check</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner/magic-check</span></span><br><span class="line">    <span class="attribute">intro</span>: Beautify Radio and Checkbox with pure CSS</span><br><span class="line">  - <span class="attribute">type</span>: personal</span><br><span class="line">    <span class="attribute">name</span>: nice-bar</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner/nice-bar</span></span><br><span class="line">    <span class="attribute">intro</span>: A nice and lightweight scrollbar</span><br><span class="line">  - <span class="attribute">type</span>: personal</span><br><span class="line">    <span class="attribute">name</span>: angular-nice-bar</span><br><span class="line">    <span class="attribute">url</span>: <span class="attribute">https</span>:<span class="comment">//github.com/forsigner/angular-nice-bar</span></span><br><span class="line">    <span class="attribute">intro</span>: A nice and lightweight scrollbar in Angular</span><br></pre></td></tr></table></figure>
+<p><strong>启用搜索页面</strong></p>
+<ul>
+<li>在博客根目录执行 <code>hexo new page search</code></li>
+<li>修改<code>my-blog/source/search/index.md</code>里面的内容:</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">search</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">search</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后安装 Hexo 插件 <code>hexo-search</code> (重要)</li>
+</ul>
+<p>先进入 blog 的根目录</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> my<span class="literal">-blog</span></span><br><span class="line"><span class="variable">$</span> npm install hexo<span class="literal">-search</span> -<span class="literal">-save</span></span><br></pre></td></tr></table></figure>
+<h3 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h3><p><strong>自定义CSS</strong></p>
+<p>也许 Fexo 默认的样式满足不了你个性化的需求，使用此配置你可以在不修改 Fexo 源码的情况下，任意的自定义 Fexo 的样式，方法如下：</p>
+<ol>
+<li>在 blog 根目录新建文件夹 <code>my-blog/source/css</code></li>
+<li>然后在此目录新建一个 CSS，名字随意，如 <code>personal-style.css</code></li>
+<li>修改<code>fexo/_config.yml</code>下面配置，然后你就可以写你想要的样式了</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">personal_style: <span class="regexp">/css/</span>personal-style.css</span><br><span class="line"><span class="comment"># 如果不想启用自定义样式，注释这行就可以了</span></span><br></pre></td></tr></table></figure>
+<p>比如我的个人自定义样式如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;Meiryo&quot;</span>;</span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&quot;/fonts/Meiryo.eot&quot;</span>);</span><br><span class="line">  <span class="comment">/* IE9 */</span></span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&quot;/fonts/Meiryo.eot?#iefix&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;embedded-opentype&quot;</span>), <span class="comment">/* IE6-IE8 */</span></span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&quot;/fonts/Meiryo.woff&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;woff&quot;</span>), <span class="comment">/* chrome, firefox */</span></span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&quot;/fonts/Meiryo.ttf&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;truetype&quot;</span>), <span class="comment">/* chrome, firefox, opera, Safari, Android, iOS 4.2+ */</span></span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&quot;/fonts/Meiryo.svg#Meiryo&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;svg&quot;</span>);</span><br><span class="line">  <span class="comment">/* iOS 4.1- */</span></span><br><span class="line">  <span class="attribute">font-style</span>: normal;</span><br><span class="line">  <span class="attribute">font-weight</span>: normal;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">html</span><span class="selector-class">.page-home</span> &#123;</span><br><span class="line">  <span class="comment">/*background-image: url(&#x27;/images/bg.jpg&#x27;)*/</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/*background: linear-gradient( #1abc9c, transparent), linear-gradient( 90deg, skyblue, transparent), linear-gradient( -90deg, coral, transparent);*/</span></span><br><span class="line">  <span class="comment">/*background-blend-mode: screen;*/</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/*background: linear-gradient(to left, #5f2c82, #49a09d);*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>自定义博客名的字体</strong></p>
+<p>由于中文字体文件太大，有的快10M，所以 Fexo 没有引入中文字体，导致博客名有点难看。<br>但是可以通过提取字体来减小字体文件大小，让字体只有几KB。<br>一下步骤可以让你实现自定义博客名字体，包括英文和中文：</p>
+<ol>
+<li>下载免费可用的ttf格式字体</li>
+<li>利用 <a target="_blank" rel="noopener" href="http://fontmin.forsigner.com/">Web-Fontmin</a> 提取字体，然后下载 Web 字体和样式</li>
+<li>在博客根目录的<code>source</code>文件夹新建目录 <code>fonts</code></li>
+<li>把下载的 web-fontmin 里的 CSS 内容 copy 到你的 <code>personal-style.css</code> 里去</li>
+<li>修改<code>fexo/_config.yml</code>下面配置，设置字体名称：</li>
+</ol>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">blog_name_font_familiy:</span> myFontName</span><br><span class="line"></span><br><span class="line"><span class="meta"># 注意: 这是css文件里的font-familiy的值 ,例如里面是 font-familiy: <span class="string">&quot;myfontName&quot;</span></span></span><br></pre></td></tr></table></figure>
+<p>PS：自定义博客名字体前请先自定义CSS</p>
+<p><strong>为首页设置背景</strong></p>
+<p>如果你不喜欢首页简洁的白色，想个性化一点，你可以自定义首页的背景颜色或者图片</p>
+<p>修改<code>personal-style.css</code>:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span><span class="selector-class">.page-home</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;/images/bg.jpg&#x27;</span>);</span><br><span class="line">  <span class="attribute">background-color</span>: transparent;</span><br><span class="line">  <span class="attribute">background-size</span>: cover;</span><br><span class="line">  <span class="attribute">background-position</span>: center center;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/*background: linear-gradient( #1abc9c, transparent), linear-gradient( 90deg, skyblue, transparent), linear-gradient( -90deg, coral, transparent);*/</span></span><br><span class="line">  <span class="comment">/*background-blend-mode: screen;*/</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/*background: linear-gradient(to left, #5f2c82, #49a09d);*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第三方服务"><a href="#第三方服务" class="headerlink" title="第三方服务"></a>第三方服务</h3><p><strong>启用统计</strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">google_analytics</span>:</span><br><span class="line"><span class="attribute">baidu_analytics</span>: <span class="number">57</span>e<span class="number">94</span>d<span class="number">016</span>sfsf<span class="number">1</span>fba<span class="number">3</span>xxxx<span class="number">8</span>a<span class="number">2</span>b<span class="number">0263</span>af<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><strong>启用评论</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">disqus_shortname:</span> forsigner</span><br><span class="line"><span class="meta"># duoshuo_shortname: forsigner</span></span><br></pre></td></tr></table></figure>
+<p><strong>使用 Mathjax</strong></p>
+<p>要使用 Mathjax，可以通过 Hexo 插件 <a target="_blank" rel="noopener" href="https://github.com/phoenixcw/hexo-renderer-mathjax">hexo-renderer-mathjax</a>支持</p>
+<p>查看 hexo-renderer-mathjax <a target="_blank" rel="noopener" href="https://github.com/phoenixcw/hexo-renderer-mathjax">文档</a></p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="hide pull-left" href="/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2020/12/23/git/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+    <div id="comment" class="vcomment" ></div>
+    <script>
+        var notify = 'false' == true ? true : false;
+        var verify = 'false' == true ? true : false;
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+        window.valine = new Valine({
+            el: '.vcomment',
+            notify: notify,
+            verify: verify,
+            appId: "XnX0L0I0WYtoaudFpAJ0tNHx-gzGzoHsz",
+            appKey: "Qe57EX87DwuUNuubxJCeYju6",
+            avatar:'mm',
+            placeholder: "说点什么吧！",
+            guest_info:guest_info,
+            pageSize:'10'
+        });
+        //增加以下六行代码去除 power by valine
+        var infoEle = document.querySelector('.vpower ');
+        if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+            var comment =  document.getElementById('comment');
+            comment.removeChild(infoEle);
+            // infoEle.childNodes.forEach(function(item) {
+            //     item.parentNode.removeChild(item);
+            // });
+        }
+    </script>
+  
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

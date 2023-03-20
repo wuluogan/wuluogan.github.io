@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WDOC</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="A magical documentation generator.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="assets/css/vue.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"> -->
+<!--  <link href="https://fonts.googleapis.com/css?family=Lobster"rel="stylesheet">-->
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'WDoc',
+      // github
+      // repo: 'https://doc.wulgs.com',
+      coverpage: true,
+      coverpage: 'cover.md',
+      themeColor: '#25798A',
+      loadSidebar: 'sidebar.md',
+      subMaxLevel: 5,
+      search: {
+        paths: 'auto',
+        placeholder: 'Search ~',
+        noData: '找不到结果',
+        depth: 3,
+      },
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      }
+    }
+  </script>
+
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
+  <!-- 全文搜索 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
+  <!-- 图片缩放 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script> -->
+  <!-- 复制到剪贴板 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script> -->
+  <!-- 字数统计 -->
+  <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
+  <!-- 代码高亮 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-java.min.js"></script> -->
+  
+
+  <script src="assets/js/docsify.min.js"></script>
+  <script src="assets/js/search.min.js"></script>
+  <script src="assets/js/zoom-image.min.js"></script>
+  <script src="assets/js/docsify-copy-code.js"></script>
+  <script src="assets/js/countable.js"></script>
+  <script src="assets/js/prism-java.min.js"></script>
+</body>
+</html>

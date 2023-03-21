@@ -1683,3 +1683,82 @@ package.
 
 sudo apt install nvidia-driver
 ```
+
+
+## 服务
+
+### v2rayA
+https://github.com/v2rayA/v2rayA
+https://v2raya.org/docs
+
+v2rayA 的功能依赖于 V2Ray 内核，因此需要安装内核。
+
+## 安装 V2Ray 内核 / Xray 内核[#](https://v2raya.org/docs/prologue/installation/debian/#%E5%AE%89%E8%A3%85-v2ray-%E5%86%85%E6%A0%B8--xray-%E5%86%85%E6%A0%B8)
+
+### V2Ray / Xray 的官方脚本[#](https://v2raya.org/docs/prologue/installation/debian/#v2ray--xray-%E7%9A%84%E5%AE%98%E6%96%B9%E8%84%9A%E6%9C%AC)
+
+V2Ray 安装参考：[https://github.com/v2fly/fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray)
+
+Xray 安装参考：[https://github.com/XTLS/Xray-install](https://github.com/XTLS/Xray-install)
+
+### v2rayA 提供的镜像脚本（推荐）[#](https://v2raya.org/docs/prologue/installation/debian/#v2raya-%E6%8F%90%E4%BE%9B%E7%9A%84%E9%95%9C%E5%83%8F%E8%84%9A%E6%9C%AC%E6%8E%A8%E8%8D%90)
+
+`curl -Ls https://mirrors.v2raya.org/go.sh | sudo bash` 
+
+安装后可以关掉服务，因为 v2rayA 不依赖于该 systemd 服务。
+
+`sudo systemctl disable v2ray --now ### Xray 需要替换服务为 xray` 
+
+## 安装 v2rayA[#](https://v2raya.org/docs/prologue/installation/debian/#%E5%AE%89%E8%A3%85-v2raya)
+
+### 方法一：通过软件源安装[#](https://v2raya.org/docs/prologue/installation/debian/#%E6%96%B9%E6%B3%95%E4%B8%80%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%AE%89%E8%A3%85)
+
+#### 添加公钥[#](https://v2raya.org/docs/prologue/installation/debian/#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5)
+
+`wget -qO - https://apt.v2raya.org/key/public-key.asc | sudo tee /etc/apt/trusted.gpg.d/v2raya.asc` 
+
+#### 添加 V2RayA 软件源[#](https://v2raya.org/docs/prologue/installation/debian/#%E6%B7%BB%E5%8A%A0-v2raya-%E8%BD%AF%E4%BB%B6%E6%BA%90)
+
+`echo "deb https://apt.v2raya.org/ v2raya main" | sudo tee /etc/apt/sources.list.d/v2raya.list
+sudo apt update` 
+
+#### 安装 V2RayA[#](https://v2raya.org/docs/prologue/installation/debian/#%E5%AE%89%E8%A3%85-v2raya-1)
+
+`sudo apt install v2raya` 
+
+### 方法二：手动安装 deb 包[#](https://v2raya.org/docs/prologue/installation/debian/#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85-deb-%E5%8C%85)
+
+[下载 deb 包](https://github.com/v2rayA/v2rayA/releases) 后可以使用 Gdebi、QApt 等图形化工具来安装，也可以使用命令行：
+
+`sudo apt install /path/download/installer_debian_xxx_vxxx.deb ### 自行替换 deb 包所在的实际路径` 
+
+## 启动 v2rayA / 设置 v2rayA 自动启动[#](https://v2raya.org/docs/prologue/installation/debian/#%E5%90%AF%E5%8A%A8-v2raya--%E8%AE%BE%E7%BD%AE-v2raya-%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8)
+
+> 从 1.5 版开始将不再默认为用户启动 v2rayA 及设置开机自动。
+
+- 启动 v2rayA
+    
+    `sudo systemctl start v2raya.service` 
+    
+- 设置开机自动启动
+    
+    `sudo systemctl enable v2raya.service` 
+    
+
+## 切换 iptables 为 iptables-nft[#](https://v2raya.org/docs/prologue/installation/debian/#%E5%88%87%E6%8D%A2-iptables-%E4%B8%BA-iptables-nft)
+
+对于 Debian11 用户来说，iptables 已被弃用。使用 nftables 作为 iptables 的后端以进行适配：
+
+`update-alternatives --set iptables /usr/sbin/iptables-nft
+update-alternatives --set ip6tables /usr/sbin/ip6tables-nft
+update-alternatives --set arptables /usr/sbin/arptables-nft
+update-alternatives --set ebtables /usr/sbin/ebtables-nft` 
+
+如果你想切换回 legacy 版本：
+
+`update-alternatives --set iptables /usr/sbin/iptables-legacy
+update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+update-alternatives --set arptables /usr/sbin/arptables-legacy
+update-alternatives --set ebtables /usr/sbin/ebtables-legacy` 
+
+切换后重启即可。

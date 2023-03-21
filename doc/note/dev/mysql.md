@@ -352,3 +352,54 @@ mysqldump命令的语法为： `mysqldump -h主机名 -P端口 -u用户名 -p密
 ```
 mysqldump -h 192.22.25.226 -u root -p123456 dbname > backup.sql 
 ```
+
+
+
+
+
+1. 查看所有表表名和备注
+
+```
+SELECT TABLE_NAME,
+       table_comment
+FROM `information_schema`.tables
+WHERE table_schema='数据库名'
+```
+
+2. 查询某张表的字段和备注
+
+```
+select column_name,
+column_comment 
+from information_schema.columns 
+where table_name ='表名'
+and table_schema='数据库名'
+```
+
+4. 查看所有字段名称和备注
+
+```
+SELECT a.table_name,
+       a.column_name,
+       a.column_comment
+FROM information_schema.columns a,
+     `information_schema`.tables b
+WHERE a.table_name = b.table_name
+  AND a.table_schema = b.table_schema
+  AND a.table_schema='数据库名'
+ORDER BY a.table_name,
+         a.ordinal_position;
+```
+
+
+5. 处理死锁问题
+```
+SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCK_WAITS; 
+SHOW OPEN TABLES WHERE In_use > 0;  //查询死锁
+SELECT * FROM information_schema.INNODB_TRX; //查询死锁id
+kill 33614 //杀死
+
+show processlist;
+
+SHOW ENGINE INNODB STATUS; //查询最近一次的死锁日志
+```

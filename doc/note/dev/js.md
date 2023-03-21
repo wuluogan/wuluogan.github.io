@@ -363,3 +363,560 @@ filter:grayscale(100%)
 ```
 
 只需要将这一行代码`filter:grayscale(100%)`放到body上，一下就能致黑
+
+
+
+
+# 获取当前日期的周一、周末的日期
+
+```
+export function getWeeekdata(cdate){  //cdate 传来当前的时间 
+   let now = new Date(cdate); 
+   let year = now.getFullYear(); 
+   let month = now.getMonth() + 1; 
+   let date = now.getDate(); 
+   let nowTime = now.getTime(); 
+   let day = now.getDay(); 
+   let oneDayTime = 24 * 60 * 60 * 1000; 
+   //显示周一 
+   var MondayTime = nowTime - (day - 1) * oneDayTime; 
+   //显示周日 
+   var SundayTime = nowTime + (7 - day) * oneDayTime; 
+   //初始化日期时间 
+   var monday = new Date(MondayTime); 
+   var sunday = new Date(SundayTime); 
+   return [format(monday), format(sunday)]; 
+ } 
+ function format(date) { 
+   var time = new Date(date); 
+   var y = time.getFullYear(); 
+   var m = 
+     time.getMonth() + 1 < 10 ? "0" + time.getMonth() + 1 : time.getMonth() + 1; 
+   var d = time.getDate() < 10 ? "0" + time.getDate() : time.getDate(); 
+   //var h = time.getHours(); 
+   //var mm = time.getMinutes(); 
+   //var s = time.getSeconds(); 
+   return y + "-" + m + "-" + d; 
+ } 
+ 
+```
+
+# 根据当前时间获取当月的1号和最后一号
+
+```
+ export function getcurentMonth(cdate) { //cdate传来的当前的时间 
+   
+   // 当天 
+   let thatDay = ""; 
+   // 当月第一天 
+   let oneDayTime = ""; 
+   // 当月最后一天 
+   let zDay = ""; 
+   let date = new Date(cdate); 
+   let curr_date = date.getDate(); 
+   let curr_month = date.getMonth() + 1; 
+   let curr_year = date.getFullYear(); 
+   String(curr_month).length < 2 ? (curr_month = "0" + curr_month) : curr_month; 
+   String(curr_date).length < 2 ? (curr_date = "0" + curr_date) : curr_date; 
+   thatDay = curr_year + "-" + curr_month + "-" + curr_date; 
+ 
+   String(curr_year).length < 2 ? (curr_year = "0" + curr_year) : curr_year; 
+   var m = date.getMonth() + 1; 
+   String(m).length < 2 ? (m = "0" + m) : m; 
+   var d = "01"; 
+   oneDayTime = curr_year + "-" + m + "-" + d; 
+   //结束时间 
+   var currentMonth = date.getMonth(); 
+   var nextMonth = ++currentMonth; 
+   var nextMonthFirstDay = new Date(date.getFullYear(), nextMonth, 1); 
+   var oneDay = 1000 * 60 * 60 * 24; 
+   var date1 = new Date(nextMonthFirstDay - oneDay); 
+   var yy = date1.getFullYear(); 
+   String(yy).length < 2 ? (yy = "0" + yy) : yy; 
+   var mm = date1.getMonth() + 1; 
+   String(mm).length < 2 ? (mm = "0" + mm) : mm; 
+   var dd = date1.getDate(); 
+   String(dd).length < 2 ? (dd = "0" + dd) : dd; 
+   zDay = yy + "-" + mm + "-" + dd; 
+   return [thatDay, oneDayTime, zDay]; 
+ } 
+ 
+```
+
+# 判断文件上传的类型
+
+```
+/** 
+ * @param: fileName - 文件名称 
+ * @param: 数据返回 1) 无后缀匹配 - false 
+ * @param: 数据返回 2) 匹配图片 - image 
+ * @param: 数据返回 3) 匹配 txt - txt 
+ * @param: 数据返回 4) 匹配 excel - excel 
+ * @param: 数据返回 5) 匹配 word - word 
+ * @param: 数据返回 6) 匹配 pdf - pdf 
+ * @param: 数据返回 7) 匹配 ppt - ppt 
+ * @param: 数据返回 8) 匹配 视频 - video 
+ * @param: 数据返回 9) 匹配 音频 - radio 
+ * @param: 数据返回 10) 其他匹配项 - other 
+ * @author: ljw 
+ **/ 
+ 
+export function fileSuffixTypeUtil(fileName){ 
+      // 后缀获取 
+    var suffix = ""; 
+    // 获取类型结果 
+    var result = ""; 
+    try { 
+      var flieArr = fileName.split("."); 
+      suffix = flieArr[flieArr.length - 1]; 
+    } catch (err) { 
+      suffix = ""; 
+    } 
+    // fileName无后缀返回 false 
+    if (!suffix) { 
+      result = false; 
+      return result; 
+    } 
+    // 图片格式 
+    var imglist = ["png", "jpg", "jpeg", "bmp", "gif"]; 
+    // 进行图片匹配 
+    result = imglist.some(function (item) { 
+      return item == suffix; 
+    }); 
+    if (result) { 
+      result = "image"; 
+      return result; 
+    } 
+    // 匹配txt 
+    var txtlist = ["txt"]; 
+    result = txtlist.some(function (item) { 
+      return item == suffix; 
+    }); 
+    if (result) { 
+      result = "txt"; 
+      return result; 
+    } 
+    // 匹配 excel 
+    var excelist = ["xls", "xlsx"]; 
+    result = excelist.some(function (item) { 
+      return item == suffix; 
+    }); 
+    if (result) { 
+      result = "excel"; 
+      return result; 
+    } 
+    // 匹配 word 
+    var wordlist = ["doc", "docx"]; 
+    result = wordlist.some(function (item) { 
+      return item == suffix; 
+    }); 
+    if (result) { 
+      result = "word"; 
+      return result; 
+    } 
+    // 匹配 pdf 
+    var pdflist = ["pdf"]; 
+    result = pdflist.some(function (item) { 
+      return item == suffix; 
+    }); 
+    if (result) { 
+      result = "pdf"; 
+      return result; 
+    } 
+    // 匹配 ppt 
+    var pptlist = ["ppt"]; 
+    result = pptlist.some(function (item) { 
+      return item == suffix; 
+    }); 
+    if (result) { 
+      result = "ppt"; 
+      return result; 
+    } 
+    // 匹配 视频 
+    var videolist = ["mp4", "m2v", "mkv"]; 
+    result = videolist.some(function (item) { 
+      return item == suffix; 
+    }); 
+    if (result) { 
+      result = "video"; 
+      return result; 
+    } 
+    // 匹配 音频 
+    var radiolist = ["mp3", "wav", "wmv"]; 
+    result = radiolist.some(function (item) { 
+      return item == suffix; 
+    }); 
+    if (result) { 
+      result = "radio"; 
+      return result; 
+    } 
+    // 其他 文件类型 
+    result = "other"; 
+    return result; 
+}; 
+```
+
+
+### 自动更新
+```
+$(function(){
+                        var time         = 0;
+                        var is_hls       = "1";
+                        var storage      = window.localStorage;
+                        var learntime    = 0,player_seek_time = 0,setLearntime = null;
+                        var is_drag      = parseInt("0"); // 控制拖动进度条 [ 1：可拖动，0：不可拖动] 
+                        var content      = "成都 XX 科技有限公司所有权   ";
+                        var learn_record = parseInt("40");
+
+                        if(is_hls == 1){
+                        
+                        	var myPlayer   = videojs('my-video',{
+                                 loop:false,
+                                 controlBar: {
+                                     LiveDisplay: false,
+                                     playbackRateMenuButton:{
+                                       //  playbackRates:[0.5,1.0,1.5,2.0,2.5]
+                                     }
+                                 }
+                             },function(){
+                                 $("#marquee_content").text(content);
+                             });
+                             //添加视频准备完成后的回调函数
+                             myPlayer.on('loadedmetadata', function() {
+                                
+                          
+                            	 //自动播放
+                             if(learn_record){
+                                     myPlayer.currentTime(learn_record);    //续播
+                                     myPlayer.play();
+                                     storage.setItem("play_time_155_1722_5091", learn_record);
+                                 }
+                                 // 初始化完成未播放时拖动进度
+                              if(!is_drag){
+                                     var play_time = parseInt(storage.getItem("play_time_155_1722_5091"));
+                                     currentTime   = parseInt(myPlayer.currentTime());
+                                     if( currentTime-play_time>1 ){
+                                         myPlayer.currentTime(play_time);
+                                     }
+                                 }
+
+                             });
+                             //监听进度条时间
+                             time = myPlayer.duration();
+                             myPlayer.on('timeupdate',videojstimeupdate);
+                            
+                            
+                            
+                        }else{
+                        	
+                        	
+                        	
+                            var myPlayer = document.getElementById('my-video');
+                            //添加视频准备完成后的回调函数
+                            myPlayer.addEventListener('loadedmetadata', function() {
+                                                          // 自动播放
+                                $("#marquee_content").text(content);     // 跑马灯
+               
+                            if(learn_record){
+                                    myPlayer.currentTime=learn_record;  // 续播
+                                    myPlayer.play();
+                                    storage.setItem("play_time_155_1722_5091", learn_record);
+                                    
+                                } 
+                                // 初始化完成未播放时拖动进度
+                            /*     if(!is_drag){
+                                    var play_time = parseInt(storage.getItem("play_time_155_1722_5091"));
+                                    currentTime   = parseInt(myPlayer.currentTime);
+                                    if( currentTime-play_time>1 ){
+                                        myPlayer.currentTime = play_time ;
+                                    }
+                                } */
+
+                            });
+                            
+                            
+                            
+                            
+                            //监听进度条时间
+                            time = myPlayer.duration;
+                            myPlayer.addEventListener('timeupdate',videotimeupdate);
+                        }
+
+                        //监听播放时间
+                        function setTime(){
+                            learntime = learntime+1;
+                           }
+
+                        //播放
+                        function videojsplay() {
+                        	
+                        	  if(learn_record){
+                                  myPlayer.currentTime(learn_record);    //续播
+                                  myPlayer.play();
+                                  storage.setItem("play_time_155_1722_5091", learn_record);
+                              }else{
+                            	  
+                            	  setLearntime = setInterval(setTime, 1000);
+                              }
+                        	
+                        	 
+                          }
+
+                         if(is_hls == 1){
+                            myPlayer.on('play', videojsplay);
+                            myPlayer.on('pause',videojspause);
+                            myPlayer.on('ended', videojsended);
+                            //暂停
+                         function videojspause() {
+                                clearInterval(setLearntime);
+                                var times      = parseInt(myPlayer.currentTime());
+                                var total_time = parseInt(myPlayer.duration());
+                                if(times > 2){
+                                    addLearnLog(times , total_time,1);
+                                }
+                            }
+                            //结束
+                            function videojsended() {
+                                clearInterval(setLearntime);
+                                var times      = parseInt(myPlayer.currentTime());
+                                var total_time = parseInt(myPlayer.duration());
+                                if(times > 2){
+                                    addLearnLog(times , total_time,1);
+                                }
+                                if( total_time != 0 && times >= total_time ){
+                                    // 获取下一解锁课时并跳转
+                                    $.ajax({
+                                        type: "POST",
+                                        url:"http://xbzj.masterol.cn/index.php?app=course&mod=Video&act=getNextSection",
+                                        data:{vid:"155",sid:"1722"},
+                                        dataType:"json",
+                                        success:function(data){
+                                            if(data){
+                                                var height = $('#vplayer').height();
+                                                var width = $('#vplayer').width();
+                                                var index = ui.open({
+                                                    type:3,
+                                                    icon:2,
+                                                    shade: [0.7, '#fff'], //0.1 透明度的白色背景
+                                                    offset: [height / 2+'px', width / 2+'px'],
+                                                });
+                                                setTimeout(function(){
+                                                    window.location.href = data;
+                                                }, 800);
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        }else{
+                            myPlayer.addEventListener('play',videojsplay);
+                            myPlayer.addEventListener('pause',videojspause);
+                            myPlayer.addEventListener('ended', videojsended);
+                            //暂停
+                            function videojspause() {
+                                clearInterval(setLearntime);
+                                var times      = parseInt(myPlayer.currentTime);
+                                var total_time = parseInt(myPlayer.duration);
+                                if(times > 2){
+                                    addLearnLog(times , total_time,1);
+                                }
+                            }
+                            //结束
+                            function videojsended() {
+                                clearInterval(setLearntime);
+                                var times      = parseInt(myPlayer.currentTime);
+                                var total_time = parseInt(myPlayer.duration);
+                                if(times > 2){
+                                    addLearnLog(times , total_time,1);
+                                }
+                                if( total_time != 0 && times >= total_time ){
+                                    // 获取下一解锁课时并跳转
+                                    $.ajax({
+                                        type: "POST",
+                                        url:"http://xbzj.masterol.cn/index.php?app=course&mod=Video&act=getNextSection",
+                                        data:{vid:"155",sid:"1722"},
+                                        dataType:"json",
+                                        success:function(data){
+                                            if(data){
+                                                var height = $('#vplayer').height();
+                                                var width = $('#vplayer').width();
+                                                var index = ui.open({
+                                                    type:3,
+                                                    icon:2,
+                                                    shade: [0.7, '#fff'], //0.1 透明度的白色背景
+                                                    offset: [height / 2+'px', width / 2+'px'],
+                                                });
+                                                setTimeout(function(){
+                                                    window.location.href = data;
+                                                }, 800);
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        }
+
+                     
+                  
+                            
+                         if(!is_drag){
+                            var play_time = parseInt(storage.getItem("play_time_155_1722_5091"));
+
+                             if(curr_times-times>1){
+                        	    console.log('1307'+curr_times+'-'+play_time+'--'+times);
+                        	    myPlayer.currentTime(play_time);
+                        	    storage.setItem("play_time_155_1722_5091", play_time);
+                               }   
+        
+                            }
+                            
+       
+                            if( total_time != 0 && curr_times >= total_time ){
+                                // 获取下一解锁课时并跳转
+                                $.ajax({
+                                    type: "POST",
+                                    url:"http://xbzj.masterol.cn/index.php?app=course&mod=Video&act=getNextSection",
+                                    data:{vid:"155",sid:"1722"},
+                                    dataType:"json",
+                                    success:function(data){
+                                        if(data){
+                                            var height = $('#vplayer').height();
+                                            var width = $('#vplayer').width();
+                                            var index = ui.open({
+                                                type:3,
+                                                icon:2,
+                                                shade: [0.7, '#fff'], //0.1 透明度的白色背景
+                                                offset: [height / 2+'px', width / 2+'px'],
+                                            });
+                                            setTimeout(function(){
+                                                window.location.href = data;
+                                            }, 800);
+                                        }
+                                    }
+                                });
+                            }
+
+                            if( times     != parseInt(myPlayer.currentTime()) ){
+                                times      = parseInt(myPlayer.currentTime());
+                                if(times > 0 && times % 4 == 0 ){
+                                    addLearnLog(times , total_time , 0);  //0 表示不及时更新学习记录，即 4 秒一次
+                                }
+                                storage.setItem( 'learn_curr_time', times);
+                            }
+
+                            if(is_free == 0 && free == 0){
+                                if (times > test_time){
+                                    myPlayer.pause();
+                                    $("#vplayer").html('');
+                                    $(".vedioPlay-msg").css("display","block");
+                                }
+                            }
+                        }
+
+                        //video 时间更新
+                        function videotimeupdate() {
+                            var test_time  = 5;
+                            var is_free    = 1;//课程是否免费
+                         var free       = 0;//课时是否免费
+
+                         var total_time = parseInt(myPlayer.duration);
+                            var times      = storage.getItem('learn_curr_time');
+                            var curr_times = parseInt(myPlayer.currentTime);
+
+                            // 拖动进度
+                            if(!is_drag){
+                                var play_time = parseInt(storage.getItem("play_time_155_1722_5091"));
+
+                                 if(curr_times-times>1){
+                            	    console.log('1307'+curr_times+'-'+play_time+'--'+times);
+                            	    myPlayer.currentTime = play_time;
+                            	    storage.setItem("play_time_155_1722_5091", play_time);
+                                   }   
+            
+                                }
+
+                            if( total_time != 0 && curr_times >= total_time ){
+                                // 获取下一解锁课时并跳转
+                                $.ajax({
+                                    type: "POST",
+                                    url:"http://xbzj.masterol.cn/index.php?app=course&mod=Video&act=getNextSection",
+                                    data:{vid:"155",sid:"1722"},
+                                    dataType:"json",
+                                    success:function(data){
+                                        if(data){
+                                            var height = $('#vplayer').height();
+                                            var width = $('#vplayer').width();
+                                            var index = ui.open({
+                                                type:3,
+                                                icon:2,
+                                                shade: [0.7, '#fff'], //0.1 透明度的白色背景
+                                                offset: [height / 2+'px', width / 2+'px'],
+                                            });
+                                            setTimeout(function(){
+                                                window.location.href = data;
+                                            }, 800);
+                                        }
+                                    }
+                                });
+                            }
+
+                            if( times     != parseInt(myPlayer.currentTime) ){
+                                times      = parseInt(myPlayer.currentTime);
+                                if(times > 0 && times % 4 == 0 ){
+                                    addLearnLog(times , total_time , 0);  //0 表示不及时更新学习记录，即 4 秒一次
+                                }
+                                storage.setItem( 'learn_curr_time', times);
+                            }
+
+                            if(is_free == 0 && free == 0){
+                                if (times > test_time){
+                                    myPlayer.pause();
+                                    $("#vplayer").html('');
+                                    $(".vedioPlay-msg").css("display","block");
+                                }
+                            }
+                        }
+
+                        //添加观看记录
+                        function addLearnLog(timespan , total_time , is_true){
+                            var t          = parseInt(timespan);
+                            var total_time = parseInt(total_time);
+                            var video_type = "5";
+
+                            if((t && (t % 4 == 0)) || is_true == 1){
+
+                                $.ajax({
+                                    type: "POST",
+                                    url:"http://xbzj.masterol.cn/index.php?app=course&mod=Video&act=updateLearn",
+                                    data:{time:t,player_seek_time:learntime,vid:"155",sid:"1722",totaltime:total_time,is_true:is_true,type:video_type},
+                                    dataType:"json",
+                                    success:function(data){
+                                    	
+                                      if(data.status=='0'){
+                                       	    console.log('修正--'+t+'-'+data.time);
+                                       	    
+                                       	   if(is_hls == 1){
+                                       		  myPlayer.currentTime(data.time);	
+                                       	    }else{
+                                       	      myPlayer.currentTime = data.time;
+                                       	    }
+                                       	    storage.setItem("play_time_155_1722_5091", data.time);
+                                            ui.error('禁止多次拖动快进！');
+                                            return;
+                                       }else if(data.status=='-1'){
+                                       	
+                                       	    ui.error('您的登录已过期，请重新登录');
+                                       	    var callbacklogin = "location.href ='/login.html'";
+                                            setTimeout(callbacklogin,3000);
+                                            return false;
+                                       }else{
+                                       	
+                                       	
+                                       }
+                                    }
+                                });
+
+                            }
+                        }
+                          });  
+```

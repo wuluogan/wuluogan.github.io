@@ -1,4 +1,10 @@
 
+## 终端
+### 终端代理
+```
+export https_proxy=http://192.168.5.102:10809 http_proxy=http://192.168.5.102:10809 all_proxy=socks5://192.168.5.102:10808
+```
+
 ## 软件
 
 ### homebrew

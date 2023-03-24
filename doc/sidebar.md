@@ -1,24 +1,42 @@
-
-<!-- [首页](readme.md) -->
-
-- [开发](#)
-    - [Linux](note/dev/linux.md)
-    - [Mac](note/dev/mac.md)
-    - [Win](note/dev/win.md)
-    - [接口](note/dev/api.md)
-    - [正则](note/dev/regular.md)
-    - [SQL](note/dev/sql.md)
-    - [面试总结（CSS篇）](dev/interview-css.md)
-    - [面试总结（HTML篇）](dev/interview-html.md)
-    - [面试总结（JAVA篇）](dev/interview-java.md)
-    - [面试总结（JS篇）](dev/interview-js.md)
-    - [面试总结（网络篇）](dev/interview-net.md)
-    - [面试总结（VUE篇）](dev/interview-vue.md)
-    - [MongoDB](note/dev/mongo-db.md)
-
-- [生活](#)
-    - [销售](note/life/sale.md)
-    - [股票](note/life/shares.md)
-
-
-
+- [**书不尽意**](/README.md)
+- **开发**
+  - **前端**
+    - **CSS**
+      - [CSS-面试](/开发/前端/CSS/CSS-面试.md)
+    - **HTML**
+      - [HTML-面试](/开发/前端/HTML/HTML-面试.md)
+      - [html](/开发/前端/HTML/html.md)
+    - **JS**
+      - [JS-面试](/开发/前端/JS/JS-面试.md)
+      - [js](/开发/前端/JS/js.md)
+    - **VUE**
+      - [VUE-面试](/开发/前端/VUE/VUE-面试.md)
+    - [node](/开发/前端/node.md)
+  - **后端**
+    - **Java**
+      - [Java-面试](/开发/后端/Java/Java-面试.md)
+      - [java](/开发/后端/Java/java.md)
+  - **数据**
+    - [mysql](/开发/数据/mysql.md)
+    - [sql](/开发/数据/sql.md)
+    - [正则](/开发/数据/正则.md)
+    - [算法](/开发/数据/算法.md)
+  - **硬件**
+    - [win](/开发/硬件/win.md)
+    - [wxapp](/开发/硬件/wxapp.md)
+  - **网络**
+    - [接口](/开发/网络/接口.md)
+    - [网络面试](/开发/网络/网络面试.md)
+  - **配置**
+    - [docker](/开发/配置/docker.md)
+    - [git](/开发/配置/git.md)
+    - [ide](/开发/配置/ide.md)
+    - [linux](/开发/配置/linux.md)
+    - [mongo-db](/开发/配置/mongo-db.md)
+- **记录**
+  - [sale](/记录/sale.md)
+  - [shares](/记录/shares.md)
+- **配置**
+  - [file](/配置/file.md)
+  - [mac](/配置/mac.md)
+  - [xiaomi-box](/配置/xiaomi-box.md)

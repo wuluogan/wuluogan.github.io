@@ -1,0 +1,80 @@
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-weight: bold;
+  margin: 28px 0 15px;
+  color: $title-color;
+}
+.article-content h1 {
+  font-size: 28px;
+}
+.article-content h2 {
+  font-size: 24px;
+}
+.article-content h3 {
+  font-size: 20px;
+}
+.article-content h4 {
+  font-size: 16px;
+}
+.article-content a {
+  color: #1abc9c;
+}
+.article-content a:hover {
+  color: #17a98c;
+}
+.article-content strong {
+  color: $title-color;
+}
+.article-content a strong {
+  color: #1abc9c;
+}
+.article-content p {
+  font-size: $article-font-size;
+  line-height: 2em;
+  margin-bottom: 20px;
+  color: $article-color;
+}
+.article-content ol,
+.article-content ul {
+  font-size: $article-font-size;
+  color: $article-color;
+}
+.article-content img {
+  max-width: 100%;
+  height: auto;
+}
+.article-content ul li {
+  position: relative;
+  padding-left: 14px;
+}
+.article-content ul li:before {
+  position: absolute;
+  top: 12px;
+  left: -2px;
+  width: 4px;
+  height: 4px;
+  margin-left: 2px;
+  content: ' ';
+  border-radius: 50%;
+  background: #bbb;
+}
+.article-content p + ul {
+  margin-top: -10px;
+}
+.article-content ul + p {
+  margin-top: 25px;
+}
+.article-content ol {
+  padding-left: 20px;
+}
+.article-content blockquote {
+  margin: 0;
+  padding: 2px 30px;
+  color: $article-color;
+  border-left: 6px solid #eee;
+  background: #fafafa;
+}

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>深入解析Java反射 | WBlog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="编程," />
+  
+
+  <meta name="description" content="一、回顾：什么是反射？反射 (Reflection) 是 Java 的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的内部属性。 Oracle 官方对反射的解释是：  Reflection enables Java code to discover information about the fields, methods and constructors of lo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入解析Java反射">
+<meta property="og:url" content="http://wuluogan.github.io/2023/java-reflection/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="一、回顾：什么是反射？反射 (Reflection) 是 Java 的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的内部属性。 Oracle 官方对反射的解释是：  Reflection enables Java code to discover information about the fields, methods and constructors of lo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-23T02:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-28T02:44:46.246Z">
+<meta property="article:author" content="wlg">
+<meta property="article:tag" content="编程">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- <link href="/css/style.css" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?4864bfaad212463cbde663d59f191259";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="WBlog" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9B%9E%E9%A1%BE%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%B0%84%EF%BC%9F"><span class="toc-text">一、回顾：什么是反射？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8F%8D%E5%B0%84%E7%9A%84%E4%B8%BB%E8%A6%81%E7%94%A8%E9%80%94"><span class="toc-text">二、反射的主要用途</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%8F%8D%E5%B0%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%94%A8"><span class="toc-text">三、反射的基本运用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%8E%B7%E5%BE%97-Class-%E5%AF%B9%E8%B1%A1"><span class="toc-text">1、获得 Class 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9F%90%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%AE%9E%E4%BE%8B"><span class="toc-text">2、判断是否为某个类的实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B"><span class="toc-text">3、创建实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95"><span class="toc-text">4、获取方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E8%8E%B7%E5%8F%96%E6%9E%84%E9%80%A0%E5%99%A8%E4%BF%A1%E6%81%AF"><span class="toc-text">5、获取构造器信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E8%8E%B7%E5%8F%96%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%EF%BC%88%E5%AD%97%E6%AE%B5%EF%BC%89%E4%BF%A1%E6%81%AF"><span class="toc-text">6、获取类的成员变量（字段）信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">7、调用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E5%88%A9%E7%94%A8%E5%8F%8D%E5%B0%84%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="toc-text">8、利用反射创建数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%8D%E5%B0%84%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">四、反射的一些注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81invoke%E6%96%B9%E6%B3%95"><span class="toc-text">五、invoke方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%85%E6%9E%90invoke%E8%BF%87%E7%A8%8B"><span class="toc-text">浅析invoke过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%9D%83%E9%99%90%E6%A3%80%E6%9F%A5"><span class="toc-text">1、权限检查</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E8%B0%83%E7%94%A8MethodAccessor%E7%9A%84invoke%E6%96%B9%E6%B3%95"><span class="toc-text">2、调用MethodAccessor的invoke方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%A0%B9%E6%BA%AF%E6%BA%90-%E5%9C%A8JVM%E5%B1%82%E9%9D%A2%E6%8E%A2%E7%A9%B6invoke0%E6%96%B9%E6%B3%95"><span class="toc-text">寻根溯源 - 在JVM层面探究invoke0方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%A0%B9%E6%BA%AF%E6%BA%90-Java%E7%89%88%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">寻根溯源 - Java版的实现</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-2023/java-reflection" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">深入解析Java反射</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2023.03.23</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+  </span>
+
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+          <i class="icon-eye"></i>
+          <span id="busuanzi_value_page_pv">
+          <i class="fa fa-spinner fa-spin"></i></span>℃
+      </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="一、回顾：什么是反射？"><a href="#一、回顾：什么是反射？" class="headerlink" title="一、回顾：什么是反射？"></a>一、回顾：什么是反射？</h2><p>反射 (Reflection) 是 Java 的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的内部属性。</p>
+<p>Oracle 官方对反射的解释是：</p>
+<blockquote>
+<p>Reflection enables Java code to discover information about the fields, methods and constructors of loaded classes, and to use reflected fields, methods, and constructors to operate on their underlying counterparts, within security restrictions.<br>The API accommodates applications that need access to either the public members of a target object (based on its runtime class) or the members declared by a given class. It also allows programs to suppress default reflective access control.</p>
+</blockquote>
+<p>简而言之，通过反射，我们可以在运行时获得程序或程序集中每一个类型的成员和成员的信息。程序中一般的对象的类型都是在编译期就确定下来的，而 Java 反射机制可以动态地创建对象并调用其属性，这样的对象的类型在编译期是未知的。所以我们可以通过反射机制直接创建对象，即使这个对象的类型在编译期是未知的。</p>
+<p>反射的核心是 JVM 在运行时才动态加载类或调用方法&#x2F;访问属性，它不需要事先（写代码的时候或编译期）知道运行对象是谁。</p>
+<p>Java 反射主要提供以下功能：</p>
+<ul>
+<li>在运行时判断任意一个对象所属的类；</li>
+<li>在运行时构造任意一个类的对象；</li>
+<li>在运行时判断任意一个类所具有的成员变量和方法（通过反射甚至可以调用private方法）；</li>
+<li>在运行时调用任意一个对象的方法</li>
+</ul>
+<p>重点：<strong>是运行时而不是编译时</strong></p>
+<h2 id="二、反射的主要用途"><a href="#二、反射的主要用途" class="headerlink" title="二、反射的主要用途"></a>二、反射的主要用途</h2><p>很多人都认为反射在实际的 Java 开发应用中并不广泛，其实不然。当我们在使用 IDE(如 Eclipse，IDEA)时，当我们输入一个对象或类并想调用它的属性或方法时，一按点号，编译器就会自动列出它的属性或方法，这里就会用到反射。</p>
+<p><strong>反射最重要的用途就是开发各种通用框架。</strong>很多框架（比如 Spring）都是配置化的（比如通过 XML 文件配置 Bean），为了保证框架的通用性，它们可能需要根据配置文件加载不同的对象或类，调用不同的方法，这个时候就必须用到反射，运行时动态加载需要加载的对象。</p>
+<p>举一个例子，在运用 Struts 2 框架的开发中我们一般会在 <code>struts.xml</code> 里去配置 <code>Action</code>，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;action name=&quot;login&quot;</span><br><span class="line">               class=&quot;org.ScZyhSoft.test.action.SimpleLoginAction&quot;</span><br><span class="line">               method=&quot;execute&quot;&gt;</span><br><span class="line">           &lt;result&gt;/shop/shop-index.jsp&lt;/result&gt;</span><br><span class="line">           &lt;result name=&quot;error&quot;&gt;login.jsp&lt;/result&gt;</span><br><span class="line">       &lt;/action&gt;</span><br></pre></td></tr></table></figure>
+
+<p>配置文件与 <code>Action</code> 建立了一种映射关系，当 View 层发出请求时，请求会被 <code>StrutsPrepareAndExecuteFilter</code> 拦截，然后 <code>StrutsPrepareAndExecuteFilter</code> 会去动态地创建 Action 实例。比如我们请求 <code>login.action</code>，那么 <code>StrutsPrepareAndExecuteFilter</code>就会去解析struts.xml文件，检索action中name为login的Action，并根据class属性创建SimpleLoginAction实例，并用invoke方法来调用execute方法，这个过程离不开反射。</p>
+<p>对与框架开发人员来说，反射虽小但作用非常大，它是各种容器实现的核心。而对于一般的开发者来说，不深入框架开发则用反射用的就会少一点，不过了解一下框架的底层机制有助于丰富自己的编程思想，也是很有益的。</p>
+<h2 id="三、反射的基本运用"><a href="#三、反射的基本运用" class="headerlink" title="三、反射的基本运用"></a>三、反射的基本运用</h2><p>上面我们提到了反射可以用于判断任意对象所属的类，获得 Class 对象，构造任意一个对象以及调用一个对象。这里我们介绍一下基本反射功能的使用和实现(反射相关的类一般都在 java.lang.relfect 包里)。</p>
+<h3 id="1、获得-Class-对象"><a href="#1、获得-Class-对象" class="headerlink" title="1、获得 Class 对象"></a>1、获得 Class 对象</h3><p>方法有三种：</p>
+<p>(1) 使用 Class 类的 <code>forName</code> 静态方法:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Class&lt;?&gt; forName(String className)</span><br><span class="line"><span class="comment">//比如在 JDBC 开发中常用此方法加载数据库驱动:</span></span><br><span class="line">Class.forName(driver);</span><br></pre></td></tr></table></figure>
+
+<p>(2)直接获取某一个对象的 class，比如:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; klass = <span class="type">int</span>.class;</span><br><span class="line">Class&lt;?&gt; classInt = Integer.TYPE;</span><br></pre></td></tr></table></figure>
+
+<p>(3)调用某个对象的 <code>getClass()</code> 方法，比如:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">str</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;123&quot;</span>);</span><br><span class="line">Class&lt;?&gt; klass = str.getClass();</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、判断是否为某个类的实例"><a href="#2、判断是否为某个类的实例" class="headerlink" title="2、判断是否为某个类的实例"></a>2、判断是否为某个类的实例</h3><p>一般地，我们用 <code>instanceof</code> 关键字来判断是否为某个类的实例。同时我们也可以借助反射中 Class 对象的 <code>isInstance()</code> 方法来判断是否为某个类的实例，它是一个 native 方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public native boolean isInstance(Object obj);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、创建实例"><a href="#3、创建实例" class="headerlink" title="3、创建实例"></a>3、创建实例</h3><p>通过反射来生成对象主要有两种方式。</p>
+<ul>
+<li>使用Class对象的newInstance()方法来创建Class对象对应类的实例。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; c = String.class;</span><br><span class="line">Object str = c.newInstance();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>先通过Class对象获取指定的Constructor对象，再调用Constructor对象的newInstance()方法来创建实例。这种方法可以用指定的构造器构造类的实例。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取String所对应的Class对象</span></span><br><span class="line">Class&lt;?&gt; c = String.class;</span><br><span class="line"><span class="comment">//获取String类带一个String参数的构造器</span></span><br><span class="line"><span class="type">Constructor</span> <span class="variable">constructor</span> <span class="operator">=</span> c.getConstructor(String.class);</span><br><span class="line"><span class="comment">//根据构造器创建实例</span></span><br><span class="line"><span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> constructor.newInstance(<span class="string">&quot;23333&quot;</span>);</span><br><span class="line">System.out.println(obj);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、获取方法"><a href="#4、获取方法" class="headerlink" title="4、获取方法"></a>4、获取方法</h3><p>获取某个Class对象的方法集合，主要有以下几个方法：</p>
+<ul>
+<li><code>getDeclaredMethods</code> 方法返回类或接口声明的所有方法，包括公共、保护、默认（包）访问和私有方法，但不包括继承的方法。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public Method[] getDeclaredMethods() throws SecurityException</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>getMethods</code> 方法返回某个类的所有公用（public）方法，包括其继承类的公用方法。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public Method[] getMethods() throws SecurityException</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>getMethod</code> 方法返回一个特定的方法，其中第一个参数为方法名称，后面的参数为方法的参数对应Class的对象。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public Method getMethod(String name, Class&lt;?&gt;... parameterTypes)</span><br></pre></td></tr></table></figure>
+
+<p>只是这样描述的话可能难以理解，我们用例子来理解这三个方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">package org.ScZyhSoft.common;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.InvocationTargetException;</span><br><span class="line">import java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line">public class test1 &#123;</span><br><span class="line">	public static void test() throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException &#123;</span><br><span class="line">	        Class&lt;?&gt; c = methodClass.class;</span><br><span class="line">	        Object object = c.newInstance();</span><br><span class="line">	        Method[] methods = c.getMethods();</span><br><span class="line">	        Method[] declaredMethods = c.getDeclaredMethods();</span><br><span class="line">	        //获取methodClass类的add方法</span><br><span class="line">	        Method method = c.getMethod(&quot;add&quot;, int.class, int.class);</span><br><span class="line">	        //getMethods()方法获取的所有方法</span><br><span class="line">	        System.out.println(&quot;getMethods获取的方法：&quot;);</span><br><span class="line">	        for(Method m:methods)</span><br><span class="line">	            System.out.println(m);</span><br><span class="line">	        //getDeclaredMethods()方法获取的所有方法</span><br><span class="line">	        System.out.println(&quot;getDeclaredMethods获取的方法：&quot;);</span><br><span class="line">	        for(Method m:declaredMethods)</span><br><span class="line">	            System.out.println(m);</span><br><span class="line">	    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">class methodClass &#123;</span><br><span class="line"></span><br><span class="line">    public final int fuck = 3;</span><br><span class="line">    public int add(int a,int b) &#123;</span><br><span class="line">        return a+b;</span><br><span class="line">    &#125;</span><br><span class="line">    public int sub(int a,int b) &#123;</span><br><span class="line">        return a+b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序运行的结果如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">getMethods获取的方法：</span><br><span class="line">public int org.ScZyhSoft.common.methodClass.add(int,int)</span><br><span class="line">public int org.ScZyhSoft.common.methodClass.sub(int,int)</span><br><span class="line">public final void java.lang.Object.wait() throws java.lang.InterruptedException</span><br><span class="line">public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException</span><br><span class="line">public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException</span><br><span class="line">public boolean java.lang.Object.equals(java.lang.Object)</span><br><span class="line">public java.lang.String java.lang.Object.toString()</span><br><span class="line">public native int java.lang.Object.hashCode()</span><br><span class="line">public final native java.lang.Class java.lang.Object.getClass()</span><br><span class="line">public final native void java.lang.Object.notify()</span><br><span class="line">public final native void java.lang.Object.notifyAll()</span><br><span class="line">getDeclaredMethods获取的方法：</span><br><span class="line">public int org.ScZyhSoft.common.methodClass.add(int,int)</span><br><span class="line">public int org.ScZyhSoft.common.methodClass.sub(int,int)</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，通过 <code>getMethods()</code> 获取的方法可以获取到父类的方法,比如 java.lang.Object 下定义的各个方法。</p>
+<h3 id="5、获取构造器信息"><a href="#5、获取构造器信息" class="headerlink" title="5、获取构造器信息"></a>5、获取构造器信息</h3><p>获取类构造器的用法与上述获取方法的用法类似。主要是通过Class类的getConstructor方法得到Constructor类的一个实例，而Constructor类有一个newInstance方法可以创建一个对象实例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public T newInstance(Object ... initargs)</span><br></pre></td></tr></table></figure>
+
+<p>此方法可以根据传入的参数来调用对应的Constructor创建对象实例。</p>
+<h3 id="6、获取类的成员变量（字段）信息"><a href="#6、获取类的成员变量（字段）信息" class="headerlink" title="6、获取类的成员变量（字段）信息"></a>6、获取类的成员变量（字段）信息</h3><p>主要是这几个方法，在此不再赘述：</p>
+<ul>
+<li><code>getFiled</code>：访问公有的成员变量</li>
+<li><code>getDeclaredField</code>：所有已声明的成员变量，但不能得到其父类的成员变量</li>
+</ul>
+<p><code>getFileds</code> 和 <code>getDeclaredFields</code> 方法用法同上（参照 Method）。</p>
+<h3 id="7、调用方法"><a href="#7、调用方法" class="headerlink" title="7、调用方法"></a>7、调用方法</h3><p>当我们从类中获取了一个方法后，我们就可以用 <code>invoke()</code> 方法来调用这个方法。<code>invoke</code> 方法的原型为:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public Object invoke(Object obj, Object... args)</span><br><span class="line">        throws IllegalAccessException, IllegalArgumentException,</span><br><span class="line">           InvocationTargetException</span><br></pre></td></tr></table></figure>
+
+<p>下面是一个实例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class test1 &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException &#123;</span><br><span class="line">        Class&lt;?&gt; klass = methodClass.class;</span><br><span class="line">        //创建methodClass的实例</span><br><span class="line">        Object obj = klass.newInstance();</span><br><span class="line">        //获取methodClass类的add方法</span><br><span class="line">        Method method = klass.getMethod(&quot;add&quot;,int.class,int.class);</span><br><span class="line">        //调用method对应的方法 =&gt; add(1,4)</span><br><span class="line">        Object result = method.invoke(obj,1,4);</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class methodClass &#123;</span><br><span class="line"></span><br><span class="line">    public final int fuck = 3;</span><br><span class="line">    public int add(int a,int b) &#123;</span><br><span class="line">        return a+b;</span><br><span class="line">    &#125;</span><br><span class="line">    public int sub(int a,int b) &#123;</span><br><span class="line">        return a+b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关于 <code>invoke</code> 方法的详解，后面我会专门写一篇文章来深入解析 invoke 的过程。</p>
+<h3 id="8、利用反射创建数组"><a href="#8、利用反射创建数组" class="headerlink" title="8、利用反射创建数组"></a>8、利用反射创建数组</h3><p>数组在Java里是比较特殊的一种类型，它可以赋值给一个Object Reference。下面我们看一看利用反射创建数组的例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public static void testArray() throws ClassNotFoundException &#123;</span><br><span class="line">        Class&lt;?&gt; cls = Class.forName(&quot;java.lang.String&quot;);</span><br><span class="line">        Object array = Array.newInstance(cls,25);</span><br><span class="line">        //往数组里添加内容</span><br><span class="line">        Array.set(array,0,&quot;hello&quot;);</span><br><span class="line">        Array.set(array,1,&quot;Java&quot;);</span><br><span class="line">        Array.set(array,2,&quot;fuck&quot;);</span><br><span class="line">        Array.set(array,3,&quot;Scala&quot;);</span><br><span class="line">        Array.set(array,4,&quot;Clojure&quot;);</span><br><span class="line">        //获取某一项的内容</span><br><span class="line">        System.out.println(Array.get(array,3));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中的Array类为java.lang.reflect.Array类。我们通过Array.newInstance()创建数组对象，它的原型是:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static Object newInstance(Class&lt;?&gt; componentType, int length)</span><br><span class="line">        throws NegativeArraySizeException &#123;</span><br><span class="line">        return newArray(componentType, length);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>而 <code>newArray</code> 方法是一个 native 方法，它在 HotSpot JVM 里的具体实现我们后边再研究，这里先把源码贴出来：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">private static native Object newArray(Class&lt;?&gt; componentType, int length)</span><br><span class="line">        throws NegativeArraySizeException;</span><br></pre></td></tr></table></figure>
+
+<p>源码目录：<code>openjdk\hotspot\src\share\vm\runtime\reflection.cpp</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">arrayOop Reflection::reflect_new_array(oop element_mirror, jint length, TRAPS) &#123;</span><br><span class="line">  if (element_mirror == NULL) &#123;</span><br><span class="line">    THROW_0(vmSymbols::java_lang_NullPointerException());</span><br><span class="line">  &#125;</span><br><span class="line">  if (length &lt; 0) &#123;</span><br><span class="line">    THROW_0(vmSymbols::java_lang_NegativeArraySizeException());</span><br><span class="line">  &#125;</span><br><span class="line">  if (java_lang_Class::is_primitive(element_mirror)) &#123;</span><br><span class="line">    Klass* tak = basic_type_mirror_to_arrayklass(element_mirror, CHECK_NULL);</span><br><span class="line">    return TypeArrayKlass::cast(tak)-&gt;allocate(length, THREAD);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    Klass* k = java_lang_Class::as_Klass(element_mirror);</span><br><span class="line">    if (k-&gt;oop_is_array() &amp;&amp; ArrayKlass::cast(k)-&gt;dimension() &gt;= MAX_DIM) &#123;</span><br><span class="line">      THROW_0(vmSymbols::java_lang_IllegalArgumentException());</span><br><span class="line">    &#125;</span><br><span class="line">    return oopFactory::new_objArray(k, length, THREAD);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>另外，Array 类的 <code>set</code> 和 <code>get</code> 方法都为 native 方法，在 HotSpot JVM 里分别对应 <code>Reflection::array_set</code> 和 <code>Reflection::array_get</code> 方法，这里就不详细解析了。</p>
+<h2 id="四、反射的一些注意事项"><a href="#四、反射的一些注意事项" class="headerlink" title="四、反射的一些注意事项"></a>四、反射的一些注意事项</h2><p>由于反射会额外消耗一定的系统资源，因此如果不需要动态地创建一个对象，那么就不需要用反射。</p>
+<p>另外，反射调用方法时可以忽略权限检查，因此可能会破坏封装性而导致安全问题。</p>
+<h2 id="五、invoke方法"><a href="#五、invoke方法" class="headerlink" title="五、invoke方法"></a>五、invoke方法</h2><p>即使没有学过反射，大家也一定会见过invoke方法。因为很多方法调用都是靠invoke方法，所以很多异常的抛出都会定位到invoke方法，比如下面的情形大家会很熟悉:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">java.lang.NullPointerException</span><br><span class="line">  at ......</span><br><span class="line">  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">  at java.lang.reflect.Method.invoke(Method.java:497)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>大家在看到异常抛出时，除了想要排除Bug，是不是同时也对这个神秘的invoke乃至invoke0方法有一些好奇呢？我们下面就来揭开它神秘的面纱，探寻底层的机制。</p>
+<h3 id="浅析invoke过程"><a href="#浅析invoke过程" class="headerlink" title="浅析invoke过程"></a>浅析invoke过程</h3><p>上面我们讲过，invoke方法用来在运行时动态地调用某个实例的方法。它的实现如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@CallerSensitive</span></span><br><span class="line"><span class="keyword">public</span> Object <span class="title function_">invoke</span><span class="params">(Object obj, Object... args)</span></span><br><span class="line">    <span class="keyword">throws</span> IllegalAccessException, IllegalArgumentException,</span><br><span class="line">       InvocationTargetException</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (!override) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!Reflection.quickCheckMemberAccess(clazz, modifiers)) &#123;</span><br><span class="line">            Class&lt;?&gt; caller = Reflection.getCallerClass();</span><br><span class="line">            checkAccess(caller, clazz, obj, modifiers);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">MethodAccessor</span> <span class="variable">ma</span> <span class="operator">=</span> methodAccessor;             <span class="comment">// read volatile</span></span><br><span class="line">    <span class="keyword">if</span> (ma == <span class="literal">null</span>) &#123;</span><br><span class="line">        ma = acquireMethodAccessor();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ma.invoke(obj, args);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们根据invoke方法的实现，将其分为以下几步：</p>
+<h4 id="1、权限检查"><a href="#1、权限检查" class="headerlink" title="1、权限检查"></a>1、权限检查</h4><p>invoke方法会首先检查AccessibleObject的override属性的值。AccessibleObject 类是 Field、Method 和 Constructor 对象的基类。它提供了将反射的对象标记为在使用时取消默认 Java 语言访问控制检查的能力。<br>override的值默认是false,表示需要权限调用规则，调用方法时需要检查权限;我们也可以用setAccessible方法设置为true,若override的值为true，表示忽略权限规则，调用方法时无需检查权限（也就是说可以调用任意的private方法，违反了封装）。<br>如果override属性为默认值false，则进行进一步的权限检查：<br>（1）首先用Reflection.quickCheckMemberAccess(clazz, modifiers)方法检查方法是否为public，如果是的话跳出本步；如果不是public方法，那么用Reflection.getCallerClass()方法获取调用这个方法的Class对象，这是一个native方法:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@CallerSensitive</span><br><span class="line">    public static native Class&lt;?&gt; getCallerClass();</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在OpenJDK的源码中找到此方法的JNI入口(Reflection.c):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JNIEXPORT jclass JNICALL Java_sun_reflect_Reflection_getCallerClass__</span><br><span class="line">(JNIEnv *env, jclass unused)</span><br><span class="line">&#123;</span><br><span class="line">    return JVM_GetCallerClass(env, JVM_CALLER_DEPTH);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>其中JVM_GetCallerClass的源码如下，有兴趣的可以研究一下(位于jvm.cpp):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">JVM_ENTRY(jclass, JVM_GetCallerClass(JNIEnv* env, int depth))</span><br><span class="line">  JVMWrapper(&quot;JVM_GetCallerClass&quot;);</span><br><span class="line"></span><br><span class="line">  // Pre-JDK 8 and early builds of JDK 8 don&#x27;t have a CallerSensitive annotation; or</span><br><span class="line">  // sun.reflect.Reflection.getCallerClass with a depth parameter is provided</span><br><span class="line">  // temporarily for existing code to use until a replacement API is defined.</span><br><span class="line">  if (SystemDictionary::reflect_CallerSensitive_klass() == NULL || depth != JVM_CALLER_DEPTH) &#123;</span><br><span class="line">    Klass* k = thread-&gt;security_get_caller_class(depth);</span><br><span class="line">    return (k == NULL) ? NULL : (jclass) JNIHandles::make_local(env, k-&gt;java_mirror());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // Getting the class of the caller frame.</span><br><span class="line">  //</span><br><span class="line">  // The call stack at this point looks something like this:</span><br><span class="line">  //</span><br><span class="line">  // [0] [ @CallerSensitive public sun.reflect.Reflection.getCallerClass ]</span><br><span class="line">  // [1] [ @CallerSensitive API.method                                   ]</span><br><span class="line">  // [.] [ (skipped intermediate frames)                                 ]</span><br><span class="line">  // [n] [ caller                                                        ]</span><br><span class="line">  vframeStream vfst(thread);</span><br><span class="line">  // Cf. LibraryCallKit::inline_native_Reflection_getCallerClass</span><br><span class="line">  for (int n = 0; !vfst.at_end(); vfst.security_next(), n++) &#123;</span><br><span class="line">    Method* m = vfst.method();</span><br><span class="line">    assert(m != NULL, &quot;sanity&quot;);</span><br><span class="line">    switch (n) &#123;</span><br><span class="line">    case 0:</span><br><span class="line">      // This must only be called from Reflection.getCallerClass</span><br><span class="line">      if (m-&gt;intrinsic_id() != vmIntrinsics::_getCallerClass) &#123;</span><br><span class="line">        THROW_MSG_NULL(vmSymbols::java_lang_InternalError(), &quot;JVM_GetCallerClass must only be called from Reflection.getCallerClass&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">      // fall-through</span><br><span class="line">    case 1:</span><br><span class="line">      // Frame 0 and 1 must be caller sensitive.</span><br><span class="line">      if (!m-&gt;caller_sensitive()) &#123;</span><br><span class="line">        THROW_MSG_NULL(vmSymbols::java_lang_InternalError(), err_msg(&quot;CallerSensitive annotation expected at frame %d&quot;, n));</span><br><span class="line">      &#125;</span><br><span class="line">      break;</span><br><span class="line">    default:</span><br><span class="line">      if (!m-&gt;is_ignored_by_security_stack_walk()) &#123;</span><br><span class="line">        // We have reached the desired frame; return the holder class.</span><br><span class="line">        return (jclass) JNIHandles::make_local(env, m-&gt;method_holder()-&gt;java_mirror());</span><br><span class="line">      &#125;</span><br><span class="line">      break;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return NULL;</span><br><span class="line">JVM_END</span><br></pre></td></tr></table></figure>
+
+
+
+<p>获取了这个Class对象caller后用checkAccess方法做一次快速的权限校验，其实现为:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">volatile Object securityCheckCache;</span><br><span class="line"></span><br><span class="line">    void checkAccess(Class&lt;?&gt; caller, Class&lt;?&gt; clazz, Object obj, int modifiers)</span><br><span class="line">        throws IllegalAccessException</span><br><span class="line">    &#123;</span><br><span class="line">        if (caller == clazz) &#123;  // 快速校验</span><br><span class="line">            return;             // 权限通过校验</span><br><span class="line">        &#125;</span><br><span class="line">        Object cache = securityCheckCache;  // read volatile</span><br><span class="line">        Class&lt;?&gt; targetClass = clazz;</span><br><span class="line">        if (obj != null</span><br><span class="line">            &amp;&amp; Modifier.isProtected(modifiers)</span><br><span class="line">            &amp;&amp; ((targetClass = obj.getClass()) != clazz)) &#123;</span><br><span class="line">            // Must match a 2-list of &#123; caller, targetClass &#125;.</span><br><span class="line">            if (cache instanceof Class[]) &#123;</span><br><span class="line">                Class&lt;?&gt;[] cache2 = (Class&lt;?&gt;[]) cache;</span><br><span class="line">                if (cache2[1] == targetClass &amp;&amp;</span><br><span class="line">                    cache2[0] == caller) &#123;</span><br><span class="line">                    return;     // ACCESS IS OK</span><br><span class="line">                &#125;</span><br><span class="line">                // (Test cache[1] first since range check for [1]</span><br><span class="line">                // subsumes range check for [0].)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else if (cache == caller) &#123;</span><br><span class="line">            // Non-protected case (or obj.class == this.clazz).</span><br><span class="line">            return;             // ACCESS IS OK</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // If no return, fall through to the slow path.</span><br><span class="line">        slowCheckMemberAccess(caller, clazz, obj, modifiers, targetClass);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>首先先执行一次快速校验，一旦调用方法的Class正确则权限检查通过。<br>若未通过，则创建一个缓存，中间再进行一堆检查（比如检验是否为protected属性）。<br>如果上面的所有权限检查都未通过，那么将执行更详细的检查，其实现为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// Keep all this slow stuff out of line:</span><br><span class="line">void slowCheckMemberAccess(Class&lt;?&gt; caller, Class&lt;?&gt; clazz, Object obj, int modifiers,</span><br><span class="line">                           Class&lt;?&gt; targetClass)</span><br><span class="line">    throws IllegalAccessException</span><br><span class="line">&#123;</span><br><span class="line">    Reflection.ensureMemberAccess(caller, clazz, obj, modifiers);</span><br><span class="line"></span><br><span class="line">    // Success: Update the cache.</span><br><span class="line">    Object cache = ((targetClass == clazz)</span><br><span class="line">                    ? caller</span><br><span class="line">                    : new Class&lt;?&gt;[] &#123; caller, targetClass &#125;);</span><br><span class="line"></span><br><span class="line">    // Note:  The two cache elements are not volatile,</span><br><span class="line">    // but they are effectively final.  The Java memory model</span><br><span class="line">    // guarantees that the initializing stores for the cache</span><br><span class="line">    // elements will occur before the volatile write.</span><br><span class="line">    securityCheckCache = cache;         // write volatile</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>大体意思就是，用Reflection.ensureMemberAccess方法继续检查权限，若检查通过就更新缓存，这样下一次同一个类调用同一个方法时就不用执行权限检查了，这是一种简单的缓存机制。由于JMM的happens-before规则能够保证缓存初始化能够在写缓存之前发生，因此两个cache不需要声明为volatile。<br>到这里，前期的权限检查工作就结束了。如果没有通过检查则会抛出异常，如果通过了检查则会到下一步。</p>
+<h4 id="2、调用MethodAccessor的invoke方法"><a href="#2、调用MethodAccessor的invoke方法" class="headerlink" title="2、调用MethodAccessor的invoke方法"></a>2、调用MethodAccessor的invoke方法</h4><p>Method.invoke()实际上并不是自己实现的反射调用逻辑，而是委托给sun.reflect.MethodAccessor来处理。<br>首先要了解Method对象的基本构成，每个Java方法有且只有一个Method对象作为root，它相当于根对象，对用户不可见。当我们创建Method对象时，我们代码中获得的Method对象都相当于它的副本（或引用）。root对象持有一个MethodAccessor对象，所以所有获取到的Method对象都共享这一个MethodAccessor对象，因此必须保证它在内存中的可见性。root对象其声明及注释为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">private volatile MethodAccessor methodAccessor;</span><br><span class="line">// For sharing of MethodAccessors. This branching structure is</span><br><span class="line">// currently only two levels deep (i.e., one root Method and</span><br><span class="line">// potentially many Method objects pointing to it.)</span><br><span class="line">//</span><br><span class="line">// If this branching structure would ever contain cycles, deadlocks can</span><br><span class="line">// occur in annotation code.</span><br><span class="line">private Method  root;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>那么MethodAccessor到底是个啥玩意呢？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/** This interface provides the declaration for</span><br><span class="line">    java.lang.reflect.Method.invoke(). Each Method object is</span><br><span class="line">    configured with a (possibly dynamically-generated) class which</span><br><span class="line">    implements this interface.</span><br><span class="line">*/</span><br><span class="line">	public interface MethodAccessor &#123;</span><br><span class="line">    /** Matches specification in &#123;@link java.lang.reflect.Method&#125; */</span><br><span class="line">    public Object invoke(Object obj, Object[] args)</span><br><span class="line">        throws IllegalArgumentException, InvocationTargetException;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到MethodAccessor是一个接口，定义了invoke方法。分析其Usage可得它的具体实现类有:</p>
+<ul>
+<li>sun.reflect.DelegatingMethodAccessorImpl</li>
+<li>sun.reflect.MethodAccessorImpl</li>
+<li>sun.reflect.NativeMethodAccessorImpl</li>
+</ul>
+<p>第一次调用一个Java方法对应的Method对象的invoke()方法之前，实现调用逻辑的MethodAccessor对象还没有创建；等第一次调用时才新创建MethodAccessor并更新给root，然后调用MethodAccessor.invoke()完成反射调用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// NOTE that there is no synchronization used here. It is correct</span><br><span class="line">// (though not efficient) to generate more than one MethodAccessor</span><br><span class="line">// for a given Method. However, avoiding synchronization will</span><br><span class="line">// probably make the implementation more scalable.</span><br><span class="line">private MethodAccessor acquireMethodAccessor() &#123;</span><br><span class="line">    // First check to see if one has been created yet, and take it</span><br><span class="line">    // if so</span><br><span class="line">    MethodAccessor tmp = null;</span><br><span class="line">    if (root != null) tmp = root.getMethodAccessor();</span><br><span class="line">    if (tmp != null) &#123;</span><br><span class="line">        methodAccessor = tmp;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // Otherwise fabricate one and propagate it up to the root</span><br><span class="line">        tmp = reflectionFactory.newMethodAccessor(this);</span><br><span class="line">        setMethodAccessor(tmp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>可以看到methodAccessor实例由reflectionFactory对象操控生成，它在AccessibleObject下的声明如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// Reflection factory used by subclasses for creating field,</span><br><span class="line">// method, and constructor accessors. Note that this is called</span><br><span class="line">// very early in the bootstrapping process.</span><br><span class="line">static final ReflectionFactory reflectionFactory =</span><br><span class="line">    AccessController.doPrivileged(</span><br><span class="line">        new sun.reflect.ReflectionFactory.GetReflectionFactoryAction());</span><br></pre></td></tr></table></figure>
+
+<p>再研究一下sun.reflect.ReflectionFactory类的源码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">public class ReflectionFactory &#123;</span><br><span class="line"></span><br><span class="line">    private static boolean initted = false;</span><br><span class="line">    private static Permission reflectionFactoryAccessPerm</span><br><span class="line">        = new RuntimePermission(&quot;reflectionFactoryAccess&quot;);</span><br><span class="line">    private static ReflectionFactory soleInstance = new ReflectionFactory();</span><br><span class="line">    // Provides access to package-private mechanisms in java.lang.reflect</span><br><span class="line">    private static volatile LangReflectAccess langReflectAccess;</span><br><span class="line"></span><br><span class="line">    // 这里设计得非常巧妙</span><br><span class="line">    // &quot;Inflation&quot; mechanism. Loading bytecodes to implement</span><br><span class="line">    // Method.invoke() and Constructor.newInstance() currently costs</span><br><span class="line">    // 3-4x more than an invocation via native code for the first</span><br><span class="line">    // invocation (though subsequent invocations have been benchmarked</span><br><span class="line">    // to be over 20x faster). Unfortunately this cost increases</span><br><span class="line">    // startup time for certain applications that use reflection</span><br><span class="line">    // intensively (but only once per class) to bootstrap themselves.</span><br><span class="line">    // To avoid this penalty we reuse the existing JVM entry points</span><br><span class="line">    // for the first few invocations of Methods and Constructors and</span><br><span class="line">    // then switch to the bytecode-based implementations.</span><br><span class="line">    //</span><br><span class="line">    // Package-private to be accessible to NativeMethodAccessorImpl</span><br><span class="line">    // and NativeConstructorAccessorImpl</span><br><span class="line">    private static boolean noInflation        = false;</span><br><span class="line">    private static int     inflationThreshold = 15;</span><br><span class="line"></span><br><span class="line">    //......</span><br><span class="line"></span><br><span class="line">	//这是生成MethodAccessor的方法</span><br><span class="line">    public MethodAccessor newMethodAccessor(Method method) &#123;</span><br><span class="line">        checkInitted();</span><br><span class="line"></span><br><span class="line">        if (noInflation &amp;&amp; !ReflectUtil.isVMAnonymousClass(method.getDeclaringClass())) &#123;</span><br><span class="line">            return new MethodAccessorGenerator().</span><br><span class="line">                generateMethod(method.getDeclaringClass(),</span><br><span class="line">                               method.getName(),</span><br><span class="line">                               method.getParameterTypes(),</span><br><span class="line">                               method.getReturnType(),</span><br><span class="line">                               method.getExceptionTypes(),</span><br><span class="line">                               method.getModifiers());</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            NativeMethodAccessorImpl acc =</span><br><span class="line">                new NativeMethodAccessorImpl(method);</span><br><span class="line">            DelegatingMethodAccessorImpl res =</span><br><span class="line">                new DelegatingMethodAccessorImpl(acc);</span><br><span class="line">            acc.setParent(res);</span><br><span class="line">            return res;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //......</span><br><span class="line"></span><br><span class="line">    /** We have to defer full initialization of this class until after</span><br><span class="line">    the static initializer is run since java.lang.reflect.Method&#x27;s</span><br><span class="line">    static initializer (more properly, that for</span><br><span class="line">    java.lang.reflect.AccessibleObject) causes this class&#x27;s to be</span><br><span class="line">    run, before the system properties are set up. */</span><br><span class="line">    private static void checkInitted() &#123;</span><br><span class="line">        if (initted) return;</span><br><span class="line">        AccessController.doPrivileged(</span><br><span class="line">            new PrivilegedAction&lt;Void&gt;() &#123;</span><br><span class="line">                public Void run() &#123;</span><br><span class="line">                    // Tests to ensure the system properties table is fully</span><br><span class="line">                    // initialized. This is needed because reflection code is</span><br><span class="line">                    // called very early in the initialization process (before</span><br><span class="line">                    // command-line arguments have been parsed and therefore</span><br><span class="line">                    // these user-settable properties installed.) We assume that</span><br><span class="line">                    // if System.out is non-null then the System class has been</span><br><span class="line">                    // fully initialized and that the bulk of the startup code</span><br><span class="line">                    // has been run.</span><br><span class="line"></span><br><span class="line">                    if (System.out == null) &#123;</span><br><span class="line">                        // java.lang.System not yet fully initialized</span><br><span class="line">                        return null;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    String val = System.getProperty(&quot;sun.reflect.noInflation&quot;);</span><br><span class="line">                    if (val != null &amp;&amp; val.equals(&quot;true&quot;)) &#123;</span><br><span class="line">                        noInflation = true;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    val = System.getProperty(&quot;sun.reflect.inflationThreshold&quot;);</span><br><span class="line">                    if (val != null) &#123;</span><br><span class="line">                        try &#123;</span><br><span class="line">                            inflationThreshold = Integer.parseInt(val);</span><br><span class="line">                        &#125; catch (NumberFormatException e) &#123;</span><br><span class="line">                            throw new RuntimeException(&quot;Unable to parse property sun.reflect.inflationThreshold&quot;, e);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    initted = true;</span><br><span class="line">                    return null;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>观察前面的声明部分的注释，我们可以发现一些有趣的东西。就像注释里说的，实际的MethodAccessor实现有两个版本，一个是Java版本，一个是native版本，两者各有特点。初次启动时Method.invoke()和Constructor.newInstance()方法采用native方法要比Java方法快3-4倍，而启动后native方法又要消耗额外的性能而慢于Java方法。也就是说，Java实现的版本在初始化时需要较多时间，但长久来说性能较好；native版本正好相反，启动时相对较快，但运行时间长了之后速度就比不过Java版了。这是HotSpot的优化方式带来的性能特性，同时也是许多虚拟机的共同点：跨越native边界会对优化有阻碍作用，它就像个黑箱一样让虚拟机难以分析也将其内联，于是运行时间长了之后反而是托管版本的代码更快些。</p>
+<p>为了尽可能地减少性能损耗，HotSpot JDK采用“inflation”的技巧：让Java方法在被反射调用时，开头若干次使用native版，等反射调用次数超过阈值时则生成一个专用的MethodAccessor实现类，生成其中的invoke()方法的字节码，以后对该Java方法的反射调用就会使用Java版本。 这项优化是从JDK 1.4开始的。</p>
+<p>研究ReflectionFactory.newMethodAccessor()生产MethodAccessor对象的逻辑，一开始(native版)会生产NativeMethodAccessorImpl和DelegatingMethodAccessorImpl两个对象。<br>DelegatingMethodAccessorImpl的源码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/** Delegates its invocation to another MethodAccessorImpl and can</span><br><span class="line">    change its delegate at run time. */</span><br><span class="line"></span><br><span class="line">class DelegatingMethodAccessorImpl extends MethodAccessorImpl &#123;</span><br><span class="line">    private MethodAccessorImpl delegate;</span><br><span class="line"></span><br><span class="line">    DelegatingMethodAccessorImpl(MethodAccessorImpl delegate) &#123;</span><br><span class="line">        setDelegate(delegate);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Object invoke(Object obj, Object[] args)</span><br><span class="line">        throws IllegalArgumentException, InvocationTargetException</span><br><span class="line">    &#123;</span><br><span class="line">        return delegate.invoke(obj, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    void setDelegate(MethodAccessorImpl delegate) &#123;</span><br><span class="line">        this.delegate = delegate;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>它其实是一个中间层，方便在native版与Java版的MethodAccessor之间进行切换。<br>然后下面就是native版MethodAccessor的Java方面的声明：<br>sun.reflect.NativeMethodAccessorImpl：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">/** Used only for the first few invocations of a Method; afterward,</span><br><span class="line">    switches to bytecode-based implementation */</span><br><span class="line"></span><br><span class="line">class NativeMethodAccessorImpl extends MethodAccessorImpl &#123;</span><br><span class="line">    private Method method;</span><br><span class="line">    private DelegatingMethodAccessorImpl parent;</span><br><span class="line">    private int numInvocations;</span><br><span class="line"></span><br><span class="line">    NativeMethodAccessorImpl(Method method) &#123;</span><br><span class="line">        this.method = method;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Object invoke(Object obj, Object[] args)</span><br><span class="line">        throws IllegalArgumentException, InvocationTargetException</span><br><span class="line">    &#123;</span><br><span class="line">        // We can&#x27;t inflate methods belonging to vm-anonymous classes because</span><br><span class="line">        // that kind of class can&#x27;t be referred to by name, hence can&#x27;t be</span><br><span class="line">        // found from the generated bytecode.</span><br><span class="line">        if (++numInvocations &gt; ReflectionFactory.inflationThreshold()</span><br><span class="line">                &amp;&amp; !ReflectUtil.isVMAnonymousClass(method.getDeclaringClass())) &#123;</span><br><span class="line">            MethodAccessorImpl acc = (MethodAccessorImpl)</span><br><span class="line">                new MethodAccessorGenerator().</span><br><span class="line">                    generateMethod(method.getDeclaringClass(),</span><br><span class="line">                                   method.getName(),</span><br><span class="line">                                   method.getParameterTypes(),</span><br><span class="line">                                   method.getReturnType(),</span><br><span class="line">                                   method.getExceptionTypes(),</span><br><span class="line">                                   method.getModifiers());</span><br><span class="line">            parent.setDelegate(acc);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return invoke0(method, obj, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    void setParent(DelegatingMethodAccessorImpl parent) &#123;</span><br><span class="line">        this.parent = parent;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static native Object invoke0(Method m, Object obj, Object[] args);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>每次NativeMethodAccessorImpl.invoke()方法被调用时，程序调用计数器都会增加1，看看是否超过阈值；一旦超过，则调用MethodAccessorGenerator.generateMethod()来生成Java版的MethodAccessor的实现类，并且改变DelegatingMethodAccessorImpl所引用的MethodAccessor为Java版。后续经由DelegatingMethodAccessorImpl.invoke()调用到的就是Java版的实现了。<br>到这里，我们已经追寻到native版的invoke方法在Java一侧声明的最底层 - invoke0了，下面我们将深入到HotSpot JVM中去研究其具体实现。</p>
+<h3 id="寻根溯源-在JVM层面探究invoke0方法"><a href="#寻根溯源-在JVM层面探究invoke0方法" class="headerlink" title="寻根溯源 - 在JVM层面探究invoke0方法"></a>寻根溯源 - 在JVM层面探究invoke0方法</h3><p>invoke0方法是一个native方法,它在HotSpot JVM里调用JVM_InvokeMethod函数:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JNIEXPORT jobject JNICALL Java_sun_reflect_NativeMethodAccessorImpl_invoke0</span><br><span class="line">(JNIEnv *env, jclass unused, jobject m, jobject obj, jobjectArray args)</span><br><span class="line">&#123;</span><br><span class="line">    return JVM_InvokeMethod(env, m, obj, args);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>openjdk&#x2F;hotspot&#x2F;src&#x2F;share&#x2F;vm&#x2F;prims&#x2F;jvm.cpp</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">JVM_ENTRY(jobject, JVM_InvokeMethod(JNIEnv *env, jobject method, jobject obj, jobjectArray args0))</span><br><span class="line">  JVMWrapper(&quot;JVM_InvokeMethod&quot;);</span><br><span class="line">  Handle method_handle;</span><br><span class="line">  if (thread-&gt;stack_available((address) &amp;method_handle) &gt;= JVMInvokeMethodSlack) &#123;</span><br><span class="line">    method_handle = Handle(THREAD, JNIHandles::resolve(method));</span><br><span class="line">    Handle receiver(THREAD, JNIHandles::resolve(obj));</span><br><span class="line">    objArrayHandle args(THREAD, objArrayOop(JNIHandles::resolve(args0)));</span><br><span class="line">    oop result = Reflection::invoke_method(method_handle(), receiver, args, CHECK_NULL);</span><br><span class="line">    jobject res = JNIHandles::make_local(env, result);</span><br><span class="line">    if (JvmtiExport::should_post_vm_object_alloc()) &#123;</span><br><span class="line">      oop ret_type = java_lang_reflect_Method::return_type(method_handle());</span><br><span class="line">      assert(ret_type != NULL, &quot;sanity check: ret_type oop must not be NULL!&quot;);</span><br><span class="line">      if (java_lang_Class::is_primitive(ret_type)) &#123;</span><br><span class="line">        // Only for primitive type vm allocates memory for java object.</span><br><span class="line">        // See box() method.</span><br><span class="line">        JvmtiExport::post_vm_object_alloc(JavaThread::current(), result);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    THROW_0(vmSymbols::java_lang_StackOverflowError());</span><br><span class="line">  &#125;</span><br><span class="line">JVM_END</span><br></pre></td></tr></table></figure>
+
+
+
+<p>其关键部分为Reflection::invoke_method:<br>openjdk&#x2F;hotspot&#x2F;src&#x2F;share&#x2F;vm&#x2F;runtime&#x2F;reflection.cpp</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">oop Reflection::invoke_method(oop method_mirror, Handle receiver, objArrayHandle args, TRAPS) &#123;</span><br><span class="line">  oop mirror             = java_lang_reflect_Method::clazz(method_mirror);</span><br><span class="line">  int slot               = java_lang_reflect_Method::slot(method_mirror);</span><br><span class="line">  bool override          = java_lang_reflect_Method::override(method_mirror) != 0;</span><br><span class="line">  objArrayHandle ptypes(THREAD, objArrayOop(java_lang_reflect_Method::parameter_types(method_mirror)));</span><br><span class="line"></span><br><span class="line">  oop return_type_mirror = java_lang_reflect_Method::return_type(method_mirror);</span><br><span class="line">  BasicType rtype;</span><br><span class="line">  if (java_lang_Class::is_primitive(return_type_mirror)) &#123;</span><br><span class="line">    rtype = basic_type_mirror_to_basic_type(return_type_mirror, CHECK_NULL);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    rtype = T_OBJECT;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  instanceKlassHandle klass(THREAD, java_lang_Class::as_Klass(mirror));</span><br><span class="line">  Method* m = klass-&gt;method_with_idnum(slot);</span><br><span class="line">  if (m == NULL) &#123;</span><br><span class="line">    THROW_MSG_0(vmSymbols::java_lang_InternalError(), &quot;invoke&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  methodHandle method(THREAD, m);</span><br><span class="line"></span><br><span class="line">  return invoke(klass, method, receiver, override, ptypes, rtype, args, true, THREAD);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这里面又会涉及到Java的对象模型(klass和oop)，以后继续补充。(<strong>留坑</strong>)</p>
+<h3 id="寻根溯源-Java版的实现"><a href="#寻根溯源-Java版的实现" class="headerlink" title="寻根溯源 - Java版的实现"></a>寻根溯源 - Java版的实现</h3><p>Java版MethodAccessor的生成使用MethodAccessorGenerator实现，由于代码太长，这里就不贴代码了，只贴一下开头的注释：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/** Generator for sun.reflect.MethodAccessor and</span><br><span class="line">    sun.reflect.ConstructorAccessor objects using bytecodes to</span><br><span class="line">    implement reflection. A java.lang.reflect.Method or</span><br><span class="line">    java.lang.reflect.Constructor object can delegate its invoke or</span><br><span class="line">    newInstance method to an accessor using native code or to one</span><br><span class="line">    generated by this class. (Methods and Constructors were merged</span><br><span class="line">    together in this class to ensure maximum code sharing.) */</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这里运用了asm动态生成字节码技术（sun.reflect.ClassFileAssembler)，原理比较复杂，后面讲到AOP要用到asm技术的时候再深入了解一下吧。</p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2023/weekly-202312/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2023/qlzx-syfx/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+
+
+  <!-- 渲染左下角音乐播放器 -->
+  
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<style>
+.aplayer .aplayer-lrc p {
+  display: none;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px !important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  display: none;
+  font-size: 15px;
+  color: #42b983;
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;
+}
+</style>
+<meting-js  
+  class=""
+  server="tencent"
+  type="playlist"
+  id="8062553743"
+  fixed='true'
+  autoplay='false'
+  theme='#42b983'
+  loop='all'
+  order='random'
+  preload='auto'
+  volume='0.7'
+  list-folded='true'
+>
+</meting-js>
+<!-- https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js -->
+<script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
+  
+
+  
+    <script src="/js/firework.js"></script>
+  
+
+  
+</body>
+</html>

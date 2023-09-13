@@ -1,3 +1,4 @@
+//鼠标点击弹出烟花波纹
 function clickEffect() {
     let balls = [];
     let longPressed = false;
@@ -14,7 +15,6 @@ function clickEffect() {
     const pointer = document.createElement("span");
     pointer.classList.add("pointer");
     document.body.appendChild(pointer);
-
     if (canvas.getContext && window.addEventListener) {
         ctx = canvas.getContext("2d");
         updateSize();
@@ -46,8 +46,6 @@ function clickEffect() {
     } else {
         console.log("canvas or addEventListener is unsupported!");
     }
-
-
     function updateSize() {
         canvas.width = window.innerWidth * 2;
         canvas.height = window.innerHeight * 2;
@@ -71,13 +69,16 @@ function clickEffect() {
             this.y = y;
             this.angle = Math.PI * 2 * Math.random();
             if (longPressed == true) {
-                this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
+                //this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
+                this.multiplier = randBetween(6 + multiplier, 9 + multiplier);
             } else {
-                this.multiplier = randBetween(6, 12);
+                // this.multiplier = randBetween(6, 12);
+                this.multiplier = randBetween(3, 6);
             }
             this.vx = (this.multiplier + Math.random() * 0.5) * Math.cos(this.angle);
             this.vy = (this.multiplier + Math.random() * 0.5) * Math.sin(this.angle);
-            this.r = randBetween(8, 12) + 3 * Math.random();
+            //this.r = randBetween(8, 12) + 3 * Math.random();
+            this.r = randBetween(4, 6) + 3 * Math.random();
             this.color = colours[Math.floor(Math.random() * colours.length)];
         }
         update() {
@@ -90,17 +91,14 @@ function clickEffect() {
             this.vy *= 0.9;
         }
     }
-
     function pushBalls(count = 1, x = origin.x, y = origin.y) {
         for (let i = 0; i < count; i++) {
             balls.push(new Ball(x, y));
         }
     }
-
     function randBetween(min, max) {
         return Math.floor(Math.random() * max) + min;
     }
-
     function loop() {
         ctx.fillStyle = "rgba(255, 255, 255, 0)";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -121,7 +119,6 @@ function clickEffect() {
         removeBall();
         requestAnimationFrame(loop);
     }
-
     function removeBall() {
         for (let i = 0; i < balls.length; i++) {
             let b = balls[i];

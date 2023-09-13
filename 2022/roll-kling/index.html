@@ -18,7 +18,7 @@
   <meta name="description" content="我最喜欢我的发型，因为它天生自然卷，而且是内卷。 公司在十八层，为了能坐上电梯，我每次走到三层去等往下的电梯，先坐到1楼再上去。 为了能带薪拉屎，我每次提前半个小时占坑，一边等shi意一边刷抖音，外面兄弟急得满头大汗，我静静享受这片刻悠闲。 我的手机通讯软件只有钉钉，因为最喜欢它的已读功能，和谁聊天也是，别假装没看到。 微信只用来凌晨两点发个朋友圈功能，比如：今天又是凌晨两点下班，年轻就该奋斗，工">
 <meta property="og:type" content="article">
 <meta property="og:title" content="卷王">
-<meta property="og:url" content="http://example.com/2022/roll-kling/index.html">
+<meta property="og:url" content="http://wuluogan.github.io/2022/roll-kling/index.html">
 <meta property="og:site_name" content="WBlog">
 <meta property="og:description" content="我最喜欢我的发型，因为它天生自然卷，而且是内卷。 公司在十八层，为了能坐上电梯，我每次走到三层去等往下的电梯，先坐到1楼再上去。 为了能带薪拉屎，我每次提前半个小时占坑，一边等shi意一边刷抖音，外面兄弟急得满头大汗，我静静享受这片刻悠闲。 我的手机通讯软件只有钉钉，因为最喜欢它的已读功能，和谁聊天也是，别假装没看到。 微信只用来凌晨两点发个朋友圈功能，比如：今天又是凌晨两点下班，年轻就该奋斗，工">
 <meta property="og:locale" content="zh_CN">
@@ -34,14 +34,10 @@
     <link rel="icon" href="/favicon.ico">
   
 
-  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+  <!-- <link href="/css/style.css" rel="stylesheet"> -->
 
+<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/css/personal-style.css">
-
-  
 
   
 
@@ -78,8 +74,6 @@
   
     <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
-  
-
   
 
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="WBlog" type="application/atom+xml">
@@ -435,35 +429,65 @@
 
   
 
-  <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
+  
+<script src="/js/fastclick.js"></script>
 
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
+<script src="/js/scroll-spy.js"></script>
 
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
+<script src="/js/zenscroll.js"></script>
 
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
-</script>
+<script src="/js/util.js"></script>
 
+<script src="/js/app.js"></script>
+
+
+
+  <!-- 渲染左下角音乐播放器 -->
+  
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<style>
+.aplayer .aplayer-lrc p {
+  display: none;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px !important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  display: none;
+  font-size: 15px;
+  color: #42b983;
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;
+}
+</style>
+<meting-js  
+  class=""
+  server="tencent"
+  type="playlist"
+  id="8062553743"
+  fixed='true'
+  autoplay='false'
+  theme='#42b983'
+  loop='all'
+  order='random'
+  preload='auto'
+  volume='0.7'
+  list-folded='true'
+>
+</meting-js>
+<!-- https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js -->
+<script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
+  
+
+  
+    <script src="/js/firework.js"></script>
+  
+
+  
 </body>
 </html>

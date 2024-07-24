@@ -1,0 +1,20 @@
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1009;
+}
+.progress-bar-container .scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  visibility: hidden;
+  z-index: 1007;
+  background: #ea404a;
+}
+.progress-bar-container .scroll-progress-bar.hide {
+  display: none !important;
+}

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>远程传输文件的命令 | WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="运维、开发," />
+  
+
+  <meta name="description" content="前言若干年前，我曾对面试者问出过一个类似的问题：有哪些远程传输文件的命令？ 他的回答令我非常意外：  答：使用rz或sz  我：如果没有xshell之类的软件呢？  答：那就下载一个  我：emmmm…….，还有其他命令么？  答：不会了  我：emmmm…….   虽然标题里的千千万有些夸张，但跨主机传输文件的命令可是真不少的。下面就来介绍些我曾经用过的那些文件传输命令吧！ 脚本语言也可以很多脚">
+<meta property="og:type" content="article">
+<meta property="og:title" content="远程传输文件的命令">
+<meta property="og:url" content="https://wlg.us.kg/2023/commands-for-transferring-files-remotely/index.html">
+<meta property="og:site_name" content="WLG">
+<meta property="og:description" content="前言若干年前，我曾对面试者问出过一个类似的问题：有哪些远程传输文件的命令？ 他的回答令我非常意外：  答：使用rz或sz  我：如果没有xshell之类的软件呢？  答：那就下载一个  我：emmmm…….，还有其他命令么？  答：不会了  我：emmmm…….   虽然标题里的千千万有些夸张，但跨主机传输文件的命令可是真不少的。下面就来介绍些我曾经用过的那些文件传输命令吧！ 脚本语言也可以很多脚">
+<meta property="og:locale">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a442d384196b42c3b524e9370d4257de~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9fc6649305b454f9adc3e15bac88b85~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/580beee7afa24228aea52d00b922b191~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp">
+<meta property="article:published_time" content="2023-03-10T02:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-11T22:00:41.849Z">
+<meta property="article:author" content="wlg">
+<meta property="article:tag" content="运维、开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a442d384196b42c3b524e9370d4257de~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <i class="icon-text"></i>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80%E4%B9%9F%E5%8F%AF%E4%BB%A5"><span class="toc-number">2.</span> <span class="toc-text">脚本语言也可以</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-number">2.1.</span> <span class="toc-text">Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP"><span class="toc-number">2.2.</span> <span class="toc-text">PHP</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E7%9A%84-nc"><span class="toc-number">3.</span> <span class="toc-text">鲜为人知的 nc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%91%E5%90%AC%E7%AB%AF%E5%8F%A3"><span class="toc-number">3.1.</span> <span class="toc-text">监听端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE"><span class="toc-number">3.2.</span> <span class="toc-text">发送数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-number">3.3.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E7%BB%88%E7%AB%AF%E8%BD%AF%E4%BB%B6%E4%B8%AD%E7%9A%84rz-%E5%92%8C-sz"><span class="toc-number">4.</span> <span class="toc-text">虚拟终端软件中的rz 和 sz</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rz-%E5%91%BD%E4%BB%A4"><span class="toc-number">4.1.</span> <span class="toc-text">rz 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sz-%E5%91%BD%E4%BB%A4"><span class="toc-number">4.2.</span> <span class="toc-text">sz 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="toc-number">4.3.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84sftp%E5%92%8Cftp"><span class="toc-number">5.</span> <span class="toc-text">传统的sftp和ftp</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text">上传文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6"><span class="toc-number">5.2.</span> <span class="toc-text">下载文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E5%87%BA"><span class="toc-number">5.3.</span> <span class="toc-text">退出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="toc-number">5.4.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E4%B8%93%E4%B8%80%E7%9A%84scp"><span class="toc-number">6.</span> <span class="toc-text">功能专一的scp</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%8A%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%E5%88%B0%E8%BF%9C%E7%A8%8B"><span class="toc-number">6.1.</span> <span class="toc-text">把本地文件复制到远程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%8A%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%8A%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="toc-number">6.2.</span> <span class="toc-text">把远程机器上的文件复制到本地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E7%9B%AE%E5%BD%95%E4%BD%BF%E7%94%A8-r"><span class="toc-number">6.3.</span> <span class="toc-text">上传目录使用-r</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-3"><span class="toc-number">6.4.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E9%87%8F%E5%90%8C%E6%AD%A5%E7%9A%84%E7%A5%9E%EF%BC%9Arsync"><span class="toc-number">7.</span> <span class="toc-text">增量同步的神：rsync</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%B8%A6%E4%BB%BB%E4%BD%95%E9%80%89%E9%A1%B9"><span class="toc-number">7.1.</span> <span class="toc-text">不带任何选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="toc-number">7.2.</span> <span class="toc-text">同步文件类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7"><span class="toc-number">7.3.</span> <span class="toc-text">同步文件属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E5%91%BD%E4%BB%A4"><span class="toc-number">7.4.</span> <span class="toc-text">复合命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C"><span class="toc-number">7.5.</span> <span class="toc-text">用户体验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%90%8C%E6%AD%A5%E7%AD%96%E7%95%A5"><span class="toc-number">7.6.</span> <span class="toc-text">控制同步策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3"><span class="toc-number">9.</span> <span class="toc-text">参考文档</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+    
+<div class="progress-bar-container">
+    <span id="scroll-progress-bar" class="scroll-progress-bar"></span>
+  </div>
+
+<article id="post-2023/commands-for-transferring-files-remotely" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">远程传输文件的命令</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-clock"></i>
+        <span>2023.03.10</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
+  </span>
+
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+            <i class="icon-eye"></i>
+           <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>若干年前，我曾对面试者问出过一个类似的问题：有哪些远程传输文件的命令？</p>
+<p>他的回答令我非常意外：</p>
+<ul>
+<li><p>答：使用<code>rz</code>或<code>sz</code></p>
+</li>
+<li><p>我：如果没有<code>xshell</code>之类的软件呢？</p>
+</li>
+<li><p>答：那就下载一个</p>
+</li>
+<li><p>我：emmmm…….，还有其他命令么？</p>
+</li>
+<li><p>答：不会了</p>
+</li>
+<li><p>我：emmmm…….</p>
+</li>
+</ul>
+<p>虽然标题里的千千万有些夸张，但跨主机传输文件的命令可是真不少的。下面就来介绍些我曾经用过的那些文件传输命令吧！</p>
+<h2 id="脚本语言也可以"><a href="#脚本语言也可以" class="headerlink" title="脚本语言也可以"></a>脚本语言也可以</h2><p>很多脚本语言都可以临时启动一个<code>http server</code>。于是我们便可以通过浏览器来下载一些文件</p>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p><code>Python</code>可以临时启动一个<code>http server</code>来提供文件访问</p>
+<p><strong>Python 2</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m SimpleHTTPServer 8000</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>Python 3</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python3 -m http.server 8000</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>通过浏览器我们就可以看到目录可以进行下载</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a442d384196b42c3b524e9370d4257de~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp"></p>
+<h3 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h3><p>启动<code>php</code>内置的服务器之后，虽然我们没有办法通过浏览器来浏览目录，但可以直接通过浏览器下载文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">php -S 0.0.0.0:8000</span> </span><br><span class="line">[Mon Feb 20 15:04:35 2023] PHP 7.4.27 Development Server (http://0.0.0.0:8000) started</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h2 id="鲜为人知的-nc"><a href="#鲜为人知的-nc" class="headerlink" title="鲜为人知的 nc"></a>鲜为人知的 <code>nc</code></h2><p><code>nc</code>是<code>netcat</code>的简写，有着网络界的瑞士军刀美誉。因为它短小精悍、功能实用，被设计为一个简单、可靠的网络工具</p>
+<p>很多人只知道<code>nc</code>可以用来探测端口是否打开，功能和<code>telnet</code>类似</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nc -v 192.168.199.226 1001</span></span><br><span class="line">nc: connectx to 192.168.199.226 port 1001 (tcp) failed: Connection refused</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nc -v 192.168.199.226 1000</span></span><br><span class="line">Connection to 192.168.199.226 port 1000 [tcp/cadlock2] succeeded!</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>但不知道<code>nc</code>也可以进行端口监听！利用<code>nc</code>端口监听的功能我们就可以实现文件传输</p>
+<h3 id="监听端口"><a href="#监听端口" class="headerlink" title="监听端口"></a>监听端口</h3><p>在目标机器上监听端口，并使用管道输出到某文件。注意：下面的<code>-l</code>是小写的<code>L</code>，不是数字<code>1</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nc -l 1000 &gt; dst/main.go</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h3><p>在本地机器上执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nc -v 192.168.199.226 1000 &lt; <span class="built_in">source</span>/main.go</span></span><br><span class="line">Connection to 192.168.199.226 port 1000 [tcp/cadlock2] succeeded!</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><code>source/main.go</code>就被传输到了<code>192.168.199.226</code>的机器上，并且文件名为<code>dst/main.go</code></p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a><strong>说明</strong></h3><p><code>nc</code>进行文件传输，功能非常简陋，能做的事情不多，但不失为没有其他命令时的应急方案</p>
+<p>上面两种方式只能上传或者下载文件，下面来介绍些既可以上传又可以下载的玩法</p>
+<h2 id="虚拟终端软件中的rz-和-sz"><a href="#虚拟终端软件中的rz-和-sz" class="headerlink" title="虚拟终端软件中的rz 和 sz"></a>虚拟终端软件中的<code>rz</code> 和 <code>sz</code></h2><p>当我们使用虚拟终端软件，如Xshell、SecureCRT或PuTTY来连接远程服务器后，可以使用<code>rz</code>或<code>sz</code>来上传下载文件</p>
+<h3 id="rz-命令"><a href="#rz-命令" class="headerlink" title="rz 命令"></a><code>rz</code> 命令</h3><p>使用<code>rz</code>命令可以上传本地文件到远程服务器。运行该命令会弹出一个文件选择窗口，从本地选择文件上传到Linux服务器</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9fc6649305b454f9adc3e15bac88b85~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp"></p>
+<h3 id="sz-命令"><a href="#sz-命令" class="headerlink" title="sz 命令"></a><code>sz</code> 命令</h3><p>将选定的文件发送到本地机器。运行该命令会弹出一个文件选择窗口，从Linux服务器发送到本地（保存的目录是可以配置）</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/580beee7afa24228aea52d00b922b191~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp"></p>
+<h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h3><p><code>rz</code>命令与<code>sz</code>命令常用在虚拟终端软件中，如果是在两台<code>linux</code>直接传输文件，往往是不可行的</p>
+<h2 id="传统的sftp和ftp"><a href="#传统的sftp和ftp" class="headerlink" title="传统的sftp和ftp"></a>传统的<code>sftp</code>和<code>ftp</code></h2><p><code>sftp</code>与<code>ftp</code>有着几乎一样的语法和功能，<code>sftp</code>是一个独立的<code>SSH</code>封装协议包，通过安全连接以相似的方式工作。这意味着只要目标端启动了<code>sshd服务器</code>就可以使用<code>sftp</code>，而且是一种安全传输文件的方式，因此我更推荐你使用<code>sftp</code></p>
+<p>要连接到远程 sftp 服务器，如下建立一个安全 SSH 连接并创建 SFTP 会话：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sftp wentao@192.168.199.151</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>登录到远程主机后，你可以如下运行交互式的 sFTP 命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash"><span class="built_in">ls</span> -al  <span class="comment"># 展示远程主机文件列表</span></span></span><br><span class="line">drwxr-xr-x    6 wentao   wheel         192 Feb 19 18:35 .</span><br><span class="line">drwxrwxrwt   13 root     wheel         416 Feb 19 18:26 ..</span><br><span class="line">-rw-r--r--    1 wentao   wheel          73 Feb 19 18:35 main.go</span><br><span class="line">drwxr-xr-x    6 wentao   wheel         192 Feb 19 18:35 sub</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash"><span class="built_in">pwd</span> <span class="comment"># 远程主机当前路径</span></span></span><br><span class="line">Remote working directory: /private/tmp/dst</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash">lls -al <span class="comment"># 展示本地主机文件列表</span></span></span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x  6 wentao  wheel  192 Feb 19 16:54 .</span><br><span class="line">drwxrwxrwt  9 root    wheel  288 Feb 19 18:29 ..</span><br><span class="line">-rw-r--r--  1 wentao  wheel    0 Feb 19 18:30 a</span><br><span class="line">-rw-r--r--  1 wentao  wheel   73 Feb 19 18:30 main.go</span><br><span class="line">drwxr-xr-x  6 wentao  wheel  192 Feb 19 18:25 sub</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash">lpwd <span class="comment"># 本地主机当前路径</span></span></span><br><span class="line">Local working directory: /private/tmp/source</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a><strong>上传文件</strong></h3><p>把本地当前路径下的<code>main.go</code>上传到远程主机当前路径</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash">put main.go</span></span><br><span class="line">Uploading main.go to /private/tmp/dst/main.go</span><br><span class="line">main.go</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>把本地当前路径下的<code>main.go</code>上传到远程主机当前路径，并命名成<code>a.go</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash">put main.go a.go</span></span><br><span class="line">Uploading main.go to /private/tmp/dst/a.go</span><br><span class="line">main.go</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a><strong>下载文件</strong></h3><p>把远程主机当前路径下的<code>main.go</code>下载到本地当前路径</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash">get main.go</span></span><br><span class="line">Fetching /private/tmp/dst/main.go to main.go</span><br><span class="line">main.go</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>依旧可以自定义名字</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash">get main.go a.go</span></span><br><span class="line">Fetching /private/tmp/dst/main.go to a.go</span><br><span class="line">main.go</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><p>退出<code>sftp</code> shell可以输入 <code>!</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sftp&gt; </span><span class="language-bash">!</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h3><p>还有许多图形界面甚至是语言SDK支持<code>sftp</code>，它的目标不仅仅是传输文件，是历史非常悠久的文件管理协议</p>
+<h2 id="功能专一的scp"><a href="#功能专一的scp" class="headerlink" title="功能专一的scp"></a>功能专一的<code>scp</code></h2><p><code>scp</code>消耗资源少，功能专一，并且加密传输，可以说是最常用的跨主机复制命令。</p>
+<p>和<code>cp</code>的命令相似，<code>scp</code>的使用非常简单</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp [参数] [原路径] [目标路径]</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第一个路径是原路径，第二个是目标路，两者都可以是远程机器</li>
+<li>路径：<code>ssh</code>命令一样，使用<code>@</code>符分割用户名和ip，同时使用<code>:</code>连接目标目录</li>
+</ul>
+<h3 id="把本地文件复制到远程"><a href="#把本地文件复制到远程" class="headerlink" title="把本地文件复制到远程"></a>把本地文件复制到远程</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">scp <span class="built_in">source</span>/main.go wentao@192.168.199.151:/tmp/dst/</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="把远程机器上的文件复制到本地"><a href="#把远程机器上的文件复制到本地" class="headerlink" title="把远程机器上的文件复制到本地"></a>把远程机器上的文件复制到本地</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">scp wentao@192.168.199.151:/tmp/dst/main.go <span class="built_in">source</span>/</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传目录使用-r"><a href="#上传目录使用-r" class="headerlink" title="上传目录使用-r"></a>上传目录使用<code>-r</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">scp -r <span class="built_in">source</span>/* wentao@192.168.199.151:/tmp/dst/</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a><strong>说明</strong></h3><p><code>scp</code>在小文件场景下确实得心应手，但面对大文件或者网络不好需要续传的场景，<code>scp</code>的效率就会受到较大的影响了。此时就是另一个命令的大显身手的时候了。</p>
+<h2 id="增量同步的神：rsync"><a href="#增量同步的神：rsync" class="headerlink" title="增量同步的神：rsync"></a>增量同步的神：<code>rsync</code></h2><p><code>rsync</code>是一种快速且非常通用的文件复制工具。它使用增量传输算法，该算法仅发送源文件和目标文件之间的差异以减少网络发送的数据量。所以它广泛用于备份和镜像，或作为日常使用的拷贝命令</p>
+<h3 id="不带任何选项"><a href="#不带任何选项" class="headerlink" title="不带任何选项"></a>不带任何选项</h3><p>我们可以使用<code>rsync</code>进行本地复制</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rsync main.go wentao@192.168.199.151:/tmp/dst</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>或者把本地文件复制到远程。和<code>ssh</code>命令一样，使用<code>@</code>符分割用户名和ip，同时使用<code>:</code>连接目标目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rsync main.go wentao@192.168.199.151:/tmp/dst</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>或者把远程机器上的文件复制到本地</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rsync wentao@192.168.199.151:/tmp/source/main.go /tmp/dst</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>只要目的端的文件内容和源端不一样，并且对<strong>源文件</strong>的读权限，对目标路径有写权限，就会触发数据同步，<code>rsync</code>就能确保目的端文件同步到和源端一致。（⚠️ 注意是同步文件）</p>
+<p>✨【quick check】<code>rsync</code>很聪明，它对两边时间戳和文件大小一致的文件将不会采取更新动作。但聪明有时也反被聪明误，如果目的端文件的时间戳、大小和源端完全一致，但是内容恰巧不一致时，<code>rsync</code>是发现不了的</p>
+<p>✨【modify time】<code>rsync</code>不会同步文件的modify time，凡是有数据同步的文件，目的端的文件的modify time总是会被修改为最新时刻的时间</p>
+<p>✨【rwx权限】<code>rsync</code>不会关注目的端文件的rwx权限，如果目的端没有此文件，那么权限会保持与源端一致；如果目的端有此文件，则权限不会随着源端变更</p>
+<p>✨【用户和组】<code>rsync</code>只能以登陆目的端的账号来创建文件，它没有能力保持目的端文件的用户和用户组和源端一致。(除非你使用root权限，才有资格要求用户一致、用户组一致)</p>
+<p>✨【删除策略】<code>rsync</code>只确保源目录（使用<code>-r</code>，下文会讲）的所有内容都复制到目标目录，并且不会删除目标目录的文件</p>
+<h3 id="同步文件类型"><a href="#同步文件类型" class="headerlink" title="同步文件类型"></a>同步文件类型</h3><p><strong>🌲 <code>-r</code> , <code>--recursive</code>：同步文件夹</strong></p>
+<p>当我们不加选项的同步一个文件夹时，<code>rsync</code>会跳过其中的文件夹，仅同步文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">跳过了<span class="built_in">source</span>中的sub文件夹</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync -v <span class="built_in">source</span>/*  wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">skipping directory source/sub</span><br><span class="line">a</span><br><span class="line">main.go</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">连<span class="built_in">source</span>都跳过了</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"> rsync -v <span class="built_in">source</span>  wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">skipping directory source</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>加上<code>-r</code>选项，指示需要递归所有文件夹一起同步</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync -vr <span class="built_in">source</span>  wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">building file list ... done</span><br><span class="line">source/a</span><br><span class="line">source/main.go</span><br><span class="line">source/sub/</span><br><span class="line">source/sub/c</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>🌲 <code>-l</code>, <code>--links</code>：同步软链接文件</strong></p>
+<p>如果我们要同步一个软链接文件，你猜<code>rsync</code>会提示什么？</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ll <span class="built_in">source</span>/</span></span><br><span class="line">total 0</span><br><span class="line">lrwxr-xr-x  1 wentao  wheel     9B Feb 18 21:19 d -&gt; outsync/d</span><br><span class="line">-rw-r--r--  1 wentao  wheel     0B Feb 18 20:08 main.go</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync <span class="built_in">source</span>/d  wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">skipping non-regular file &quot;d&quot;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>你猜对了，<code>rsync</code>又无情了拒绝了我们。它一旦发现某个文件是软链接，就会无视它，除非我们增加<code>-l</code>选项。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync -l <span class="built_in">source</span>/d  wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>使用了<code>-l</code>选项后，<code>rsync</code>会完全保持软链接文件类型，原原本本的将<strong>软链接文件</strong>复制到目的端，而不会“follow link”到指向的实体文件。</p>
+<p>示例中，虽然软链接文件被同步过去了，但因为软连接指向的文件并没有，所以自然会提示<code>No such file or directory</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">wentao@192.168.199.151</span></span><br><span class="line">➜  dst ll</span><br><span class="line">total 0</span><br><span class="line">-rw-r--r--  1 wentao  wheel     0B Feb 18 20:35 a</span><br><span class="line">-rw-r--r--  1 wentao  wheel     0B Feb 18 20:24 b</span><br><span class="line">lrwxr-xr-x  1 wentao  wheel     9B Feb 18 21:20 d -&gt; outsync/d</span><br><span class="line"></span><br><span class="line">➜  dst cat d</span><br><span class="line">cat: d: No such file or directory</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>如果我偏偏就想让<code>rsync</code>采取”follow link”的方式，那就用<code>-L</code>选项就可以了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync -vv -L <span class="built_in">source</span>/d  wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>此时目标端已经不再时软连接文件了，而是实体文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">➜  dst ll</span><br><span class="line">total 0</span><br><span class="line">-rw-r--r--  1 wentao  wheel     0B Feb 18 20:35 a</span><br><span class="line">-rw-r--r--  1 wentao  wheel     0B Feb 18 20:24 b</span><br><span class="line">-rw-r--r--  1 wentao  wheel     0B Feb 18 21:34 d</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>🌲 <code>--devices</code>：同步块设备文件</strong></p>
+<p>块设备也能被同步，但前提是目标端使用<code>super-user</code>用户传输</p>
+<p><strong>🌲 <code>--specials</code>：同步特殊文件</strong></p>
+<p>特殊文件主要包含着命名<code>sockets</code>和<code>fifos</code></p>
+<h3 id="同步文件属性"><a href="#同步文件属性" class="headerlink" title="同步文件属性"></a>同步文件属性</h3><p><strong>🌲 <code>-p</code>, <code>--perms</code>：同步权限</strong></p>
+<p>还记得无选项时提到的rwx权限么？</p>
+<ul>
+<li><p>如果目的端没有此文件，那么在同步后会将目的端文件的权限保持与源端一致</p>
+</li>
+<li><p>如果目的端已存在此文件，那么只会同步文件内容，权限保持原有不变</p>
+</li>
+</ul>
+<p>如果你使用了<code>-p</code>选项，则无论如何，<code>rsync</code>都会让目的端保持与源端的权限一致的</p>
+<p><strong>🌲 <code>-t</code>, <code>--times</code>：同步修改时间</strong></p>
+<p>还记得无选项时提到的modify time么？<code>rsync</code>不会同步文件的modify time，凡是有数据同步的文件，目的端的文件的modify time总是会被修改为最新时刻的时间</p>
+<p>如果你使用了<code>-t</code>选项，则无论如何，<code>rsync</code>都会让目的端保持与源端的修改时间一致的</p>
+<p><strong>🌲 <code>-g</code>, <code>--group</code>：同步文件用户组</strong></p>
+<p><strong>🌲 <code>-o</code>, <code>--owner</code>：同步文件用户</strong></p>
+<p>还记得无选项时提到的用户和组么？<code>rsync</code>只能以登陆目的端的账号来创建文件，它没有能力保持目的端文件的用户和用户组和源端一致</p>
+<p>这两个选项是一对，用来保持文件的属组(group)和属主(owner)，作用应该很清晰明了。不过要注意的一点是，改变属主和属组，往往只有管理员权限才可以</p>
+<h3 id="复合命令"><a href="#复合命令" class="headerlink" title="复合命令"></a>复合命令</h3><p><strong>🌲<code>-a</code>, <code>--archive</code>: <code>-rlptgoD</code></strong></p>
+<p><code>-a</code>选项，就相当于使用了<code>-rlptgoD</code>这一坨选项，以一敌七。(在看了前文之后，你应该可以很轻松的理解这七个选项的作用了)</p>
+<ul>
+<li><code>-r</code> , <code>--recursive</code>：同步文件夹</li>
+<li><code>-l</code>, <code>--links</code>：同步软链接文件</li>
+<li><code>-p</code>, <code>--perms</code>：同步权限</li>
+<li><code>-t</code>, <code>--times</code>：同步修改时间</li>
+<li><code>-g</code>, <code>--group</code>：同步文件用户组</li>
+<li><code>-o</code>, <code>--owner</code>：同步文件用户</li>
+<li><code>-D</code>: 等同于 <code>--devices --specials</code><ul>
+<li><code>--devices</code>：同步块设备文件</li>
+<li><code>--specials</code>：同步特殊文件</li>
+</ul>
+</li>
+</ul>
+<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><p><strong>🌲<code>-v</code>, <code>--verbose</code>：展示日志信息</strong></p>
+<p>这个选项简单易懂，就是让<code>rsync</code>输出更多的信息，我们可以举一个例子：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync -v main.go wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">main.go</span><br><span class="line"></span><br><span class="line">sent 84 bytes  received 42 bytes  252.00 bytes/sec</span><br><span class="line">total size is 0  speedup is 0.00</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>增加越多的<code>v</code>，就可以获得越多的日志信息。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync -vvvv main.go wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">cmd= machine=192.168.199.151 user=wentao path=/tmp/dst</span><br><span class="line">cmd[0]=ssh cmd[1]=-l cmd[2]=wentao cmd[3]=192.168.199.151 cmd[4]=rsync cmd[5]=--server cmd[6]=-vvvv cmd[7]=. cmd[8]=/tmp/dst</span><br><span class="line">opening connection using ssh -l wentao 192.168.199.151 rsync --server -vvvv . /tmp/dst</span><br><span class="line">(Server) Protocol versions: remote=29, negotiated=29</span><br><span class="line">(Client) Protocol versions: remote=29, negotiated=29</span><br><span class="line">[sender] make_file(main.go,*,2)</span><br><span class="line">server_recv(2) starting pid=3420</span><br><span class="line">[sender] i=0 &lt;NULL&gt; main.go mode=0100644 len=0 flags=0</span><br><span class="line">send_file_list done</span><br><span class="line">...</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>🌲 <code>-n, --dry-run</code>：不实际执行</strong></p>
+<p>如果担心执行删除等危险操作时误操作，可以使用<code>-n</code>进行测试</p>
+<p>加上<code>-n</code>之后并不会真正执行同步，与<code>-v</code>搭配则会展示<code>rsync</code>要如何操作每一个文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync -n -v --delete -r <span class="built_in">source</span>/ wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">building file list ... done</span><br><span class="line">deleting b</span><br><span class="line">a</span><br><span class="line">main.go</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="控制同步策略"><a href="#控制同步策略" class="headerlink" title="控制同步策略"></a>控制同步策略</h3><p><strong>🌲 <code>-I</code>, <code>--ignore-times</code>：不使用quick check</strong></p>
+<p>还记得无选项时提到的<strong>quick check</strong>么？<code>rsync</code>会忽略两边时间戳和文件大小一致的文件，以提高传输速度，但有时却会产生问题</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rsync -I <span class="built_in">source</span>/main.go  wentao@192.168.199.151:/tmp/dst</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>✨ <code>-I</code>选项会让<code>rsync</code>变得很乖很老实，它会挨个文件去发起数据同步</p>
+<p>✨ <code>-I</code>选项可以确保数据的一致性，代价便是速度上会变慢，因为我们放弃了“quick check”策略</p>
+<p><strong>🌲 <code>--delete</code>：删除目标的文件</strong></p>
+<p>还记得无选项时提到的<strong>删除策略</strong>么？如果在源端删除了某文件，目的端是不会被删除的</p>
+<p>当使用了 <code>--delete</code>之后，如果源端没有此文件，那么发送方也别想拥有，删除之。(如果你使用这个选项，就必须搭配<code>-r</code>选项一起)</p>
+<p><strong>🌲 <code>-z</code>, <code>--compress</code>：压缩传输</strong></p>
+<p>这是个压缩选项，只要使用了这个选项，<code>rsync</code>就会把发向对端的数据先进行压缩再传输，从而减小数据量</p>
+<p>对于网络环境较差的情况下建议使用</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过介绍的内容占比大家也可以看出来，我最爱的命令是<code>rsync</code>，但我并不是所有场景都使用它</p>
+<p>我最常用的其实是<code>scp</code>。首先它非常简单，消耗资源少，而且大部分linux发行版都自带这个命令</p>
+<p>但当要传输非常大或者非常多的文件，或者网络环境不太好的时候，我更喜欢<code>rsync</code>。它使用增量同步的方案，支持压缩，因此传输非常快，而且断线之后还可以续传</p>
+<p>当主机上没有这两个命令时，我才会尝试使用 <code>sfpt</code>、<code>nc</code>、或者脚本语言等方式</p>
+<p>你还知道哪些跨主机文件传输的命令或者方式呢？欢迎评论区留言讨论～</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a href="https://link.juejin.cn/?target=http://roclinux.cn/?p=2643" title="http://roclinux.cn/?p=2643">《rsync同步的艺术》–linux命令五分钟系列之四十二</a></li>
+<li><a href="https://link.juejin.cn/?target=https://linux.die.net/man/1/rsync" title="https://linux.die.net/man/1/rsync">rsync(1) - Linux man page</a></li>
+<li><a href="https://link.juejin.cn/?target=https://linux.die.net/man/1/sftp" title="https://linux.die.net/man/1/sftp">sftp(1) - Linux man page</a></li>
+<li><a href="https://link.juejin.cn/?target=https://linux.die.net/man/1/nc" title="https://linux.die.net/man/1/nc">nc(1) - Linux man page</a></li>
+</ul>
+
+    
+  </div>
+
+</article>
+
+
+    
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/img/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/img/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2024/humanity/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2023/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C%EF%BC%8C%E5%A7%8B%E4%BA%8E%E5%8F%91%E5%BF%83/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

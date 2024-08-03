@@ -46,7 +46,7 @@
   box-sizing: border-box;
   padding: 10px 6px;
   font-size: 1rem;
-  background: #fff;
+  background: var(--bg-color);
 }
 .article-copyright-info-container::after {
   position: absolute;

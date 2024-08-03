@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
-
-  <html class="light page-home">
-
+<!-- <html class="page-home"> -->
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -16,9 +15,9 @@
   
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="WLG">
+<meta property="og:title" content="WBlog">
 <meta property="og:url" content="https://wlg.us.kg/index.html">
-<meta property="og:site_name" content="WLG">
+<meta property="og:site_name" content="WBlog">
 <meta property="og:locale">
 <meta property="article:author" content="wlg">
 <meta name="twitter:card" content="summary">
@@ -50,11 +49,17 @@
   
 
   
-  <div class="content-home text-center">
+  <!-- <div class="home-button">
+    <a id="theme-color">
+    <i class="icon-sun"></i>
+    </a>
+</div> -->
+
+<div class="content-home text-center">
   <a class="avatar" href="/">
     <img src="/img/avatar.jpg" alt="" />
   </a>
-  <h1 class="name" style="font-family: calligraffittiregular">
+  <h1 class="name" style="font-family:Pacifico-Regular;font-size: 2rem">
     WLG
   </h1>
   <div class="slogan" id="slogan">
@@ -88,13 +93,6 @@
     
       <li class="item">
         
-          <a href="/page">工具</a>
-        
-        <span>|</span>
-      </li>
-    
-      <li class="item">
-        
           <a href="/project">项目</a>
         
         <span>|</span>
@@ -114,7 +112,7 @@
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <script type="text/javascript">
   jinrishici.load(function(result) {
-    slogan.innerHTML = '「'+result.data.content + '」<br>【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+    slogan.innerHTML = '「'+result.data.content + '」<br> -【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
     document.getElementById("slogan").value = slogan;
 });
 </script>

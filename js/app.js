@@ -12,6 +12,8 @@
   var $modalDialog = document.getElementById('modal-dialog');
   var scrollTop = 0;
   var tocTop = 20;
+  var $themeColor = document.getElementById('theme-color');
+
 
   (function init() {
     if ($backTop) {
@@ -29,6 +31,17 @@
       scrollTop > 180 ? Util.addClass($toc, 'fixed') : Util.removeClass($toc, 'fixed');
     }
 
+    if ($themeColor){
+      $themeColor.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        isDark ? enableLightMode() : enableDarkMode();
+        if (!isDark){
+          localStorage.setItem('darkModeEnabled', true);
+        }else {
+          localStorage.removeItem('darkModeEnabled');
+        }
+      });
+    }
 
 
   }());
@@ -36,8 +49,14 @@
   // 禁用鼠标右键
   document.oncontextmenu = function() { return false; };
 
-
   document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('darkModeEnabled') === 'true') {
+      document.body.classList.add('dark-mode');
+      $themeColor.getElementsByTagName('i')[0].className = 'icon-moon';
+    }else {
+      document.body.classList.add('light-mode');
+      $themeColor.getElementsByTagName('i')[0].className = 'icon-sun';
+    }
     FastClick.attach(document.body);
   }, false);
 
@@ -220,6 +239,18 @@
     Util.removeClass($modalDialog, 'show-dialog');
     Util.addClass($cover, 'hide')
     Util.removeClass($cover, 'show');
+  }
+
+  function enableLightMode() {
+    document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
+    $themeColor.getElementsByTagName('i')[0].className = 'icon-sun';
+  }
+
+  function enableDarkMode() {
+    document.body.classList.remove('light-mode');
+    document.body.classList.add('dark-mode');
+    $themeColor.getElementsByTagName('i')[0].className = 'icon-moon';
   }
 
 }());

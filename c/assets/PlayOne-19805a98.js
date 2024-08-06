@@ -1,0 +1,1 @@
+import{P as o,Q as e}from"./index-53a858b2.js";const i=o("play-one",!0,(function(o){return e("svg",{width:o.size,height:o.size,viewBox:"0 0 48 48",fill:"none"},[e("path",{d:"M15 24V11.8756L25.5 17.9378L36 24L25.5 30.0622L15 36.1244V24Z",fill:o.colors[1],stroke:o.colors[0],"stroke-width":o.strokeWidth,"stroke-linejoin":o.strokeLinejoin},null)])}));export{i as P};

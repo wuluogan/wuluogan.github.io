@@ -4,6 +4,7 @@
   margin-right: 20px;
   top: 200px;
   font-size: 13px;
+  color: var(--title-color);
 }
 .toc-article.fixed {
   position: fixed;
@@ -25,10 +26,10 @@
   font-weight: bold;
 }
 .toc-article a {
-  color: #888;
+  color: var(--text-color);
 }
 .toc-article a:hover {
-  color: #06f;
+  color: var(--theme-color);
 }
 @media screen and (max-width: 1023px) {
   .toc-article {

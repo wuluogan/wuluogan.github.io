@@ -37,7 +37,7 @@ hr {
   font-size: 16px;
   font-weight: 200;
   margin: 20px 0;
-  color: var(--text-color);
+  color: var(--title-color);
 }
 .content-home .nav {
   color: #bbb;
@@ -50,7 +50,7 @@ hr {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--title-color);
   transition-duration: 0.5s;
   transition-propety: background-color;
 }

@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   var $html = document.documentElement;
@@ -25,19 +25,19 @@
       var tocHeight = parseInt(window.getComputedStyle($toc)['height'], 10);
       var winHeight = document.documentElement.clientHeight;
       if (tocHeight + 20 > winHeight) {
-          return;
+        return;
       }
       scrollTop = $body.scrollTop || $html.scrollTop;
       scrollTop > 180 ? Util.addClass($toc, 'fixed') : Util.removeClass($toc, 'fixed');
     }
 
-    if ($themeColor){
+    if ($themeColor) {
       $themeColor.addEventListener('click', () => {
         const isDark = document.body.classList.contains('dark-mode');
         isDark ? enableLightMode() : enableDarkMode();
-        if (!isDark){
+        if (!isDark) {
           localStorage.setItem('darkModeEnabled', true);
-        }else {
+        } else {
           localStorage.removeItem('darkModeEnabled');
         }
       });
@@ -47,15 +47,17 @@
   }());
 
   // 禁用鼠标右键
-  document.oncontextmenu = function() { return false; };
+  document.oncontextmenu = function () { return false; };
 
-  document.addEventListener('DOMContentLoaded', function() {
-    if (localStorage.getItem('darkModeEnabled') === 'true') {
-      document.body.classList.add('dark-mode');
-      $themeColor.getElementsByTagName('i')[0].className = 'icon-moon';
-    }else {
-      document.body.classList.add('light-mode');
-      $themeColor.getElementsByTagName('i')[0].className = 'icon-sun';
+  document.addEventListener('DOMContentLoaded', function () {
+    if ($themeColor) {
+      if (localStorage.getItem('darkModeEnabled') === 'true') {
+        document.body.classList.add('dark-mode');
+        $themeColor.getElementsByTagName('i')[0].className = 'icon-moon';
+      } else {
+        document.body.classList.add('light-mode');
+        $themeColor.getElementsByTagName('i')[0].className = 'icon-sun';
+      }
     }
     FastClick.attach(document.body);
   }, false);
@@ -69,15 +71,15 @@
   });
 
   // toc and backTop
-  Util.bind(window, 'scroll', function() {
+  Util.bind(window, 'scroll', function () {
     scrollTop = $body.scrollTop || $html.scrollTop;
     if ($toc) {
       var tocHeight = parseInt(window.getComputedStyle($toc)['height'], 10);
       var winHeight = document.documentElement.clientHeight;
       if (tocHeight + 20 > winHeight) {
-          return;
+        return;
       }
-      
+
       scrollTop > 180 ? Util.addClass($toc, 'fixed') : Util.removeClass($toc, 'fixed');
     }
 
@@ -95,7 +97,7 @@
   });
 
   if ($backTop) {
-    Util.bind($backTop, 'click', function() {
+    Util.bind($backTop, 'click', function () {
       zenscroll.to($body)
     });
   }
@@ -105,8 +107,8 @@
     var $tocLinks = document.querySelectorAll('.toc-link');
     var links = Array.prototype.slice.call($tocLinks);
 
-    links.forEach(function(element) {
-      Util.bind(element, 'click', function(e) {
+    links.forEach(function (element) {
+      Util.bind(element, 'click', function (e) {
         var $target = document.getElementById(this.hash.substring(1));
         zenscroll.to($target)
         e.preventDefault();
@@ -115,7 +117,7 @@
   }
 
   if ($toolboxMobile) {
-    Util.bind($toolboxMobile, 'click', function() {
+    Util.bind($toolboxMobile, 'click', function () {
       Util.addClass($modalDialog, 'show-dialog')
       Util.removeClass($modalDialog, 'hide-dialog');
 
@@ -130,9 +132,9 @@
 
 
   if (location.pathname === '/search/') {
-    Util.request('GET', '/search.json', function(data) {
+    Util.request('GET', '/search.json', function (data) {
       var $inputSearch = document.getElementById('input-search');
-      Util.bind($inputSearch, 'keyup', function() {
+      Util.bind($inputSearch, 'keyup', function () {
         var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
 
         if (this.value.trim().length <= 0) {
@@ -151,12 +153,12 @@
   function filterPosts(data, keywords) {
     var results = [];
 
-    data.forEach(function(item) {
+    data.forEach(function (item) {
       var isMatch = false;
       var matchKeyWords = [];
       item.content = item.content.replace(/<[^>]*>/g, '');
 
-      keywords.forEach(function(word) {
+      keywords.forEach(function (word) {
         var reg = new RegExp(word, 'i');
         var indexTitle = item.title.search(reg);
         var indexContent = item.content.search(reg);
@@ -178,7 +180,7 @@
 
   function createInnerHTML(results) {
     var content = '';
-    results.forEach(function(item) {
+    results.forEach(function (item) {
       var postContent;
       postContent = highlightText(item.content, item.matchKeyWords);
       postContent = getPreviewContent(postContent, item.matchKeyWords);
@@ -200,7 +202,7 @@
   function getPreviewContent(content, matchKeyWords) {
     var isMatch = false;
     var index = 0;
-    matchKeyWords.forEach(function(word) {
+    matchKeyWords.forEach(function (word) {
       var reg = new RegExp(word, 'i');
       index = content.search(reg);
       if (index < 0) {
@@ -225,7 +227,7 @@
 
   function highlightText(text, matchKeyWords) {
     text = text.replace(/<[^>]*>/g, '');
-    matchKeyWords.forEach(function(word) {
+    matchKeyWords.forEach(function (word) {
       var reg = new RegExp('(' + word + ')', 'ig');
       text = text.replace(reg, '<span class="color-hightlight">$1</span>');
     });

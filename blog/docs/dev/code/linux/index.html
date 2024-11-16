@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<!-- <html class="page-post"> -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="WLG,WBlog,博客,Java,Nodejs,JavaScript" />
+  
+
+  <meta name="description" content="软件服务v2rayAhttps:&#x2F;&#x2F;github.com&#x2F;v2rayA&#x2F;v2rayAhttps:&#x2F;&#x2F;v2raya.org&#x2F;docs v2rayA 的功能依赖于 V2Ray 内核，因此需要安装内核。 安装 V2Ray 内核 &#x2F; Xray 内核#V2Ray &#x2F; Xray 的官方脚本#V2Ray 安装参考：https:&#x2F;&#x2F;github.com&#x2F;v2fly&#x2F;fhs-install-v2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WBlog">
+<meta property="og:url" content="https://wlg.us.kg/blog/docs/dev/code/linux/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="软件服务v2rayAhttps:&#x2F;&#x2F;github.com&#x2F;v2rayA&#x2F;v2rayAhttps:&#x2F;&#x2F;v2raya.org&#x2F;docs v2rayA 的功能依赖于 V2Ray 内核，因此需要安装内核。 安装 V2Ray 内核 &#x2F; Xray 内核#V2Ray &#x2F; Xray 的官方脚本#V2Ray 安装参考：https:&#x2F;&#x2F;github.com&#x2F;v2fly&#x2F;fhs-install-v2">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-07-11T22:00:41.849Z">
+<meta property="article:modified_time" content="2024-07-11T22:00:41.849Z">
+<meta property="article:author" content="wlg">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <i class="icon-text"></i>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.</span> <span class="toc-text">服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#v2rayA"><span class="toc-number">2.1.</span> <span class="toc-text">v2rayA</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-V2Ray-%E5%86%85%E6%A0%B8-x2F-Xray-%E5%86%85%E6%A0%B8"><span class="toc-number">3.</span> <span class="toc-text">安装 V2Ray 内核 &#x2F; Xray 内核</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#V2Ray-x2F-Xray-%E7%9A%84%E5%AE%98%E6%96%B9%E8%84%9A%E6%9C%AC"><span class="toc-number">3.1.</span> <span class="toc-text">V2Ray &#x2F; Xray 的官方脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v2rayA-%E6%8F%90%E4%BE%9B%E7%9A%84%E9%95%9C%E5%83%8F%E8%84%9A%E6%9C%AC%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">v2rayA 提供的镜像脚本（推荐）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-v2rayA"><span class="toc-number">4.</span> <span class="toc-text">安装 v2rayA</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%AE%89%E8%A3%85"><span class="toc-number">4.1.</span> <span class="toc-text">方法一：通过软件源安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="toc-number">4.1.1.</span> <span class="toc-text">添加公钥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-V2RayA-%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="toc-number">4.1.2.</span> <span class="toc-text">添加 V2RayA 软件源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-V2RayA"><span class="toc-number">4.1.3.</span> <span class="toc-text">安装 V2RayA</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85-deb-%E5%8C%85"><span class="toc-number">4.2.</span> <span class="toc-text">方法二：手动安装 deb 包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-v2rayA-x2F-%E8%AE%BE%E7%BD%AE-v2rayA-%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8"><span class="toc-number">5.</span> <span class="toc-text">启动 v2rayA &#x2F; 设置 v2rayA 自动启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%87%E6%8D%A2-iptables-%E4%B8%BA-iptables-nft"><span class="toc-number">6.</span> <span class="toc-text">切换 iptables 为 iptables-nft</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+    
+<div class="progress-bar-container">
+    <span id="scroll-progress-bar" class="scroll-progress-bar"></span>
+  </div>
+
+<article id="post-docs/dev/code/linux" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-clock"></i>
+        <span>2024.07.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+            <i class="icon-eye"></i>
+           <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><h3 id="v2rayA"><a href="#v2rayA" class="headerlink" title="v2rayA"></a>v2rayA</h3><p><a target="_blank" rel="noopener" href="https://github.com/v2rayA/v2rayA">https://github.com/v2rayA/v2rayA</a><br><a target="_blank" rel="noopener" href="https://v2raya.org/docs">https://v2raya.org/docs</a></p>
+<p>v2rayA 的功能依赖于 V2Ray 内核，因此需要安装内核。</p>
+<h2 id="安装-V2Ray-内核-x2F-Xray-内核"><a href="#安装-V2Ray-内核-x2F-Xray-内核" class="headerlink" title="安装 V2Ray 内核 &#x2F; Xray 内核#"></a>安装 V2Ray 内核 &#x2F; Xray 内核<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E5%AE%89%E8%A3%85-v2ray-%E5%86%85%E6%A0%B8--xray-%E5%86%85%E6%A0%B8">#</a></h2><h3 id="V2Ray-x2F-Xray-的官方脚本"><a href="#V2Ray-x2F-Xray-的官方脚本" class="headerlink" title="V2Ray &#x2F; Xray 的官方脚本#"></a>V2Ray &#x2F; Xray 的官方脚本<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#v2ray--xray-%E7%9A%84%E5%AE%98%E6%96%B9%E8%84%9A%E6%9C%AC">#</a></h3><p>V2Ray 安装参考：<a target="_blank" rel="noopener" href="https://github.com/v2fly/fhs-install-v2ray">https://github.com/v2fly/fhs-install-v2ray</a></p>
+<p>Xray 安装参考：<a target="_blank" rel="noopener" href="https://github.com/XTLS/Xray-install">https://github.com/XTLS/Xray-install</a></p>
+<h3 id="v2rayA-提供的镜像脚本（推荐）"><a href="#v2rayA-提供的镜像脚本（推荐）" class="headerlink" title="v2rayA 提供的镜像脚本（推荐）#"></a>v2rayA 提供的镜像脚本（推荐）<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#v2raya-%E6%8F%90%E4%BE%9B%E7%9A%84%E9%95%9C%E5%83%8F%E8%84%9A%E6%9C%AC%E6%8E%A8%E8%8D%90">#</a></h3><p><code>curl -Ls https://mirrors.v2raya.org/go.sh | sudo bash</code> </p>
+<p>安装后可以关掉服务，因为 v2rayA 不依赖于该 systemd 服务。</p>
+<p><code>sudo systemctl disable v2ray --now ### Xray 需要替换服务为 xray</code> </p>
+<h2 id="安装-v2rayA"><a href="#安装-v2rayA" class="headerlink" title="安装 v2rayA#"></a>安装 v2rayA<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E5%AE%89%E8%A3%85-v2raya">#</a></h2><h3 id="方法一：通过软件源安装"><a href="#方法一：通过软件源安装" class="headerlink" title="方法一：通过软件源安装#"></a>方法一：通过软件源安装<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E6%96%B9%E6%B3%95%E4%B8%80%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%AE%89%E8%A3%85">#</a></h3><h4 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥#"></a>添加公钥<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5">#</a></h4><p><code>wget -qO - https://apt.v2raya.org/key/public-key.asc | sudo tee /etc/apt/trusted.gpg.d/v2raya.asc</code> </p>
+<h4 id="添加-V2RayA-软件源"><a href="#添加-V2RayA-软件源" class="headerlink" title="添加 V2RayA 软件源#"></a>添加 V2RayA 软件源<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E6%B7%BB%E5%8A%A0-v2raya-%E8%BD%AF%E4%BB%B6%E6%BA%90">#</a></h4><p><code>echo &quot;deb https://apt.v2raya.org/ v2raya main&quot; | sudo tee /etc/apt/sources.list.d/v2raya.list sudo apt update</code> </p>
+<h4 id="安装-V2RayA"><a href="#安装-V2RayA" class="headerlink" title="安装 V2RayA#"></a>安装 V2RayA<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E5%AE%89%E8%A3%85-v2raya-1">#</a></h4><p><code>sudo apt install v2raya</code> </p>
+<h3 id="方法二：手动安装-deb-包"><a href="#方法二：手动安装-deb-包" class="headerlink" title="方法二：手动安装 deb 包#"></a>方法二：手动安装 deb 包<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85-deb-%E5%8C%85">#</a></h3><p><a target="_blank" rel="noopener" href="https://github.com/v2rayA/v2rayA/releases">下载 deb 包</a> 后可以使用 Gdebi、QApt 等图形化工具来安装，也可以使用命令行：</p>
+<p><code>sudo apt install /path/download/installer_debian_xxx_vxxx.deb ### 自行替换 deb 包所在的实际路径</code> </p>
+<h2 id="启动-v2rayA-x2F-设置-v2rayA-自动启动"><a href="#启动-v2rayA-x2F-设置-v2rayA-自动启动" class="headerlink" title="启动 v2rayA &#x2F; 设置 v2rayA 自动启动#"></a>启动 v2rayA &#x2F; 设置 v2rayA 自动启动<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E5%90%AF%E5%8A%A8-v2raya--%E8%AE%BE%E7%BD%AE-v2raya-%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8">#</a></h2><blockquote>
+<p>从 1.5 版开始将不再默认为用户启动 v2rayA 及设置开机自动。</p>
+</blockquote>
+<ul>
+<li><p>启动 v2rayA</p>
+<p>  <code>sudo systemctl start v2raya.service</code> </p>
+</li>
+<li><p>设置开机自动启动</p>
+<p>  <code>sudo systemctl enable v2raya.service</code></p>
+</li>
+</ul>
+<h2 id="切换-iptables-为-iptables-nft"><a href="#切换-iptables-为-iptables-nft" class="headerlink" title="切换 iptables 为 iptables-nft#"></a>切换 iptables 为 iptables-nft<a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/installation/debian/#%E5%88%87%E6%8D%A2-iptables-%E4%B8%BA-iptables-nft">#</a></h2><p>对于 Debian11 用户来说，iptables 已被弃用。使用 nftables 作为 iptables 的后端以进行适配：</p>
+<p><code>update-alternatives --set iptables /usr/sbin/iptables-nft update-alternatives --set ip6tables /usr/sbin/ip6tables-nft update-alternatives --set arptables /usr/sbin/arptables-nft update-alternatives --set ebtables /usr/sbin/ebtables-nft</code> </p>
+<p>如果你想切换回 legacy 版本：</p>
+<p><code>update-alternatives --set iptables /usr/sbin/iptables-legacy update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy update-alternatives --set arptables /usr/sbin/arptables-legacy update-alternatives --set ebtables /usr/sbin/ebtables-legacy</code> </p>
+<p>切换后重启即可。</p>
+
+    
+  </div>
+
+</article>
+
+
+    
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/img/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/img/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/blog/docs/dev/code/mac/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/blog/docs/dev/code/delay-queue-scheme/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+<a id="theme-color" class="theme-color">
+<i class="icon-sun"></i>
+</a>
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

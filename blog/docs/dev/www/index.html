@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<!-- <html class="page-post"> -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="WLG,WBlog,博客,Java,Nodejs,JavaScript" />
+  
+
+  <meta name="description" content="开发前端JSNode.js 方法参数查询 Npm 包查询 https:&#x2F;&#x2F;www.npmjs.com&#x2F; 电影&#x2F;电视剧&#x2F;动漫&#x2F;纪录片&#x2F;短片：https:&#x2F;&#x2F;www.mini4k.com&#x2F;（影视最常用网址）https:&#x2F;&#x2F;www.btnull.org&#x2F; （影视最常用网址，但是现在不让注册，需要账号私聊老师）https:&#x2F;&#x2F;www.xinjuc.com&#x2F;2：高清网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WBlog">
+<meta property="og:url" content="https://wlg.us.kg/blog/docs/dev/www/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="开发前端JSNode.js 方法参数查询 Npm 包查询 https:&#x2F;&#x2F;www.npmjs.com&#x2F; 电影&#x2F;电视剧&#x2F;动漫&#x2F;纪录片&#x2F;短片：https:&#x2F;&#x2F;www.mini4k.com&#x2F;（影视最常用网址）https:&#x2F;&#x2F;www.btnull.org&#x2F; （影视最常用网址，但是现在不让注册，需要账号私聊老师）https:&#x2F;&#x2F;www.xinjuc.com&#x2F;2：高清网">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-07-11T22:00:41.861Z">
+<meta property="article:modified_time" content="2024-07-11T22:00:41.861Z">
+<meta property="article:author" content="wlg">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <i class="icon-text"></i>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91"><span class="toc-number">1.</span> <span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF"><span class="toc-number">1.1.</span> <span class="toc-text">前端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JS"><span class="toc-number">1.1.1.</span> <span class="toc-text">JS</span></a></li></ol></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+    
+<div class="progress-bar-container">
+    <span id="scroll-progress-bar" class="scroll-progress-bar"></span>
+  </div>
+
+<article id="post-docs/dev/www" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-clock"></i>
+        <span>2024.07.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+            <i class="icon-eye"></i>
+           <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><p><a target="_blank" rel="noopener" href="https://www.nodeapp.cn/">Node.js 方法参数查询</a></p>
+<p>Npm 包查询 <a target="_blank" rel="noopener" href="https://www.npmjs.com/">https://www.npmjs.com/</a></p>
+<p><strong>电影</strong>&#x2F;电视剧&#x2F;动漫&#x2F;纪录片&#x2F;短片：<br><a target="_blank" rel="noopener" href="https://www.mini4k.com/%EF%BC%88%E5%BD%B1%E8%A7%86%E6%9C%80%E5%B8%B8%E7%94%A8%E7%BD%91%E5%9D%80%EF%BC%89">https://www.mini4k.com/（影视最常用网址）</a><br><a target="_blank" rel="noopener" href="https://www.btnull.org/">https://www.btnull.org/</a> （影视最常用网址，但是现在不让注册，需要账号私聊老师）<br><a target="_blank" rel="noopener" href="https://www.xinjuc.com/">https://www.xinjuc.com/</a><br>2：高清网 <a target="_blank" rel="noopener" href="https://m1080.com/">https://m1080.com/</a><br>3：磁力狗 <a target="_blank" rel="noopener" href="http://clg5.net/?from=clg5.co%EF%BC%88%E5%BD%B1%E8%A7%86%E6%9C%80%E5%B8%B8%E7%94%A8%E7%BD%91%E5%9D%80%EF%BC%89">http://clg5.net/?from=clg5.co（影视最常用网址）</a><br><a target="_blank" rel="noopener" href="http://www.xiepp.cc/">http://www.xiepp.cc/</a>   （下片片）<br><a target="_blank" rel="noopener" href="https://www.dacaer.com/%EF%BC%88%E7%BE%8E%E5%89%A7%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%EF%BC%89">https://www.dacaer.com/（美剧下载网站）</a><br><a target="_blank" rel="noopener" href="http://www.yinfans.me/">www.yinfans.me</a>  （音范丝4K）<br><a target="_blank" rel="noopener" href="http://www.pdoro.com/">www.pdoro.com</a><br><a target="_blank" rel="noopener" href="http://www.ibtba.cc/">www.ibtba.cc</a><br><a target="_blank" rel="noopener" href="http://www.ktt2048.com/">www.ktt2048.com</a>  (看天堂）<br><a target="_blank" rel="noopener" href="https://www.1080its.com/">https://www.1080its.com/</a><br><a target="_blank" rel="noopener" href="http://www.taiyingshi.vip/">http://www.taiyingshi.vip/</a><br><a target="_blank" rel="noopener" href="https://www.z2py.com/">https://www.z2py.com/</a>      （片源网）<br><a target="_blank" rel="noopener" href="https://www.hanfan.cc/hanju">https://www.hanfan.cc/hanju</a><br><a target="_blank" rel="noopener" href="http://www.nydylt.com/">http://www.nydylt.com/</a> （印度电影专区）</p>
+<p>自动分句网址：<br><a target="_blank" rel="noopener" href="https://www.23bei.com/">https://www.23bei.com/</a></p>
+<p>背景音乐下载网址（所有版权都可以下载）</p>
+<p><a target="_blank" rel="noopener" href="https://www.yeyulingfeng.com/tools/music/">https://www.yeyulingfeng.com/tools/music/</a></p>
+<p>下载封面图片网址</p>
+<p><a target="_blank" rel="noopener" href="http://www.mtime.com/">http://www.mtime.com/</a><br><a target="_blank" rel="noopener" href="https://movie.douban.com/">https://movie.douban.com/</a></p>
+<p>纪录片网址：<br><a target="_blank" rel="noopener" href="https://www.135world.com/">https://www.135world.com/</a><br><a target="_blank" rel="noopener" href="https://gaoqing.fm/">https://gaoqing.fm</a><br><a target="_blank" rel="noopener" href="https://www.135world.com/">https://www.135world.com/</a><br><a target="_blank" rel="noopener" href="https://www.xitongle.com/">https://www.xitongle.com</a><br><a target="_blank" rel="noopener" href="http://www.daofire.com/">http://www.daofire.com</a><br><a target="_blank" rel="noopener" href="https://www.xitongle.com/">https://www.xitongle.com/</a><br><a target="_blank" rel="noopener" href="https://www.993dy.com/">https://www.993dy.com/</a><br><a target="_blank" rel="noopener" href="https://www.yinfans.me/">https://www.yinfans.me/</a><br><a target="_blank" rel="noopener" href="https://ciligou.app/">https://ciligou.app</a><br><a target="_blank" rel="noopener" href="https://www.mini4k.com/">https://www.mini4k.com/</a><br><a target="_blank" rel="noopener" href="https://www.hiaxj.com/">https://www.hiaxj.com/</a><br><a target="_blank" rel="noopener" href="https://www.4kii.com/forum-39-1.html">https://www.4kii.com/forum-39-1.html</a></p>
+<p>历史网站素材<br><a target="_blank" rel="noopener" href="http://baike.qulishi.com/zt/v329586/3/">http://baike.qulishi.com/zt/v329586/3/</a><br><a target="_blank" rel="noopener" href="https://www.allhistory.com/">https://www.allhistory.com/</a><br><a target="_blank" rel="noopener" href="http://www.3233.cn/">http://www.3233.cn/</a><br><a target="_blank" rel="noopener" href="http://www.y1984.com/index.html">http://www.y1984.com/index.html</a></p>
+<p>大案要案素材<br><a target="_blank" rel="noopener" href="https://tv.cctv.com/lm/tianwang/">https://tv.cctv.com/lm/tianwang/</a></p>
+<p>体育素材<br><a target="_blank" rel="noopener" href="https://tv.cctv.com/?t=1458823140501">https://tv.cctv.com/?t=1458823140501</a></p>
+<p>【影视动漫资源】<br><a target="_blank" rel="noopener" href="https://www.btnull.org/">https://www.btnull.org</a> (片库网 最常用 资源全更新快）<br><a target="_blank" rel="noopener" href="http://www.kkkob.com/">http://www.kkkob.com</a>（爱看搜索 网盘资源）<br><a target="_blank" rel="noopener" href="http://www.678gwy.com/">http://www.678gwy.com</a>（678 解说网 除了片源还附带解说文案作为参考）<br><a target="_blank" rel="noopener" href="https://www.xinjuc.com/">https://www.xinjuc.com</a>（新剧场 百度网盘资源多）<br><a target="_blank" rel="noopener" href="https://www.axjbd.com/">https://www.axjbd.com</a> （爱笑聚 付费）<br><a target="_blank" rel="noopener" href="https://www.domp4.cc/">https://www.domp4.cc</a> （MP4 电影 资源全 ）<br><a target="_blank" rel="noopener" href="https://www.993dy.com/">https://www.993dy.com</a>（lol 电影天堂 资源全）<br><a target="_blank" rel="noopener" href="https://www.dytt89.com/">https://www.dytt89.com/</a> （电影天堂）<br><a target="_blank" rel="noopener" href="https://www.haopanyou.net/">https://www.haopanyou.net</a>（好盘友 付费）<br><a target="_blank" rel="noopener" href="https://www.dyg5.com/">https://www.dyg5.com</a>（电影港）<br><a target="_blank" rel="noopener" href="https://www.yinfans.me/">https://www.yinfans.me/</a> （音范丝）<br><a target="_blank" rel="noopener" href="https://www.acgndog.com/">https://www.acgndog.com/</a> （次元狗动漫）<br><a target="_blank" rel="noopener" href="https://www.z2py.com/">https://www.z2py.com/</a> （最爱片源网）<br><a target="_blank" rel="noopener" href="https://www.ygdy8.net/index.html">https://www.ygdy8.net/index.html</a> （阳光电影）<br><a target="_blank" rel="noopener" href="http://www.xiepp.cc/">http://www.xiepp.cc/</a> （下片网）<br><a target="_blank" rel="noopener" href="http://clg6.site/">http://clg6.site/</a> （磁力狗）<br><a target="_blank" rel="noopener" href="https://www.hanfan.cc/">https://www.hanfan.cc/</a> （韩饭网 韩剧 韩国综艺 体育 娱乐新闻）<br><a target="_blank" rel="noopener" href="https://www.ljmovie.com/">https://www.ljmovie.com/</a> （蓝鲸电影 日韩欧美）<br><a target="_blank" rel="noopener" href="http://www.languangdy.com/">http://www.languangdy.com/</a> （蓝光电影网）<br><a target="_blank" rel="noopener" href="https://www.ostmovie.net/">https://www.ostmovie.net/</a> （无字幕电影网）<br><a target="_blank" rel="noopener" href="http://www.pdoro.com/">http://www.pdoro.com/</a> （pdoro 电影网）<br><a target="_blank" rel="noopener" href="http://www.bugutv.org/">http://www.bugutv.org/</a> (布谷 TV 4K 素材）<br><a target="_blank" rel="noopener" href="http://www.hkb123.com/">http://www.hkb123.com/</a> （好恐怖电影网 里边有泰剧 微电影 冷门剧等）<br><a target="_blank" rel="noopener" href="https://yyets.dmesg.app/home">https://yyets.dmesg.app/home</a> （人人影视分享站）<br><a target="_blank" rel="noopener" href="https://www.mini4k.com/">https://www.mini4k.com/</a> （迷客电影）<br><a target="_blank" rel="noopener" href="http://www.zhanxixi.com/">http://www.zhanxixi.com/</a> （西西电影论坛）<br><a target="_blank" rel="noopener" href="https://www.piaohua.com/">https://www.piaohua.com/</a> （飘花资源网）<br><a target="_blank" rel="noopener" href="http://hanjumi.cc/">http://hanjumi.cc/</a> （韩剧迷）</p>
+
+    
+  </div>
+
+</article>
+
+
+    
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/img/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/img/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/blog/docs/dev/book/java-manual/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/blog/docs/dev/mysql/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+<a id="theme-color" class="theme-color">
+<i class="icon-sun"></i>
+</a>
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

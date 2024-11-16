@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<!-- <html class="page-post"> -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="WLG,WBlog,博客,Java,Nodejs,JavaScript" />
+  
+
+  <meta name="description" content="OllamaOllama 简介Ollama 是一个基于 Go 语言开发的可以本地运行大模型的开源框架。 官网：ollama.com&#x2F; GitHub 地址：github.com&#x2F;ollama&#x2F;olla… Ollama 安装下载安装 Ollama在 Ollama 官网根据操作系统类型选择对应的安装包，这里选择 macOS 下载安装。   安装完在终端输入 ollama，可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WBlog">
+<meta property="og:url" content="https://wlg.us.kg/blog/docs/dev/ai/ollama/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="OllamaOllama 简介Ollama 是一个基于 Go 语言开发的可以本地运行大模型的开源框架。 官网：ollama.com&#x2F; GitHub 地址：github.com&#x2F;ollama&#x2F;olla… Ollama 安装下载安装 Ollama在 Ollama 官网根据操作系统类型选择对应的安装包，这里选择 macOS 下载安装。   安装完在终端输入 ollama，可">
+<meta property="og:locale">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dbef1a2271b74236a4cb51a1044b72c9~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=830&h=482&s=44027&e=png&b=fefefe">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e5248bbc5af4784a8b46e4790245dd1~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=800&h=1000&s=46771&e=png&b=ffffff">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/742f79528327446d88bbdb19c3f21508~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1532&h=1422&s=295205&e=png&b=fefefe">
+<meta property="article:published_time" content="2024-07-11T22:00:41.857Z">
+<meta property="article:modified_time" content="2024-07-11T22:00:41.857Z">
+<meta property="article:author" content="wlg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dbef1a2271b74236a4cb51a1044b72c9~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=830&h=482&s=44027&e=png&b=fefefe">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <i class="icon-text"></i>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ollama"><span class="toc-number">1.</span> <span class="toc-text">Ollama</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ollama-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">Ollama 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ollama-%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">Ollama 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85-Ollama"><span class="toc-number">1.2.1.</span> <span class="toc-text">下载安装 Ollama</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">下载大模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D"><span class="toc-number">1.3.</span> <span class="toc-text">终端对话</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4-x2F"><span class="toc-number">1.3.1.</span> <span class="toc-text">显示帮助命令-&#x2F;?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%9E%8B%E4%BF%A1%E6%81%AF%E5%91%BD%E4%BB%A4-x2F-show"><span class="toc-number">1.3.2.</span> <span class="toc-text">显示模型信息命令-&#x2F;show</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%9E%8B%E8%AF%A6%E6%83%85%E5%91%BD%E4%BB%A4-x2F-show-info"><span class="toc-number">1.3.3.</span> <span class="toc-text">显示模型详情命令-&#x2F;show info</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-%E8%B0%83%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">API 调用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#generate"><span class="toc-number">1.4.1.</span> <span class="toc-text">generate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chat"><span class="toc-number">1.4.2.</span> <span class="toc-text">chat</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web-UI"><span class="toc-number">1.5.</span> <span class="toc-text">Web UI</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+    
+<div class="progress-bar-container">
+    <span id="scroll-progress-bar" class="scroll-progress-bar"></span>
+  </div>
+
+<article id="post-docs/dev/ai/ollama" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-clock"></i>
+        <span>2024.07.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+            <i class="icon-eye"></i>
+           <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="Ollama"><a href="#Ollama" class="headerlink" title="Ollama"></a>Ollama</h1><h2 id="Ollama-简介"><a href="#Ollama-简介" class="headerlink" title="Ollama 简介"></a>Ollama 简介</h2><p>Ollama 是一个基于 Go 语言开发的可以本地运行大模型的开源框架。</p>
+<p>官网：<a href="https://link.juejin.cn/?target=https://ollama.com/">ollama.com&#x2F;</a></p>
+<p>GitHub 地址：<a href="https://link.juejin.cn/?target=https://github.com/ollama/ollama">github.com&#x2F;ollama&#x2F;olla…</a></p>
+<h2 id="Ollama-安装"><a href="#Ollama-安装" class="headerlink" title="Ollama 安装"></a>Ollama 安装</h2><h3 id="下载安装-Ollama"><a href="#下载安装-Ollama" class="headerlink" title="下载安装 Ollama"></a>下载安装 Ollama</h3><p>在 Ollama 官网根据操作系统类型选择对应的安装包，这里选择 macOS 下载安装。 <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dbef1a2271b74236a4cb51a1044b72c9~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=830&h=482&s=44027&e=png&b=fefefe" alt="Ollama下载"> </p>
+<p>安装完在终端输入 ollama，可以看到 ollama 支持的命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码Usage:</span><br><span class="line">  ollama [flags]</span><br><span class="line">  ollama [<span class="built_in">command</span>]</span><br><span class="line"></span><br><span class="line">Available Commands:</span><br><span class="line">  serve       Start ollama</span><br><span class="line">  create      Create a model from a Modelfile</span><br><span class="line">  show        Show information <span class="keyword">for</span> a model</span><br><span class="line">  run         Run a model</span><br><span class="line">  pull        Pull a model from a registry</span><br><span class="line">  push        Push a model to a registry</span><br><span class="line">  list        List models</span><br><span class="line">  <span class="built_in">cp</span>          Copy a model</span><br><span class="line">  <span class="built_in">rm</span>          Remove a model</span><br><span class="line">  <span class="built_in">help</span>        Help about any <span class="built_in">command</span></span><br><span class="line"></span><br><span class="line">Flags:</span><br><span class="line">  -h, --<span class="built_in">help</span>      <span class="built_in">help</span> <span class="keyword">for</span> ollama</span><br><span class="line">  -v, --version   Show version information</span><br><span class="line"></span><br><span class="line">Use <span class="string">&quot;ollama [command] --help&quot;</span> <span class="keyword">for</span> more information about a <span class="built_in">command</span>.</span><br></pre></td></tr></table></figure>
+
+<p>查看 ollama 版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码ollama -v</span><br><span class="line">ollama version is 0.1.31</span><br></pre></td></tr></table></figure>
+
+<p>查看已下载模型</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码ollama list</span><br><span class="line"></span><br><span class="line">NAME    	ID          	SIZE  	MODIFIED    </span><br><span class="line">gemma:2b	b50d6c999e59	1.7 GB	3 hours ago</span><br></pre></td></tr></table></figure>
+
+<p>我本地已经有一个大模型，接下来我们看一下怎么下载大模型。</p>
+<h3 id="下载大模型"><a href="#下载大模型" class="headerlink" title="下载大模型"></a>下载大模型</h3><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e5248bbc5af4784a8b46e4790245dd1~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=800&h=1000&s=46771&e=png&b=ffffff" alt="下载模型"></p>
+<p>安装完后默认提示安装 llama2 大模型，下面是 Ollama 支持的部分模型</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Parameters</th>
+<th>Size</th>
+<th>Download</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Llama 3</td>
+<td>8B</td>
+<td>4.7GB</td>
+<td><code>ollama run llama3</code></td>
+</tr>
+<tr>
+<td>Llama 3</td>
+<td>70B</td>
+<td>40GB</td>
+<td><code>ollama run llama3:70b</code></td>
+</tr>
+<tr>
+<td>Mistral</td>
+<td>7B</td>
+<td>4.1GB</td>
+<td><code>ollama run mistral</code></td>
+</tr>
+<tr>
+<td>Dolphin Phi</td>
+<td>2.7B</td>
+<td>1.6GB</td>
+<td><code>ollama run dolphin-phi</code></td>
+</tr>
+<tr>
+<td>Phi-2</td>
+<td>2.7B</td>
+<td>1.7GB</td>
+<td><code>ollama run phi</code></td>
+</tr>
+<tr>
+<td>Neural Chat</td>
+<td>7B</td>
+<td>4.1GB</td>
+<td><code>ollama run neural-chat</code></td>
+</tr>
+<tr>
+<td>Starling</td>
+<td>7B</td>
+<td>4.1GB</td>
+<td><code>ollama run starling-lm</code></td>
+</tr>
+<tr>
+<td>Code Llama</td>
+<td>7B</td>
+<td>3.8GB</td>
+<td><code>ollama run codellama</code></td>
+</tr>
+<tr>
+<td>Llama 2 Uncensored</td>
+<td>7B</td>
+<td>3.8GB</td>
+<td><code>ollama run llama2-uncensored</code></td>
+</tr>
+<tr>
+<td>Llama 2 13B</td>
+<td>13B</td>
+<td>7.3GB</td>
+<td><code>ollama run llama2:13b</code></td>
+</tr>
+<tr>
+<td>Llama 2 70B</td>
+<td>70B</td>
+<td>39GB</td>
+<td><code>ollama run llama2:70b</code></td>
+</tr>
+<tr>
+<td>Orca Mini</td>
+<td>3B</td>
+<td>1.9GB</td>
+<td><code>ollama run orca-mini</code></td>
+</tr>
+<tr>
+<td>LLaVA</td>
+<td>7B</td>
+<td>4.5GB</td>
+<td><code>ollama run llava</code></td>
+</tr>
+<tr>
+<td>Gemma</td>
+<td>2B</td>
+<td>1.4GB</td>
+<td><code>ollama run gemma:2b</code></td>
+</tr>
+<tr>
+<td>Gemma</td>
+<td>7B</td>
+<td>4.8GB</td>
+<td><code>ollama run gemma:7b</code></td>
+</tr>
+<tr>
+<td>Solar</td>
+<td>10.7B</td>
+<td>6.1GB</td>
+<td><code>ollama run solar</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Llama 3 是 Meta 2024年4月19日 开源的大语言模型，共80亿和700亿参数两个版本，Ollama均已支持。</p>
+</blockquote>
+<p>这里选择安装 gemma 2b，打开终端，执行下面命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">shell</span><br><span class="line"></span><br><span class="line">复制代码ollama run gemma:2b</span><br><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码pulling manifest </span><br><span class="line">pulling c1864a5eb193... 100% ▕██████████████████████████████████████████████████████████▏ 1.7 GB                         </span><br><span class="line">pulling 097a36493f71... 100% ▕██████████████████████████████████████████████████████████▏ 8.4 KB                         </span><br><span class="line">pulling 109037bec39c... 100% ▕██████████████████████████████████████████████████████████▏  136 B                         </span><br><span class="line">pulling 22a838ceb7fb... 100% ▕██████████████████████████████████████████████████████████▏   84 B                         </span><br><span class="line">pulling 887433b89a90... 100% ▕██████████████████████████████████████████████████████████▏  483 B                         </span><br><span class="line">verifying sha256 digest </span><br><span class="line">writing manifest </span><br><span class="line">removing any unused layers </span><br><span class="line">success </span><br></pre></td></tr></table></figure>
+
+<p>经过一段时间等待，显示模型下载完成。</p>
+<blockquote>
+<p>上表仅是 Ollama 支持的部分模型，更多模型可以在 <a href="https://link.juejin.cn/?target=https://ollama.com/library">ollama.com&#x2F;library</a> 查看，中文模型比如阿里的通义千问。</p>
+</blockquote>
+<h2 id="终端对话"><a href="#终端对话" class="headerlink" title="终端对话"></a>终端对话</h2><p>下载完成后，可以直接在终端进行对话，比如提问“介绍一下React”</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码&gt;&gt;&gt; 介绍一下React</span><br></pre></td></tr></table></figure>
+
+<p>输出内容如下：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/742f79528327446d88bbdb19c3f21508~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1532&h=1422&s=295205&e=png&b=fefefe" alt="img"></p>
+<h3 id="显示帮助命令-x2F"><a href="#显示帮助命令-x2F" class="headerlink" title="显示帮助命令-&#x2F;?"></a>显示帮助命令-&#x2F;?</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">markdown</span><br><span class="line"></span><br><span class="line">复制代码&gt;&gt;&gt; /?</span><br><span class="line">Available Commands:</span><br><span class="line">  /set            Set session variables</span><br><span class="line">  /show           Show model information</span><br><span class="line">  /load <span class="language-xml"><span class="tag">&lt;<span class="name">model</span>&gt;</span></span>   Load a session or model</span><br><span class="line">  /save <span class="language-xml"><span class="tag">&lt;<span class="name">model</span>&gt;</span></span>   Save your current session</span><br><span class="line">  /bye            Exit</span><br><span class="line">  /?, /help       Help for a command</span><br><span class="line">  /? shortcuts    Help for keyboard shortcuts</span><br><span class="line"></span><br><span class="line">Use &quot;&quot;&quot; to begin a multi-line message.</span><br></pre></td></tr></table></figure>
+
+<h3 id="显示模型信息命令-x2F-show"><a href="#显示模型信息命令-x2F-show" class="headerlink" title="显示模型信息命令-&#x2F;show"></a>显示模型信息命令-&#x2F;show</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码&gt;&gt;&gt; /show</span><br><span class="line">Available Commands:</span><br><span class="line">  /show info         Show details <span class="keyword">for</span> this model</span><br><span class="line">  /show license      Show model license</span><br><span class="line">  /show modelfile    Show Modelfile <span class="keyword">for</span> this model</span><br><span class="line">  /show parameters   Show parameters <span class="keyword">for</span> this model</span><br><span class="line">  /show system       Show system message</span><br><span class="line">  /show template     Show prompt template</span><br></pre></td></tr></table></figure>
+
+<h3 id="显示模型详情命令-x2F-show-info"><a href="#显示模型详情命令-x2F-show-info" class="headerlink" title="显示模型详情命令-&#x2F;show info"></a>显示模型详情命令-&#x2F;show info</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码&gt;&gt;&gt; /show info</span><br><span class="line">Model details:</span><br><span class="line">Family              gemma</span><br><span class="line">Parameter Size      3B</span><br><span class="line">Quantization Level  Q4_0</span><br></pre></td></tr></table></figure>
+
+<h2 id="API-调用"><a href="#API-调用" class="headerlink" title="API 调用"></a>API 调用</h2><p>除了在终端直接对话外，ollama 还可以以 API 的方式调用，比如执行 <code>ollama show --help</code> 可以看到本地访问地址为：<a href="https://link.juejin.cn/?target=http://localhost:11434">http://localhost:11434</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码ollama show --<span class="built_in">help</span></span><br><span class="line">Show information <span class="keyword">for</span> a model</span><br><span class="line"></span><br><span class="line">Usage:</span><br><span class="line">  ollama show MODEL [flags]</span><br><span class="line"></span><br><span class="line">Flags:</span><br><span class="line">  -h, --<span class="built_in">help</span>         <span class="built_in">help</span> <span class="keyword">for</span> show</span><br><span class="line">      --license      Show license of a model</span><br><span class="line">      --modelfile    Show Modelfile of a model</span><br><span class="line">      --parameters   Show parameters of a model</span><br><span class="line">      --system       Show system message of a model</span><br><span class="line">      --template     Show template of a model</span><br><span class="line"></span><br><span class="line">Environment Variables:</span><br><span class="line">      OLLAMA_HOST        The host:port or base URL of the Ollama server (e.g. http://localhost:11434)</span><br></pre></td></tr></table></figure>
+
+<p>下面介绍主要介绍两个 api ：generate 和 chat。</p>
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><ul>
+<li>流式返回</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">json</span><br><span class="line"></span><br><span class="line">复制代码curl http<span class="punctuation">:</span><span class="comment">//localhost:11434/api/generate -d &#x27;&#123;</span></span><br><span class="line">  <span class="attr">&quot;model&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;prompt&quot;</span><span class="punctuation">:</span><span class="string">&quot;介绍一下React，20字以内&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span>&#x27;</span><br><span class="line">json</span><br><span class="line"></span><br><span class="line">复制代码<span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.337192Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;React&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.421481Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot; 是&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.503852Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;一个&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.584813Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;用于&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.672575Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;构建&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.754663Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;用户&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.837639Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;界面&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.918767Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;（&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:32.998863Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;UI&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.080361Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;）&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.160418Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;的&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.239247Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot; JavaScript&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.318396Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot; 库&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.484203Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;。&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.671075Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;它&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.751622Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;允许&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.833298Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;开发者&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:33.919385Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;轻松&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.007706Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;构建&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.09201Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;可&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.174897Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;重&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.414743Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;用的&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.497013Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot; UI&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.584026Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;，&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.669825Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;并&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.749524Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;与&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.837544Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;各种&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:34.927049Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot; JavaScript&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:35.008527Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot; &quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:35.088936Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;框架&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:35.176094Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;一起&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:35.255251Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;使用&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:35.34085Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;。&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">false</span></span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;model&quot;</span><span class="punctuation">:</span><span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span><span class="string">&quot;2024-04-19T10:12:35.428575Z&quot;</span><span class="punctuation">,</span><span class="attr">&quot;response&quot;</span><span class="punctuation">:</span><span class="string">&quot;&quot;</span><span class="punctuation">,</span><span class="attr">&quot;done&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span><span class="attr">&quot;context&quot;</span><span class="punctuation">:</span><span class="punctuation">[</span><span class="number">106</span><span class="punctuation">,</span><span class="number">1645</span><span class="punctuation">,</span><span class="number">108</span><span class="punctuation">,</span><span class="number">25661</span><span class="punctuation">,</span><span class="number">18071</span><span class="punctuation">,</span><span class="number">22469</span><span class="punctuation">,</span><span class="number">235365</span><span class="punctuation">,</span><span class="number">235284</span><span class="punctuation">,</span><span class="number">235276</span><span class="punctuation">,</span><span class="number">235960</span><span class="punctuation">,</span><span class="number">179621</span><span class="punctuation">,</span><span class="number">107</span><span class="punctuation">,</span><span class="number">108</span><span class="punctuation">,</span><span class="number">106</span><span class="punctuation">,</span><span class="number">2516</span><span class="punctuation">,</span><span class="number">108</span><span class="punctuation">,</span><span class="number">22469</span><span class="punctuation">,</span><span class="number">23437</span><span class="punctuation">,</span><span class="number">5121</span><span class="punctuation">,</span><span class="number">40163</span><span class="punctuation">,</span><span class="number">81964</span><span class="punctuation">,</span><span class="number">16464</span><span class="punctuation">,</span><span class="number">57881</span><span class="punctuation">,</span><span class="number">235538</span><span class="punctuation">,</span><span class="number">5639</span><span class="punctuation">,</span><span class="number">235536</span><span class="punctuation">,</span><span class="number">235370</span><span class="punctuation">,</span><span class="number">22978</span><span class="punctuation">,</span><span class="number">185852</span><span class="punctuation">,</span><span class="number">235362</span><span class="punctuation">,</span><span class="number">236380</span><span class="punctuation">,</span><span class="number">64032</span><span class="punctuation">,</span><span class="number">227725</span><span class="punctuation">,</span><span class="number">64727</span><span class="punctuation">,</span><span class="number">81964</span><span class="punctuation">,</span><span class="number">235553</span><span class="punctuation">,</span><span class="number">235846</span><span class="punctuation">,</span><span class="number">37694</span><span class="punctuation">,</span><span class="number">13566</span><span class="punctuation">,</span><span class="number">235365</span><span class="punctuation">,</span><span class="number">236203</span><span class="punctuation">,</span><span class="number">235971</span><span class="punctuation">,</span><span class="number">34384</span><span class="punctuation">,</span><span class="number">22978</span><span class="punctuation">,</span><span class="number">235248</span><span class="punctuation">,</span><span class="number">90141</span><span class="punctuation">,</span><span class="number">19600</span><span class="punctuation">,</span><span class="number">7060</span><span class="punctuation">,</span><span class="number">235362</span><span class="punctuation">,</span><span class="number">107</span><span class="punctuation">,</span><span class="number">108</span><span class="punctuation">]</span><span class="punctuation">,</span><span class="attr">&quot;total_duration&quot;</span><span class="punctuation">:</span><span class="number">3172809302</span><span class="punctuation">,</span><span class="attr">&quot;load_duration&quot;</span><span class="punctuation">:</span><span class="number">983863</span><span class="punctuation">,</span><span class="attr">&quot;prompt_eval_duration&quot;</span><span class="punctuation">:</span><span class="number">80181000</span><span class="punctuation">,</span><span class="attr">&quot;eval_count&quot;</span><span class="punctuation">:</span><span class="number">34</span><span class="punctuation">,</span><span class="attr">&quot;eval_duration&quot;</span><span class="punctuation">:</span><span class="number">3090973000</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>非流式返回</li>
+</ul>
+<p>通过设置 “stream”: false 参数可以设置一次性返回。</p>
+<p>&#96;&#96;bash curl <a href="https://link.juejin.cn/?target=http://localhost:11434/api/generate">http://localhost:11434/api/generate</a> -d ‘{ “model”: “gemma:2b”, “prompt”:”介绍一下React，20字以内”, “stream”: false }’</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">json</span><br><span class="line"></span><br><span class="line">复制代码</span><br><span class="line">```json</span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;model&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gemma:2b&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2024-04-19T08:53:14.534085Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;response&quot;</span><span class="punctuation">:</span> <span class="string">&quot;React 是一个用于构建用户界面的大型 JavaScript 库，允许您轻松创建动态的网站和应用程序。&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;done&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;context&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">106</span><span class="punctuation">,</span> <span class="number">1645</span><span class="punctuation">,</span> <span class="number">108</span><span class="punctuation">,</span> <span class="number">25661</span><span class="punctuation">,</span> <span class="number">18071</span><span class="punctuation">,</span> <span class="number">22469</span><span class="punctuation">,</span> <span class="number">235365</span><span class="punctuation">,</span> <span class="number">235284</span><span class="punctuation">,</span> <span class="number">235276</span><span class="punctuation">,</span> <span class="number">235960</span><span class="punctuation">,</span> <span class="number">179621</span><span class="punctuation">,</span> <span class="number">107</span><span class="punctuation">,</span> <span class="number">108</span><span class="punctuation">,</span> <span class="number">106</span><span class="punctuation">,</span> <span class="number">2516</span><span class="punctuation">,</span> <span class="number">108</span><span class="punctuation">,</span> <span class="number">22469</span><span class="punctuation">,</span> <span class="number">23437</span><span class="punctuation">,</span> <span class="number">5121</span><span class="punctuation">,</span> <span class="number">40163</span><span class="punctuation">,</span> <span class="number">81964</span><span class="punctuation">,</span> <span class="number">16464</span><span class="punctuation">,</span> <span class="number">236074</span><span class="punctuation">,</span> <span class="number">26546</span><span class="punctuation">,</span> <span class="number">66240</span><span class="punctuation">,</span> <span class="number">22978</span><span class="punctuation">,</span> <span class="number">185852</span><span class="punctuation">,</span> <span class="number">235365</span><span class="punctuation">,</span> <span class="number">64032</span><span class="punctuation">,</span> <span class="number">236552</span><span class="punctuation">,</span> <span class="number">64727</span><span class="punctuation">,</span> <span class="number">22957</span><span class="punctuation">,</span> <span class="number">80376</span><span class="punctuation">,</span> <span class="number">235370</span><span class="punctuation">,</span> <span class="number">37188</span><span class="punctuation">,</span> <span class="number">235581</span><span class="punctuation">,</span> <span class="number">79826</span><span class="punctuation">,</span> <span class="number">235362</span><span class="punctuation">,</span> <span class="number">107</span><span class="punctuation">,</span> <span class="number">108</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;total_duration&quot;</span><span class="punctuation">:</span> <span class="number">1864443127</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;load_duration&quot;</span><span class="punctuation">:</span> <span class="number">2426249</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;prompt_eval_duration&quot;</span><span class="punctuation">:</span> <span class="number">101635000</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;eval_count&quot;</span><span class="punctuation">:</span> <span class="number">23</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;eval_duration&quot;</span><span class="punctuation">:</span> <span class="number">1757523000</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="chat"><a href="#chat" class="headerlink" title="chat"></a>chat</h3><ul>
+<li>流式返回</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码curl http://localhost:11434/api/chat -d <span class="string">&#x27;&#123;</span></span><br><span class="line"><span class="string">  &quot;model&quot;: &quot;gemma:2b&quot;,</span></span><br><span class="line"><span class="string">  &quot;messages&quot;: [</span></span><br><span class="line"><span class="string">    &#123; &quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;介绍一下React，20字以内&quot; &#125;</span></span><br><span class="line"><span class="string">  ]</span></span><br><span class="line"><span class="string">&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到终端输出结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制代码&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:54.86791Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;React&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:54.949168Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;是&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.034272Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;用于&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.119119Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;构建&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.201837Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;用户&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.286611Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;界面&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.37054Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot; React&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.45099Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;.&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.534105Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;js&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.612744Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;框架&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.695129Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;，&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.775357Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;允许&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.855803Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;开发者&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:55.936518Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;轻松&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:56.012203Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;地&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:56.098045Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;创建&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:56.178332Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;动态&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:56.255488Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;网页&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:56.336361Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;。&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">false</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;model&quot;</span>:<span class="string">&quot;gemma:2b&quot;</span>,<span class="string">&quot;created_at&quot;</span>:<span class="string">&quot;2024-04-19T08:45:56.415904Z&quot;</span>,<span class="string">&quot;message&quot;</span>:&#123;<span class="string">&quot;role&quot;</span>:<span class="string">&quot;assistant&quot;</span>,<span class="string">&quot;content&quot;</span>:<span class="string">&quot;&quot;</span>&#125;,<span class="string">&quot;done&quot;</span>:<span class="literal">true</span>,<span class="string">&quot;total_duration&quot;</span>:2057551864,<span class="string">&quot;load_duration&quot;</span>:568391,<span class="string">&quot;prompt_eval_count&quot;</span>:11,<span class="string">&quot;prompt_eval_duration&quot;</span>:506238000,<span class="string">&quot;eval_count&quot;</span>:20,<span class="string">&quot;eval_duration&quot;</span>:1547724000&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>默认流式返回，同样可以通过 “stream”: false 参数一次性返回。</p>
+</blockquote>
+<p>generate 和 chat 的区别在于，generate 是一次性生成的数据。chat 可以附加历史记录，多轮对话。</p>
+<h2 id="Web-UI"><a href="#Web-UI" class="headerlink" title="Web UI"></a>Web UI</h2><p>除了上面终端和 API 调用的方式，目前还有许多开源的 Web UI，可以本地搭建一个可视化的页面来实现对话，比如：</p>
+<ul>
+<li>open-webui</li>
+</ul>
+<p><a href="https://link.juejin.cn/?target=https://github.com/open-webui/open-webui">github.com&#x2F;open-webui&#x2F;…</a></p>
+<ul>
+<li>lollms-webui</li>
+</ul>
+<p><a href="https://link.juejin.cn/?target=https://github.com/ParisNeo/lollms-webui">github.com&#x2F;ParisNeo&#x2F;lo…</a></p>
+<p>通过 Ollama 本地运行大模型的学习成本已经非常低，大家有兴趣尝试本地部署一个大模型吧 🎉🎉🎉</p>
+
+    
+  </div>
+
+</article>
+
+
+    
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/img/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/img/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/blog/docs/dev/code/api/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/blog/docs/dev/api/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+<a id="theme-color" class="theme-color">
+<i class="icon-sun"></i>
+</a>
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

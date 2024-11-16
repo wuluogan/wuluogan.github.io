@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<!-- <html class="page-post"> -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="WLG,WBlog,博客,Java,Nodejs,JavaScript" />
+  
+
+  <meta name="description" content="Java算法LeetCode翻转整数给定一个 32 位有符号整数，将整数中的数字进行反转。 示例 1: 12输入: 123输出: 321  示例 2: 12输入: -123输出: -321  如果反转后整数溢出那么就返回 0。 1234567891011121314151617181920212223public class ReverseInteger &amp;#123;    public stat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WBlog">
+<meta property="og:url" content="https://wlg.us.kg/blog/docs/dev/java/java%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="Java算法LeetCode翻转整数给定一个 32 位有符号整数，将整数中的数字进行反转。 示例 1: 12输入: 123输出: 321  示例 2: 12输入: -123输出: -321  如果反转后整数溢出那么就返回 0。 1234567891011121314151617181920212223public class ReverseInteger &amp;#123;    public stat">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-07-11T22:00:41.861Z">
+<meta property="article:modified_time" content="2024-07-11T22:00:41.861Z">
+<meta property="article:author" content="wlg">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <i class="icon-text"></i>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E7%AE%97%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">Java算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LeetCode"><span class="toc-number">1.1.</span> <span class="toc-text">LeetCode</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BF%BB%E8%BD%AC%E6%95%B4%E6%95%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">翻转整数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0"><span class="toc-number">1.1.2.</span> <span class="toc-text">字符串转换整数</span></a></li></ol></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+    
+<div class="progress-bar-container">
+    <span id="scroll-progress-bar" class="scroll-progress-bar"></span>
+  </div>
+
+<article id="post-docs/dev/java/java算法" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-clock"></i>
+        <span>2024.07.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+            <i class="icon-eye"></i>
+           <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="Java算法"><a href="#Java算法" class="headerlink" title="Java算法"></a>Java算法</h1><h2 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h2><h3 id="翻转整数"><a href="#翻转整数" class="headerlink" title="翻转整数"></a>翻转整数</h3><p>给定一个 32 位有符号整数，将整数中的数字进行反转。</p>
+<p>示例 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 123</span><br><span class="line">输出: 321</span><br></pre></td></tr></table></figure>
+
+<p>示例 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: -123</span><br><span class="line">输出: -321</span><br></pre></td></tr></table></figure>
+
+<p>如果反转后整数溢出那么就返回 0。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ReverseInteger</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">123</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> -<span class="number">123</span>;</span><br><span class="line">        System.out.println(reverse(x));</span><br><span class="line">        System.out.println(reverse(y));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">reverse</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">rev</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 用于存储反转后的结果</span></span><br><span class="line">		<span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="type">int</span> <span class="variable">pop</span> <span class="operator">=</span> x % <span class="number">10</span>; <span class="comment">// 获取 x 的最后一位数字</span></span><br><span class="line">			x /= <span class="number">10</span>; <span class="comment">// 移除 x 的最后一位数字</span></span><br><span class="line"></span><br><span class="line">			<span class="comment">// 检查溢出：如果 rev &gt; Integer.MAX_VALUE/10 或 rev &lt; Integer.MIN_VALUE/10，则会溢出</span></span><br><span class="line">			<span class="keyword">if</span> (rev &gt; Integer.MAX_VALUE / <span class="number">10</span> || (rev == Integer.MAX_VALUE / <span class="number">10</span> &amp;&amp; pop &gt; Integer.MAX_VALUE % <span class="number">10</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">if</span> (rev &lt; Integer.MIN_VALUE / <span class="number">10</span> || (rev == Integer.MIN_VALUE / <span class="number">10</span> &amp;&amp; pop &lt; Integer.MIN_VALUE % <span class="number">10</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">			rev = rev * <span class="number">10</span> + pop; <span class="comment">// 将 pop 添加到 rev 的最后</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> rev; <span class="comment">// 返回反转后的整数</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这道题是 LeetCode 的第 7 题，很好的考察了 int 的基本数据类型、取余和除法运算符，以及 if 和 while 语句的使用。</p>
+<h3 id="字符串转换整数"><a href="#字符串转换整数" class="headerlink" title="字符串转换整数"></a>字符串转换整数</h3><p>请你来实现一个 parseInt 方法，使其能将字符串转换成整数。</p>
+<p>示例 1（正数）:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;42&quot;</span><br><span class="line">输出: 42</span><br></pre></td></tr></table></figure>
+
+<p>示例 2（带空格的负数）:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;   -42&quot;</span><br><span class="line">输出: -42</span><br></pre></td></tr></table></figure>
+
+<p>示例 3（带非数字的字符）:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;4193 with words&quot;</span><br><span class="line">输出: 4193</span><br></pre></td></tr></table></figure>
+
+<p>示例 4（超出 int 范围）:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;91283472332&quot;</span><br><span class="line">输出: 2147483647</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringToInteger</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="string">&quot;42&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> <span class="string">&quot;   -42&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str3</span> <span class="operator">=</span> <span class="string">&quot;4193 with words&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str4</span> <span class="operator">=</span> <span class="string">&quot;91283472332&quot;</span>;</span><br><span class="line">        System.out.println(parseInt(str1));</span><br><span class="line">        System.out.println(parseInt(str2));</span><br><span class="line">        System.out.println(parseInt(str3));</span><br><span class="line">        System.out.println(parseInt(str4));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">parseInt</span><span class="params">(String str)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 用于遍历字符串</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">sign</span> <span class="operator">=</span> <span class="number">1</span>; <span class="comment">// 用于标记正负号</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">total</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 用于存储转换后的整数</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1. 跳过前面的空格</span></span><br><span class="line">        <span class="keyword">while</span> (index &lt; str.length() &amp;&amp; str.charAt(index) == <span class="string">&#x27; &#x27;</span>) index++;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2. 检查正负号</span></span><br><span class="line">        <span class="keyword">if</span> (index &lt; str.length() &amp;&amp; (str.charAt(index) == <span class="string">&#x27;+&#x27;</span> || str.charAt(index) == <span class="string">&#x27;-&#x27;</span>)) &#123;</span><br><span class="line">            sign = str.charAt(index) == <span class="string">&#x27;+&#x27;</span> ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3. 转换数字</span></span><br><span class="line">        <span class="keyword">while</span> (index &lt; str.length()) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">digit</span> <span class="operator">=</span> str.charAt(index) - <span class="string">&#x27;0&#x27;</span>; <span class="comment">// 获取当前字符对应的数字</span></span><br><span class="line">            <span class="keyword">if</span> (digit &lt; <span class="number">0</span> || digit &gt; <span class="number">9</span>) <span class="keyword">break</span>; <span class="comment">// 如果不是数字则退出循环</span></span><br><span class="line">            <span class="comment">// 检查溢出：如果 total &gt; Integer.MAX_VALUE/10 或 total == Integer.MAX_VALUE/10 且 digit &gt; Integer.MAX_VALUE%10，则会溢出</span></span><br><span class="line">            <span class="keyword">if</span> (total &gt; Integer.MAX_VALUE / <span class="number">10</span> || (total == Integer.MAX_VALUE / <span class="number">10</span> &amp;&amp; digit &gt; Integer.MAX_VALUE % <span class="number">10</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> sign == <span class="number">1</span> ? Integer.MAX_VALUE : Integer.MIN_VALUE;</span><br><span class="line">            &#125;</span><br><span class="line">            total = total * <span class="number">10</span> + digit; <span class="comment">// 将 digit 添加到 total 的最后</span></span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> total * sign; <span class="comment">// 返回转换后的整数</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这道题是 LeetCode 的第 8 题，很好的字符与整数之间的转换，以及 if 和 while 语句的使用。超纲的内容就是字符串的处理，比如说去空格（<code>trim()</code>），比如说取字符（<code>charAt()</code>）。</p>
+
+    
+  </div>
+
+</article>
+
+
+    
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/img/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/img/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/blog/docs/dev/network/api/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/blog/docs/dev/java/java-spring/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+<a id="theme-color" class="theme-color">
+<i class="icon-sun"></i>
+</a>
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

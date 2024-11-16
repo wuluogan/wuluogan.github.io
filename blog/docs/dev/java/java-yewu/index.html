@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<!-- <html class="page-post"> -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="WLG,WBlog,博客,Java,Nodejs,JavaScript" />
+  
+
+  <meta name="description" content="Java 业务40亿QQ号，如何去重？首先我们来看看如果要存储40亿QQ号需要多少内存？我们使用无符号整数存储，一个整数需要4个字节，那么40亿需要4*4000000000&#x2F;1024&#x2F;1024&#x2F;1024≈15G，在业务中我们往往需要更多的空间。而且在Java中并不存在无符号整形，只有几个操作无符号的静态方法。  1GB &#x3D; 1024MB，1MB &#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WBlog">
+<meta property="og:url" content="https://wlg.us.kg/blog/docs/dev/java/java-yewu/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="Java 业务40亿QQ号，如何去重？首先我们来看看如果要存储40亿QQ号需要多少内存？我们使用无符号整数存储，一个整数需要4个字节，那么40亿需要4*4000000000&#x2F;1024&#x2F;1024&#x2F;1024≈15G，在业务中我们往往需要更多的空间。而且在Java中并不存在无符号整形，只有几个操作无符号的静态方法。  1GB &#x3D; 1024MB，1MB &#x3D;">
+<meta property="og:locale">
+<meta property="og:image" content="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/136da16216d740aaad774e6e4b307df4~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQkxBQ0s1OTU=:q75.awebp?rk3s=f64ab15b&x-expires=1725190610&x-signature=6JymgzxeJKJMyJ/YUPIvd+SUF1U=">
+<meta property="og:image" content="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/c9a4c2f70ba74bcea82456e0352a69b9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQkxBQ0s1OTU=:q75.awebp?rk3s=f64ab15b&x-expires=1725190610&x-signature=VutlV+tqWNlHpboeMZcJ0oKSP9o=">
+<meta property="og:image" content="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/a728b15fa9f44709af358deb75530557~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQkxBQ0s1OTU=:q75.awebp?rk3s=f64ab15b&x-expires=1725190610&x-signature=RqvNgKf4w+IvSquSXA0klC0lI7g=">
+<meta property="article:published_time" content="2024-09-08T19:59:39.149Z">
+<meta property="article:modified_time" content="2024-09-08T19:59:39.149Z">
+<meta property="article:author" content="wlg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/136da16216d740aaad774e6e4b307df4~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQkxBQ0s1OTU=:q75.awebp?rk3s=f64ab15b&x-expires=1725190610&x-signature=6JymgzxeJKJMyJ/YUPIvd+SUF1U=">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <i class="icon-text"></i>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-%E4%B8%9A%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">Java 业务</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#40%E4%BA%BFQQ%E5%8F%B7%EF%BC%8C%E5%A6%82%E4%BD%95%E5%8E%BB%E9%87%8D%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">40亿QQ号，如何去重？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bitmap"><span class="toc-number">1.1.1.</span> <span class="toc-text">Bitmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">布隆过滤器</span></a></li></ol></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+    
+<div class="progress-bar-container">
+    <span id="scroll-progress-bar" class="scroll-progress-bar"></span>
+  </div>
+
+<article id="post-docs/dev/java/java-yewu" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-clock"></i>
+        <span>2024.09.09</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+            <i class="icon-eye"></i>
+           <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="Java-业务"><a href="#Java-业务" class="headerlink" title="Java 业务"></a>Java 业务</h1><h2 id="40亿QQ号，如何去重？"><a href="#40亿QQ号，如何去重？" class="headerlink" title="40亿QQ号，如何去重？"></a>40亿QQ号，如何去重？</h2><p>首先我们来看看如果要存储40亿QQ号需要多少内存？我们使用无符号整数存储，一个整数需要4个字节，那么40亿需要4*4000000000&#x2F;1024&#x2F;1024&#x2F;1024≈15G，在业务中我们往往需要更多的空间。而且在Java中并不存在无符号整形，只有几个操作无符号的静态方法。</p>
+<blockquote>
+<p>1GB &#x3D; 1024MB，1MB &#x3D; 1024KB，1KB &#x3D; 1024B, 1B &#x3D; 8b</p>
+</blockquote>
+<p>很显然这种存储是不太优雅的，对于这种大数据量的去重，我们可以使用位图Bitmap。</p>
+<h3 id="Bitmap"><a href="#Bitmap" class="headerlink" title="Bitmap"></a>Bitmap</h3><p>Bitmap，位图，首先看它的名字，比特map，首先我们听到map，一般都有去重的功能，bitmap听名字就像使用bit存储的map。确实，位图是使用bit数组表示的，它只存储0或者1，因此我们可以把全部的QQ号放到位图中，当index位置为1时表示已经存在。</p>
+<p><img src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/136da16216d740aaad774e6e4b307df4~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQkxBQ0s1OTU=:q75.awebp?rk3s=f64ab15b&x-expires=1725190610&x-signature=6JymgzxeJKJMyJ/YUPIvd+SUF1U=" alt="image.png"></p>
+<p>假如我们要判断2924357571是否存在，那么我们只需要看index为2924357571的值是否为1，如果为1则表示已经存在。</p>
+<p>位图使用1个比特表示一个数是否存在，那么使用无符号整数表示QQ号，4字节2^32-1是4294967295，内存需要4294967295&#x2F;8&#x2F;1024&#x2F;1024≈512MB。</p>
+<p>使用Java编程时，我们使用位图一般是通过的redis，在redis中位图常用的是以下三个命令：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SETBIT key offset value</td>
+<td>设置指定offset位置的值，value只能是0或1</td>
+</tr>
+<tr>
+<td>GETBIT key offset</td>
+<td>获取指定offset位置的值</td>
+</tr>
+<tr>
+<td>BITCOUNT key start end</td>
+<td>获取start到end之间value为1的数量</td>
+</tr>
+</tbody></table>
+<p><strong>演示</strong></p>
+<p><img src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/c9a4c2f70ba74bcea82456e0352a69b9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQkxBQ0s1OTU=:q75.awebp?rk3s=f64ab15b&x-expires=1725190610&x-signature=VutlV+tqWNlHpboeMZcJ0oKSP9o=" alt="GIF 2024-7-27 22-33-37.gif"></p>
+<p><strong>其他作用</strong></p>
+<ol>
+<li>大数据量去重，Bitmap其极致的空间用在大数据量去重非常合适的，除了QQ号去重，我们还可以用在比如订单号去重；爬取网站时URL去重，爬过的就不爬取了。</li>
+<li>数据统计，比如在线人员统计，将在线人员id为偏移值，为1表示在线；视频统计，将全部视频的id为偏移存储到Bitmap中。</li>
+<li>布隆过滤器（BloomFilter），布隆过滤器的基础就是使用的位图，只不过布隆过滤器使用了多个哈希函数处理，只有当全部的哈希都为1，才表示这个值存在。</li>
+</ol>
+<h3 id="布隆过滤器"><a href="#布隆过滤器" class="headerlink" title="布隆过滤器"></a>布隆过滤器</h3><p>布隆过滤器一般会使用多个哈希函数，计算出对应的hash对应多个位图下标值，如果都为1，表示这个值存在。</p>
+<p><img src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/a728b15fa9f44709af358deb75530557~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQkxBQ0s1OTU=:q75.awebp?rk3s=f64ab15b&x-expires=1725190610&x-signature=RqvNgKf4w+IvSquSXA0klC0lI7g=" alt="image.png"> 例如hutool工具中布隆过滤器的实现类BitMapBloomFilter默认就提供了5个哈希函数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">BitMapBloomFilter</span><span class="params">(<span class="type">int</span> m)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">mNum</span> <span class="operator">=</span>NumberUtil.div(String.valueOf(m), String.valueOf(<span class="number">5</span>)).intValue();</span><br><span class="line">    <span class="type">long</span> <span class="variable">size</span> <span class="operator">=</span> mNum * <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">8</span>;</span><br><span class="line">    </span><br><span class="line">    filters = <span class="keyword">new</span> <span class="title class_">BloomFilter</span>[]&#123;</span><br><span class="line">       <span class="keyword">new</span> <span class="title class_">DefaultFilter</span>(size),</span><br><span class="line">       <span class="keyword">new</span> <span class="title class_">ELFFilter</span>(size),</span><br><span class="line">       <span class="keyword">new</span> <span class="title class_">JSFilter</span>(size),</span><br><span class="line">       <span class="keyword">new</span> <span class="title class_">PJWFilter</span>(size),</span><br><span class="line">       <span class="keyword">new</span> <span class="title class_">SDBMFilter</span>(size)</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点：相较位图，布隆过滤器使用多个hash算法，我们就可以给字符串或对象存进去计算hash了，不像位图一样只能使用整形数字看偏移位置是否为1。</p>
+<p>缺点：可能产生哈希冲突，如果判断某个位置值为1，那么可能是产生了哈希冲突，所以，布隆过滤器会有一定误差。</p>
+
+    
+  </div>
+
+</article>
+
+
+    
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/img/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/img/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/blog/week/week_202436/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/blog/docs/dev/interview/interview-javase/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+<a id="theme-color" class="theme-color">
+<i class="icon-sun"></i>
+</a>
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

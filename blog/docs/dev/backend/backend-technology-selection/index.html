@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<!-- <html class="page-post"> -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>WLG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="WLG,WBlog,博客,Java,Nodejs,JavaScript" />
+  
+
+  <meta name="description" content="后端技术选型订单超时自动关闭的方案背景之前遇到过一个需求，类似于超过一定时间自动关闭订单。拿电商领域的订单举例，比如订单超时自动收货、用户下单后放弃支付超过半小时后订单需要自动关闭，订单关闭后才能进行后续的流程，如解锁库存，通知用户等。依稀记得前几年背过类似的八股文，没想到有一天真能用上，特此做一份整理，如有错误欢迎指正。 一、定时任务轮询数据库大部分人第一个想到的便是这个方案，思路如下：  生成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WBlog">
+<meta property="og:url" content="https://wlg.us.kg/blog/docs/dev/backend/backend-technology-selection/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="后端技术选型订单超时自动关闭的方案背景之前遇到过一个需求，类似于超过一定时间自动关闭订单。拿电商领域的订单举例，比如订单超时自动收货、用户下单后放弃支付超过半小时后订单需要自动关闭，订单关闭后才能进行后续的流程，如解锁库存，通知用户等。依稀记得前几年背过类似的八股文，没想到有一天真能用上，特此做一份整理，如有错误欢迎指正。 一、定时任务轮询数据库大部分人第一个想到的便是这个方案，思路如下：  生成">
+<meta property="og:locale">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/56f5ec20379441d39c4f63872d752ea8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=901&h=507&s=59725&e=png&b=0f172a">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/620ef96e3358485e849b03ee1fa07d9e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1641&h=873&s=87754&e=jpg&b=fefefe">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ad9a2fde636419480ace5ddeb8035e3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1458&h=786&s=59690&e=jpg&b=ffffff">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/134c5aa360fa4272a046b8daf1b03725~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1547&h=725&s=99194&e=jpg&b=fefefe">
+<meta property="article:published_time" content="2024-07-23T12:59:54.780Z">
+<meta property="article:modified_time" content="2024-07-23T12:59:54.780Z">
+<meta property="article:author" content="wlg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/56f5ec20379441d39c4f63872d752ea8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=901&h=507&s=59725&e=png&b=0f172a">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <i class="icon-text"></i>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">后端技术选型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E8%B6%85%E6%97%B6%E8%87%AA%E5%8A%A8%E5%85%B3%E9%97%AD%E7%9A%84%E6%96%B9%E6%A1%88"><span class="toc-number">1.1.</span> <span class="toc-text">订单超时自动关闭的方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E8%BD%AE%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">一、定时任务轮询数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81redis%E8%BF%87%E6%9C%9F%E7%9B%91%E5%90%AC%EF%BC%88%E4%B8%8D%E5%8F%AF%E8%A1%8C%EF%BC%89"><span class="toc-number">1.1.0.3.</span> <span class="toc-text">二、redis过期监听（不可行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.1.0.4.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81redis-zset%E5%81%9A%E5%BB%B6%E8%BF%9F%E9%98%9F%E5%88%97"><span class="toc-number">1.1.0.5.</span> <span class="toc-text">三、redis-zset做延迟队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E5%BB%B6%E8%BF%9F%E6%B6%88%E6%81%AF"><span class="toc-number">1.1.0.6.</span> <span class="toc-text">四、消息队列-延迟消息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.1.0.7.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+    
+<div class="progress-bar-container">
+    <span id="scroll-progress-bar" class="scroll-progress-bar"></span>
+  </div>
+
+<article id="post-docs/dev/backend/backend-technology-selection" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-clock"></i>
+        <span>2024.07.23</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+            <i class="icon-eye"></i>
+           <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="后端技术选型"><a href="#后端技术选型" class="headerlink" title="后端技术选型"></a>后端技术选型</h1><h2 id="订单超时自动关闭的方案"><a href="#订单超时自动关闭的方案" class="headerlink" title="订单超时自动关闭的方案"></a>订单超时自动关闭的方案</h2><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>之前遇到过一个需求，类似于超过一定时间自动关闭订单。拿电商领域的订单举例，比如订单超时自动收货、用户下单后放弃支付超过半小时后订单需要自动关闭，订单关闭后才能进行后续的流程，如解锁库存，通知用户等。依稀记得前几年背过类似的八股文，没想到有一天真能用上，特此做一份整理，如有错误欢迎指正。</p>
+<h4 id="一、定时任务轮询数据库"><a href="#一、定时任务轮询数据库" class="headerlink" title="一、定时任务轮询数据库"></a>一、定时任务轮询数据库</h4><p>大部分人第一个想到的便是这个方案，思路如下：</p>
+<ol>
+<li>生成订单时，记录预计的过期时间（<code>expire_time = now() + 30min</code>） ，和state一起加上索引，3s轮询数据库，查出超时未付款的订单id</li>
+<li>通过定时器（如xxl-job）去轮询数据库，比如3s一次，查询超时未付款的订单id<code>select id from order where state = &#39;未付款&#39; and now() &gt;= expire_time limit 500</code> 尝试对订单ids加锁，成功的订单ids可以更新订单状态为超时未付款</li>
+<li>定时任务有间隔，而且在表数据量较大的情况下查询会变慢，导致订单超时但定时任务可能还未关闭订单，而此时可能又有订单操作。因此在查询订单、更新订单时要检查订单是否超时未付款，超时则关闭订单</li>
+</ol>
+<p><strong>优点</strong></p>
+<p>实现起来简单，成本低，可靠性强，后续维护和排查问题也方便。算是主流的解决方案。</p>
+<p><strong>缺点</strong></p>
+<p>精度不够，轮询总需要设定一个时间间隔。当时间间隔很小但数据量很大时，即便有索引也会有较大的db压力。如果间隔设置较大，订单关闭就会有延迟</p>
+<h4 id="二、redis过期监听（不可行）"><a href="#二、redis过期监听（不可行）" class="headerlink" title="二、redis过期监听（不可行）"></a>二、redis过期监听（不可行）</h4><p>在<code>redis.conf</code>中设置<code>notify-keyspace-events Ex</code>，在<code>KeyExpirationEventMessageListener.onMessage</code>接收消息并处理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">notify-keyspace-events Ex </span><br><span class="line">public class Test extends KeyExpirationEventMessageListener &#123; </span><br><span class="line">    public Test(RedisMessageListenerContainer listenerContainer) &#123; </span><br><span class="line">        super(listenerContainer); </span><br><span class="line">    &#125; </span><br><span class="line"> </span><br><span class="line">    @Override </span><br><span class="line">    public void onMessage(Message message, byte[] bytes) &#123; </span><br><span class="line">        String orderId = message.toString(); </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p><code>notify-keyspace-events</code>参数如下，可任意组合用于指定要发送的通知类型，但<code>K</code>和<code>E</code>至少2选1</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/56f5ec20379441d39c4f63872d752ea8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=901&h=507&s=59725&e=png&b=0f172a" alt="img"></h4><p><strong>缺点</strong></p>
+<p>理论上很美好，可实际生产环境不建议使用，这个方案有较大缺陷</p>
+<ol>
+<li>并不是key过期就立刻发送过期通知，延迟是必定存在的。当key被实际删除时才会开始生成过期事件，而实际删除key的时间是不准确的，时机分2种：<ol>
+<li>惰性删除：访问到某个过期的key时，删除该key</li>
+<li>定时删除：定时每隔100ms，检查设置了过期时间的部分key，并删除过期的key</li>
+</ol>
+</li>
+<li>发送的通知并不能像消息队列那样保证送达，即有可能丢消息，比如发通知时服务正好重启。显然可靠性不足</li>
+</ol>
+<h4 id="三、redis-zset做延迟队列"><a href="#三、redis-zset做延迟队列" class="headerlink" title="三、redis-zset做延迟队列"></a>三、redis-zset做延迟队列</h4><p>Zset是一个有序集合，存储member和score，通过字典（member为key）+跳表（按score排序）实现，可以by字典精确搜索member得到节点，或by跳表搜索score得到节点。这种数据结构正好符合我们的需求。我们将预计过期时间设置为score，订单id设置为member。新建订单时插入，支付后删除节点，未付款的订单存于zset中。每秒轮询redis，通过<code>rangeByScore</code>获取<code>now() &gt; score</code>的任务，执行完<code>remove</code></p>
+<p><strong>优点</strong></p>
+<ol>
+<li>实现简单易维护</li>
+<li>在内存中增删查询节点，且实际未付款订单数量少，执行效率高</li>
+<li>可以存储不同过期时间的任务</li>
+</ol>
+<p><strong>缺点</strong></p>
+<p>没有重试机制，当单线程执行任务时只需在执行成功时再移除任务，但当需要多线程取任务执行时，需要额外增加1个集合，用于保存执行中的任务，执行成功则删除，执行失败则回滚到原集合</p>
+<h4 id="四、消息队列-延迟消息"><a href="#四、消息队列-延迟消息" class="headerlink" title="四、消息队列-延迟消息"></a>四、消息队列-延迟消息</h4><p>延迟消息，指在发送消息时需指定延迟时间，消息发送成功后不会立刻消费，而是先存储在消息队列服务器，等到达指定的时间后才会被消费。</p>
+<p>那么消息队列是怎么实现延迟功能的，消息队列轮询大批量消息不会有性能问题吗，拉Rocketmq源码看了下，大致是这么个思路：设定18个不同延迟时间的队列，每个队列的消息按顺序写入，轮询队列时只需要按顺序检查是否到达指定时间，有则发送消息并记录offset</p>
+<p>轮询的流程图：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/620ef96e3358485e849b03ee1fa07d9e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1641&h=873&s=87754&e=jpg&b=fefefe" alt="img"></p>
+<p>整体流程图：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ad9a2fde636419480ace5ddeb8035e3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1458&h=786&s=59690&e=jpg&b=ffffff" alt="img"></p>
+<p>源码分析：</p>
+<p>1、写入<code>CommitLog</code>时修改<code>topic</code>和<code>queueId</code>防止消费，并记录原始<code>topic</code>和<code>queueId</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// org.apache.rocketmq.store.CommitLog.putMessage() </span><br><span class="line"> </span><br><span class="line">if (msg.getDelayTimeLevel() &gt; 0) &#123; </span><br><span class="line">    // 超过maxLevel的调为maxLevel </span><br><span class="line">    if (msg.getDelayTimeLevel() &gt; this.defaultMessageStore.getScheduleMessageService().getMaxDelayLevel()) &#123; </span><br><span class="line">        msg.setDelayTimeLevel(this.defaultMessageStore.getScheduleMessageService().getMaxDelayLevel()); </span><br><span class="line">    &#125; </span><br><span class="line"> </span><br><span class="line">    // 修改topic为SCHEDULE_TOPIC_XXXX </span><br><span class="line">    topic = ScheduleMessageService.SCHEDULE_TOPIC; </span><br><span class="line">    // 决定投递到哪个队列：queueId = delayLevel - 1 </span><br><span class="line">    queueId = ScheduleMessageService.delayLevel2QueueId(msg.getDelayTimeLevel()); </span><br><span class="line"> </span><br><span class="line">    // 保存真实的topic, queueId </span><br><span class="line">    MessageAccessor.putProperty(msg, MessageConst.PROPERTY_REAL_TOPIC, msg.getTopic()); </span><br><span class="line">    MessageAccessor.putProperty(msg, MessageConst.PROPERTY_REAL_QUEUE_ID, String.valueOf(msg.getQueueId())); </span><br><span class="line">    msg.setPropertiesString(MessageDecoder.messageProperties2String(msg.getProperties())); </span><br><span class="line"> </span><br><span class="line">    msg.setTopic(topic); </span><br><span class="line">    msg.setQueueId(queueId); </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>2、修改tagCode为发送时间</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//  org.apache.rocketmq.store.CommitLog.checkMessageAndReturnSize() </span><br><span class="line"> </span><br><span class="line">String t = propertiesMap.get(MessageConst.PROPERTY_DELAY_TIME_LEVEL); </span><br><span class="line">if (ScheduleMessageService.SCHEDULE_TOPIC.equals(topic) &amp;&amp; t != null) &#123; </span><br><span class="line">    int delayLevel = Integer.parseInt(t); </span><br><span class="line">    if (delayLevel &gt; this.defaultMessageStore.getScheduleMessageService().getMaxDelayLevel()) &#123; </span><br><span class="line">        delayLevel = this.defaultMessageStore.getScheduleMessageService().getMaxDelayLevel(); </span><br><span class="line">    &#125; </span><br><span class="line">    if (delayLevel &gt; 0) &#123; </span><br><span class="line">        // 将tagsCode替换为发送时间（storeTimestamp + 延迟时间） </span><br><span class="line">        tagsCode = this.defaultMessageStore.getScheduleMessageService().computeDeliverTimestamp(delayLevel,storeTimestamp); </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>3、每个延迟等级都新建定时任务，轮询队列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">// org.apache.rocketmq.store.schedule.ScheduleMessageService </span><br><span class="line"> </span><br><span class="line">public void start() &#123; </span><br><span class="line">    // 对于每个level都建一个timerTask </span><br><span class="line">    for (Map.Entry&lt;Integer, Long&gt; entry : this.delayLevelTable.entrySet()) &#123; </span><br><span class="line">        Integer level = entry.getKey(); </span><br><span class="line">        Long timeDelay = entry.getValue(); </span><br><span class="line">        // &lt;delayLevel, consumeQueue.offset&gt; </span><br><span class="line">        Long offset = this.offsetTable.get(level); </span><br><span class="line">        if (null == offset) &#123; </span><br><span class="line">            offset = 0L; </span><br><span class="line">        &#125; </span><br><span class="line">        if (timeDelay != null) &#123; </span><br><span class="line">            // 1s后执行，任务内部每100ms执行一次 </span><br><span class="line">            this.timer.schedule(new DeliverDelayedMessageTimerTask(level, offset), FIRST_DELAY_TIME); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">// org.apache.rocketmq.store.schedule.ScheduleMessageService.DeliverDelayedMessageTimerTask.executeOnTimeup </span><br><span class="line"> </span><br><span class="line">public void executeOnTimeup() &#123; </span><br><span class="line">    ConsumeQueue cq = ScheduleMessageService.this.defaultMessageStore.findConsumeQueue(SCHEDULE_TOPIC, delayLevel2QueueId(delayLevel)); </span><br><span class="line"> </span><br><span class="line">    long failScheduleOffset = offset; </span><br><span class="line"> </span><br><span class="line">    if (cq != null) &#123; </span><br><span class="line">        SelectMappedBufferResult bufferCQ = cq.getIndexBuffer(this.offset); </span><br><span class="line">        try &#123; </span><br><span class="line">            long nextOffset = offset; </span><br><span class="line">            int i = 0; </span><br><span class="line">            ConsumeQueueExt.CqExtUnit cqExtUnit = new ConsumeQueueExt.CqExtUnit(); </span><br><span class="line">            for (; i &lt; bufferCQ.getSize(); i += ConsumeQueue.CQ_STORE_UNIT_SIZE) &#123; </span><br><span class="line">                long offsetPy = bufferCQ.getByteBuffer().getLong(); </span><br><span class="line">                int sizePy = bufferCQ.getByteBuffer().getInt(); </span><br><span class="line">                long tagsCode = bufferCQ.getByteBuffer().getLong(); </span><br><span class="line"> </span><br><span class="line">                long now = System.currentTimeMillis(); </span><br><span class="line">                // 取tagCode作为投递时间 </span><br><span class="line">                long deliverTimestamp = this.correctDeliverTimestamp(now, tagsCode); </span><br><span class="line"> </span><br><span class="line">                nextOffset = offset + (i / ConsumeQueue.CQ_STORE_UNIT_SIZE); </span><br><span class="line"> </span><br><span class="line">                long countdown = deliverTimestamp - now; </span><br><span class="line"> </span><br><span class="line">                if (countdown &lt;= 0) &#123; </span><br><span class="line">                    // 已经超时 </span><br><span class="line">                    MessageExt msgExt = ScheduleMessageService.this.defaultMessageStore.lookMessageByOffset(offsetPy, sizePy); </span><br><span class="line"> </span><br><span class="line">                    MessageExtBrokerInner msgInner = this.messageTimeup(msgExt); </span><br><span class="line">                    PutMessageResult putMessageResult = ScheduleMessageService.this.defaultMessageStore.putMessage(msgInner); </span><br><span class="line"> </span><br><span class="line">                    if (putMessageResult != null &amp;&amp; putMessageResult.getPutMessageStatus() == PutMessageStatus.PUT_OK) &#123; </span><br><span class="line">                        // 当前任务ok，顺序检查下一个任务是否到期 </span><br><span class="line">                        continue; </span><br><span class="line">                    &#125; </span><br><span class="line">                &#125; else &#123; </span><br><span class="line">                    // 未到超时时间 </span><br><span class="line">                    ScheduleMessageService.this.timer.schedule(new DeliverDelayedMessageTimerTask(this.delayLevel, nextOffset), countdown); </span><br><span class="line">                    ScheduleMessageService.this.updateOffset(this.delayLevel, nextOffset); </span><br><span class="line">                    return; </span><br><span class="line">                &#125; </span><br><span class="line">            &#125; </span><br><span class="line">            nextOffset = offset + (i / ConsumeQueue.CQ_STORE_UNIT_SIZE); </span><br><span class="line">            ScheduleMessageService.this.timer.schedule(new DeliverDelayedMessageTimerTask( this.delayLevel, nextOffset), DELAY_FOR_A_WHILE); </span><br><span class="line">            ScheduleMessageService.this.updateOffset(this.delayLevel, nextOffset); </span><br><span class="line">            return; </span><br><span class="line">        &#125; finally &#123; </span><br><span class="line">            bufferCQ.release(); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    ScheduleMessageService.this.timer.schedule(new DeliverDelayedMessageTimerTask(this.delayLevel,  failScheduleOffset), DELAY_FOR_A_WHILE); </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>RocketMQ 4.x为了性能，在延迟时间上有所妥协，仅支持固定的延迟等级。在5.x中引入了时间轮，支持任意时间的延迟，大致思路如图：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/134c5aa360fa4272a046b8daf1b03725~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1547&h=725&s=99194&e=jpg&b=fefefe" alt="img"></p>
+<p>借助延迟消息的方案思路如下：</p>
+<ol>
+<li>创建订单成功后，发送延迟消息到mq</li>
+<li>用户支付后删除对应消息</li>
+<li>收到消息后进行处理</li>
+<li>由于发送消息可能失败，需要定时轮询数据库，处理超时未付款的订单</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">message.setDelayTimeLevel(16) </span><br><span class="line">producer.send(message); </span><br></pre></td></tr></table></figure>
+
+<p><strong>优点</strong></p>
+<p>把轮询的压力给到消息队列，业务中的逻辑变轻松，且数据库压力变小</p>
+<p><strong>缺点</strong></p>
+<p>延迟消息其实并不是一种特别好的方案，缺点如下</p>
+<ol>
+<li>消息过多：使用消息队列往往是因为数据过多，数据库轮询无法满足需求，那么如果在每个订单创建时都发送延迟消息，就需要考虑消息积压的问题。可实际上超时未付款的订单只是极少数，正常来说用户是会付款或手动取消订单的。所以大部分数据都是无用消息，平白无故浪费资源，增加成本</li>
+<li>消息队列的限制：各个项目对于延迟关闭的需求不同，而且有变化的可能，但消息队列并不是那么灵活，比如对延迟时间的限制<ol>
+<li>RabbitMQ：延时最大为 <code>2^32-1</code>毫秒，约49天，超过的会被立刻消费</li>
+<li>RocketMQ 4.x：18个延迟级别，1s 5s 10s 30s 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m 20m 30m 1h 2h</li>
+<li>RocketMQ 5.x：最大默认3天</li>
+</ol>
+</li>
+<li>可靠性问题：任何额外引入的中间件都要考虑其可靠性，比如消息发送失败需要额外的兜底方案，消息延迟，排查问题不方便等。在这种场景下使用消息队列，意味着更复杂的开发和维护流程，问题可能来自于消息队列的异常或开发人员不了解原理，导致使用不当</li>
+</ol>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>项目应将可靠性、可维护性放在首位，尤其是对于小项目或刚起步的项目，数据库轮询或redis轮询完全足够了，没必要为一个超时功能，额外引入消息队列这么重的中间件，过度设计徒增成本。即使采用了redis或消息队列等方案，也最好保留数据库轮询方案，作为异常情况的兜底</p>
+
+    
+  </div>
+
+</article>
+
+
+    
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/img/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/img/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/blog/week/week_202430/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/blog/week/week_202431/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+<a id="theme-color" class="theme-color">
+<i class="icon-sun"></i>
+</a>
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

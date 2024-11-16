@@ -1,0 +1,743 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>加密HTML</title><style>.main{width:60%;margin:0 auto}.main>*{margin-top:10px}textarea{border-radius:3px;width:100%;height:200px}#passData{width:100%}</style></head><body><div class="main"><div>请输入密码</div><input id="passData" placeholder="密码（越复杂安全性越好）"><div><label for="enableCompress">是否压缩</label> <input type="checkbox" id="enableCompress" checked="true"></div><div><label for="enableRemember">允许记住密码</label> <input type="checkbox" id="enableRemember" checked="true"></div><div id="expireRemember"><span>记住密码有效期（单位：天）</span> <input id="expireDays" placeholder="默认：0（永不过期）"></div><div>请输入要加密的HTML内容</div><textarea id="inputData" placeholder="<html><head>..."></textarea> <button id="genHTML">生成加密HTML</button> <textarea id="outputData" style="display:none"></textarea> <button id="downHTML" style="display:none">下载加密HTML文件</button></div><script>var n=Uint8Array,r=Uint16Array,e=Int32Array,i=new n([0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0,0,0,0]),o=new n([0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,0,0]),s=new n([16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15]),a=function(n,f){for(var a=new r(31),t=0;t<31;++t)a[t]=f+=1<<n[t-1];for(var o=new e(a[30]),t=1;t<30;++t)for(var i=a[t];i<a[t+1];++i)o[i]=i-a[t]<<5|t;return{b:a,r:o}},u=a(i,2),h=u.b,f=u.r;h[28]=258,f[258]=28;for(var c=a(o,0),p=c.r,v=new r(32768),d=0;d<32768;++d){var g=(43690&d)>>1|(21845&d)<<1;v[d]=((65280&(g=(61680&(g=(52428&g)>>2|(13107&g)<<2))>>4|(3855&g)<<4))>>8|(255&g)<<8)>>1}for(var y=function(n,f,e){for(var a=n.length,t=0,o=new r(f);t<a;++t)n[t]&&++o[n[t]-1];var i=new r(f);for(t=1;t<f;++t)i[t]=i[t-1]+o[t-1]<<1;if(e){for(var u=new r(1<<f),l=15-f,t=0;t<a;++t)if(n[t])for(var s=t<<4|n[t],h=f-n[t],w=i[n[t]-1]++<<h,c=w|(1<<h)-1;w<=c;++w)u[v[w]>>l]=s}else for(u=new r(a),t=0;t<a;++t)n[t]&&(u[t]=v[i[n[t]-1]++]>>15-n[t]);return u},m=new n(288),d=0;d<144;++d)m[d]=8;for(d=144;d<256;++d)m[d]=9;for(d=256;d<280;++d)m[d]=7;for(d=280;d<288;++d)m[d]=8;var b=new n(32);for(d=0;d<32;++d)b[d]=5;var w=y(m,9,0),z=y(b,5,0),T=function(r){return(r+7)/8|0},D=function(r,f,e){(null==e||e>r.length)&&(e=r.length);var a=new n(e-(f=null==f||f<0?0:f));return a.set(r.subarray(f,e)),a},F=function(r,n,f){var e=n/8|0;r[e]|=f<<=7&n,r[1+e]|=f>>8},E=function(r,n,f){var e=n/8|0;r[e]|=f<<=7&n,r[1+e]|=f>>8,r[2+e]|=f>>16},Z=function(f,e){for(var a=[],t=0;t<f.length;++t)f[t]&&a.push({s:t,f:f[t]});var o=a.length,i=a.slice();if(!o)return{t:N,l:0};if(1==o)return(m=new n(a[0].s+1))[a[0].s]=1,{t:m,l:1};a.sort(function(r,n){return r.f-n.f}),a.push({s:-1,f:25001});var v=a[0],u=a[1],l=0,s=1,h=2;for(a[0]={s:-1,f:v.f+u.f,l:v,r:u};s!=o-1;)v=a[a[l].f<a[h].f?l++:h++],u=a[l!=s&&a[l].f<a[h].f?l++:h++],a[s++]={s:-1,f:v.f+u.f,l:v,r:u};var w=i[0].s;for(t=1;t<o;++t)i[t].s>w&&(w=i[t].s);var c=new r(w+1),d=O(a[s-1],c,0);if(e<d){var t=0,g=0,m=d-e,y=1<<m;for(i.sort(function(r,n){return c[n.s]-c[r.s]||r.f-n.f});t<o;++t){var b=i[t].s;if(!(c[b]>e))break;g+=y-(1<<d-c[b]),c[b]=e}for(g>>=m;0<g;){var M=i[t].s;c[M]<e?g-=1<<e-c[M]++-1:++t}for(;0<=t&&g;--t){var F=i[t].s;c[F]==e&&(--c[F],++g)}d=e}return{t:new n(c),l:d}},O=function(r,n,f){return-1==r.s?Math.max(O(r.l,n,f+1),O(r.r,n,f+1)):n[r.s]=f},G=function(n){for(var f=n.length;f&&!n[--f];);function e(r){a[t++]=r}for(var a=new r(++f),t=0,o=n[0],i=1,v=1;v<=f;++v)if(n[v]==o&&v!=f)++i;else{if(!o&&2<i){for(;138<i;i-=138)e(32754);2<i&&(e(10<i?i-11<<5|28690:i-3<<5|12305),i=0)}else if(3<i){for(e(o),--i;6<i;i-=6)e(8304);2<i&&(e(i-3<<5|8208),i=0)}for(;i--;)e(o);i=1,o=n[v]}return{c:a.subarray(0,t),n:f}},L=function(r,n){for(var f=0,e=0;e<n.length;++e)f+=r[e]*n[e];return f},q=function(r,n,f){var e=f.length,a=T(n+2);r[a]=255&e,r[a+1]=e>>8,r[a+2]=255^r[a],r[a+3]=255^r[a+1];for(var t=0;t<e;++t)r[a+t+4]=f[t];return 8*(a+4+e)},H=function(n,f,e,a,t,v,u,l,h,c,d){F(f,d++,e),++t[256];for(var e=Z(t,15),g=e.t,e=e.l,M=Z(v,15),p=M.t,M=M.l,O=G(g),x=O.c,O=O.n,A=G(p),H=A.c,A=A.n,T=new r(19),j=0;j<x.length;++j)++T[31&x[j]];for(j=0;j<H.length;++j)++T[31&H[j]];for(var k=Z(T,7),D=k.t,k=k.l,K=19;4<K&&!D[s[K-1]];--K);var N=c+5<<3,P=L(t,m)+L(v,b)+u,t=L(t,g)+L(v,p)+u+14+3*K+L(T,D)+2*T[16]+3*T[17]+7*T[18];if(0<=h&&N<=P&&N<=t)return q(f,d,n.subarray(h,h+c));if(F(f,d,1+(t<P)),d+=2,t<P){var U=y(g,e,0),I=g,S=y(p,M,0),B=p,C=y(D,k,0);for(F(f,d,O-257),F(f,d+5,A-1),F(f,d+10,K-4),d+=14,j=0;j<K;++j)F(f,d+3*j,D[s[j]]);d+=3*K;for(var J=[x,H],Q=0;Q<2;++Q)for(var R=J[Q],j=0;j<R.length;++j)F(f,d,C[V=31&R[j]]),d+=D[V],15<V&&(F(f,d,R[j]>>5&127),d+=R[j]>>12)}else U=w,I=m,S=z,B=b;for(j=0;j<l;++j){var V,W,X=a[j];255<X?(E(f,d,U[257+(V=X>>18&31)]),d+=I[V+257],7<V&&(F(f,d,X>>23&31),d+=i[V]),E(f,d,S[W=31&X]),d+=B[W],3<W&&(E(f,d,X>>5&8191),d+=o[W])):(E(f,d,U[X]),d+=I[X])}return E(f,d,U[256]),d+I[256]},j=new e([65540,131080,131088,131104,262176,1048704,1048832,2114560,2117632]),N=new n(0),P=function(a,t,v,u,l,s){var h=s.z||a.length,w=new n(u+h+5*(1+Math.ceil(h/7e3))+l),c=w.subarray(u,w.length-l),d=s.l,g=7&(s.r||0);if(t){g&&(c[0]=s.r>>3);function m(r){return(a[r]^a[r+1]<<F^a[r+2]<<X)&y}for(var t=j[t-1],V=t>>13,W=8191&t,y=(1<<v)-1,b=s.p||new r(32768),M=s.h||new r(1+y),F=Math.ceil(v/3),X=2*F,E=new e(25e3),L=new r(288),O=new r(32),Z=0,x=0,z=s.i||0,A=0,G=s.w||0,k=0;z+2<h;++z){var K=m(z),N=32767&z,P=M[K];if(b[N]=P,M[K]=N,G<=z){var U=h-z;if((7e3<Z||24576<A)&&(423<U||!d)){for(var g=H(a,c,0,E,L,O,x,A,k,z-k,g),A=Z=x=0,k=z,I=0;I<286;++I)L[I]=0;for(I=0;I<30;++I)O[I]=0}var S=2,B=0,Y=W,C=N-P&32767;if(2<U&&K==m(z-C))for(var $=Math.min(V,U)-1,_=Math.min(32767,z),rr=Math.min(258,U);C<=_&&--Y&&N!=P;){if(a[z+S]==a[z+S-C]){for(var J=0;J<rr&&a[z+J]==a[z+J-C];++J);if(S<J){if(B=C,$<(S=J))break;for(var nr=Math.min(C,J-2),fr=0,I=0;I<nr;++I){var Q=z-C+I&32767,er=Q-b[Q]&32767;fr<er&&(fr=er,P=Q)}}}C+=(N=P)-(P=b[N])&32767}B?(E[A++]=268435456|f[S]<<18|p[B],K=31&f[S],U=31&p[B],x+=i[K]+o[U],++L[257+K],++O[U],G=z+S,++Z):(E[A++]=a[z],++L[a[z]])}}for(z=Math.max(z,G);z<h;++z)E[A++]=a[z],++L[a[z]];g=H(a,c,d,E,L,O,x,A,k,z-k,g),d||(s.r=7&g|c[g/8|0]<<3,g-=7,s.h=M,s.p=b,s.i=z,s.w=G)}else{for(z=s.w||0;z<h+d;z+=65535){var R=z+65535;h<=R&&(c[g/8|0]=d,R=h),g=q(c,g+1,a.subarray(z,R))}s.i=h}return D(w,0,u+T(g)+l)},K=function(r,f,e,a,t){var o,i;return!t&&(t={l:1},f.dictionary)&&(o=f.dictionary.subarray(-32768),(i=new n(o.length+r.length)).set(o),i.set(r,o.length),r=i,t.w=o.length),P(r,null==f.level?6:f.level,null==f.mem?Math.ceil(1.5*Math.max(8,Math.min(13,Math.log(r.length)))):12+f.mem,e,a,t)};function deflateSync(r,n){return K(r,n||{},0,0)}</script><script>const sjcl={cipher:{},hash:{},keyexchange:{},mode:{},misc:{},codec:{},exception:{corrupt:function(t){this.toString=function(){return"CORRUPT: "+this.message},this.message=t},invalid:function(t){this.toString=function(){return"INVALID: "+this.message},this.message=t},bug:function(t){this.toString=function(){return"BUG: "+this.message},this.message=t},notReady:function(t){this.toString=function(){return"NOT READY: "+this.message},this.message=t}},bitArray:{bitSlice:function(t,e,i){return t=sjcl.bitArray._shiftRight(t.slice(e/32),32-(31&e)).slice(1),void 0===i?t:sjcl.bitArray.clamp(t,i-e)},concat:function(t,e){var i,n;return 0===t.length||0===e.length||(i=t[t.length-1],32===(n=sjcl.bitArray.getPartial(i)))?t.concat(e):sjcl.bitArray._shiftRight(e,n,0|i,t.slice(0,t.length-1))},bitLength:function(t){var e=t.length;return 0===e?0:(t=t[e-1],32*(e-1)+sjcl.bitArray.getPartial(t))},clamp:function(t,e){var i;return 32*t.length<e||(i=(t=t.slice(0,Math.ceil(e/32))).length,e&=31,0<i&&e&&(t[i-1]=sjcl.bitArray.partial(e,t[i-1]&2147483648>>e-1,1))),t},partial:function(t,e,i){return 32===t?e:(i?0|e:e<<32-t)+1099511627776*t},getPartial:function(t){return Math.round(t/1099511627776)||32},equal:function(t,e){if(sjcl.bitArray.bitLength(t)!==sjcl.bitArray.bitLength(e))return!1;let i=0,n;for(n=0;n<t.length;n++)i|=t[n]^e[n];return 0===i},_shiftRight:function(t,e,i,n){let r,s,c;for(void 0===n&&(n=[]);32<=e;e-=32)n.push(i),i=0;if(0===e)return n.concat(t);for(r=0;r<t.length;r++)n.push(i|t[r]>>>e),i=t[r]<<32-e;return s=t.length?t[t.length-1]:0,c=sjcl.bitArray.getPartial(s),n.push(sjcl.bitArray.partial(e+c&31,32<e+c?i:n.pop(),1)),n}}};sjcl.codec.bytes={fromBits:function(t){let e=[],i=sjcl.bitArray.bitLength(t),n,r;for(n=0;n<i/8;n++)0==(3&n)&&(r=t[n/4]),e.push(r>>>24),r<<=8;return e},toBits:function(t){let e=[],i,n=0;for(i=0;i<t.length;i++)n=n<<8|t[i],3==(3&i)&&(e.push(n),n=0);return 3&i&&e.push(sjcl.bitArray.partial(8*(3&i),n)),e}},sjcl.codec.utf8String={fromBits:function(t){let e="",i=sjcl.bitArray.bitLength(t),n,r;for(n=0;n<i/8;n++)0==(3&n)&&(r=t[n/4]),e+=String.fromCharCode(r>>>8>>>8>>>8),r<<=8;return decodeURIComponent(escape(e))},toBits:function(t){t=unescape(encodeURIComponent(t));let e=[],i,n=0;for(i=0;i<t.length;i++)n=n<<8|t.charCodeAt(i),3==(3&i)&&(e.push(n),n=0);return 3&i&&e.push(sjcl.bitArray.partial(8*(3&i),n)),e}},sjcl.hash.sha1=function(t){t?(this._h=t._h.slice(0),this._buffer=t._buffer.slice(0),this._length=t._length):this.reset()},sjcl.hash.sha1.hash=function(t){return(new sjcl.hash.sha1).update(t).finalize()},sjcl.hash.sha1.prototype={blockSize:512,reset:function(){return this._h=this._init.slice(0),this._buffer=[],this._length=0,this},update:function(t){"string"==typeof t&&(t=sjcl.codec.utf8String.toBits(t));let e,i=this._buffer=sjcl.bitArray.concat(this._buffer,t),n=this._length,r=this._length=n+sjcl.bitArray.bitLength(t);if(9007199254740991<r)throw new sjcl.exception.invalid("Cannot hash more than 2^53 - 1 bits");if("undefined"!=typeof Uint32Array){var s=new Uint32Array(i);let t=0;for(e=this.blockSize+n-(this.blockSize+n&this.blockSize-1);e<=r;e+=this.blockSize)this._block(s.subarray(16*t,16*(t+1))),t+=1;i.splice(0,16*t)}else for(e=this.blockSize+n-(this.blockSize+n&this.blockSize-1);e<=r;e+=this.blockSize)this._block(i.splice(0,16));return this},finalize:function(){let t,e=this._buffer,i=this._h;for(e=sjcl.bitArray.concat(e,[sjcl.bitArray.partial(1,1)]),t=e.length+2;15&t;t++)e.push(0);for(e.push(Math.floor(this._length/4294967296)),e.push(0|this._length);e.length;)this._block(e.splice(0,16));return this.reset(),i},_init:[1732584193,4023233417,2562383102,271733878,3285377520],_key:[1518500249,1859775393,2400959708,3395469782],_f:function(t,e,i,n){return t<=19?e&i|~e&n:t<=39?e^i^n:t<=59?e&i|e&n|i&n:t<=79?e^i^n:void 0},_S:function(t,e){return e<<t|e>>>32-t},_block:function(e){let t,i,n,r,s,c,o,l=this._h,h;if("undefined"!=typeof Uint32Array){h=Array(80);for(let t=0;t<16;t++)h[t]=e[t]}else h=e;for(n=l[0],r=l[1],s=l[2],c=l[3],o=l[4],t=0;t<=79;t++)16<=t&&(h[t]=this._S(1,h[t-3]^h[t-8]^h[t-14]^h[t-16])),i=this._S(5,n)+this._f(t,r,s,c)+o+h[t]+this._key[Math.floor(t/20)]|0,o=c,c=s,s=this._S(30,r),r=n,n=i;l[0]=l[0]+n|0,l[1]=l[1]+r|0,l[2]=l[2]+s|0,l[3]=l[3]+c|0,l[4]=l[4]+o|0}},sjcl.cipher.aes=function(t){this._tables[0][0][0]||this._precompute();let e,i,n,r,s,c=this._tables[0][4],o=this._tables[1],l=t.length,h=1;if(4!==l&&6!==l&&8!==l)throw new sjcl.exception.invalid("invalid aes key size");for(this._key=[r=t.slice(0),s=[]],e=l;e<4*l+28;e++)n=r[e-1],(e%l==0||8===l&&e%l==4)&&(n=c[n>>>24]<<24^c[n>>16&255]<<16^c[n>>8&255]<<8^c[255&n],e%l==0)&&(n=n<<8^n>>>24^h<<24,h=h<<1^283*(h>>7)),r[e]=r[e-l]^n;for(i=0;e;i++,e--)n=r[3&i?e:e-4],e<=4||i<4?s[i]=n:s[i]=o[0][c[n>>>24]]^o[1][c[n>>16&255]]^o[2][c[n>>8&255]]^o[3][c[255&n]]},sjcl.cipher.aes.prototype={encrypt:function(t){return this._crypt(t,0)},decrypt:function(t){return this._crypt(t,1)},_tables:[[[],[],[],[],[]],[[],[],[],[],[]]],_precompute:function(){let t=this._tables[0],e=this._tables[1],i=t[4],n=e[4],r,s,c,o=[],l=[],h,a,u,f,p,d;for(r=0;r<256;r++)l[(o[r]=r<<1^283*(r>>7))^r]=r;for(s=c=0;!i[s];s^=h||1,c=l[c]||1)for(f=(f=c^c<<1^c<<2^c<<3^c<<4)>>8^255&f^99,i[s]=f,n[f]=s,u=o[a=o[h=o[s]]],d=16843009*u^65537*a^257*h^16843008*s,p=257*o[f]^16843008*f,r=0;r<4;r++)t[r][s]=p=p<<24^p>>>8,e[r][f]=d=d<<24^d>>>8;for(r=0;r<5;r++)t[r]=t[r].slice(0),e[r]=e[r].slice(0)},_crypt:function(t,e){if(4!==t.length)throw new sjcl.exception.invalid("invalid aes block size");let i=this._key[e],n=t[0]^i[0],r=t[e?3:1]^i[1],s=t[2]^i[2],c=t[e?1:3]^i[3],o,l,h,a=i.length/4-2,u,f=4,p=[0,0,0,0],d=this._tables[e],y=d[0],b=d[1],g=d[2],_=d[3],m=d[4];for(u=0;u<a;u++)o=y[n>>>24]^b[r>>16&255]^g[s>>8&255]^_[255&c]^i[f],l=y[r>>>24]^b[s>>16&255]^g[c>>8&255]^_[255&n]^i[f+1],h=y[s>>>24]^b[c>>16&255]^g[n>>8&255]^_[255&r]^i[f+2],c=y[c>>>24]^b[n>>16&255]^g[r>>8&255]^_[255&s]^i[f+3],f+=4,n=o,r=l,s=h;for(u=0;u<4;u++)p[e?3&-u:u]=m[n>>>24]<<24^m[r>>16&255]<<16^m[s>>8&255]<<8^m[255&c]^i[f++],o=n,n=r,r=s,s=c,c=o;return p}},sjcl.misc.hmac=function(t,e){this._hash=e=e||sjcl.hash.sha1;let i=[[],[]],n,r=e.prototype.blockSize/32;for(this._baseHash=[new e,new e],t.length>r&&(t=e.hash(t)),n=0;n<r;n++)i[0][n]=909522486^t[n],i[1][n]=1549556828^t[n];this._baseHash[0].update(i[0]),this._baseHash[1].update(i[1]),this._resultHash=new e(this._baseHash[0])},sjcl.misc.hmac.prototype.encrypt=sjcl.misc.hmac.prototype.mac=function(t){if(this._updated)throw new sjcl.exception.invalid("encrypt on already updated hmac called!");return this.update(t),this.digest(t)},sjcl.misc.hmac.prototype.reset=function(){this._resultHash=new this._hash(this._baseHash[0]),this._updated=!1},sjcl.misc.hmac.prototype.update=function(t){this._updated=!0,this._resultHash.update(t)},sjcl.misc.hmac.prototype.digest=function(){var t=this._resultHash.finalize(),t=new this._hash(this._baseHash[1]).update(t).finalize();return this.reset(),t},sjcl.misc.pbkdf2=function(t,e,i,n,r){if(i=i||1e4,n<0||i<0)throw new sjcl.exception.invalid("invalid params to pbkdf2");"string"==typeof t&&(t=sjcl.codec.utf8String.toBits(t)),"string"==typeof e&&(e=sjcl.codec.utf8String.toBits(e));let s=new(r=r||sjcl.misc.hmac)(t),c,o,l,h,a,u=[],f=sjcl.bitArray;for(a=1;32*u.length<(n||1);a++){for(c=o=s.encrypt(f.concat(e,[a])),l=1;l<i;l++)for(o=s.encrypt(o),h=0;h<o.length;h++)c[h]^=o[h];u=u.concat(c)}return u=n?f.clamp(u,n):u},sjcl.random={randomWords:function(e){let t;"undefined"!=typeof window?window.crypto?t=window.crypto:window.msCrypto&&(t=window.msCrypto):"undefined"!=typeof self&&self.crypto?t=self.crypto:"undefined"!=typeof module&&module.exports?t=function(){try{return require("crypto")}catch(t){return null}}():"undefined"!=typeof global&&global.crypto&&(t=global.crypto);try{return t?t.getRandomValues?sjcl.codec.bytes.toBits(t.getRandomValues(new Uint8Array(e))):t.randomBytes?sjcl.codec.bytes.toBits(new Uint8Array(t.randomBytes(e))):void 0:getRandomValues(e)}catch(t){return getRandomValues(e)}},getRandomValues:function(i){var n=[];for(let t=0,e;t<i;t+=4){var r=function(e){let i=987654321,n=4294967295;return function(){i=36969*(65535&i)+(i>>16)&n,e=18e3*(65535&e)+(e>>16)&n;var t=(i<<16)+e&n;return(t/4294967296+.5)*(.5<Math.random()?1:-1)}}(4294967296*(e||Math.random()));e=987654071*r(),n.push(4294967296*r()|0)}return n}},sjcl.mode.ctr={name:"ctr",encrypt:function(t,e,i){return sjcl.mode.ctr._calculate(t,e,i)},decrypt:function(t,e,i){return sjcl.mode.ctr._calculate(t,e,i)},_calculate:function(t,e,i){let n,r,s,c,o,l;if(128!==sjcl.bitArray.bitLength(i))throw new sjcl.exception.invalid("ctr iv must be 128 bits");if(!(n=e.length))return[];for(s=i.slice(0),c=e.slice(0),r=sjcl.bitArray.bitLength(c),l=0;l<n;l+=4){o=t.encrypt(s),c[l]^=o[0],c[l+1]^=o[1],c[l+2]^=o[2],c[l+3]^=o[3];for(let t=3;0<=t&&!++s[t];t--);}return sjcl.bitArray.clamp(c,r)}}</script><script>enableRemember.onchange=()=>{expireRemember.style.display=enableRemember.checked?"block":"none"},genHTML.onclick=()=>{downHTML.style.display=outputData.style.display="none",passData.value?inputData.value?encryptString(inputData.value,passData.value):alert("HTML不能为空！"):alert("密码不能为空！")},downHTML.onclick=()=>{var e=document.createElement("a");e.download="encrypted_index.html",e.href=URL.createObjectURL(new Blob([outputData.value])),e.click()};const encoder=new TextEncoder,decoder=new TextDecoder,passwordVerifierLen=4,aesKeyLen=16,saltLen=8;function encryptString(e,t){var i=sjcl.random.randomWords(saltLen),t=sjcl.misc.pbkdf2(t,i,1e3,8*(aesKeyLen+passwordVerifierLen)),r=sjcl.bitArray.bitSlice(t,0,8*aesKeyLen),t=sjcl.bitArray.bitSlice(t,8*aesKeyLen),i=sjcl.bitArray.concat(i,t);let n=encoder.encode(e);enableCompress.checked&&(n=deflateSync(n));t=sjcl.mode.ctr.encrypt(new sjcl.cipher.aes(r),sjcl.codec.bytes.toBits(n),[0,0,0,0]);const s=new FileReader;s.onload=()=>{var e=s.result.substring(s.result.indexOf(",")+1),e=`<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密页面</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !important;
+        }
+
+        #loadMask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            background-color: #edeff2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loadMask>div {
+            text-align: center;
+        }
+
+        #loadMask>div>div {
+            font-size: 40px;
+            color: #909090;
+        }
+
+        #loadMask svg {
+            width: 160px;
+            height: 80px;
+        }
+
+        .passArea {
+            width: 200px;
+        }
+
+        #passData {
+            height: 40px;
+            display: block;
+            outline: none;
+            border: none;
+            width: 100%;
+            padding-left: 10px;
+            font-size: 18px;
+            border-radius: 3px;
+            -webkit-text-security: disc;
+        }
+
+        .activeBtn {
+            background: #99c959 !important;
+        }
+
+        label {
+            margin-top: 8px;
+            font-size: 16px;
+            display: flex;
+            color: #909090;
+            align-items: center;
+            line-height: 20px;
+            height: 20px;
+        }
+
+        #rememberMe {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #909090;
+            border-radius: 2px;
+            margin: 0 8px 0 0;
+        }
+
+        #rememberMe::before {
+            content: "";
+            display: block;
+            /* margin: 1px; */
+            width: 16px;
+            height: 16px;
+            transform: scale(0);
+            background: #99c959;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+
+        #rememberMe:checked::before {
+            transform: scale(1);
+        }
+
+        #goChat {
+            margin-top: 8px;
+            font-size: 18px;
+            background: #b8da8b;
+            border-radius: 3px;
+            height: 100%;
+            color: white;
+            padding: 0 15px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loadMask">
+        <div>
+            <div>ChatGPT</div>
+            <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid">
+                <g transform="translate(50 50)">
+                    <circle cx="0" cy="0" r="15" fill="#e15b64">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.3333333333333333s"
+                            calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1"
+                            dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(100 50)">
+                    <circle cx="0" cy="0" r="15" fill="#f8b26a">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.16666666666666666s"
+                            calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1"
+                            dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(150 50)">
+                    <circle cx="0" cy="0" r="15" fill="#99c959">
+                        <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline"
+                            keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s"
+                            repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+            </svg>
+            <div class="passArea">
+                <input id="passData" type="text" placeholder="请输入密码" autocomplete="off" />
+                `+(enableRemember.checked?`<label for="rememberMe">
+                    <input type="checkbox" id="rememberMe" checked="true">
+                    记住密码
+                </label>`:"")+`<div id="goChat">开始</div>
+            </div>
+        </div>
+    </div>
+    `+(enableCompress.checked?`<script>
+        {const t=Uint8Array,n=Uint16Array,e=Int32Array,r=new t([0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0,0,0,0]),o=new t([0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,0,0]),l=new t([16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15]),s=(t,r)=>{const o=new n(31);for(let n=0;n<31;++n)o[n]=r+=1<<t[n-1];const l=new e(o[30]);for(let t=1;t<30;++t)for(let n=o[t];n<o[t+1];++n)l[n]=n-o[t]<<5|t;return{b:o,r:l}},{b:c,r:i}=s(r,2);c[28]=258,i[258]=28;const{b:f}=s(o,0),a=new n(32768);for(let t=0;t<32768;++t){let n=(43690&t)>>1|(21845&t)<<1;n=(52428&n)>>2|(13107&n)<<2,n=(61680&n)>>4|(3855&n)<<4,a[t]=((65280&n)>>8|(255&n)<<8)>>1}const u=(t,e,r)=>{const o=t.length;let l=0;const s=new n(e);for(;l<o;++l)t[l]&&++s[t[l]-1];const c=new n(e);for(l=1;l<e;++l)c[l]=c[l-1]+s[l-1]<<1;let i;if(r){i=new n(1<<e);const r=15-e;for(l=0;l<o;++l)if(t[l]){const n=l<<4|t[l],o=e-t[l];let s=c[t[l]-1]++<<o;for(const t=s|(1<<o)-1;s<=t;++s)i[a[s]>>r]=n}}else for(i=new n(o),l=0;l<o;++l)t[l]&&(i[l]=a[c[t[l]-1]++]>>15-t[l]);return i},w=new t(288);for(let t=0;t<144;++t)w[t]=8;for(let t=144;t<256;++t)w[t]=9;for(let t=256;t<280;++t)w[t]=7;for(let t=280;t<288;++t)w[t]=8;const d=new t(32);for(let t=0;t<32;++t)d[t]=5;const b=u(w,9,1),h=u(d,5,1),g=t=>{let n=t[0];for(let e=1;e<t.length;++e)t[e]>n&&(n=t[e]);return n},y=(t,n,e)=>{const r=n/8|0;return(t[r]|t[r+1]<<8)>>(7&n)&e},k=(t,n)=>{const e=n/8|0;return(t[e]|t[e+1]<<8|t[e+2]<<16)>>(7&n)},m=t=>(t+7)/8|0,p=(n,e,r)=>{(null==e||e<0)&&(e=0),(null==r||r>n.length)&&(r=n.length);const o=new t(r-e);return o.set(n.subarray(e,r)),o},v=["unexpected EOF","invalid block type","invalid length/literal","invalid distance","stream finished","no stream handler",,"no callback","invalid UTF-8 data","extra field too long","date not in range 1980-2099","filename too long","stream finishing","invalid zip data"],E=(t,n,e)=>{const r=new Error(n||v[t]);if(r.code=t,Error.captureStackTrace&&Error.captureStackTrace(r,E),!e)throw r;return r},x=(n,e,s,i)=>{const a=n.length,w=i?i.length:0;if(!a||e.f&&!e.l)return s||new t(0);const d=!s||2!=e.i,v=e.i;s||(s=new t(3*a));const x=n=>{let e=s.length;if(n>e){const r=new t(Math.max(2*e,n));r.set(s),s=r}};let A=e.f||0,S=e.p||0,T=e.b||0,U=e.l,F=e.d,M=e.m,z=e.n;const I=8*a;do{if(!U){A=y(n,S,1);const r=y(n,S+1,3);if(S+=3,!r){const t=m(S)+4,r=n[t-4]|n[t-3]<<8,o=t+r;if(o>a){v&&E(0);break}d&&x(T+r),s.set(n.subarray(t,o),T),e.b=T+=r,e.p=S=8*o,e.f=A;continue}if(1==r)U=b,F=h,M=9,z=5;else if(2==r){const e=y(n,S,31)+257,r=y(n,S+10,15)+4,o=e+y(n,S+5,31)+1;S+=14;const s=new t(o),c=new t(19);for(let t=0;t<r;++t)c[l[t]]=y(n,S+3*t,7);S+=3*r;const i=g(c),f=(1<<i)-1,a=u(c,i,1);for(let t=0;t<o;){const e=a[y(n,S,f)];S+=15&e;const r=e>>4;if(r<16)s[t++]=r;else{let e=0,o=0;for(16==r?(o=3+y(n,S,3),S+=2,e=s[t-1]):17==r?(o=3+y(n,S,7),S+=3):18==r&&(o=11+y(n,S,127),S+=7);o--;)s[t++]=e}}const w=s.subarray(0,e),d=s.subarray(e);M=g(w),z=g(d),U=u(w,M,1),F=u(d,z,1)}else E(1);if(S>I){v&&E(0);break}}d&&x(T+131072);const p=(1<<M)-1,O=(1<<z)-1;let j=S;for(;;j=S){const t=U[k(n,S)&p],e=t>>4;if(S+=15&t,S>I){v&&E(0);break}if(t||E(2),e<256)s[T++]=e;else{if(256==e){j=S,U=null;break}{let t=e-254;if(e>264){const o=e-257,l=r[o];t=y(n,S,(1<<l)-1)+c[o],S+=l}const l=F[k(n,S)&O],a=l>>4;l||E(3),S+=15&l;let u=f[a];if(a>3){const t=o[a];u+=k(n,S)&(1<<t)-1,S+=t}if(S>I){v&&E(0);break}d&&x(T+131072);const b=T+t;if(T<u){const t=w-u,n=Math.min(u,b);for(t+T<0&&E(3);T<n;++T)s[T]=i[t+T]}for(;T<b;T+=4)s[T]=s[T-u],s[T+1]=s[T+1-u],s[T+2]=s[T+2-u],s[T+3]=s[T+3-u];T=b}}}e.l=U,e.p=j,e.b=T,e.f=A,U&&(A=1,e.m=M,e.d=F,e.n=z)}while(!A);return T==s.length?s:p(s,0,T)};self.inflateSync=(t,n)=>x(t,{i:2},n&&n.out,n&&n.dictionary)}
+    </script>`:"")+`<script>
+        const sjcl = {
+            cipher: {},
+            hash: {},
+            keyexchange: {},
+            mode: {},
+            misc: {},
+            codec: {},
+            exception: {
+                corrupt: function (message) {
+                    this.toString = function () {return "CORRUPT: " + this.message;};
+                    this.message = message;
+                },
+                invalid: function (message) {
+                    this.toString = function () {return "INVALID: " + this.message;};
+                    this.message = message;
+                },
+                bug: function (message) {
+                    this.toString = function () {return "BUG: " + this.message;};
+                    this.message = message;
+                },
+                notReady: function (message) {
+                    this.toString = function () {return "NOT READY: " + this.message;};
+                    this.message = message;
+                }
+            }
+        };
+        sjcl.bitArray = {
+            bitSlice: function (a, bstart, bend) {
+                a = sjcl.bitArray._shiftRight(a.slice(bstart / 32), 32 - (bstart & 31)).slice(1);
+                return (bend === undefined) ? a : sjcl.bitArray.clamp(a, bend - bstart);
+            },
+            concat: function (a1, a2) {
+                if (a1.length === 0 || a2.length === 0) {
+                    return a1.concat(a2);
+                }
+                let last = a1[a1.length - 1], shift = sjcl.bitArray.getPartial(last);
+                if (shift === 32) {
+                    return a1.concat(a2);
+                } else {
+                    return sjcl.bitArray._shiftRight(a2, shift, last | 0, a1.slice(0, a1.length - 1));
+                }
+            },
+            bitLength: function (a) {
+                let l = a.length, x;
+                if (l === 0) {return 0;}
+                x = a[l - 1];
+                return (l - 1) * 32 + sjcl.bitArray.getPartial(x);
+            },
+            clamp: function (a, len) {
+                if (a.length * 32 < len) {return a;}
+                a = a.slice(0, Math.ceil(len / 32));
+                let l = a.length;
+                len = len & 31;
+                if (l > 0 && len) {
+                    a[l - 1] = sjcl.bitArray.partial(len, a[l - 1] & 0x80000000 >> (len - 1), 1);
+                }
+                return a;
+            },
+            partial: function (len, x, _end) {
+                if (len === 32) {return x;}
+                return (_end ? x | 0 : x << (32 - len)) + len * 0x10000000000;
+            },
+            getPartial: function (x) {
+                return Math.round(x / 0x10000000000) || 32;
+            },
+            equal: function (a, b) {
+                if (sjcl.bitArray.bitLength(a) !== sjcl.bitArray.bitLength(b)) {
+                    return false;
+                }
+                let x = 0, i;
+                for (i = 0; i < a.length; i++) {
+                    x |= a[i] ^ b[i];
+                }
+                return (x === 0);
+            },
+            _shiftRight: function (a, shift, carry, out) {
+                let i, last2 = 0, shift2;
+                if (out === undefined) {out = [];}
+                for (; shift >= 32; shift -= 32) {
+                    out.push(carry);
+                    carry = 0;
+                }
+                if (shift === 0) {
+                    return out.concat(a);
+                }
+                for (i = 0; i < a.length; i++) {
+                    out.push(carry | a[i] >>> shift);
+                    carry = a[i] << (32 - shift);
+                }
+                last2 = a.length ? a[a.length - 1] : 0;
+                shift2 = sjcl.bitArray.getPartial(last2);
+                out.push(sjcl.bitArray.partial(shift + shift2 & 31, (shift + shift2 > 32) ? carry : out.pop(), 1));
+                return out;
+            }
+        };
+        sjcl.codec.bytes = {
+            fromBits: function (arr) {
+                let out = [], bl = sjcl.bitArray.bitLength(arr), i, tmp;
+                for (i = 0; i < bl / 8; i++) {
+                    if ((i & 3) === 0) {
+                        tmp = arr[i / 4];
+                    }
+                    out.push(tmp >>> 24);
+                    tmp <<= 8;
+                }
+                return out;
+            },
+            toBits: function (bytes) {
+                let out = [], i, tmp = 0;
+                for (i = 0; i < bytes.length; i++) {
+                    tmp = tmp << 8 | bytes[i];
+                    if ((i & 3) === 3) {
+                        out.push(tmp);
+                        tmp = 0;
+                    }
+                }
+                if (i & 3) {
+                    out.push(sjcl.bitArray.partial(8 * (i & 3), tmp));
+                }
+                return out;
+            }
+        };
+        sjcl.codec.utf8String = {
+            fromBits: function (arr) {
+                let out = "", bl = sjcl.bitArray.bitLength(arr), i, tmp;
+                for (i = 0; i < bl / 8; i++) {
+                    if ((i & 3) === 0) {
+                        tmp = arr[i / 4];
+                    }
+                    out += String.fromCharCode(tmp >>> 8 >>> 8 >>> 8);
+                    tmp <<= 8;
+                }
+                return decodeURIComponent(escape(out));
+            },
+            toBits: function (str) {
+                str = unescape(encodeURIComponent(str));
+                let out = [], i, tmp = 0;
+                for (i = 0; i < str.length; i++) {
+                    tmp = tmp << 8 | str.charCodeAt(i);
+                    if ((i & 3) === 3) {
+                        out.push(tmp);
+                        tmp = 0;
+                    }
+                }
+                if (i & 3) {
+                    out.push(sjcl.bitArray.partial(8 * (i & 3), tmp));
+                }
+                return out;
+            }
+        };
+        sjcl.hash.sha1 = function (hash) {
+            if (hash) {
+                this._h = hash._h.slice(0);
+                this._buffer = hash._buffer.slice(0);
+                this._length = hash._length;
+            } else {
+                this.reset();
+            }
+        };
+        sjcl.hash.sha1.hash = function (data) {
+            return (new sjcl.hash.sha1()).update(data).finalize();
+        };
+        sjcl.hash.sha1.prototype = {
+            blockSize: 512,
+            reset: function () {
+                this._h = this._init.slice(0);
+                this._buffer = [];
+                this._length = 0;
+                return this;
+            },
+            update: function (data) {
+                if (typeof data === "string") {
+                    data = sjcl.codec.utf8String.toBits(data);
+                }
+                let i, b = this._buffer = sjcl.bitArray.concat(this._buffer, data),
+                    ol = this._length,
+                    nl = this._length = ol + sjcl.bitArray.bitLength(data);
+                if (nl > 9007199254740991) {
+                    throw new sjcl.exception.invalid("Cannot hash more than 2^53 - 1 bits");
+                }
+                if (typeof Uint32Array !== "undefined") {
+                    let c = new Uint32Array(b);
+                    let j = 0;
+                    for (i = this.blockSize + ol - ((this.blockSize + ol) & (this.blockSize - 1)); i <= nl;
+                        i += this.blockSize) {
+                        this._block(c.subarray(16 * j, 16 * (j + 1)));
+                        j += 1;
+                    }
+                    b.splice(0, 16 * j);
+                } else {
+                    for (i = this.blockSize + ol - ((this.blockSize + ol) & (this.blockSize - 1)); i <= nl;
+                        i += this.blockSize) {
+                        this._block(b.splice(0, 16));
+                    }
+                }
+                return this;
+            },
+            finalize: function () {
+                let i, b = this._buffer, h = this._h;
+                b = sjcl.bitArray.concat(b, [sjcl.bitArray.partial(1, 1)]);
+                for (i = b.length + 2; i & 15; i++) {
+                    b.push(0);
+                }
+                b.push(Math.floor(this._length / 0x100000000));
+                b.push(this._length | 0);
+                while (b.length) {
+                    this._block(b.splice(0, 16));
+                }
+                this.reset();
+                return h;
+            },
+            _init: [0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0],
+            _key: [0x5A827999, 0x6ED9EBA1, 0x8F1BBCDC, 0xCA62C1D6],
+            _f: function (t, b, c, d) {
+                if (t <= 19) {
+                    return (b & c) | (~b & d);
+                } else if (t <= 39) {
+                    return b ^ c ^ d;
+                } else if (t <= 59) {
+                    return (b & c) | (b & d) | (c & d);
+                } else if (t <= 79) {
+                    return b ^ c ^ d;
+                }
+            },
+            _S: function (n, x) {
+                return (x << n) | (x >>> 32 - n);
+            },
+            _block: function (words) {
+                let t, tmp, a, b, c, d, e,
+                    h = this._h;
+                let w;
+                if (typeof Uint32Array !== "undefined") {
+                    w = Array(80);
+                    for (let j = 0; j < 16; j++) {
+                        w[j] = words[j];
+                    }
+                } else {
+                    w = words;
+                }
+                a = h[0]; b = h[1]; c = h[2]; d = h[3]; e = h[4];
+                for (t = 0; t <= 79; t++) {
+                    if (t >= 16) {
+                        w[t] = this._S(1, w[t - 3] ^ w[t - 8] ^ w[t - 14] ^ w[t - 16]);
+                    }
+                    tmp = (this._S(5, a) + this._f(t, b, c, d) + e + w[t] +
+                        this._key[Math.floor(t / 20)]) | 0;
+                    e = d;
+                    d = c;
+                    c = this._S(30, b);
+                    b = a;
+                    a = tmp;
+                }
+                h[0] = (h[0] + a) | 0;
+                h[1] = (h[1] + b) | 0;
+                h[2] = (h[2] + c) | 0;
+                h[3] = (h[3] + d) | 0;
+                h[4] = (h[4] + e) | 0;
+            }
+        };
+        sjcl.cipher.aes = function (key) {
+            if (!this._tables[0][0][0]) {
+                this._precompute();
+            }
+            let i, j, tmp,
+                encKey, decKey,
+                sbox = this._tables[0][4], decTable = this._tables[1],
+                keyLen = key.length, rcon = 1;
+            if (keyLen !== 4 && keyLen !== 6 && keyLen !== 8) {
+                throw new sjcl.exception.invalid("invalid aes key size");
+            }
+            this._key = [encKey = key.slice(0), decKey = []];
+            for (i = keyLen; i < 4 * keyLen + 28; i++) {
+                tmp = encKey[i - 1];
+                if (i % keyLen === 0 || (keyLen === 8 && i % keyLen === 4)) {
+                    tmp = sbox[tmp >>> 24] << 24 ^ sbox[tmp >> 16 & 255] << 16 ^ sbox[tmp >> 8 & 255] << 8 ^ sbox[tmp & 255];
+                    if (i % keyLen === 0) {
+                        tmp = tmp << 8 ^ tmp >>> 24 ^ rcon << 24;
+                        rcon = rcon << 1 ^ (rcon >> 7) * 283;
+                    }
+                }
+                encKey[i] = encKey[i - keyLen] ^ tmp;
+            }
+            for (j = 0; i; j++, i--) {
+                tmp = encKey[j & 3 ? i : i - 4];
+                if (i <= 4 || j < 4) {
+                    decKey[j] = tmp;
+                } else {
+                    decKey[j] = decTable[0][sbox[tmp >>> 24]] ^
+                        decTable[1][sbox[tmp >> 16 & 255]] ^
+                        decTable[2][sbox[tmp >> 8 & 255]] ^
+                        decTable[3][sbox[tmp & 255]];
+                }
+            }
+        };
+        sjcl.cipher.aes.prototype = {
+            encrypt: function (data) {return this._crypt(data, 0);},
+            decrypt: function (data) {return this._crypt(data, 1);},
+            _tables: [[[], [], [], [], []], [[], [], [], [], []]],
+            _precompute: function () {
+                let encTable = this._tables[0], decTable = this._tables[1],
+                    sbox = encTable[4], sboxInv = decTable[4],
+                    i, x, xInv, d = [], th = [], x2, x4, x8, s, tEnc, tDec;
+                for (i = 0; i < 256; i++) {
+                    th[(d[i] = i << 1 ^ (i >> 7) * 283) ^ i] = i;
+                }
+                for (x = xInv = 0; !sbox[x]; x ^= x2 || 1, xInv = th[xInv] || 1) {
+                    s = xInv ^ xInv << 1 ^ xInv << 2 ^ xInv << 3 ^ xInv << 4;
+                    s = s >> 8 ^ s & 255 ^ 99;
+                    sbox[x] = s;
+                    sboxInv[s] = x;
+                    x8 = d[x4 = d[x2 = d[x]]];
+                    tDec = x8 * 0x1010101 ^ x4 * 0x10001 ^ x2 * 0x101 ^ x * 0x1010100;
+                    tEnc = d[s] * 0x101 ^ s * 0x1010100;
+                    for (i = 0; i < 4; i++) {
+                        encTable[i][x] = tEnc = tEnc << 24 ^ tEnc >>> 8;
+                        decTable[i][s] = tDec = tDec << 24 ^ tDec >>> 8;
+                    }
+                }
+                for (i = 0; i < 5; i++) {
+                    encTable[i] = encTable[i].slice(0);
+                    decTable[i] = decTable[i].slice(0);
+                }
+            },
+            _crypt: function (input, dir) {
+                if (input.length !== 4) {
+                    throw new sjcl.exception.invalid("invalid aes block size");
+                }
+                let key = this._key[dir],
+                    a = input[0] ^ key[0],
+                    b = input[dir ? 3 : 1] ^ key[1],
+                    c = input[2] ^ key[2],
+                    d = input[dir ? 1 : 3] ^ key[3],
+                    a2, b2, c2,
+                    nInnerRounds = key.length / 4 - 2,
+                    i,
+                    kIndex = 4,
+                    out = [0, 0, 0, 0],
+                    table = this._tables[dir],
+                    t0 = table[0],
+                    t1 = table[1],
+                    t2 = table[2],
+                    t3 = table[3],
+                    sbox = table[4];
+                for (i = 0; i < nInnerRounds; i++) {
+                    a2 = t0[a >>> 24] ^ t1[b >> 16 & 255] ^ t2[c >> 8 & 255] ^ t3[d & 255] ^ key[kIndex];
+                    b2 = t0[b >>> 24] ^ t1[c >> 16 & 255] ^ t2[d >> 8 & 255] ^ t3[a & 255] ^ key[kIndex + 1];
+                    c2 = t0[c >>> 24] ^ t1[d >> 16 & 255] ^ t2[a >> 8 & 255] ^ t3[b & 255] ^ key[kIndex + 2];
+                    d = t0[d >>> 24] ^ t1[a >> 16 & 255] ^ t2[b >> 8 & 255] ^ t3[c & 255] ^ key[kIndex + 3];
+                    kIndex += 4;
+                    a = a2; b = b2; c = c2;
+                }
+                for (i = 0; i < 4; i++) {
+                    out[dir ? 3 & -i : i] =
+                        sbox[a >>> 24] << 24 ^
+                        sbox[b >> 16 & 255] << 16 ^
+                        sbox[c >> 8 & 255] << 8 ^
+                        sbox[d & 255] ^
+                        key[kIndex++];
+                    a2 = a; a = b; b = c; c = d; d = a2;
+                }
+                return out;
+            }
+        };
+        sjcl.misc.hmac = function (key, Hash) {
+            this._hash = Hash = Hash || sjcl.hash.sha1;
+            let exKey = [[], []], i,
+                bs = Hash.prototype.blockSize / 32;
+            this._baseHash = [new Hash(), new Hash()];
+            if (key.length > bs) {
+                key = Hash.hash(key);
+            }
+            for (i = 0; i < bs; i++) {
+                exKey[0][i] = key[i] ^ 0x36363636;
+                exKey[1][i] = key[i] ^ 0x5C5C5C5C;
+            }
+            this._baseHash[0].update(exKey[0]);
+            this._baseHash[1].update(exKey[1]);
+            this._resultHash = new Hash(this._baseHash[0]);
+        };
+        sjcl.misc.hmac.prototype.encrypt = sjcl.misc.hmac.prototype.mac = function (data) {
+            if (!this._updated) {
+                this.update(data);
+                return this.digest(data);
+            } else {
+                throw new sjcl.exception.invalid("encrypt on already updated hmac called!");
+            }
+        };
+        sjcl.misc.hmac.prototype.reset = function () {
+            this._resultHash = new this._hash(this._baseHash[0]);
+            this._updated = false;
+        };
+        sjcl.misc.hmac.prototype.update = function (data) {
+            this._updated = true;
+            this._resultHash.update(data);
+        };
+        sjcl.misc.hmac.prototype.digest = function () {
+            let w = this._resultHash.finalize(), result = new (this._hash)(this._baseHash[1]).update(w).finalize();
+            this.reset();
+            return result;
+        };
+        sjcl.misc.pbkdf2 = function (password, salt, count, length, Prff) {
+            count = count || 10000;
+            if (length < 0 || count < 0) {
+                throw new sjcl.exception.invalid("invalid params to pbkdf2");
+            }
+            if (typeof password === "string") {
+                password = sjcl.codec.utf8String.toBits(password);
+            }
+            if (typeof salt === "string") {
+                salt = sjcl.codec.utf8String.toBits(salt);
+            }
+            Prff = Prff || sjcl.misc.hmac;
+            let prf = new Prff(password),
+                u, ui, i, j, k, out = [], b = sjcl.bitArray;
+            for (k = 1; 32 * out.length < (length || 1); k++) {
+                u = ui = prf.encrypt(b.concat(salt, [k]));
+                for (i = 1; i < count; i++) {
+                    ui = prf.encrypt(ui);
+                    for (j = 0; j < ui.length; j++) {
+                        u[j] ^= ui[j];
+                    }
+                }
+                out = out.concat(u);
+            }
+            if (length) {out = b.clamp(out, length);}
+            return out;
+        };
+        sjcl.random = {
+            randomWords: function (nbytes) {
+                function getCryptoModule() {
+                    try {
+                        return require("crypto");
+                    }
+                    catch (e) {
+                        return null;
+                    }
+                }
+                let crypto;
+                if (typeof window !== "undefined") {
+                    if (window.crypto) {
+                        crypto = window.crypto;
+                    } else if (window.msCrypto) {
+                        crypto = window.msCrypto;
+                    }
+                } else if (typeof self !== "undefined" && self.crypto) {
+                    crypto = self.crypto;
+                } else if (typeof module !== "undefined" && module.exports) {
+                    crypto = getCryptoModule();
+                } else if (typeof global !== "undefined" && global.crypto) {
+                    crypto = global.crypto;
+                }
+                try {
+                    if (crypto) {
+                        if (crypto.getRandomValues) {
+                            return sjcl.codec.bytes.toBits(crypto.getRandomValues(new Uint8Array(nbytes)));
+                        }
+                        if (crypto.randomBytes) {
+                            return sjcl.codec.bytes.toBits(new Uint8Array(crypto.randomBytes(nbytes)));
+                        }
+                    } else {
+                        return getRandomValues(nbytes);
+                    }
+                } catch (e) {
+                    return getRandomValues(nbytes);
+                }
+            },
+            getRandomValues: function (nbytes) {
+                let words = [];
+                let r = function (m_w) {
+                    let m_z = 0x3ade68b1;
+                    let mask = 0xffffffff;
+                    return function () {
+                        m_z = (0x9069 * (m_z & 0xFFFF) + (m_z >> 0x10)) & mask;
+                        m_w = (0x4650 * (m_w & 0xFFFF) + (m_w >> 0x10)) & mask;
+                        let result = ((m_z << 0x10) + m_w) & mask;
+                        result /= 0x100000000;
+                        result += 0.5;
+                        return result * (Math.random() > .5 ? 1 : -1);
+                    };
+                };
+                for (let i = 0, rcache; i < nbytes; i += 4) {
+                    let _r = r((rcache || Math.random()) * 0x100000000);
+                    rcache = _r() * 0x3ade67b7;
+                    words.push((_r() * 0x100000000) | 0);
+                }
+                return words;
+            }
+        };
+        sjcl.mode.ctr = {
+            name: "ctr",
+            encrypt: function (prf, plaintext, iv) {
+                return sjcl.mode.ctr._calculate(prf, plaintext, iv);
+            },
+            decrypt: function (prf, ciphertext, iv) {
+                return sjcl.mode.ctr._calculate(prf, ciphertext, iv);
+            },
+            _calculate: function (prf, data, iv) {
+                let l, bl, res, c, d, e, i;
+                if (sjcl.bitArray.bitLength(iv) !== 128) {
+                    throw new sjcl.exception.invalid("ctr iv must be 128 bits");
+                }
+                if (!(l = data.length)) {
+                    return [];
+                }
+                c = iv.slice(0);
+                d = data.slice(0);
+                bl = sjcl.bitArray.bitLength(d);
+                for (i = 0; i < l; i += 4) {
+                    e = prf.encrypt(c);
+                    d[i] ^= e[0];
+                    d[i + 1] ^= e[1];
+                    d[i + 2] ^= e[2];
+                    d[i + 3] ^= e[3];
+                    for (let carry = 3; carry >= 0; carry--) {
+                        if (++c[carry]) break;
+                    }
+                }
+                return sjcl.bitArray.clamp(d, bl);
+            }
+        };
+    </script>
+    <script>
+        const encryptedHTML = "`+e+`";
+        passData.focus();
+        passData.oninput = () => {
+            if (passData.value.trim().length) {
+                goChat.classList.add("activeBtn");
+            } else {
+                goChat.classList.remove("activeBtn");
+            }
+        }
+        goChat.onclick = () => {
+            decryptString(encryptedHTML, passData.value);
+        }
+        const decoder = new TextDecoder();
+        const passwordVerifierLen = 4;
+        const aesKeyLen = 16; // aes-128-ctr
+        const saltLen = 8;
+        const base64ToUint8Array = (base64) => {
+            let byteString = atob(base64);
+            let bytes = new Uint8Array(byteString.length);
+            for (let i = 0; i < byteString.length; i++) {
+                bytes[i] = byteString.charCodeAt(i);
+            }
+            return bytes
+        }
+        const decryptFromKey = (derivedKey, uint8Data) => {
+            const derivedPassVerifier = sjcl.bitArray.bitSlice(derivedKey, aesKeyLen * 8);
+            const passVerifyValue = sjcl.codec.bytes.toBits(uint8Data.subarray(saltLen, saltLen + passwordVerifierLen));
+            if (!sjcl.bitArray.equal(passVerifyValue, derivedPassVerifier)) {
+                alert("密码错误，请重试！")
+                return;
+            }
+            `+(enableRemember.checked?`if (rememberMe && rememberMe.checked) {
+                let baseKey = btoa(String.fromCharCode.apply(null, sjcl.codec.bytes.fromBits(derivedKey)));
+                localStorage.setItem("staticDerivedKey", baseKey);
+                if (expireDays) {
+                    localStorage.setItem("staticKeyExpire", new Date().getTime() + expireDays * 8.64e7);
+                }
+            }`:"")+`const aesKey = sjcl.bitArray.bitSlice(derivedKey, 0, aesKeyLen * 8);
+            const encryptedData = uint8Data.subarray(saltLen + passwordVerifierLen);
+            let result = new Uint8Array(sjcl.codec.bytes.fromBits(sjcl.mode.ctr.decrypt(new sjcl.cipher.aes(aesKey), sjcl.codec.bytes.toBits(encryptedData), [0, 0, 0, 0])));
+            if (self.inflateSync) {
+                result = self.inflateSync(result);
+            }
+            const utf8Result = decoder.decode(result)
+            document.write(utf8Result);
+            document.close();
+        }
+        const decryptString = (data, password) => {
+            const uint8Data = base64ToUint8Array(data);
+            const salt = sjcl.codec.bytes.toBits(uint8Data.subarray(0, saltLen));
+            const derivedKey = sjcl.misc.pbkdf2(password, salt, 1000, (aesKeyLen + passwordVerifierLen) * 8);
+            decryptFromKey(derivedKey, uint8Data)
+        }
+        `+(enableRemember.checked?`const expireDays = ${expireDays.value||0};
+        window.onload = () => {
+            let localKey = localStorage.getItem("staticDerivedKey");
+            if (localKey) {
+                let localExpire = localStorage.getItem("staticKeyExpire")
+                if (localExpire && (localExpire < new Date().getTime())) {
+                    localStorage.removeItem("staticDerivedKey")
+                    return;
+                }
+                const derivedKey = sjcl.codec.bytes.toBits(base64ToUint8Array(localKey));
+                const uint8Data = base64ToUint8Array(encryptedHTML);
+                decryptFromKey(derivedKey, uint8Data);
+            }
+        }`:"")+`
+    </script>
+</body>
+
+</html>`;outputData.value=e,downHTML.style.display=outputData.style.display="block"},s.readAsDataURL(new Blob([new Uint8Array(sjcl.codec.bytes.fromBits(sjcl.bitArray.concat(i,t)))]))}function decryptString(e,t){var i=window.atob(e),r=new Uint8Array(i.length);for(let e=0;e<i.length;e++)r[e]=i.charCodeAt(e);var e=sjcl.codec.bytes.toBits(r.subarray(0,saltLen)),t=sjcl.misc.pbkdf2(t,e,1e3,8*(aesKeyLen+passwordVerifierLen)),e=sjcl.bitArray.bitSlice(t,8*aesKeyLen),n=sjcl.codec.bytes.toBits(r.subarray(saltLen,saltLen+passwordVerifierLen));if(!sjcl.bitArray.equal(n,e))throw new Error("Wrong password!");n=sjcl.bitArray.bitSlice(t,0,8*aesKeyLen),e=r.subarray(saltLen+passwordVerifierLen),t=sjcl.mode.ctr.decrypt(new sjcl.cipher.aes(n),sjcl.codec.bytes.toBits(e),[0,0,0,0]),n=decoder.decode(new Uint8Array(sjcl.codec.bytes.fromBits(t)));console.log(n)}</script></body></html>

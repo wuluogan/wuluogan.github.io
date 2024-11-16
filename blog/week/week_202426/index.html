@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<!-- <html class="page-post"> -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>周刊 202426 | WBlog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="WLG,WBlog,博客,Java,Nodejs,JavaScript" />
+  
+
+  <meta name="description" content="图片    随机数，这是一个问题今天谈谈，怎么生成真正的随机数。 这个问题超难，但有一些很有趣的内容。  首先，编程语言提供的随机数，是伪随机数。 V8 引擎的官网有一篇文章（下图），特别提醒大家这一点。它内置的随机数不是真随机数，而是伪随机数。  所谓伪随机数，并非真的随机，而是算法得到的。只要初始的种子值相同，算法会给出一样的结果。 JavaScript 和许多其他语言，都有这个问题。所以，遇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="周刊 202426">
+<meta property="og:url" content="https://wlg.us.kg/blog/week/week_202426/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="图片    随机数，这是一个问题今天谈谈，怎么生成真正的随机数。 这个问题超难，但有一些很有趣的内容。  首先，编程语言提供的随机数，是伪随机数。 V8 引擎的官网有一篇文章（下图），特别提醒大家这一点。它内置的随机数不是真随机数，而是伪随机数。  所谓伪随机数，并非真的随机，而是算法得到的。只要初始的种子值相同，算法会给出一样的结果。 JavaScript 和许多其他语言，都有这个问题。所以，遇">
+<meta property="og:locale">
+<meta property="og:image" content="https://cms-bucket.ws.126.net/2024/0616/e1a0695ej00sf6gqd00aoc000go00s3c.jpg">
+<meta property="og:image" content="https://image.baidu.com/search/down?thumburl=https://baidu.com&url=https://tvax2.sinaimg.cn/large/006BNqYCly1hqpq4rxb5jj30u06gge5p.jpg">
+<meta property="og:image" content="https://image.baidu.com/search/down?thumburl=https://baidu.com&url=https://tvax4.sinaimg.cn/large/006BNqYCly1hqpq4s70kej30fh1kwgtw.jpg">
+<meta property="og:image" content="https://cms-bucket.ws.126.net/2024/0704/9d50025dj00sg3but002kc000we01azc.jpg">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202406/bg2024061814.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202406/bg2024061606.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202406/bg2024061815.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202406/bg2024061816.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202406/bg2024061817.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202403/bg2024031204.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202406/bg2024061818.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202403/bg2024031205.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202403/bg2024031206.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202403/bg2024031207.webp">
+<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202403/bg2024031208.webp">
+<meta property="og:image" content="https://images-1252557999.file.myqcloud.com/uPic/dll-files.jpg">
+<meta property="og:image" content="https://imgs.zhubai.love/c5677dee288543a2addc48ee4e60c030_2192261542853668864.png">
+<meta property="og:image" content="https://imgs.zhubai.love/bb431500b74f4365904207f440d6932d_2192261542853668864.png">
+<meta property="og:image" content="https://imgs.zhubai.love/4d290bb4a6224469aa36d72a9bc70146_2192261542853668864.png">
+<meta property="og:image" content="https://imgs.zhubai.love/74040702feab436aa59179dc1dd2c986_2192261542853668864.png">
+<meta property="article:published_time" content="2024-07-11T22:00:41.857Z">
+<meta property="article:modified_time" content="2024-07-14T02:23:52.980Z">
+<meta property="article:author" content="wlg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cms-bucket.ws.126.net/2024/0616/e1a0695ej00sf6gqd00aoc000go00s3c.jpg">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">WB</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">WB</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <i class="icon-text"></i>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">1.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%EF%BC%8C%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">随机数，这是一个问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dll-files"><span class="toc-number">2.1.</span> <span class="toc-text">dll-files</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BF%A1%E4%BB%BB%E7%9A%84%E8%BF%9B%E5%8C%96"><span class="toc-number">3.</span> <span class="toc-text">3. 信任的进化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Text-to-speech"><span class="toc-number">4.</span> <span class="toc-text">1. Text to speech</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-OCR-Space"><span class="toc-number">5.</span> <span class="toc-text">2. OCR Space</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%AB%99"><span class="toc-number">6.</span> <span class="toc-text">网站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%BB%E4%BA%A1%E5%85%AC%E5%8F%B8%E5%85%AC%E5%A2%93"><span class="toc-number">6.1.</span> <span class="toc-text">死亡公司公墓</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ePub2Kindle"><span class="toc-number">6.2.</span> <span class="toc-text">ePub2Kindle</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+    
+<div class="progress-bar-container">
+    <span id="scroll-progress-bar" class="scroll-progress-bar"></span>
+  </div>
+
+<article id="post-week/week_202426" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">周刊 202426</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-clock"></i>
+        <span>2024.07.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wlg</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+        <span id="busuanzi_container_page_pv">
+            <i class="icon-eye"></i>
+           <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://cms-bucket.ws.126.net/2024/0616/e1a0695ej00sf6gqd00aoc000go00s3c.jpg"></p>
+<p><img src="https://image.baidu.com/search/down?thumburl=https://baidu.com&url=https://tvax2.sinaimg.cn/large/006BNqYCly1hqpq4rxb5jj30u06gge5p.jpg"></p>
+<p><img src="https://image.baidu.com/search/down?thumburl=https://baidu.com&url=https://tvax4.sinaimg.cn/large/006BNqYCly1hqpq4s70kej30fh1kwgtw.jpg"></p>
+<p><img src="https://cms-bucket.ws.126.net/2024/0704/9d50025dj00sg3but002kc000we01azc.jpg"></p>
+<h2 id="随机数，这是一个问题"><a href="#随机数，这是一个问题" class="headerlink" title="随机数，这是一个问题"></a>随机数，这是一个问题</h2><p>今天谈谈，怎么生成真正的随机数。</p>
+<p>这个问题超难，但有一些很有趣的内容。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061814.webp" alt="img"></p>
+<p>首先，编程语言提供的随机数，是伪随机数。</p>
+<p>V8 引擎的官网有<a target="_blank" rel="noopener" href="https://v8.dev/blog/math-random">一篇文章</a>（下图），特别提醒大家这一点。它内置的随机数不是真随机数，而是伪随机数。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061606.webp" alt="img"></p>
+<p>所谓伪随机数，并非真的随机，而是算法得到的。只要初始的种子值相同，算法会给出一样的结果。</p>
+<p>JavaScript 和许多其他语言，都有这个问题。所以，遇到特别强调随机的场合，都不应该使用语言内置的随机数生成器。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061815.webp" alt="img"></p>
+<p>真随机数需要满足三个条件。</p>
+<blockquote>
+<p><strong>（1）无法预测。</strong> 随机数不能被猜到，所以必须非常大，否则会被暴力破解。</p>
+<p><strong>（2）不能重复。</strong> 每次生成的随机数，不能是一样的。</p>
+<p><strong>（3）均匀分布。</strong> 随机数必须平均散布在所有区间，不能集中在某些区间。</p>
+</blockquote>
+<p><strong>一般来说，只有通过硬件，才能得到真随机数</strong>，单纯的软件算法做不到。</p>
+<p>科学家绞尽脑汁，想出各种办法，通过硬件生成随机数。</p>
+<p>著名的 <a target="_blank" rel="noopener" href="https://www.random.org/">Random.org</a> 就是专门生成一个随机数的网站。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061816.webp" alt="img"></p>
+<p>它在全世界部署了多个无线电接收器，专门监听大气无线电波（即大气噪音，可以理解成大气的布朗运动），通过随机的无线电信号来生成随机数。下图是它的早期硬件设备。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061817.webp" alt="img"></p>
+<p>因为有硬件支出，使用它的随机数，需要付费。所以，大家可以看到，真随机数是有成本的，不是跑一下程序就可以了。</p>
+<p>世界最大的 CDN 服务商 Cloudflare ，为了得到真随机数，做得更绝。</p>
+<p>它的三个办公室，每个都有<a target="_blank" rel="noopener" href="https://blog.cloudflare.com/harnessing-office-chaos">不一样</a>的随机数生成装置。</p>
+<p><strong>（1）旧金山总部</strong>。一进门就有一堵墙，放满了几十盏熔岩灯。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031204.webp" alt="img"></p>
+<p>熔岩灯内部是融化的蜡，每时每刻都在变化着形状。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061818.webp" alt="img"></p>
+<p>需要随机数的时候，就对着这堵墙拍一张照片。每张照片都是不一样的，然后计算照片的哈希，将其作为种子值，计算得到一个随机数。</p>
+<p><strong>（2）伦敦办公室。</strong> 那里有一面”单摆墙”，放满了各种单摆装置。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031205.webp" alt="img"></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031206.webp" alt="img"></p>
+<p>单摆和它们的影子，每时每刻都在摆动。每次照片的哈希也是不一样的，可以作为随机数的种子值。</p>
+<p><strong>（3）奥斯汀办公室。</strong> 那里的天花板，挂了很多彩色的反光片。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031207.webp" alt="img"></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031208.webp" alt="img"></p>
+<p>这些反光片对空气流动十分敏感，开门、关门、空调、温度、湿度，都会让其转动，反射出不同颜色的光。因此，也可以用来当作随机数的种子值。</p>
+<h3 id="dll-files"><a href="#dll-files" class="headerlink" title="dll-files"></a><a target="_blank" rel="noopener" href="https://cn.dll-files.com/">dll-files</a></h3><p>最近一些工作在 Windows 系统上完成，有一些软件总是提示：无法找到xxxx.dll文件…，这个网站很好地解决了我的问题：</p>
+<p><img src="https://images-1252557999.file.myqcloud.com/uPic/dll-files.jpg" alt="dll-files"></p>
+<h2 id="3-信任的进化"><a href="#3-信任的进化" class="headerlink" title="3. 信任的进化"></a>3. 信任的进化</h2><p>这是一个以游戏为形式的合作博弈论互动讲解手册，非常有意思。 </p>
+<p><img src="https://imgs.zhubai.love/c5677dee288543a2addc48ee4e60c030_2192261542853668864.png" alt="c5677dee288543a2addc48ee4e60c030_2192261"></p>
+<p> <a target="_blank" rel="noopener" href="https://dccxi.com/trust/">信任的进化</a></p>
+<h2 id="1-Text-to-speech"><a href="#1-Text-to-speech" class="headerlink" title="1. Text to speech"></a>1. Text to speech</h2><p>这是一个免费的文字转语音的工具，无需登录可以免费使用。 </p>
+<p><img src="https://imgs.zhubai.love/bb431500b74f4365904207f440d6932d_2192261542853668864.png" alt="bb431500b74f4365904207f440d6932d_2192261"></p>
+<p> <a target="_blank" rel="noopener" href="https://texttospeech.im/zh-CN">Text to speech</a></p>
+<h2 id="2-OCR-Space"><a href="#2-OCR-Space" class="headerlink" title="2. OCR Space"></a>2. OCR Space</h2><p>这是免费的在线 OCR（从图像中识别文字）服务，无需登录可以免费使用，并提供免费的 api 接口。 </p>
+<p><img src="https://imgs.zhubai.love/4d290bb4a6224469aa36d72a9bc70146_2192261542853668864.png" alt="4d290bb4a6224469aa36d72a9bc70146_2192261"></p>
+<p> <a target="_blank" rel="noopener" href="https://ocr.space/">OCR Space</a></p>
+<h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><h3 id="死亡公司公墓"><a href="#死亡公司公墓" class="headerlink" title="死亡公司公墓"></a><a target="_blank" rel="noopener" href="https://www.itjuzi.com/deathCompany">死亡公司公墓</a></h3><p>这是由 IT橘子提供的倒闭公司数据库，记录了各种公司存活时间、倒闭原因和烧了多少钱。 </p>
+<p><img src="https://imgs.zhubai.love/74040702feab436aa59179dc1dd2c986_2192261542853668864.png" alt="74040702feab436aa59179dc1dd2c986_2192261"></p>
+<h3 id="ePub2Kindle"><a href="#ePub2Kindle" class="headerlink" title="ePub2Kindle"></a><a target="_blank" rel="noopener" href="https://epub2kindle.com/zh/">ePub2Kindle</a></h3><p>在线将ePub文档转换成适用于Kindle设备的AZW3格式</p>
+
+    
+  </div>
+
+</article>
+
+
+    
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/img/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/img/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/blog/docs/dev/api/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/blog/week/week_202419/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+<a id="theme-color" class="theme-color">
+<i class="icon-sun"></i>
+</a>
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  
+<script src="/js/fastclick.js"></script>
+
+<script src="/js/scroll-spy.js"></script>
+
+<script src="/js/zenscroll.js"></script>
+
+<script src="/js/util.js"></script>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

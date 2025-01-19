@@ -1,1 +1,0 @@
-export default class Base{constructor(t){this.id=Base.id++}static id=0;events={};on(t,s){void 0===this.events[t]&&(this.events[t]=[]);var e=Math.random().toString(16).substring(2);return this.events[t].push({id:e,type:t,handler:s}),e}off(s){for(var t of this.events)this.events[t]=this.events[t].filter(t=>t.id!=s)}}

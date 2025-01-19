@@ -1,1 +1,0 @@
-function formatTime(t){return Math.floor(t/60).toString().padStart(2,"0")+":"+Math.floor(t%60).toString().padStart(2,"0")}export{formatTime};

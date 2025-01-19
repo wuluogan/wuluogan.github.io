@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="book p3d">
+        <div class="front-cover p3d">
+            <div class="inside page p3d flip">
+                <p>亲爱的XXX，我用这篇情书表达我内心深处的感受，向你诉说我对你的深深爱意。见到你的那一刻起，你的温柔与美丽就深深地吸引着我，让我心动不已。
+                    每次和你相聚，我的心跳似乎变得更快。你的笑容如阳光般灿烂，每一个眼神都能融化我内心的冰霜。你的聪明才智和善解人意让我感到无比敬佩，我觉得自己是世界上最幸运的人，能有机会与你共度每一天。
+                </p>
+            </div>
+            <div class="outside page">
+            </div>
+        </div>
+        <div class="back-cover p3d">
+            <div class="outside page"></div>
+            <div class="inside page p3d">
+                <div class="shadow"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var front = document.getElementsByClassName('front-cover')[0];
+    var book = document.getElementsByClassName('book')[0];
+    var card = document.getElementsByClassName('card')[0];
+    var shadow = document.getElementsByClassName('shadow')[0];
+    var hold = false;
+    var clamp = function (val, min, max) {
+        return Math.max(min, Math.min(val, max))
+    }
+    //鼠标按下 
+    front.onmousedown = function () {
+        hold = true;
+    }
+    //鼠标松开 
+    window.onmouseup = function () {
+        hold = false;
+    }
+    //判断是否按下 
+    window.onmousemove = function (e) {
+        if (hold) {//修改左半本书的角度，卡片旋转，阴影倾斜 
+            var deg = clamp((window.innerWidth / 2 - e.x + 300) / 300 * -90, -180, 0)
+            front.style.transform = `rotateY(${deg}deg)`
+            //整本书立起来 
+            var bookdeg = deg / 8 + 60
+            book.style.transform = `rotateX(${bookdeg}deg)`
+            var carddeg = deg / 2
+            card.style.transform = `rotateX(${carddeg}deg)`
+            var shadowdeg = deg / 8
+            shadow.style.transform = `skew(${shadowdeg}deg)`
+        }
+    } 
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: baseline;
+        box-sizing: border-box;
+        /*将容器申明成IE模型*/
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        font: 100%/1.25 Helvetica, arial, 仿宋;
+        perspective: 1000px;
+        background-color: pink;
+        background-image: linear-gradient(to bottom, rgb(247, 242, 154), #f79090);
+    }
+
+    .p3d {
+        transform-style: preserve-3d;
+    }
+
+    .book {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -150px;
+        color: #fff;
+        -webkit-transform: rotateX(60deg);
+        /* -moz-transform: rotateX(60deg); 
+    -o-transform: rotateX(60deg); */
+        user-select: none;
+    }
+
+    .front-cover {
+        cursor: move;
+        transform-origin: 0 50%;
+        transform: rotateY(0deg);
+    }
+
+    .page {
+        width: 300px;
+        height: 300px;
+        padding: 1em;
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-indent: 2em;
+    }
+
+    .inside {
+        background-color: #f79090;
+    }
+
+    .outside {
+        background-color: #fff;
+    }
+
+    .front-cover .outside {
+        background-image: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.oWr0-UcLkYBGedCwTIN2LAHaHa?w=192&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateZ(3px);
+    }
+
+    .flip {
+        transform: rotateY(180deg);
+    }
+
+    .back-cover .outside {
+        transform: rotateZ(-3px);
+    }
+
+    .back-cover .inside {
+        background-color: #f79090;
+    }
+
+    .shadow,
+    .card {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 196px;
+        height: 132px;
+        position: absolute;
+        left: 60px;
+        top: 60px;
+        transform-origin: 0 100%;
+    }
+
+    .shadow {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .card {
+        background-image: url(https://tse3-mm.cn.bing.net/th/id/OIP-C.zuHVOAp1LoRzzkHAUE9gbwHaE8?w=295&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+</html>

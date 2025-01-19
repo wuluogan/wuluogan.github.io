@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WVdeo</title>
+    <style>
+        #player{
+            width: 50%;
+            height: 400px;
+            margin：0 auto;
+        }
+        #switch,#next1{
+        background: #7F9CCC;
+        color:#fff;
+        line-height:40px;
+        text-align:center;
+        width:100px;
+        border:none;
+        margin:0 6px;
+        border-radius:6px;
+        font-weight:bold;
+        }
+        </style>
+</head>
+<body>
+    <div>
+        <section id="main">
+        <video id="player" src="http://v.nrzj.vip/video.php" controls="controls"></video>
+        </section>
+        </div>
+        <div style="text-align: center;">
+        <section id="buttons">
+        <button id="switch">连续: 开</button>
+        <button id="next1">换一个</button>
+        </section>
+        </div>
+
+        <script>
+            // 小姐姐: http://v.nrzj.vip/video.php
+            // DJ: http://mn.bt8.top/zjxjj/djxjj/video.php
+            // 精品: https://api.ainio.cn/mp4
+            // 清晰横版:https://www.cunshao.com/666666/api/pc.php
+            // 手机版: https://www.cunshao.com/666666/api/web.php
+            // 歌唱 https://188sp.711888.xyz/188/video.php
+            // 合集一: http://www.kuaidoushe.com/video.php
+            // 合集二: http://xjj.nbtd.vip/cs/video.php
+            // MTV: http://mn.bt8.top/zjxjj/mtv/mtv.php
+            // 国外抖音: http://mn.bt8.top/tkxjj/video.php
+
+            (function (window, document) {
+            if (top != self) {
+            window.top.location.replace(self.location.href);
+            }
+            var get = function (id) {
+            return document.getElementById(id);
+            }
+            var bind = function (element, event, callback) {
+            return element.addEventListener(event, callback);
+            }
+            var auto = true;
+            var player = get('player');
+            var randomm = function () {
+            player.src = 'http://v.nrzj.vip/video.php?_t=' + Math.random();
+            player.play();
+            }
+            bind(get('next1'), 'click', randomm);
+            bind(player, 'error', function () {
+            randomm();
+            });
+            bind(get('switch'), 'click', function () {
+            auto = !auto;
+            this.innerText = '连续: ' + (auto ? '开' : '关');
+            });
+            bind(player, 'ended', function () {
+            if (auto) randomm();
+            });
+            })(window, document);</script>
+</body>
+</html>
+
+
+
+
+
+
+
+  
+    

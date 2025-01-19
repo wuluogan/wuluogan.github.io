@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>WPay</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Huangxin, LF112" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <!-- 配置页面图标，更改href后面的图片地址即可 -->
+    <link rel="shortcut icon" type="image/x-icon" id="favicon">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.26.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.26.1/assets/styles/style.min.css">
+    <!-- <link rel="stylesheet" href="./assets/styles/style.css"> -->
+
+</head>
+
+<body>
+
+    <script>
+
+        // 昵称和头像地址
+        var myname = "WLG";
+        var profile = "im.hx@live.cn";
+        // var profile = "https://ae01.alicdn.com/kf/H0b798980349e4042bd9dabb1acc79cb6U.jpg";
+
+        var usage = "payment";
+
+        // 支付方式，需要将你的微信、QQ、支付宝收款码图片解析成链接填入即可，解析地址：https://www.sojson.com/deqr.html，paypal直接使用个人收款链接即可。
+        var wechat = "wxp://f2f0xFuBE5tqPeKuwZxWkpE0CBf4-GkfwdpN";
+        var alipay = "https://qr.alipay.com/tsx13404cfdrbv32vk9vm90";
+        var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=26E3D12F23952F04A9553D36B31F18BC3AEA141B073F9DD9BC3747C823819645&u=1031092401&n=惶心";
+        // var paypal = "https://paypal.me/hxco";
+
+        // Multilingual Support
+        var multilingual = true; // Set variable to false to disable multilingual feature
+        var myname_hans = myname // Default setting for Chinese Simplified users; change it to a speicify value if needed
+        var myname_hant = "WLG"; // Choose how you want your name to be displayed for Traditional Chinese users
+        var myname_eng = "Focus Chen"; // Choose how you want your name to be displayed for English / Non-Chinese users
+
+
+        // 调试模式，可以使用#注释掉
+        var branding = true; // Set variable to `false` to disable branding
+
+        // 界面文字提示，可以默认不用修改
+        var title = "选择你的支付方式";
+        var subtitle = "跟随进一步的指示以向" + myname + "付款"; // Do not change the `myname` variable here
+
+        // 二维码生成api接口，直接默认即可，不过也可以替换其它接口
+        var qrcodeapi = "https://www.zhihu.com/qrcode?url="; // Please note that the API has to support HTTPS connection otherwise will not be loaded
+        var gravatar_url = "https://www.gravatar.com/avatar/"; // You can set your preferred gravatar source (mirror) here; stay default if you cannot decide which source you'd prefer
+    </script>
+
+    <div class="main" id="h">
+        <i id="i"></i>
+
+        <div class="texts">
+            <h2 id="name"></h2>
+            <p id="description"></p>
+        </div>
+
+        <div id="pending">
+            <p id="depends" class="middlebtn">
+                <a href="#showqrcode" class="btn btn-primary" id="tenpaybtn" onclick="opentenpay()"><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#icon-QQ"></use>
+                    </svg></a><span></span>
+                <a href="#showqrcode" class="btn btn-primary" id="toclick" onclick="openwechat()"><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#icon-weixinzhifu"></use>
+                    </svg></a><span></span>
+                <a href="#showqrcode" class="btn btn-primary" id="alipaybtn" onclick="openalipay()"><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#icon-iconfontrectangle390"></use>
+                    </svg></a><span></span>
+                <button class="btn btn-primary" id="paypalbtn" onclick="openbox()"><svg class="icon paypal-wide"
+                        aria-hidden="true">
+                        <use xlink:href="#icon-paypal"></use>
+                    </svg></button>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="modal" id="showqrcode">
+        <div class="modal-container" role="document">
+            <div class="modal-header" id="btncontainer">
+                <a href="#" class="btn btn-clear float-right" id="qrcodeclose" aria-label="Close"></a>
+                <div id="titleinfo" class="modal-title h5" style="text-align: center"></div>
+            </div>
+            <div class="modal-body">
+                <div class="content" id="qrcontainer">
+                    <div id="currentqrcode" class="img smaller"></div>
+                    <img id="tenpayonly" class="img smaller">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3"></script>
+    <script
+        src="https://cdn.jsdelivr.net/combine/gh/lrsjng/jquery-qrcode@0.18.0/dist/jquery-qrcode.min.js,npm/blueimp-md5@2.18.0/js/md5.min.js,gh/hifocus/merger@0.26.1/assets/js/function.min.js,gh/hifocus/merger@0.26.1/assets/js/font_974919_xgtacm93vxp.min.js"></script>
+
+    <!-- <script src="./assets/js/font_974919_xgtacm93vxp.js"></script> -->
+
+
+</body>
+
+</html>

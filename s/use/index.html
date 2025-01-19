@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>WHtml</title>
+    <meta name="description" content="集合了众多在线工具的神奇工具网站,集齐超多小工具等等"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f1f2f3;
+            position: relative;
+            /*min-width: 1300px;*/
+        }
+
+        .content {
+            width: 90%;
+            margin: 15px auto;
+        }
+
+        .content .item {
+            /*min-width: 1200px;*/
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .content .item h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 12px;
+        }
+
+        .github svg {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            fill: #999;
+        }
+
+        .content .item .child {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .content .item .child a {
+            float: left;
+            color: #666;
+            font-size: 14px;
+            margin: 10px 0.8%;
+            text-decoration: none;
+            padding: 10px 14px;
+            border: 1px solid #fff;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 0.5rem 0.875rem 2.375rem rgb(39 44 49 / 6%), 0.0625rem 0.1875rem 0.5rem rgb(39 44 49 / 3%);
+            width: 18.4%;
+            min-height: 62px;
+            line-height: 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+
+        .content .item .child .red {
+            color: #F06431;
+        }
+
+        .content .item .child a:hover {
+            border-color: #476675;
+            background: #476675;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+        .content .info {
+            background: #fff;
+            border-radius: 8px;
+            padding: 5px 0;
+            margin: 0 10px;
+            margin-bottom: 20px;
+            /*min-width: 1180px;*/
+            width: calc(100% - 20px);
+            box-shadow: 0.5rem 0.875rem 2.375rem rgb(39 44 49 / 6%), 0.0625rem 0.1875rem 0.5rem rgb(39 44 49 / 3%);
+        }
+
+        .content .info h2 {
+            margin: 10px;
+            color: #111;
+            font-size: 20px;
+        }
+
+        .content .info p {
+            margin: 10px;
+            color: #222;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .content .info a {
+            color: #f7810d;
+            text-decoration: none;
+        }
+
+        .content .info a:hover {
+            color: #f73131;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px;
+        }
+
+        footer a {
+            margin: 0 5px;
+            font-size: 14px;
+            color: #476675;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="content" id="container">
+    <div class="item info">
+        <h2>欢迎使用WHtml</h2>
+        <div id="ad_line" style="margin: 0 10px;"></div>
+        <p>
+            致力于打造和收集各种简单、易用、便捷的在线工具，部分来源于开源项目，红色标记为热门工具。 收藏本站域名(ctrl+d)：<a
+                target="_blank" href="https://wlg.com">https://wlg.com</a>。
+        </p>
+    </div>
+
+
+</div>
+
+<footer id="footer"></footer>
+</body>
+
+<script>
+    var data = [
+        {title: '待办', group: '常用', url: './use/todo.html'},
+        {title: '音乐', group: '常用', url: './use/music.html'},
+        {title: '视频', group: '常用', url: './use/video.html'},
+        {title: 'AI', group: '常用', url: './use/ai.html'},
+        {title: 'Aria', group: '常用', url: './use/aria.html'},
+
+        {title: '时钟', group: '工具', url: './tool/dateclock.html'},
+        {title: 'HTML加密', group: '工具', url: './tool/encrypt.html'},
+        {title: '问题卡片', group: '工具', url: './tool/cards.html'},
+        {title: '画板', group: '工具', url: './tool/drawing.html'},
+        {title: '文本阅读', group: '工具', url: './tool/speech.html'},
+        {title: '文章生成器', group: '工具', url: './tool/article.html'},
+        {title: 'css绘制', group: '工具', url: './tool/cssToImg.html'},
+        {title: '喝水记录', group: '工具', url: './tool/drinkWater.html'},
+        {title: '键盘对应', group: '工具', url: './tool/keys.html'},
+        {title: '备忘录', group: '工具', url: './tool/memo.html'},
+        {title: '万能收款码', group: '工具', url: './tool/play.html'},
+        {title: '图片加水印', group: '工具', url: './tool/sfz.html'},
+        {title: '重合日期推算器', group: '工具', url: './tool/zhrqtsq.html'},
+        {title: '成绩分析器', group: '工具', url: './tool/gradeAnalyzer.html'},
+        {title: '文字转语音', group: '工具', url: './tool/textToSpeech.html'},
+
+        {title: 'Kindle', group: '动画', url: './draw/kindle.html'},
+        {title: '名牌', group: '动画', url: './draw/visi.html'},
+        {title: '刮刮乐', group: '动画', url: './draw/ggl.html'},
+        {title: '系统更新', group: '动画', url: './draw/rest.html'},
+        {title: '群鸟飞行', group: '动画', url: './draw/bird.html'},
+        {title: '呼吸动画', group: '动画', url: './draw/breathe.html'},
+        {title: '数字雨', group: '动画', url: './draw/digitalRain.html'},
+        {title: '小鸡', group: '动画', url: './draw/egg.html'},
+        {title: '流体动画', group: '动画', url: './draw/fluid.html'},
+        {title: '刮刮乐', group: '动画', url: './draw/ggl.html'},
+        {title: '果冻', group: '动画', url: './draw/jelly.html'},
+        {title: '花瓣特效', group: '动画', url: './draw/petal.html'},
+        {title: '放松呼吸', group: '动画', url: './draw/rest.html'},
+
+
+
+        {title: '按钮特效', group: '动画', url: './demo/active.html'},
+        {title: '彩炫', group: '动画', url: './demo/animation.html'},
+        {title: '飞鸟', group: '动画', url: './demo/bird.html'},
+        {title: '呼吸动画', group: '动画', url: './demo/breathe.html'},
+        {title: '按钮1', group: '动画', url: './demo/button1.html'},
+        {title: '圣诞动画', group: '动画', url: './demo/christmas.html'},
+        {title: '时钟1', group: '动画', url: './demo/clock1.html'},
+        {title: '时钟2', group: '动画', url: './demo/clock2.html'},
+        {title: '时钟3', group: '动画', url: './demo/clock3.html'},
+        {title: '时钟4', group: '动画', url: './demo/clock4.html'},
+        {title: '时钟5', group: '动画', url: './demo/clock5.html'},
+        {title: '时钟6', group: '动画', url: './demo/clock6.html'},
+        {title: '时钟7', group: '动画', url: './demo/clock7.html'},
+        {title: '时钟8', group: '动画', url: './demo/clock8.html'},
+        {title: '弹球', group: '动画', url: './demo/collision.html'},
+        {title: '数字雨', group: '动画', url: './demo/digitalRain.html'},
+        {title: '流体动画', group: '动画', url: './demo/fluid.html'},
+        {title: '刮刮乐', group: '动画', url: './demo/ggl.html'},
+        {title: '暗色导航', group: '动画', url: './demo/iconCss.html'},
+        {title: '图片2', group: '动画', url: './demo/img2.html'},
+        {title: '图片3', group: '动画', url: './demo/img3.html'},
+        {title: '图片4', group: '动画', url: './demo/img4.html'},
+        {title: '果冻', group: '动画', url: './demo/jelly.html'},
+        {title: '排行榜', group: '动画', url: './demo/list.html'},
+        {title: '加载动画1', group: '动画', url: './demo/loader1.html'},
+        {title: '加载动画2', group: '动画', url: './demo/loader2.html'},
+        {title: '菜单', group: '动画', url: './demo/menu.html'},
+        {title: '花瓣特效', group: '动画', url: './demo/petal.html'},
+        {title: '字体流动效果', group: '动画', url: './demo/text.html'},
+        {title: '伞与颜色', group: '动画', url: './demo/umbrella.html'},
+        {title: '爱吹风的小狮子', group: '动画', url: './demo/xsz.html'},
+        {title: '加载动画1', group: '动画', url: './demo/loader1.html'},
+        {title: '加载动画1', group: '动画', url: './demo/loader1.html'},
+
+
+        {title: '烟花', group: '游戏', url: 'game/firework/index.html'},
+        {title: '2048', group: '游戏', url: './game/2048.html'},
+        {title: '飞机大战', group: '游戏', url: './game/aircraft.html'},
+        {title: '打砖块', group: '游戏', url: './game/breakout.html'},
+        {title: '圣诞游戏', group: '游戏', url: './game/christmas.html'},
+        {title: '色差游戏', group: '游戏', url: './game/chromatism.html'},
+        {title: '色球游戏', group: '游戏', url: './game/detour.html'},
+        {title: 'JS闯关小游戏', group: '游戏', url: './game/jsgame.html'},
+        {title: '迷宫游戏', group: '游戏', url: './game/maze.html'},
+        {title: '切方块', group: '游戏', url: './game/qfk.html'},
+        {title: '赛车游戏', group: '游戏', url: './game/racing.html'},
+        {title: '乒乓球游戏', group: '游戏', url: './game/rattle.html'},
+        {title: '贪吃蛇', group: '游戏', url: './game/sanke.html'},
+        {title: '盖塔楼', group: '游戏', url: './game/stack.html'},
+        {title: '扫雷', group: '游戏', url: './game/minesweeper.html'},
+        {title: '文字冒险游戏', group: '游戏', url: './game/adventures.html'},
+        {title: '猜拳游戏', group: '游戏', url: './game/guessPunch.html'},
+        {title: '猜数字游戏', group: '游戏', url: './game/guessNumbers.html'},
+        {title: '架子鼓', group: '游戏', url: './game/drumkit/index.html'},
+        {title: '吉他', group: '游戏', url: './game/guitar/index.html'},
+        {title: '马里奥', group: '游戏', url: './game/mario/index.html'},
+        {title: '3D拼魔方', group: '游戏', url: './game/mofang/index.html'},
+        {title: '植物大战僵尸', group: '游戏', url: './game/plantsvsZombies/index.html'},
+        {title: '赛车', group: '游戏', url: './game/saiche/index.html'},
+        {title: '水果忍者', group: '游戏', url: './game/shuiguorenzhe/index.html'},
+    ];
+
+    const groupedData = data.reduce(function (groups, item) {
+        if (!groups[item.group]) {
+            groups[item.group] = [];
+        }
+        groups[item.group].push(item);
+        return groups;
+    }, {});
+
+    const container = document.getElementById('container');
+    for (const title in groupedData) {
+        const group = groupedData[title];
+        const groupElement = document.createElement('div');
+        groupElement.classList.add('item');
+        groupElement.innerHTML = '<h2>' + title + '</h2>';
+        const listItem = document.createElement('div');
+        listItem.classList.add('child');
+        group.forEach(function (item) {
+            listItem.innerHTML += '<a href="' + item.url + '" target="_self">' + item.title + '</a>';
+        });
+        groupElement.appendChild(listItem);
+        groupElement.innerHTML += '</div>';
+        container.appendChild(groupElement);
+    }
+
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    document.getElementById('footer').innerHTML = 'Copyright © <a href="/">'+year+'</a>';
+</script>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Preloader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #03a9f4;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #eee;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: consolas;
+
+            transition: background-color 0.5s;
+            transition-delay: 0.2s;
+        }
+
+        .aqua {
+            position: relative;
+
+            width: 70vw;
+            max-width: 500px;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: inset 0px 10px 5px rgba(0, 0, 0, 0.07),
+            0px 15px 8px rgba(0, 0, 0, 0.05),
+            0px 10px 15px rgba(0, 0, 0, 0.05),
+            inset 0px -10px 15px rgba(255, 255, 255, 0.9);
+
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .aqua::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            height: 5px;
+            background-color: #fff4;
+            border-radius: 20px;
+        }
+
+        .percent-bar {
+            position: relative;
+
+            /* width: 0; */
+            width: 10%;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 20px;
+        }
+
+        .number {
+            position: absolute;
+            top: -66px;
+            right: -55px;
+
+            padding: 10px 15px;
+            color: var(--primary-color);
+            box-shadow: inset 0px 10px 5px rgba(0, 0, 0, 0.07),
+            0px 15px 8px rgba(0, 0, 0, 0.05),
+            0px 10px 15px rgba(0, 0, 0, 0.05),
+            inset 0px -10px 15px rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            border-bottom-left-radius: 0px;
+        }
+
+        h2 {
+            position: absolute;
+
+            font-size: 4em;
+            font-weight: 500;
+            color: #fff;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: opacity 0.5s, visibility 0.5s;
+            transition-delay: 0.5s;
+        }
+
+
+        @media screen and (max-width: 576px) {
+            h2 { font-size: 3em; }
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="aqua">
+    <div class="percent-bar">
+        <h3 class="number">10%</h3>
+    </div>
+</div>
+
+<h2>Hey,guys!</h2>
+<script>
+    /**进度 */
+    let i = 0;
+
+    const body = document.querySelector('body'),
+        aquaEle = document.querySelector('.aqua'),
+        percentBarEle = document.querySelector('.percent-bar'),
+        numberEle = document.querySelector('.number'),
+        welcEle = document.querySelector('h2');
+
+    let interval = setInterval(() => {
+        const text = `${i}%`;
+
+        numberEle.textContent = text;
+        percentBarEle.style.width = text;
+
+        i+=2;
+
+        if (i > 100) {
+            clearInterval(interval);
+
+            /**隐藏加载 */
+            aquaEle.style.opacity = '0';
+            aquaEle.style.visibility = 'hidden';
+
+            /**改变背色 */
+            body.style.backgroundColor = `var(--primary-color)`;
+
+            /**显示文字 */
+            welcEle.style.opacity = '1';
+            welcEle.style.visibility = 'visible';
+        }
+    }, 50);
+
+</script>
+</body>
+
+</html>

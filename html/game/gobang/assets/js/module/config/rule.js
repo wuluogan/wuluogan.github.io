@@ -1,1 +1,0 @@
-const gameTime=720,stepTime=30,winScore=1,loseScore=-1,drawScore=0;export{gameTime,stepTime,winScore,loseScore,drawScore};

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密解密工具</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p#result {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            min-height: 50px;
+        }
+    </style>
+    <script>
+        // 定义常量
+        const LIST_CODE_EN = ["富", "强", "文", "明", "平", "等"];
+        const LIST_CODE_NUM = ["中", "华", "人", "民", "共", "和", "国", "万", "岁", "红"];
+        const LIST_HEX = ["a", "b", "c", "d", "e", "f"];
+
+        function encode(str) {
+            str = urlEncode(str);
+            let hexString = stringToHex(str);
+            return doInString(hexString);
+        }
+
+        function decode(str) {
+            try {
+                let sb = [];
+                for (let i = 0; i < str.length; i++) {
+                    if (findInNum(str.charAt(i)) != -1) {
+                        sb.push(findInNum(str.charAt(i)));
+                    } else {
+                        if (findInEn(str.charAt(i)) != -1) {
+                            sb.push(LIST_HEX[findInEn(str.charAt(i))]);
+                        }
+                    }
+                }
+                if (sb.join('') === '' || sb.join('') === null) {
+                    return "解密失败非密文";
+                }
+                return urlDecode(hexToString(sb.join('')));
+            } catch (e) {
+                return "解密失败非密文";
+            }
+        }
+
+        function stringToHex(str) {
+            let sb = [];
+            for (let i = 0; i < str.length; i++) {
+                let hexString = str.charCodeAt(i).toString(16);
+                sb.push(hexString);
+            }
+            return sb.join('');
+        }
+
+        function hexToString(str) {
+            let result = '';
+            for (let i = 0; i < str.length; i += 2) {
+                let st = str.substr(i, 2);
+                let ch = String.fromCharCode(parseInt(st, 16));
+                result += ch;
+            }
+            return result;
+        }
+
+        function doInString(str) {
+            let sb = [];
+            for (let i = 0; i < str.length; i++) {
+                if (/^\d$/.test(str.charAt(i))) {
+                    sb.push(LIST_CODE_NUM[parseInt(str.charAt(i))]);
+                } else {
+                    sb.push(LIST_CODE_EN[enToInt(str.charAt(i)) - 1]);
+                }
+            }
+            return sb.join('');
+        }
+
+        function isNum(str) {
+            return /^\d$/.test(str);
+        }
+
+        function enToInt(ch) {
+            let str = ch.toString();
+            let chCode = str.charCodeAt(0);
+            let num = 0;
+            if (chCode >= 97 && chCode <= 122) {
+                num = chCode - 96;
+            }
+            if (chCode >= 65 && chCode <= 90) {
+                num = chCode - 64;
+            }
+            return num;
+        }
+
+        function findInEn(ch) {
+            let str = ch.toString();
+            for (let i = 0; i < LIST_CODE_EN.length; i++) {
+                if (LIST_CODE_EN[i] === str) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        function findInNum(ch) {
+            let str = ch.toString();
+            for (let i = 0; i < LIST_CODE_NUM.length; i++) {
+                if (LIST_CODE_NUM[i] === str) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        function urlEncode(str) {
+            try {
+                return encodeURIComponent(str);
+            } catch (e) {
+                console.error(e);
+                return str;
+            }
+        }
+
+        function urlDecode(str) {
+            try {
+                return decodeURIComponent(str);
+            } catch (e) {
+                console.error(e);
+                return str;
+            }
+        }
+
+        function encrypt() {
+            let inputValue = document.getElementById('inputText').value;
+            let encryptedValue = encode(inputValue);
+            document.getElementById('result').innerHTML = encryptedValue;
+        }
+
+        function decrypt() {
+            let inputValue = document.getElementById('inputText').value;
+            let decryptedValue = decode(inputValue);
+            document.getElementById('result').innerHTML = decryptedValue;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>红色加密解密工具</h2>
+    <input type="text" id="inputText">
+    <button onclick="encrypt()">加密</button>
+    <button onclick="decrypt()">解密</button>
+    <p id="result"></p>
+</body>
+
+</html>

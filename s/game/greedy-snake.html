@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇</title>
+   <style>
+       html, body {
+           height: 100%;
+           margin: 0;
+           --primary-text-color: #333;
+       }
+
+       .container {
+           display: flex;
+           /* justify-content: center; */
+           /* align-items: center; */
+           /* height: 100%; */
+           flex-wrap: wrap;
+           padding: 20px 0 0 20px;
+           box-sizing: border-box;
+       }
+
+       .canvas-box {
+           border: 1px solid #dedede;
+           margin-right: 20px;
+       }
+
+       .extra-info {
+           margin-top: 5px;
+       }
+
+       .description .title, .level .title, .score-box .title {
+           font-size: 16px;
+           font-weight: bold;
+           margin-bottom: 10px;
+       }
+
+       .description .desc {
+           counter-reset: order;
+           margin-bottom: 10px;
+       }
+
+       .description .desc div {
+           font-size: 15px;
+           color: var(--primary-text-color);
+           line-height: 21px;
+       }
+
+       .description .desc div::before {
+           counter-increment: order;
+           content: counter(order);
+           padding: 0 10px;
+           font-weight: bold;
+       }
+
+       .level {
+           display: flex;
+           align-items: center;
+           flex-wrap: nowrap;
+           margin-bottom: 10px;
+       }
+
+       .level .title {
+           margin-bottom: 0;
+       }
+
+       .level .level-radio {
+           font-size: 15px;
+           color: var(--primary-text-color);
+       }
+
+       .level .level-radio input {
+           margin: -1px 0 0 10px;
+           vertical-align: middle;
+       }
+
+       .level .level-radio label {
+           cursor: pointer;
+       }
+
+       .score-box {
+           display: flex;
+           align-items: center;
+           flex-wrap: nowrap;
+           margin-bottom: 10px;
+       }
+
+       .score-box .title {
+           margin-bottom: 0;
+       }
+
+       .score-box .score {
+           font-size: 18px;
+           font-weight: bold;
+           color: lightseagreen;
+           margin-left: 10px;
+       }
+
+       .bottom-operate button {
+           padding: 2px 15px;
+           font-size: 15px;
+           cursor: pointer;
+       }
+
+       .special-event {
+           margin-top: 10px;
+           padding-left: 20px;
+           font-size: 15px;
+           color: lightskyblue;
+       }
+
+       .special-event .title {
+           font-weight: bold;
+       }
+
+       .special-event .warning {
+           color: goldenrod;
+           font-weight: bold;
+       }
+
+       .hidden {
+           display: none;
+       }
+
+       .game-over-layer {
+           position: fixed;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           z-index: 1000;
+           width: 100%;
+           height: 100%;
+           background-color: rgba(0, 0, 0, .3);
+           overflow: auto;
+       }
+
+       .game-over-box {
+           position: fixed;
+           top: 0;
+           bottom: 20%;
+           left: 0;
+           right: 0;
+           z-index: 1002;
+           width: 280px;
+           height: 150px;
+           margin: auto;
+           padding: 20px 30px;
+           box-sizing: border-box;
+           border: 1px solid #dedede;
+           border-radius: 5px;
+           background-color: #DDEDFD;
+           font-size: 20px;
+           font-weight: bold;
+           text-align: center;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: space-between;
+       }
+
+       .game-over-box .score #game-score {
+           color: lightseagreen;
+       }
+
+       .game-over-box .btn {
+           width: 100%;
+           display: flex;
+           flex-wrap: nowrap;
+           justify-content: space-between;
+           align-items: center;
+           margin-top: 15px;
+       }
+
+       .game-over-box .btn button {
+           padding: 5px 20px;
+           cursor: pointer;
+       }
+
+   </style>
+</head>
+<body>
+<div class="container">
+    <canvas id="canvas" width="400" height="400" class="canvas-box"></canvas>
+    <div class="extra-info">
+        <div class="description">
+            <div class="title">游戏说明：</div>
+            <div class="desc">
+                <div>使用键盘上下左右键（或者WSAD键）来控制蛇的移动方向</div>
+                <div>移动蛇来寻找食物，每吃一口就得一定的积分，同时蛇会越来越长</div>
+                <div>不能碰墙，不能咬到自己的身子，更不能咬到自己的尾巴</div>
+                <div>下方单选框可以选择游戏难度等级</div>
+            </div>
+            <div class="title">操作说明：</div>
+            <div class="desc">
+                <div>点击《开始/继续》即开始游戏</div>
+                <div>点击《暂停》即暂停游戏</div>
+                <div>点击《开始/继续》即继续游戏</div>
+                <div>点击《重新开始》即重新开始游戏</div>
+                <div>按键"C"：开始或继续游戏</div>
+                <div>按键"P"：暂停游戏</div>
+                <div>按键"R"：重新开始游戏</div>
+            </div>
+        </div>
+        <div class="level">
+            <div class="title">难度等级：</div>
+            <div class="level-radio">
+                <input type="radio" name="level" checked value="simplyMode" id="level-1" />
+                <label for="level-1">简单</label>
+            </div>
+            <div class="level-radio">
+                <input type="radio" name="level" value="middleMode" id="level-2" />
+                <label for="level-2">中级</label>
+            </div>
+            <div class="level-radio">
+                <input type="radio" name="level" value="hardMode" id="level-3" />
+                <label for="level-3">困难</label>
+            </div>
+        </div>
+        <div class="score-box">
+            <div class="title">当前得分：</div>
+            <div id="score" class="score">0</div>
+        </div>
+        <div class="bottom-operate">
+            <button type="button" id="start">开始/继续</button>
+            <button type="button" id="stop">暂停</button>
+            <button type="button" id="restart">重新开始</button>
+        </div>
+    </div>
+</div>
+<div id="special-box" class="special-event hidden">
+    <span class="title">触发随机事件：</span>
+    <span class="warning">!</span>
+    <span id="special-text"></span>
+</div>
+<div id="game-over-layer" class="game-over-layer hidden">
+    <div class="game-over-box">
+        <div class="title">游戏结束!</div>
+        <div class="score">你的最终得分为：<span id="game-score">0</span> 分</div>
+        <div class="btn">
+            <button type="button" id="again">再来一把</button>
+            <button type="button" id="cancel">取消</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const surprisePos = [
+        { pos: 0, text: '你在草丛中悠闲地逛着, 碰到了农夫, 不小心被砍断了一节尾巴, 扣掉1分', increase: -1, value: -1 },
+        { pos: 0, text: '夏日凉爽, 适合乘凉, 你碰到了一片荫蔽之地, 增加1分', increase: 0, value: 1 },
+        { pos: 0, text: '前天过量饮食, 积食过多, 体积扩大两节, 不加分', increase: 2, value: 0 }
+    ]
+    window.onload = () => {
+        // 地图随机性 - 生成不同大小的地图？
+        // 多人在线对战？(抢食物？不能碰撞到？)
+        // 不同的食物作用不同？
+        // 记录用户分数
+
+        $start.addEventListener('click', startGame)
+        $stop.addEventListener('click', stopGame)
+        $restart.addEventListener('click', () => {
+            init()
+            startGame()
+        })
+        $again.addEventListener('click', () => {
+            init()
+            $layer.classList.add('hidden')
+            startGame()
+        })
+        $cancel.addEventListener('click', () => {
+            $layer.classList.add('hidden')
+        })
+
+        const bgColor = 'white'
+        const snakeHeadColor = '#cc4b4b'
+        const snakeBodyColor = '#1a8dcc'
+        const foodColor = 'yellow'
+
+        let snakeArr = []      // 20 * 20 矩形，则 400块格子，队列表示 蛇整身数组范围【0 ~ 399】
+        let food = 0           // 食物的位置，范围【0 ~ 399】
+        let direction = 1      // 表示蛇运动方向，范围 { 1, -1, 20, -20 } 只要加上这个值就表示新蛇头的位置
+        let speed = levelObj.simplyMode
+        let score = 0
+        let specialPosArr = []
+
+        // 进入网页初始化
+        function init () {
+            ctx.clearRect(0, 0, 400, 400)
+            snakeArr = [null, null, null]
+            score = 0
+            updateScore()
+            // 初始化蛇的位置
+            const snakeHeadPos = random(0, 400)
+            snakeArr[0] = snakeHeadPos
+            const { x, y } = getDrawPos(snakeHeadPos)
+            const xDirection = x <= 200 ? 1 : -1
+            const yDirection = y >= 200 ? -20 : 20
+            direction = Math.random() * 10 > 5 ? xDirection : yDirection
+            // 初始化随机食物位置 - (食物不能在蛇内部)
+            while(snakeArr.indexOf((food = random(0, 400))) >= 0);
+            draw(snakeHeadPos, snakeHeadColor)
+            draw(food, foodColor)
+            initSurprisePos()
+        }
+
+        function runGame () {
+            // 每次移动前, 同步一下难度等级
+            speed = getSyncLevel()
+            // 新蛇头的位置
+            const newPos = snakeArr[0] + direction
+            // 添加新蛇头到队列前
+            snakeArr.unshift(newPos)
+            // 判断蛇头是否超出边界
+            if (checkIsOverBound(newPos)) return
+            draw(newPos, snakeHeadColor)       // 绘制新蛇头
+            draw(snakeArr[1], snakeBodyColor)  // 绘制之前的蛇头为蛇身
+            if (handleSurpriseEvent(newPos)) return // 遇到遇到随机事件
+            if (newPos === food) {   // 刚好吃到食物
+                score += 1
+                updateScore()
+                // 重新刷新食物【不可占在蛇的位置和随机事件的位置】
+                const specialArr = specialPosArr.map(item => item.pos)
+                while([...snakeArr, ...specialArr].indexOf((food = random(0, 400))) >= 0);
+                draw(food, foodColor)
+            } else {
+                // 未吃到食物则去除蛇尾最后一个格子, 因为移动了，然后绘制成白色
+                draw(snakeArr.pop(), bgColor)
+            }
+        }
+
+        function gameOver () {
+            cancelAnimationFrame(runId)
+            // 显示结果
+            $layerScore.innerText = score
+            $layer.classList.remove('hidden')
+        }
+
+        function updateScore () {
+            $score.innerText = `${score}`
+        }
+
+        function initSurprisePos () {
+            // 随机获得偶遇位置【2个吧】
+            let pos = []
+            do {
+                const nextPos = random(0, 400)
+                // 随机事件不能与蛇与食物重合
+                if ([...snakeArr, food].indexOf(nextPos) < 0) {
+                    pos.push(nextPos)
+                }
+            } while (pos.length < 2)
+            const list = surprisePos.slice(0, 2)
+            list.forEach((item, index) => {
+                item.pos = pos[index] || 0
+            })
+            specialPosArr = list
+            // Test: 随机事件位置
+            // specialPosArr.forEach(item => {
+            //     draw(item.pos, 'blue')
+            // })
+        }
+
+        function handleSurpriseEvent (newPos) {
+            const length = specialPosArr.length
+            for (let i = 0; i < length; i++) {
+                const { pos, text, increase, value } = specialPosArr[i]
+                if (pos === newPos) {  // 当碰到随机事件时
+                    showSurprise(text) // 显示随机事件
+                    score += value     // 更新得分
+                    updateScore()
+                    // Todo increase: 体积问题怎么做？
+                    specialPosArr.slice(i, 1)
+                    // 移动了, 则去除蛇尾
+                    draw(snakeArr.pop(), bgColor)
+                    return true
+                }
+            }
+            return false
+        }
+
+        function showSurprise (text) {
+            $specialText.innerText = text
+            $specialBox.classList.remove('hidden')
+            setTimeout(() => {
+                $specialBox.classList.add('hidden')
+            }, 1500)
+        }
+
+        function checkIsOverBound (pos) {
+            // 撞到蛇了
+            const isSnakePos = snakeArr.indexOf(pos, 1) > 0
+            if (isSnakePos || pos < 0 || pos > 399 || (direction === 1 && pos % 20 === 0) || (direction === -1 && pos % 20 === 19)) {
+                gameOver()
+                return true
+            }
+            return false
+        }
+
+        // 键盘绑定事件
+        const keydownMap = {
+            ArrowUp: -20,
+            ArrowDown: 20,
+            ArrowLeft: -1,
+            ArrowRight: 1,
+            w: -20,
+            s: 20,
+            a: -1,
+            d: 1
+        }
+        document.onkeydown = (e) => {
+            const key = e.key
+            const newDirection = keydownMap[key] || direction
+            // 若方向与原方向相同, 则方向不变
+            direction = (snakeArr[1] - snakeArr[0] === newDirection) ? direction : newDirection
+            if (key === 'c') {
+                $start.click()
+            } else if (key === 'p') {
+                $stop.click()
+            } else if (key === 'r') {
+                $restart.click()
+            }
+        }
+
+        let runId = null
+        let enable = true
+        function startGame () {
+            if (enable) {
+                enable = false
+                requestAnimationFrame(runGame)
+                // 通过 enable 来控制绘制蛇移动的时间间隔
+                setTimeout(() => enable = true, speed)
+            }
+            runId = requestAnimationFrame(startGame)
+        }
+
+        function stopGame () {
+            cancelAnimationFrame(runId)
+        }
+
+        init()
+    }
+
+    const canvas = document.getElementById('canvas')
+    const ctx = canvas.getContext('2d')
+    const $start = document.getElementById('start')
+    const $stop = document.getElementById('stop')
+    const $restart = document.getElementById('restart')
+    const $again = document.getElementById('again')
+    const $cancel = document.getElementById('cancel')
+    const $specialBox = document.getElementById('special-box')
+    const $specialText = document.getElementById('special-text')
+    const $layer = document.getElementById('game-over-layer')
+    const $layerScore = document.getElementById('game-score')
+    const $radios = document.querySelectorAll('input[name="level"]')
+    const $score = document.getElementById('score')
+    // 刷新间隔表示蛇的速度，刷新间隔越长，则蛇的速度越慢
+    const levelObj = {
+        simplyMode: 300,
+        middleMode: 200,
+        hardMode: 100
+    }
+
+    // 绘制格子
+    function draw (seat, color) {
+        ctx.fillStyle = color
+        // 绘制方块 x坐标、y坐标、长、宽
+        const { x, y } = getDrawPos(seat)
+        ctx.fillRect(x, y, 18, 18)
+    }
+
+    // 获得当前位置的坐标
+    function getDrawPos (seat) {
+        return {
+            x: (seat % 20) * 20 + 1,
+            y: Math.floor(seat / 20) * 20 + 1
+        }
+    }
+
+    // 产生可能出现的随机位置
+    function random (min, max) {
+        return Math.floor(Math.random() * (max - min)) + min
+    }
+
+    // 获得最新难度等级
+    function getSyncLevel () {
+        let speedValue = ''
+        for (let i = 0; i < $radios.length; i++) {
+            if ($radios[i].checked) {
+                speedValue = $radios[i].value
+                break
+            }
+        }
+        return levelObj[speedValue] || levelObj.simplyMode
+    }
+
+</script>
+</html>

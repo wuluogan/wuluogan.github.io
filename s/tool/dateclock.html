@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Date Clock</title>
+
+        <style>
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    background-color: #777;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0;
+    text-align: center;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+input {
+    margin: 0;
+    opacity: 0;
+    position: fixed;
+    z-index: -10;
+}
+.wrap {
+    bottom: 0;
+    height: 140.5vw;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.bg,
+.fg {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+.bg {
+    background-color: #222;
+    transition: background-color 0.25s;
+    z-index: -1;
+}
+.fg {
+    background-color: #777;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.75s, z-index 1s;
+    z-index: -10;
+}
+.fg.upfront {
+    opacity: 1;
+    z-index: 20;
+}
+.fg.upfront ~ .display-analog {
+    transform: rotate(90deg);
+}
+#toggle-theme:checked ~ .bg {
+    background-color: #ddd;
+}
+.panel {
+    background-color: rgb(34, 34, 34);
+    background-color: rgba(34, 34, 34, 0.95);
+    bottom: 0;
+    color: #fff;
+    font-size: 5vw;
+    font-weight: 300;
+    height: 100%;
+    left: 0;
+    line-height: 1.33;
+    overflow: scroll;
+    -ms-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    padding: 16vw;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    transform: translateX(-100%);
+    transition: background-color 0.25s, color 0.25s, transform 0.25s;
+    width: 100%;
+    z-index: 30;
+}
+#toggle-panel:checked ~ .panel {
+    transform: translateX(0);
+}
+#toggle-theme:checked ~ .panel {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+}
+.panel-brand,
+.panel-p,
+.panel-ul {
+    margin: 5vw 0;
+}
+.panel-brand {
+    font-size: 133%;
+    font-weight: 700;
+    margin-top: 0;
+}
+.panel-ul {
+    margin-top: -1.25vw;
+}
+.panel-li {
+    list-style-position: inside;
+    list-style-type: circle;
+    margin: 2.5vw 0;
+    padding-left: 5.5vw;
+    text-indent: -5vw;
+}
+.panel-link {
+    font-weight: 700;
+}
+.panel-link > a {
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+}
+.panel-link > a::after {
+    background-color: #fff;
+    bottom: 0;
+    content: '';
+    height: 0.1em;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.25s;
+}
+.panel-link > a:hover::after,
+.panel-link > a:focus::after,
+.panel-link > a:active::after {
+    opacity: 1;
+}
+#toggle-theme:checked ~ .panel > .panel-link > a {
+    color: #000;
+}
+#toggle-theme:checked ~ .panel > .panel-link > a::after {
+    background-color: #000;
+}
+.reset-button {
+    background-color: #000;
+    border: 0;
+    cursor: pointer;
+    font-size: 0;
+    height: 13.1vw;
+    margin: 1vh 0 0;
+    padding: 0;
+    position: relative;
+    transition: background-color 0.25s;
+    width: 13.1vw;
+}
+.reset-button:active {
+    background-color: #333;
+}
+#toggle-theme:checked ~ .panel > .reset-button {
+    background-color: #aaa;
+}
+#toggle-theme:checked ~ .panel > .reset-button:active {
+    background-color: #eee;
+}
+.reset-button span {
+    border-bottom-color: #fff;
+    border-left-color: transparent;
+    border-radius: 50%;
+    border-right-color: #fff;
+    border-style: solid;
+    border-top-color: #fff;
+    border-width: 0.67vw;
+    bottom: 20%;
+    display: inline-block;
+    left: 20%;
+    position: absolute;
+    right: 20%;
+    top: 20%;
+    transform: rotate(0);
+    transition: transform 0.25s;
+}
+.reset-button span::before,
+.reset-button span::after {
+    background-color: #fff;
+    content: '';
+    left: 2.5%;
+    position: absolute;
+}
+.reset-button span::before {
+    height: 30%;
+    top: -7.5%;
+    width: 0.67vw;
+}
+.reset-button span::after {
+    height: 0.67vw;
+    top: 12.5%;
+    width: 30%;
+}
+#toggle-theme:checked ~ .panel > .reset-button span {
+    border-bottom-color: #000;
+    border-right-color: #000;
+    border-top-color: #000;
+}
+#toggle-theme:checked ~ .panel > .reset-button span::before,
+#toggle-theme:checked ~ .panel > .reset-button span::after {
+    background-color: #000;
+}
+.reset-button:active span {
+    transform: rotate(-90deg);
+}
+.toggle-label-panel {
+    background-color: #000;
+    cursor: pointer;
+    height: 13.1vw;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.25s;
+    width: 13.1vw;
+    z-index: 40;
+}
+.toggle-label-panel:active {
+    background-color: #333;
+}
+#toggle-theme:checked ~ .toggle-label-panel {
+    background-color: #aaa;
+}
+#toggle-theme:checked ~ .toggle-label-panel:active {
+    background-color: #eee;
+}
+.toggle-label-panel::before,
+.toggle-label-panel span,
+.toggle-label-panel::after {
+    background-color: #fff;
+    content: '';
+    height: 5%;
+    left: 12.5%;
+    position: absolute;
+    transition: background-color 0.25s, transform 0.25s;
+    width: 75%;
+}
+.toggle-label-panel::before {
+    top: 27.5%;
+}
+.toggle-label-panel span {
+    top: 47.5%;
+}
+.toggle-label-panel::after {
+    top: 67.5%;
+}
+#toggle-theme:checked ~ .toggle-label-panel::before,
+#toggle-theme:checked ~ .toggle-label-panel span,
+#toggle-theme:checked ~ .toggle-label-panel::after {
+    background-color: #000;
+}
+#toggle-panel:checked ~ .toggle-label-panel::before {
+    transform: translate(0%, 400%) rotate(45deg);
+}
+#toggle-panel:checked ~ .toggle-label-panel span {
+    transform: translateX(-120%);
+}
+#toggle-panel:checked ~ .toggle-label-panel::after {
+    transform: translate(0%, -400%) rotate(-45deg);
+}
+.dial {
+    background-color: #000;
+    border-radius: 50%;
+    color: #eee;
+    height: 97vw;
+    left: 0;
+    margin: 2vw auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background-color 0.25s, color 0.25s;
+    width: 97vw;
+}
+#toggle-theme:checked ~ .dial {
+    background-color: #fff;
+    color: #111;
+}
+.dial-brand,
+.dial-copyright,
+.utc-offset {
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+.dial-brand {
+    font-size: 4.125vw;
+    font-weight: 700;
+    line-height: 1.125;
+    top: 32.5%;
+}
+.dial-copyright {
+    font-size: 2.33vw;
+    font-weight: 300;
+    top: 38.5%;
+}
+.utc-offset {
+    bottom: 33.5%;
+    font-size: 3.25vw;
+    font-weight: 600;
+}
+.display-analog {
+    border-radius: 50%;
+    color: #fff;
+    height: 97vw;
+    margin: 2vw auto;
+    position: relative;
+    transform: rotate(180deg);
+    transition: background-color 0.25s, color 0.25s, transform 1s;
+    width: 97vw;
+}
+#toggle-orientation:checked ~ .display-analog {
+    transform: rotate(0);
+}
+#toggle-theme:checked ~ .display-analog {
+    color: #000;
+}
+.display-digital {
+    background-color: #000;
+    display: inline-block;
+    font-size: 9.21vw;
+    font-weight: 300;
+    line-height: 0.75;
+    margin: 0 auto;
+    padding: 3vw 9.9vw;
+    transition: background-color 0.25s;
+}
+#toggle-theme:checked ~ .display-digital {
+    background-color: #fff;
+}
+.rule {
+    background-color: red;
+    display: none;
+    position: absolute;
+}
+.rule-hori {
+    height: 0.2%;
+    top: 49.9%;
+    width: 100%;
+}
+.rule-vert {
+    height: 100%;
+    left: 49.9%;
+    width: 0.2%;
+}
+.pip {
+    left: 50%;
+    position: absolute;
+}
+.pip-month {
+    font-size: 6vw;
+    height: 31.5%; /* 50% - top */
+    top: 18.5%;
+    width: 31.5%; /* same as height */
+}
+.pip-day {
+    font-size: 4vw;
+    height: 39%;
+    top: 11%;
+    width: 39%;
+}
+.pip-hour {
+    font-size: 3vw;
+    height: 44.5%;
+    top: 5.5%;
+    width: 44.5%;
+}
+.pip-minute {
+    font-size: 2vw;
+    height: 48.5%;
+    top: 1.5%;
+    width: 48.5%;
+}
+.pip > span,
+.pip > strong {
+    font-weight: 300;
+    height: 100%;
+    left: -15%;
+    position: absolute;
+    transform-origin: 50% 100%;
+    width: 30%;
+}
+.pip > strong {
+    font-weight: 700;
+}
+.hand {
+    outline-offset: 0.5vw;
+    position: absolute;
+    transition: background-color 0.25s;
+}
+.hand-month {
+    background-color: #ddd;
+    height: 29.5%; /* 55% - top */
+    left: 47.5%; /* 50% - width / 2 */
+    top: 25.5%;
+    transform: rotate(0);
+    transform-origin: 50% 83.1%; /* 50% eyeball% */
+    width: 5%;
+}
+#toggle-theme:checked ~ .display-analog > .hand-month {
+    background-color: #222;
+}
+.hand-day {
+    background-color: #bbb;
+    height: 39.4%;
+    left: 48%;
+    top: 15.6%;
+    transform: rotate(0);
+    transform-origin: 50% 87.2%;
+    width: 4%;
+}
+#toggle-theme:checked ~ .display-analog > .hand-day {
+    background-color: #444;
+}
+.hand-hour {
+    background-color: #999;
+    height: 46%;
+    left: 48.5%;
+    top: 9%;
+    transform: rotate(0);
+    transform-origin: 50% 89%;
+    width: 3%;
+}
+#toggle-theme:checked ~ .display-analog > .hand-hour {
+    background-color: #666;
+}
+.hand-minute {
+    background-color: #777;
+    height: 51%;
+    left: 49%;
+    top: 4%;
+    transform: rotate(0);
+    transform-origin: 50% 90.3%;
+    width: 2%;
+}
+#toggle-theme:checked ~ .display-analog > .hand-minute {
+    background-color: #888;
+}
+.hand-second {
+    background-color: #555;
+    height: 53.6%;
+    left: 49.5%;
+    top: 1.4%;
+    transform: rotate(0);
+    transform-origin: 50% 90.7%;
+    width: 1%;
+}
+#toggle-theme:checked ~ .display-analog > .hand-second {
+    background-color: #aaa;
+}
+.supertitle {
+    background-color: #333;
+    color: #fff;
+    font-size: 6vw;
+    font-weight: 600;
+    left: 36.75%;
+    opacity: 0;
+    padding: 1% 0;
+    position: absolute;
+    top: -1%;
+    transition: background-color 0.25s, color 0.25s, opacity 0.25s;
+    width: 26.5%;
+    z-index: 1;
+}
+#toggle-theme:checked ~ .dial > .supertitle {
+    background-color: #ccc;
+    color: #000;
+}
+.supertitle.focus {
+    opacity: 1;
+}
+#supertitle-month {
+    left: 38.5%;
+    width: 23%;
+}
+#supertitle-day {
+    left: 42%;
+    width: 16%;
+}
+#supertitle-hour {
+    left: 40.25%;
+    width: 19.5%;
+}
+.digit {
+    display: inline-block;
+    outline-offset: 2vw;
+    transition: color 0.25s;
+}
+.digit-year {
+    color: #ddd;
+}
+#toggle-theme:checked ~ .display-digital > .digit-year {
+    color: #222;
+}
+.digit-month {
+    color: #ddd;
+}
+#toggle-theme:checked ~ .display-digital > .digit-month {
+    color: #222;
+}
+.digit-hyphen {
+    color: #999;
+}
+#toggle-theme:checked ~ .display-digital > .digit-hyphen {
+    color: #666;
+}
+.digit-day {
+    color: #bbb;
+}
+#toggle-theme:checked ~ .display-digital > .digit-day {
+    color: #444;
+}
+.digit-hour {
+    color: #999;
+}
+#toggle-theme:checked ~ .display-digital > .digit-hour {
+    color: #666;
+}
+.digit-colon-1 {
+    color: #555;
+}
+#toggle-theme:checked ~ .display-digital > .digit-colon-1 {
+    color: #aaa;
+}
+.digit-minute {
+    color: #777;
+}
+#toggle-theme:checked ~ .display-digital > .digit-minute {
+    color: #888;
+}
+.digit-colon-2 {
+    color: #333;
+}
+#toggle-theme:checked ~ .display-digital > .digit-colon-2 {
+    color: #ccc;
+}
+.digit-second {
+    color: #555;
+}
+#toggle-theme:checked ~ .display-digital > .digit-second {
+    color: #aaa;
+}
+.focal {
+    cursor: pointer;
+    outline-color: rgba(204, 204, 204, 0);
+    outline-style: double;
+    outline-width: 0;
+    transition: outline-width 0.25s;
+}
+.focal.focus {
+    outline-color: rgba(204, 204, 204, 1);
+    outline-width: 1vw;
+}
+#toggle-theme:checked ~ * > .focal {
+    outline-color: rgba(119, 119, 119, 0);
+}
+#toggle-theme:checked ~ * > .focal.focus {
+    outline-color: rgba(119, 119, 119, 1);
+}
+.sep-hori {
+    display: block;
+}
+.toggle-label-setting-wrap {
+    position: relative;
+}
+.toggle-label-setting {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 3.4vw;
+    font-weight: 600;
+    height: 22.5vw;
+    margin: 2vw 1vw;
+    position: relative;
+    transition: background-color 0.25s, color 0.25s;
+    width: 22.5vw;
+}
+.toggle-label-setting::before {
+    background-color: #333;
+    content: '';
+    height: calc(50% - 1vw);
+    left: 1vw;
+    position: absolute;
+    right: 1vw;
+    transform: translateY(calc(100% + 1vw));
+    transition: background-color 0.25s, transform 0.25s;
+}
+.toggle-label-setting span {
+    bottom: auto;
+    height: 50%;
+    left: 0;
+    line-height: 12vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.toggle-label-setting span:last-child {
+    bottom: 0;
+    line-height: 10vw;
+    top: auto;
+}
+#toggle-theme:checked ~ .toggle-label-setting-wrap > .toggle-label-setting {
+    background-color: #fff;
+    color: #000;
+}
+#toggle-theme:checked ~ .toggle-label-setting-wrap > .toggle-label-setting::before {
+    background-color: #ccc;
+}
+#toggle-month:checked ~ .toggle-label-setting-wrap > #toggle-label-month::before {
+    transform: translateY(1vw);
+}
+#toggle-time:checked ~ .toggle-label-setting-wrap > #toggle-label-time::before {
+    transform: translateY(1vw);
+}
+#toggle-orientation:checked ~ .toggle-label-setting-wrap > #toggle-label-orientation::before {
+    transform: translateY(1vw);
+}
+#toggle-theme:checked ~ .toggle-label-setting-wrap > #toggle-label-theme::before {
+    transform: translateY(1vw);
+}
+#toggle-month:active ~ .toggle-label-setting-wrap > #toggle-label-month {
+    background-color: #111;
+}
+#toggle-time:active ~ .toggle-label-setting-wrap > #toggle-label-time {
+    background-color: #111;
+}
+#toggle-orientation:active ~ .toggle-label-setting-wrap > #toggle-label-orientation {
+    background-color: #111;
+}
+#toggle-theme:active ~ .toggle-label-setting-wrap > #toggle-label-theme {
+    background-color: #111;
+}
+#toggle-month:active ~ #toggle-theme:checked ~ .toggle-label-setting-wrap > #toggle-label-month {
+    background-color: #eee;
+}
+#toggle-time:active ~ #toggle-theme:checked ~ .toggle-label-setting-wrap > #toggle-label-time {
+    background-color: #eee;
+}
+#toggle-orientation:active ~ #toggle-theme:checked ~ .toggle-label-setting-wrap > #toggle-label-orientation {
+    background-color: #eee;
+}
+#toggle-theme:active ~ #toggle-theme:checked ~ .toggle-label-setting-wrap > #toggle-label-theme {
+    background-color: #eee;
+}
+.ios-prompt {
+    background-color: #eee;
+    bottom: -40px;
+    font-family: sans-serif;
+    font-weight: 300;
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 10;
+}
+.ios-prompt.open {
+    opacity: 1;
+    transform: translateY(-40px);
+}
+.ios-prompt-close {
+    background: 0;
+    border: 0;
+    float: left;
+    font-size: 15px;
+    height: 100%;
+    width: 40px;
+}
+.ios-prompt-p {
+    font-size: 1rem;
+    height: 100%;
+    line-height: 40px;
+    padding-right: 10px;
+}
+.ios-share,
+.ios-a2hs {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.ios-share {
+    background-image: url('ios-share.svg');
+    background-size: 15px 20px;
+    height: 20px;
+    margin: 0 1px 5px;
+    width: 15px;
+}
+.ios-a2hs {
+    background-image: url('ios-a2hs.svg');
+    background-size: 20px 20px;
+    height: 20px;
+    margin: 0 1px 3px;
+    width: 20px;
+}
+@media screen and (min-aspect-ratio: 3/4) {
+    .wrap {
+        height: 100vh;
+    }
+    .panel {
+        font-size: 2.25vh;
+        padding: 9vh;
+    }
+    .panel-brand,
+    .panel-p,
+    .panel-ul,
+    .panel-copyright {
+        margin: 2.5vh 0;
+    }
+    .panel-brand {
+        margin-top: 0;
+    }
+    .panel-ul {
+        margin-top: -0.625vh;
+    }
+    .panel-li {
+        margin: 1.25vh 0;
+        padding-left: 3.5vh;
+        text-indent: -3.125vh;
+    }
+    .reset-button,
+    .toggle-label-panel {
+        height: 7vh;
+        width: 7vh;
+    }
+    .reset-button span {
+        border-width: 0.33vh;
+    }
+    .reset-button span::before {
+        width: 0.33vh;
+    }
+    .reset-button span::after {
+        height: 0.33vh;
+    }
+    .dial,
+    .display-analog {
+        height: 70vh;
+        margin: 1.5vh auto;
+        width: 70vh;
+    }
+    .dial-brand {
+        font-size: 3vh;
+    }
+    .dial-copyright {
+        font-size: 1.125vh;
+        top: 39%;
+    }
+    .utc-offset {
+        font-size: 2.4vh;
+    }
+    .hand {
+        outline-offset: 0.5vh;
+    }
+    .display-digital {
+        font-size: 4.96vh;
+        padding: 1.5vh 5.8vh;
+    }
+    .pip-month {
+        font-size: 4.4vh;
+    }
+    .pip-day {
+        font-size: 2.9vh;
+    }
+    .pip-hour {
+        font-size: 2.25vh;
+    }
+    .pip-minute {
+        font-size: 1.5vh;
+    }
+    .supertitle {
+        font-size: 4.5vh;
+    }
+    .digit {
+        outline-offset: 1vh;
+        padding: 0 0 0.25vh;
+    }
+    .focal.focus {
+        outline-width: 0.6vh;
+    }
+    .toggle-label-setting {
+        font-size: 2.6vh;
+        height: 16.3vh;
+        margin: 1.5vh 0.75vh;
+        width: 16.3vh;
+    }
+    .toggle-label-setting::before {
+        height: calc(50% - 0.5vh);
+        left: 0.5vh;
+        right: 0.5vh;
+        transform: translateY(calc(100% + 0.5vh));
+    }
+    .toggle-label-setting span {
+        line-height: 8.5vh;
+    }
+    .toggle-label-setting span:last-child {
+        line-height: 8vh;
+    }
+    #toggle-month:checked ~ .toggle-label-setting-wrap > #toggle-label-month::before {
+        transform: translateY(0.5vh);
+    }
+    #toggle-time:checked ~ .toggle-label-setting-wrap > #toggle-label-time::before {
+        transform: translateY(0.5vh);
+    }
+    #toggle-orientation:checked ~ .toggle-label-setting-wrap > #toggle-label-orientation::before {
+        transform: translateY(0.5vh);
+    }
+    #toggle-theme:checked ~ .toggle-label-setting-wrap > #toggle-label-theme::before {
+        transform: translateY(0.5vh);
+    }
+}
+@media screen and (min-aspect-ratio: 4/3) {
+    .dial,
+    .display-analog {
+        height: 85vh;
+        margin: 2.5vh auto;
+        width: 85vh;
+    }
+    .dial-brand {
+        font-size: 3.5vh;
+    }
+    .dial-copyright {
+        font-size: 1.25vh;
+    }
+    .utc-offset {
+        font-size: 2.67vh;
+    }
+    .pip-month {
+        font-size: 5.5vh;
+    }
+    .pip-day {
+        font-size: 3.4vh;
+    }
+    .pip-hour {
+        font-size: 2.6vh;
+    }
+    .pip-minute {
+        font-size: 1.8vh;
+    }
+    .supertitle {
+        font-size: 5vh;
+    }
+    .toggle-label-setting-wrap {
+        position: absolute;
+        right: 2.5vh;
+        top: 2.5vh;
+        width: 21.75vh;
+    }
+    .toggle-label-setting {
+        font-size: 3.2vh;
+        height: 21.75vh;
+        margin: 0 0 2.5vh 0;
+        right: 0;
+        width: 21.75vh;
+        z-index: 1;
+    }
+    .toggle-label-setting::before {
+        height: calc(50% - 1vh);
+        left: 1vh;
+        right: 1vh;
+        transform: translateY(calc(100% + 1vh));
+    }
+    .toggle-label-setting span {
+        line-height: 11.5vh;
+    }
+    .toggle-label-setting span:last-child {
+        line-height: 10vh;
+    }
+    #toggle-month:checked ~ .toggle-label-setting-wrap > #toggle-label-month::before {
+        transform: translateY(1vh);
+    }
+    #toggle-time:checked ~ .toggle-label-setting-wrap > #toggle-label-time::before {
+        transform: translateY(1vh);
+    }
+    #toggle-orientation:checked ~ .toggle-label-setting-wrap > #toggle-label-orientation::before {
+        transform: translateY(1vh);
+    }
+    #toggle-theme:checked ~ .toggle-label-setting-wrap > #toggle-label-theme::before {
+        transform: translateY(1vh);
+    }
+}
+
+
+        </style>
+
+
+    </head>
+    <body ontouchstart="">
+        <div class="wrap">
+
+            <input id="toggle-panel" type="checkbox">
+            <input id="toggle-month" type="checkbox">
+            <input id="toggle-time" type="checkbox">
+            <input id="toggle-orientation" type="checkbox">
+            <input id="toggle-theme" type="checkbox">
+
+            <div class="bg"></div>
+            <div class="fg upfront" id="fg"></div>
+
+            <div class="panel" id="panel">
+                <h1 class="panel-brand">DATE&#xa0;CLOCK</h1>
+                <p class="panel-p">Analog layers of date and time. An holistic hor&#xad;o&#xad;loge of cyc&#xad;lic progression.</p>
+                <p class="panel-p">Touch hands or digits to show names.</p>
+                <p class="panel-p">Toggle:</p>
+                <ul class="panel-ul">
+                    <li class="panel-li">Gregorian vs lunar months.</li>
+                    <li class="panel-li">Daylight Shifting (&#x201c;Saving&#x201d;) vs Stan&#xad;dard&#xa0;Time.</li>
+                    <li class="panel-li">Origin at top vs bottom.</li>
+                    <li class="panel-li">Colors.</li>
+                </ul>
+                <p class="panel-p">Each dial is centrally aligned on its origin:</p>
+                <ul class="panel-ul">
+                    <li class="panel-li">First second of a minute is zero.</li>
+                    <li class="panel-li">First minute of an hour is zero.</li>
+                    <li class="panel-li">First hour of a day is zero.</li>
+                    <li class="panel-li">First day of a month is one.</li>
+                    <li class="panel-li">First month of a year is one.</li>
+                </ul>
+                <p class="panel-p">Lunar year is defined from first moon full af&#xad;ter winter sol&#xad;stice, to last moon full on or before winter solstice.</p>
+                <p class="panel-p">Years with thirteen full moons count the first as zero, so as to leap (tra&#xad;di&#xad;tion&#xad;al blue, belewe, be&#xad;tray&#xad;er moon).</p>
+                <p class="panel-p panel-link"><a href="#" title="View">Original Sketches</a></p>
+                <p class="panel-p panel-link"><a href="#" target="_blank" title="Visit">GitHub</a></p>
+                <p class="panel-p panel-link"><a href="#" target="_blank" title="Visit">Twitter</a></p>
+                <p class="panel-p panel-link"><a href="#" target="_blank" title="Visit">Facebook</a></p>
+                <p class="panel-p panel-link"><a href="#" target="_blank" title="Visit">Lunisolar Calendar&#xa0;Dial</a></p>
+                <p class="panel-p panel-link"><a href="#" target="_blank" title="Visit">jtheletter.com</a></p>
+                <p class="panel-p panel-copyright">&#xa9;&#x200A;2009,&#x2004;2018&#x0020;Jay Pea</p>
+                <button class="reset-button" id="reset-button" title="Reset Clock"><small>Reset Clock</small><span></span></button>
+            </div>
+
+            <label class="toggle-label-panel" id="toggle-label-panel" for="toggle-panel" title="View Info"><small>View Info</small><span></span></label>
+
+            <div class="dial">
+                <p class="supertitle" id="supertitle-month">Month</p>
+                <p class="supertitle" id="supertitle-day">Day</p>
+                <p class="supertitle" id="supertitle-hour">Hour</p>
+                <p class="supertitle" id="supertitle-minute">Minute</p>
+                <p class="supertitle" id="supertitle-second">Second</p>
+
+                <h1 class="dial-brand">DATE&#x2004;CLOCK</h1>
+                <p class="dial-copyright">&#xa9;&#x200A;2009,&#x2004;2018&#x0020;JP</p>
+                <p class="utc-offset">UTC<span id="utc-offset"></span></p>
+            </div>
+
+            <div class="display-analog">
+                <div class="rule rule-hori"></div>
+                <div class="rule rule-vert"></div>
+
+                <p class="pip pip-month" id="pip-month"></p>
+                <p class="pip pip-day" id="pip-day"></p>
+                <p class="pip pip-hour" id="pip-hour"></p>
+                <p class="pip pip-minute" id="pip-minute"></p>
+
+                <div class="hand focal hand-month" id="hand-month"></div>
+                <div class="hand focal hand-day" id="hand-day"></div>
+                <div class="hand focal hand-hour" id="hand-hour"></div>
+                <div class="hand focal hand-minute" id="hand-minute"></div>
+                <div class="hand focal hand-second" id="hand-second"></div>
+            </div>
+
+            <p class="display-digital">
+                <span class="digit focal digit-year" id="digit-year">0000</span>
+                <span class="digit digit-hyphen">&#x2010;</span>
+                <span class="digit focal digit-month" id="digit-month">00</span>
+                <span class="digit digit-hyphen">&#x2010;</span>
+                <span class="digit focal digit-day" id="digit-day">00</span>
+                <span class="digit">&#x2004;&#x2004;</span>
+                <span class="digit focal digit-hour" id="digit-hour">00</span><span class="digit digit-colon-1">&#x3a;</span><span class="digit focal digit-minute" id="digit-minute">00</span><span class="digit digit-colon-2">&#x3a;</span><span class="digit focal digit-second" id="digit-second">00</span></p>
+
+            <div class="sep-hori"></div>
+
+            <div class="toggle-label-setting-wrap">
+                <label class="toggle-label-setting" id="toggle-label-month" for="toggle-month" title="Toggle Month"><span>Gregorian</span><span>Lunar</span></label>
+                <label class="toggle-label-setting" id="toggle-label-time" for="toggle-time" title="Toggle Time"><span>DST</span><span>Standard</span></label>
+                <label class="toggle-label-setting" id="toggle-label-orientation" for="toggle-orientation" title="Toggle Orientation"><span>Clock</span><span>Sundial</span></label>
+                <label class="toggle-label-setting" id="toggle-label-theme" for="toggle-theme" title="Toggle Theme"><span>Light</span><span>Dark</span></label>
+            </div>
+
+            <div class="ios-prompt" id="ios-prompt">
+                <button class="ios-prompt-close" id="ios-prompt-close" title="Close.">&#x2573;</button>
+                <p class="ios-prompt-p">Tap <span class="ios-share">Share</span> then <span class="ios-a2hs">Add to Home Screen</span> to save this app.</p>
+            </div>
+
+        </div>
+        <script>
+
+            // Date Clock. (c) JP 2009 (concept), 2018 (code).
+
+var dateclock = (function () {
+
+// Define functions.
+function getDateAdjustedByOffset (date) {
+    // Copy date and add offset, to assure moon-number and moon-day-number only update at local midnight.
+    return new Date(date.valueOf() + getOffsetHours(date) * MILLISECONDS_PER_HOUR);
+}
+function getEndOfDateAdjustedByOffset (date) {
+    // Copy date, push to last minute of day, adjust for offset.
+    // In deciding moon-day numbers, if there's a new moon even at the end of the day,
+    // we want to start counting that day as number 1.
+    var endOfDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
+    return getDateAdjustedByOffset(endOfDate);
+}
+function getMillisecondsSinceNewMoon (date) {
+    if (date < KNOWN_NEW_MOON) {
+        console.error('Date for lunar must not be earlier than ' + KNOWN_NEW_MOON.toISOString() + '. Received:', date.toISOString());
+    }
+    return (date - KNOWN_NEW_MOON) % AVG_MILLISECONDS_PER_LUNAR_MONTH;
+}
+function getDayOfMoon (date) {
+    // Get last minute of day (adjusted by offset).
+    var adjEndOfDate = getEndOfDateAdjustedByOffset(date);
+    // Get milliseconds from new moon to then, convert to days, round up for int 1 thru 30.
+    return Math.ceil(getMillisecondsSinceNewMoon(adjEndOfDate) / MILLISECONDS_PER_DAY);
+}
+function getDaysInMoon (date) {
+    var testDate;
+    for (var testDay = 1; testDay <= 30; testDay++) {
+        // testDate = date plus an increasing number of days.
+        testDate = new Date(Date.UTC(
+            date.getUTCFullYear(),
+            date.getUTCMonth(),
+            date.getUTCDate() + testDay,
+            date.getUTCHours(),
+            date.getUTCMinutes(),
+            date.getUTCSeconds()
+        ));
+        // If moon-day of testDate is 1... testDate is now the first day of the next moon.
+        if (getDayOfMoon(testDate) === 1) {
+            break;
+        }
+    }
+    // Return the moon-day number of the day before the next new moon.
+    return getDayOfMoon(new Date(testDate.valueOf() - MILLISECONDS_PER_DAY)); // Return 29 or 30.
+}
+function getFullMoon (date) {
+    // Get adjusted end of date, minus time since new moon, plus half a moon.
+    var adjEndOfDate = getEndOfDateAdjustedByOffset(date);
+    return new Date(
+        adjEndOfDate.valueOf() -
+        getMillisecondsSinceNewMoon(adjEndOfDate) +
+        AVG_MILLISECONDS_PER_LUNAR_MONTH / 2
+    );
+}
+function getNextDecSolstice (date) {
+    if (date < KNOWN_DEC_SOLSTICE) {
+        console.error('Date for lunar must not be earlier than ' + KNOWN_DEC_SOLSTICE.toISOString() + '. Received:', date.toISOString());
+    }
+    var adjDate = getDateAdjustedByOffset(date);
+    var nextDecSolsticeYear;
+    // If adjDate is in Dec and on or after day of standardized solstice...
+    // ...then the Greg year of the next Dec solstice is the Greg year after adjDate.
+    // ...else it's the same Greg year.
+    if (
+        adjDate.getUTCMonth() === KNOWN_DEC_SOLSTICE.getUTCMonth() &&
+        adjDate.getUTCDate() >= KNOWN_DEC_SOLSTICE.getUTCDate()
+    ) {
+        nextDecSolsticeYear = adjDate.getUTCFullYear() + 1;
+    } else {
+        nextDecSolsticeYear = adjDate.getUTCFullYear();
+    }
+    return new Date(Date.UTC(
+        nextDecSolsticeYear,
+        KNOWN_DEC_SOLSTICE.getUTCMonth(),
+        KNOWN_DEC_SOLSTICE.getUTCDate(),
+        KNOWN_DEC_SOLSTICE.getUTCHours(),
+        KNOWN_DEC_SOLSTICE.getUTCMinutes(),
+        KNOWN_DEC_SOLSTICE.getUTCSeconds()
+    ));
+}
+function getMoonNumber (date) {
+    // Calculate standardized lunations between nearest full moon and next December solstice.
+    var nextDecSolstice = getNextDecSolstice(date);
+    var fullMoon = getFullMoon(date);
+    var diff = (nextDecSolstice.valueOf() - fullMoon.valueOf()) / AVG_MILLISECONDS_PER_LUNAR_MONTH;
+    if (diff <= 0) {
+        return 0; // Leap moon.
+    }
+    return 13 - Math.ceil(diff);
+}
+function getMoonsInLunarYear (date) {
+    // If current moon is leap moon, or if Greg year starts with leap moon...
+    // ...then lunar year has 13 moons, otherwise 12.
+    var jan1st = new Date(Date.UTC(date.getUTCFullYear(), 1 - 1, 1, 0, 0, 0));
+    if (getMoonNumber(date) === 0 || getMoonNumber(jan1st) === 0) {
+        return 13;
+    } else {
+        return 12;
+    }
+}
+function getDaysInMonth (date) {
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+}
+function getHoursInDst (date) {
+    var januaryOffsetHours = getOffsetHours(new Date(date.getFullYear(), 0, 1));
+    var julyOffsetHours = getOffsetHours(new Date(date.getFullYear(), 6, 1));
+    return Math.abs(januaryOffsetHours - julyOffsetHours);
+}
+function getOffsetHours (date) {
+    return date.getTimezoneOffset() * -1 / 60;
+}
+function updateHighlightFlag () {
+    if (userHasHighlighted) {
+        return;
+    }
+    userHasHighlighted = true;
+    try {
+        localStorage.setItem('userHasHighlighted', true);
+    } catch (err) {
+        console.error(err);
+    }
+}
+function focusMonth () {
+    els.handMonth.classList.add('focus');
+    els.supertitleMonth.classList.add('focus');
+    els.digitMonth.classList.add('focus');
+}
+function blurMonth () {
+    els.handMonth.classList.remove('focus');
+    els.supertitleMonth.classList.remove('focus');
+    els.digitMonth.classList.remove('focus');
+}
+function focusDay () {
+    els.handDay.classList.add('focus');
+    els.supertitleDay.classList.add('focus');
+    els.digitDay.classList.add('focus');
+}
+function blurDay () {
+    els.handDay.classList.remove('focus');
+    els.supertitleDay.classList.remove('focus');
+    els.digitDay.classList.remove('focus');
+}
+function focusHour () {
+    els.handHour.classList.add('focus');
+    els.supertitleHour.classList.add('focus');
+    els.digitHour.classList.add('focus');
+}
+function blurHour () {
+    els.handHour.classList.remove('focus');
+    els.supertitleHour.classList.remove('focus');
+    els.digitHour.classList.remove('focus');
+}
+function focusMinute () {
+    els.handMinute.classList.add('focus');
+    els.supertitleMinute.classList.add('focus');
+    els.digitMinute.classList.add('focus');
+}
+function blurMinute () {
+    els.handMinute.classList.remove('focus');
+    els.supertitleMinute.classList.remove('focus');
+    els.digitMinute.classList.remove('focus');
+}
+function focusSecond () {
+    els.handSecond.classList.add('focus');
+    els.supertitleSecond.classList.add('focus');
+    els.digitSecond.classList.add('focus');
+}
+function blurSecond () {
+    els.handSecond.classList.remove('focus');
+    els.supertitleSecond.classList.remove('focus');
+    els.digitSecond.classList.remove('focus');
+}
+function drawPipsForMonths (date) { // Draw 1 thru 12, or 0 thru 12.
+    var total = els.toggleMonth.checked ? 12 : getMoonsInLunarYear(date);
+    var number = total === 12 ? 1 : 0;
+    var index = 0;
+    var el, degs;
+    els.pipMonth.innerHTML = ''; // Clear previous drawing.
+    for (index; index < total; index++, number++) {
+        el = number === 0 || number % 3 - 1 === 0 ? document.createElement('strong') : document.createElement('span');
+        el.textContent = number;
+        degs = index / total * 360;
+        el.style.transform = `rotate(${degs}deg)`;
+        els.pipMonth.appendChild(el);
+    }
+    numberOfMonthPips = total;
+}
+function drawPipsForDays (date) { // Draw 1 thru 28, 29, 30, or 31.
+    var total = els.toggleMonth.checked ? getDaysInMonth(date) : getDaysInMoon(date);
+    var number = 1;
+    var index = 0;
+    var el, degs;
+    els.pipDay.innerHTML = ''; // Clear previous drawing.
+    for (index; index < total; index++, number++) {
+        el = number % 7 - 1 === 0 ? document.createElement('strong') : document.createElement('span');
+        el.textContent = number;
+        degs = index / total * 360;
+        el.style.transform = `rotate(${degs}deg)`;
+        els.pipDay.appendChild(el);
+    }
+    numberOfDayPips = total;
+}
+function drawPipsForHours () { // Draw 0 thru 23.
+    var number, el, degs;
+    for (number = 0; number < 24; number++) {
+        el = number % 3 === 0 ? document.createElement('strong') : document.createElement('span');
+        el.textContent = number;
+        degs = number / 24 * 360;
+        el.style.transform = `rotate(${degs}deg)`;
+        els.pipHour.appendChild(el);
+    }
+}
+function drawPipsForMinutes () { // Draw 0 thru 59.
+    var number, el, degs;
+    for (number = 0; number < 60; number++) {
+        el = number % 5 === 0 ? document.createElement('strong') : document.createElement('span');
+        el.textContent = number;
+        degs = number / 60 * 360;
+        el.style.transform = `rotate(${degs}deg)`;
+        els.pipMinute.appendChild(el);
+    }
+}
+function rotate (el, degs) {
+    el.style.transform = `rotate(${degs}deg)`;
+}
+function doesLocaleObserveDstOnDate (date) {
+    var januaryOffsetHours = getOffsetHours(new Date(date.getFullYear(), 0, 1));
+    var julyOffsetHours = getOffsetHours(new Date(date.getFullYear(), 6, 1));
+    var standardOffsetHours = Math.min(januaryOffsetHours, julyOffsetHours);
+    var dateOffsetHours = getOffsetHours(date);
+    return dateOffsetHours !== standardOffsetHours;
+}
+function updateClockOffset (date) {
+    var offsetHours = getOffsetHours(date);
+
+    if (doesLocaleObserveDstOnDate(date) && !els.toggleTime.checked) { // If locale is observing DST, but user does not want it...
+        offsetHours -= hoursInDst;
+    } else if (!doesLocaleObserveDstOnDate(date) && els.toggleTime.checked) { // If locale isn't observing DST, but user wants it...
+        offsetHours += hoursInDst;
+    }
+
+    var offsetText;
+    if (offsetHours === 0) {
+        offsetText = ''; // For UTC.
+    } else if (offsetHours % 1 === 0) {
+        offsetText = offsetHours; // For UTC+1, UTC+2... UTC-1, UTC-2...
+    } else { // For UTC+1:30, UTC-2:15...
+        offsetText = `${Math.trunc(offsetHours)}:${(Math.round(Math.abs(offsetHours) % 1 * 60).toString().padStart(2, '0'))}`;
+    }
+    if (offsetHours > 0) {
+        offsetText = '\u002b' + offsetText; // Prepend plus sign.
+    }
+
+    els.utcOffset.textContent = offsetText;
+}
+function updateClockMonth (date) {
+    var year,month, day, daysInMonth, monthsInYear, degs;
+    if (els.toggleMonth.checked) {
+        year = date.getFullYear();
+        month = date.getMonth() + 1; // Add one month for natural counting.
+        day = date.getDate();
+        daysInMonth = getDaysInMonth(date);
+        monthsInYear = 12;
+    } else {
+        year = date.getUTCFullYear();
+        month = getMoonNumber(date);
+        day = getDayOfMoon(date);
+        daysInMonth = getDaysInMoon(date);
+        monthsInYear = getMoonsInLunarYear(date);
+    }
+    els.digitYear.textContent = year;
+    if (monthsInYear === 12) {
+        degs = (month - 1 + (day - 1) / daysInMonth) / 12 * 360; // Subtract one month and one day for zero indexing of each.
+    } else { // Leap year has 13 moons.
+        degs = (month + (day - 1) / daysInMonth) / 13 * 360; // Subtract one day for zero indexing.
+    }
+    rotate(els.handMonth, degs);
+    els.digitMonth.textContent = month < 10 ? `0${month}` : month;
+    if (monthsInYear !== numberOfMonthPips) { // Update pips for months, if total months changes.
+        drawPipsForMonths(date);
+    }
+    if (daysInMonth !== numberOfDayPips) { // Update pips for days, if total days changes.
+        drawPipsForDays(date);
+    }
+    updateClockOffset(date);
+}
+function updateClockDay (date) {
+    var day = els.toggleMonth.checked ? date.getDate() : getDayOfMoon(date);
+    var hour = date.getHours();
+    var daysInMonth = els.toggleMonth.checked ? getDaysInMonth(date) : getDaysInMoon(date);
+    var degs = (day - 1 + hour / 24) / daysInMonth * 360; // Subtract one day for zero indexing.
+    rotate(els.handDay, degs);
+    els.digitDay.textContent = day < 10 ? `0${day}` : day;
+    updateClockMonth(date);
+}
+function updateClockHour (date) {
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var degs = (hour + minute / 60) / 24 * 360;
+    rotate(els.handHour, degs);
+    els.digitHour.textContent = hour < 10 ? `0${hour}` : hour;
+    updateClockDay(date);
+    prevUpdateClockHour = date;
+}
+function updateClockMinute (date) {
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    var degs = (minute + second / 60) / 60 * 360;
+    rotate(els.handMinute, degs);
+    els.digitMinute.textContent = minute < 10 ? `0${minute}` : minute;
+    if (second === 0 || date - prevUpdateClockHour > MILLISECONDS_PER_MINUTE) { // Update hour (& day, month, offset) on whole minute or after one minute.
+        updateClockHour(date);
+    }
+    prevUpdateClockMinute = date;
+}
+function updateClock (date) { // Set seconds. Set larger units as needed.
+    date = date || new Date(); // Invocations by setInterval use new Date objects.
+    if (doesLocaleObserveDstOnDate(date) && !els.toggleTime.checked) { // If locale is observing DST, but user does not want it...
+        date = new Date(date.valueOf() - hoursInDst * MILLISECONDS_PER_HOUR); // ...then subtract DST.
+    } else if (!doesLocaleObserveDstOnDate(date) && els.toggleTime.checked) { // If locale isn't observing DST, but user wants it...
+        date = new Date(date.valueOf() + hoursInDst * MILLISECONDS_PER_HOUR); // ...then add DST.
+    }
+    var second = date.getSeconds();
+    var millisecond = date.getMilliseconds();
+    var degs = (second + millisecond / 1000) / 60 * 360;
+    rotate(els.handSecond, degs);
+    els.digitSecond.textContent = second < 10 ? `0${second}` : second;
+    if (millisecond === 0 || date - prevUpdateClockMinute > 1000) { // Update minute on whole seconds or after one second.
+        updateClockMinute(date);
+    }
+}
+function resetClock () {
+    // Clear possible timeouts (demo highlights, iOS A2HS prompt).
+    timeoutIds.forEach(function (id) {
+        window.clearTimeout(id);
+    });
+
+    // Clear interval (clock update).
+    window.clearInterval(intervalId);
+    intervalId = undefined;
+
+    // Ensure no demo highlights.
+    blurMonth();
+    blurDay();
+    blurHour();
+    blurMinute();
+    blurSecond();
+
+    // Ensure iOS prompt is closed.
+    els.iosPrompt.classList.remove('open');
+
+    // Reset panel toggle label's title text.
+    els.toggleLabelPanel.title = 'View Info';
+
+    // Clear saved prefs.
+    try {
+        localStorage.clear();
+    } catch (err) {
+        console.error(err);
+    }
+
+    // Add grey curtain, rotate clock to 90 degrees (neither "clock" nor "sundial" orientation).
+    els.fg.classList.add('upfront');
+
+    // Allow time for above clock rotation before closing panel and resetting toggles.
+    window.setTimeout(function () {
+        els.togglePanel.checked = false;
+        els.toggleMonth.checked = false;
+        els.toggleTime.checked = false;
+        els.toggleOrientation.checked = false;
+        els.toggleTheme.checked = false;
+
+        // Wait for toggles to animate before restarting clock.
+        window.setTimeout(function () {
+            startClock();
+        }, 250);
+    }, 250);
+}
+function queryDom () {
+    els = {};
+    els.togglePanel = document.getElementById('toggle-panel');
+    els.toggleMonth = document.getElementById('toggle-month');
+    els.toggleTime = document.getElementById('toggle-time');
+    els.toggleOrientation = document.getElementById('toggle-orientation');
+    els.toggleTheme = document.getElementById('toggle-theme');
+    els.fg = document.getElementById('fg');
+    els.panel = document.getElementById('panel');
+    els.resetButton = document.getElementById('reset-button');
+    els.supertitleMonth = document.getElementById('supertitle-month');
+    els.supertitleDay = document.getElementById('supertitle-day');
+    els.supertitleHour = document.getElementById('supertitle-hour');
+    els.supertitleMinute = document.getElementById('supertitle-minute');
+    els.supertitleSecond = document.getElementById('supertitle-second');
+    els.utcOffset = document.getElementById('utc-offset');
+    els.pipMonth = document.getElementById('pip-month');
+    els.pipDay = document.getElementById('pip-day');
+    els.pipHour = document.getElementById('pip-hour');
+    els.pipMinute = document.getElementById('pip-minute');
+    els.handMonth = document.getElementById('hand-month');
+    els.handDay = document.getElementById('hand-day');
+    els.handHour = document.getElementById('hand-hour');
+    els.handMinute = document.getElementById('hand-minute');
+    els.handSecond = document.getElementById('hand-second');
+    els.digitYear = document.getElementById('digit-year');
+    els.digitMonth = document.getElementById('digit-month');
+    els.digitDay = document.getElementById('digit-day');
+    els.digitHour = document.getElementById('digit-hour');
+    els.digitMinute = document.getElementById('digit-minute');
+    els.digitSecond = document.getElementById('digit-second');
+    els.toggleLabelMonth = document.getElementById('toggle-label-month');
+    els.toggleLabelTime = document.getElementById('toggle-label-time');
+    els.toggleLabelPanel = document.getElementById('toggle-label-panel');
+    els.iosPrompt = document.getElementById('ios-prompt');
+    els.iosPromptClose = document.getElementById('ios-prompt-close');
+}
+function addEventListeners () {
+    // Add highlight listeners.
+    els.handMonth.addEventListener('touchstart', focusMonth);
+    els.handMonth.addEventListener('mouseenter', focusMonth);
+    els.handMonth.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.handMonth.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.handMonth.addEventListener('touchend', blurMonth);
+    els.handMonth.addEventListener('mouseleave', blurMonth);
+    els.digitMonth.addEventListener('touchstart', focusMonth);
+    els.digitMonth.addEventListener('mouseenter', focusMonth);
+    els.digitMonth.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.digitMonth.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.digitMonth.addEventListener('touchend', blurMonth);
+    els.digitMonth.addEventListener('mouseleave', blurMonth);
+    els.handDay.addEventListener('touchstart', focusDay);
+    els.handDay.addEventListener('mouseenter', focusDay);
+    els.handDay.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.handDay.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.handDay.addEventListener('touchend', blurDay);
+    els.handDay.addEventListener('mouseleave', blurDay);
+    els.digitDay.addEventListener('touchstart', focusDay);
+    els.digitDay.addEventListener('mouseenter', focusDay);
+    els.digitDay.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.digitDay.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.digitDay.addEventListener('touchend', blurDay);
+    els.digitDay.addEventListener('mouseleave', blurDay);
+    els.handHour.addEventListener('touchstart', focusHour);
+    els.handHour.addEventListener('mouseenter', focusHour);
+    els.handHour.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.handHour.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.handHour.addEventListener('touchend', blurHour);
+    els.handHour.addEventListener('mouseleave', blurHour);
+    els.digitHour.addEventListener('touchstart', focusHour);
+    els.digitHour.addEventListener('mouseenter', focusHour);
+    els.digitHour.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.digitHour.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.digitHour.addEventListener('touchend', blurHour);
+    els.digitHour.addEventListener('mouseleave', blurHour);
+    els.handMinute.addEventListener('touchstart', focusMinute);
+    els.handMinute.addEventListener('mouseenter', focusMinute);
+    els.handMinute.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.handMinute.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.handMinute.addEventListener('touchend', blurMinute);
+    els.handMinute.addEventListener('mouseleave', blurMinute);
+    els.digitMinute.addEventListener('touchstart', focusMinute);
+    els.digitMinute.addEventListener('mouseenter', focusMinute);
+    els.digitMinute.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.digitMinute.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.digitMinute.addEventListener('touchend', blurMinute);
+    els.digitMinute.addEventListener('mouseleave', blurMinute);
+    els.handSecond.addEventListener('touchstart', focusSecond);
+    els.handSecond.addEventListener('mouseenter', focusSecond);
+    els.handSecond.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.handSecond.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.handSecond.addEventListener('touchend', blurSecond);
+    els.handSecond.addEventListener('mouseleave', blurSecond);
+    els.digitSecond.addEventListener('touchstart', focusSecond);
+    els.digitSecond.addEventListener('mouseenter', focusSecond);
+    els.digitSecond.addEventListener('touchstart', updateHighlightFlag, { once: true });
+    els.digitSecond.addEventListener('mouseenter', updateHighlightFlag, { once: true });
+    els.digitSecond.addEventListener('touchend', blurSecond);
+    els.digitSecond.addEventListener('mouseleave', blurSecond);
+
+    // Trigger date re-calculations when user toggles Gregorian/lunar.
+    // Update supertitle.
+    els.toggleLabelMonth.addEventListener('click', function () {
+        prevUpdateClockHour = 0;
+        prevUpdateClockMinute = 0;
+        els.supertitleMonth.textContent = els.toggleMonth.checked ? 'Moon' : 'Month';
+    });
+
+    // Trigger date re-calculations when user toggles DST/ST.
+    els.toggleLabelTime.addEventListener('click', function () {
+        prevUpdateClockHour = 0;
+        prevUpdateClockMinute = 0;
+    });
+
+    // Save user prefs for all toggles to local storage.
+    els.toggleMonth.addEventListener('change', function () {
+        try {
+            localStorage.setItem('month', els.toggleMonth.checked);
+        } catch (err) {
+            console.error(err);
+        }
+    });
+    els.toggleTime.addEventListener('change', function () {
+        try {
+            localStorage.setItem('time', els.toggleTime.checked);
+        } catch (err) {
+            console.error(err);
+        }
+    });
+    els.toggleOrientation.addEventListener('change', function () {
+        try {
+            localStorage.setItem('orientation', els.toggleOrientation.checked);
+        } catch (err) {
+            console.error(err);
+        }
+    });
+    els.toggleTheme.addEventListener('change', function () {
+        try {
+            localStorage.setItem('theme', els.toggleTheme.checked);
+        } catch (err) {
+            console.error(err);
+        }
+    });
+
+    // Scroll panel to top on open or close.
+    els.toggleLabelPanel.addEventListener('click', function () {
+        els.panel.scrollTop = 0;
+        els.toggleLabelPanel.title = els.togglePanel.checked ? 'View Info' : 'Close Info';
+    });
+
+    // Reset button.
+    els.resetButton.addEventListener('click', resetClock);
+
+    // Close iOS prompt, remove focus, save flag.
+    els.iosPromptClose.addEventListener('click', function () {
+        els.iosPrompt.classList.remove('open');
+        els.iosPromptClose.blur();
+        userHasClosedIosPrompt = true;
+        try {
+            localStorage.setItem('userHasClosedIosPrompt', true);
+        } catch (err) {
+            console.error(err);
+        }
+    });
+}
+function demoHighlights () {
+    timeoutIds.push(window.setTimeout(function () { if (!userHasHighlighted) { focusMonth(); } }, 1000));
+    timeoutIds.push(window.setTimeout(blurMonth, 2000));
+    timeoutIds.push(window.setTimeout(function () { if (!userHasHighlighted) { focusDay(); } }, 2000));
+    timeoutIds.push(window.setTimeout(blurDay, 3000));
+    timeoutIds.push(window.setTimeout(function () { if (!userHasHighlighted) { focusHour(); } }, 3000));
+    timeoutIds.push(window.setTimeout(blurHour, 4000));
+    timeoutIds.push(window.setTimeout(function () { if (!userHasHighlighted) { focusMinute(); } }, 4000));
+    timeoutIds.push(window.setTimeout(blurMinute, 5000));
+    timeoutIds.push(window.setTimeout(function () { if (!userHasHighlighted) { focusSecond(); } }, 5000));
+    timeoutIds.push(window.setTimeout(blurSecond, 6000));
+}
+function registerServiceWorker () { // Register service worker for Chrome add-to-home-screen.
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').then(function (registration) {
+            console.log('ServiceWorker registration successful with scope:', registration.scope);
+        }, function (err) {
+            console.error('ServiceWorker registration failed:', err);
+        });
+    } else {
+        console.error('ServiceWorker not found in navigator:', navigator);
+    }
+}
+function startClock () {
+    userHasClosedIosPrompt = null;
+    userHasHighlighted = null;
+    userPrefMonth = null;
+    userPrefTime = null;
+    userPrefOrientation = null;
+    userPrefTheme = null;
+
+    prevUpdateClockHour = 0;
+    prevUpdateClockMinute = 0;
+
+    timeoutIds = [];
+
+    date = new Date();
+
+    numberOfMonthPips = els.toggleMonth.checked ? 12 : getMoonsInLunarYear(date);
+    numberOfDayPips = els.toggleMonth.checked ? getDaysInMonth(date) : getDaysInMoon(date);
+    hoursInDst = getHoursInDst(date) || 1; // Default one if no DST for locale.
+
+    drawPipsForMonths(date);
+    drawPipsForDays(date);
+    drawPipsForHours();
+    drawPipsForMinutes();
+
+    // Get user prefs from local storage.
+    try {
+        userHasClosedIosPrompt = localStorage.getItem('userHasClosedIosPrompt') === 'true' ? true : localStorage.getItem('userHasClosedIosPrompt') === 'false' ? false : null;
+        userHasHighlighted = localStorage.getItem('userHasHighlighted') === 'true' ? true : localStorage.getItem('userHasHighlighted') === 'false' ? false : null;
+        userPrefMonth = localStorage.getItem('month') === 'true' ? true : localStorage.getItem('month') === 'false' ? false : null;
+        userPrefTime = localStorage.getItem('time') === 'true' ? true : localStorage.getItem('time') === 'false' ? false : null;
+        userPrefOrientation = localStorage.getItem('orientation') === 'true' ? true : localStorage.getItem('orientation') === 'false' ? false : null;
+        userPrefTheme = localStorage.getItem('theme') === 'true' ? true : localStorage.getItem('theme') === 'false' ? false : null;
+    } catch (err) { // Local storage blocked by user.
+        console.error(err);
+    }
+
+    // Set el prefs to saved user prefs.
+    if (userPrefMonth !== null) {
+        els.toggleMonth.checked = userPrefMonth;
+    } else {
+        els.toggleMonth.checked = true;
+    }
+    if (userPrefTime !== null) {
+        els.toggleTime.checked = userPrefTime;
+    } else {
+        els.toggleTime.checked = doesLocaleObserveDstOnDate(date); // Use locale's DST observation if no user pref stored.
+    }
+    if (userPrefOrientation !== null) {
+        els.toggleOrientation.checked = userPrefOrientation;
+    } else {
+        els.toggleOrientation.checked = true;
+    }
+    if (userPrefTheme !== null) {
+        els.toggleTheme.checked = userPrefTheme;
+    } else {
+        els.toggleTheme.checked = true;
+    }
+
+    // Update month supertitle.
+    els.supertitleMonth.textContent = els.toggleMonth.checked ? 'Month' : 'Moon';
+
+    updateClock(date);
+    els.fg.classList.remove('upfront');
+    intervalId = window.setInterval(updateClock, 40); // Arbitray rate that looks good enough onscreen.
+
+    // Demo highlights for new user.
+    if (!userHasHighlighted) {
+        demoHighlights();
+    }
+
+    // Show iOS Add-to-Home-Screen prompt.
+    if (!userHasClosedIosPrompt && navigator.userAgent.indexOf('Safari') !== -1 && ['iPhone', 'iPad', 'iPod'].includes(navigator.platform) && !navigator.standalone) {
+        timeoutIds.push(window.setTimeout(function () {
+            els.iosPrompt.classList.add('open');
+        }, 20000));
+        timeoutIds.push(window.setTimeout(function () {
+            els.iosPrompt.classList.remove('open');
+        }, 40000));
+    }
+
+    registerServiceWorker();
+}
+function initClock () {
+    queryDom();
+    addEventListeners();
+    startClock();
+}
+// End function definitions.
+
+// Define constants.
+var FACTORY_DISPLAY = new Date(1970, 10 - 1, 7, 9, 35, 18);
+var KNOWN_DEC_SOLSTICE = new Date(Date.UTC(1969, 12 - 1, 22, 0, 44, 2)); // 1969-12-22T00:44:02.000Z
+var KNOWN_NEW_MOON = new Date(Date.UTC(1970, 1 - 1, 7, 20, 35, 0)); // 1970-01-07T20:35:00.000Z
+var AVG_DAYS_PER_LUNAR_MONTH = 29.530588; // In 2000 Gregorian CE.
+// var AVG_DAYS_PER_SOLAR_YEAR = 365.2422; // In 2000 Gregorian CE.
+var MILLISECONDS_PER_SECOND = 1000;
+var MILLISECONDS_PER_MINUTE = MILLISECONDS_PER_SECOND * 60;
+var MILLISECONDS_PER_HOUR = MILLISECONDS_PER_MINUTE * 60;
+var MILLISECONDS_PER_DAY = MILLISECONDS_PER_HOUR * 24;
+var AVG_MILLISECONDS_PER_LUNAR_MONTH = AVG_DAYS_PER_LUNAR_MONTH * MILLISECONDS_PER_DAY; // In 2000 Gregorian CE.
+
+// Declare variables.
+var date;
+var els;
+var hoursInDst;
+var intervalId;
+var numberOfDayPips;
+var numberOfMonthPips;
+var prevUpdateClockHour;
+var prevUpdateClockMinute;
+var timeoutIds;
+var userHasClosedIosPrompt;
+var userHasHighlighted;
+var userPrefMonth;
+var userPrefOrientation;
+var userPrefTheme;
+var userPrefTime;
+
+// Wait for DOM.
+if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
+    initClock();
+} else {
+    document.addEventListener('DOMContentLoaded', initClock);
+}
+
+return {
+    reset: resetClock,
+    set: function (date) {
+        if (typeof date === 'undefined') {
+            date = FACTORY_DISPLAY;
+            console.log('No date provided; using factory display.');
+        } else if (typeof date !== 'object' ||
+            date instanceof Date !== true ||
+            isNaN(date.valueOf())
+        ) {
+            console.error('Cannot set invalid date.');
+            return;
+        }
+        this.stop();
+        prevUpdateClockMinute = 0;
+        prevUpdateClockHour = 0;
+        updateClock(date);
+    },
+    stop: function () {
+        window.clearInterval(intervalId);
+        intervalId = undefined;
+    }
+};
+
+})();
+
+        </script>
+
+    </body>
+</html>

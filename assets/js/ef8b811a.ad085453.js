@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwblog=self.webpackChunkwblog||[]).push([[8947],{6600:e=>{e.exports=JSON.parse('{"authors":[{"name":"wlg","title":"Front End Engineer","key":"wlg","page":null,"count":0}]}')}}]);

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>语音合成 - Moeyy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: hsl(0, 0%, 72%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #007BFF;
+            /* 设置链接颜色 */
+            text-decoration: none;
+            /* 去除下划线 */
+            transition: color 0.3s;
+            /* 添加颜色过渡效果 */
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+        }
+
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label,
+        select,
+        textarea,
+        input[type="range"] {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #555;
+            box-sizing: border-box;
+            /* Include padding and border in width */
+        }
+
+        textarea {
+            resize: vertical;
+            /* Allow vertical resizing */
+        }
+
+        input[type="range"] {
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+
+        button {
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        audio {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>自然语音合成</h1>
+        <h3>微软<a target="_blank" href="https://speech.microsoft.com/portal">Azure</a>提供能力</h3>
+        <p>选择声音：</p>
+        <select id="voiceSelect"></select>
+        <p>选择声音风格：</p>
+        <select id="voiceStyleSelect"></select>
+        <p>调整语速</p>
+        <input type="range" id="rateRange" min="0" max="100" value="0">
+        <p>调整音调</p>
+        <input type="range" id="pitchRange" min="0" max="100" value="0">
+        <p>输入待转语音的文本，不超过300字：</p>
+        <textarea id="ssmlInput" rows="6"></textarea>
+        <div style="margin-bottom: 5px;">
+            <button onclick="playAudio()">播放音频</button>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <button onclick="downloadAudio()">下载音频</button>
+        </div>
+
+
+        <audio id="audioPlayer" controls></audio>
+        <p>遵守<a target="_blank"
+                href="https://privacy.microsoft.com/zh-cn/privacystatement">微软隐私权政策</a>，本站不存储任何您的信息，所有版权归Microsoft
+            Azure或对应权利人所有</p>
+
+    </div>
+
+
+
+
+    <script>
+        const voiceStyles = [{ "LocalName": "晓萱", "ShortName": "zh-CN-XiaoxuanNeural", "VoiceStyleNames": ["calm", "fearful", "cheerful", "disgruntled", "serious", "angry", "gentle", "depressed", "Default"] }, { "LocalName": "晓辰", "ShortName": "zh-CN-XiaochenNeural", "VoiceStyleNames": [""] }, { "LocalName": "晓晓", "ShortName": "zh-CN-XiaoxiaoNeural", "VoiceStyleNames": ["assistant", "chat", "customerservice", "newscast", "affectionate", "angry", "calm", "cheerful", "disgruntled", "fearful", "gentle", "lyrical", "sad", "serious", "poetry-reading", "friendly", "Default"] }, { "LocalName": "晓涵", "ShortName": "zh-CN-XiaohanNeural", "VoiceStyleNames": ["calm", "fearful", "cheerful", "disgruntled", "serious", "angry", "sad", "gentle", "affectionate", "embarrassed", "Default"] }, { "LocalName": "晓甄", "ShortName": "zh-CN-XiaozhenNeural", "VoiceStyleNames": ["angry", "disgruntled", "cheerful", "fearful", "sad", "serious", "Default"] }, { "LocalName": "云健", "ShortName": "zh-CN-YunjianNeural", "VoiceStyleNames": ["narration-relaxed", "sports-commentary", "sports-commentary-excited", "angry", "disgruntled", "cheerful", "sad", "serious", "depressed", "documentary-narration", "Default"] }, { "LocalName": "晓颜", "ShortName": "zh-CN-XiaoyanNeural", "VoiceStyleNames": [""] }, { "LocalName": "晓伊", "ShortName": "zh-CN-XiaoyiNeural", "VoiceStyleNames": ["angry", "disgruntled", "affectionate", "cheerful", "fearful", "sad", "embarrassed", "serious", "gentle", "Default"] }, { "LocalName": "云皓", "ShortName": "zh-CN-YunhaoNeural", "VoiceStyleNames": ["advertisement-upbeat", "Default"] }, { "LocalName": "晓双", "ShortName": "zh-CN-XiaoshuangNeural", "VoiceStyleNames": ["chat", "Default"] }, { "LocalName": "晓梦", "ShortName": "zh-CN-XiaomengNeural", "VoiceStyleNames": ["chat", "Default"] }, { "LocalName": "云枫", "ShortName": "zh-CN-YunfengNeural", "VoiceStyleNames": ["angry", "disgruntled", "cheerful", "fearful", "sad", "serious", "depressed", "Default"] }, { "LocalName": "云泽", "ShortName": "zh-CN-YunzeNeural", "VoiceStyleNames": ["calm", "fearful", "cheerful", "disgruntled", "serious", "angry", "sad", "depressed", "documentary-narration", "Default"] }, { "LocalName": "晓秋", "ShortName": "zh-CN-XiaoqiuNeural", "VoiceStyleNames": [""] }, { "LocalName": "云野", "ShortName": "zh-CN-YunyeNeural", "VoiceStyleNames": ["embarrassed", "calm", "fearful", "cheerful", "disgruntled", "serious", "angry", "sad", "Default"] }, { "LocalName": "晓睿", "ShortName": "zh-CN-XiaoruiNeural", "VoiceStyleNames": ["calm", "fearful", "angry", "sad", "Default"] }, { "LocalName": "云希", "ShortName": "zh-CN-YunxiNeural", "VoiceStyleNames": ["narration-relaxed", "embarrassed", "fearful", "cheerful", "disgruntled", "serious", "angry", "sad", "depressed", "chat", "assistant", "newscast", "Default"] }, { "LocalName": "晓悠", "ShortName": "zh-CN-XiaoyouNeural", "VoiceStyleNames": [""] }, { "LocalName": "云夏", "ShortName": "zh-CN-YunxiaNeural", "VoiceStyleNames": ["calm", "fearful", "cheerful", "angry", "sad", "Default"] }, { "LocalName": "云扬", "ShortName": "zh-CN-YunyangNeural", "VoiceStyleNames": ["customerservice", "narration-professional", "newscast-casual", "Default"] }, { "LocalName": "晓墨", "ShortName": "zh-CN-XiaomoNeural", "VoiceStyleNames": ["embarrassed", "calm", "fearful", "cheerful", "disgruntled", "serious", "angry", "sad", "depressed", "affectionate", "gentle", "envious", "Default"] }]
+
+        const voiceSelect = document.getElementById("voiceSelect");
+        const voiceStyleSelect = document.getElementById("voiceStyleSelect");
+
+        // 添加声音选项到下拉菜单
+        voiceStyles.forEach(voiceStyle => {
+            const option = document.createElement("option");
+            option.value = voiceStyle.ShortName;
+            option.text = voiceStyle.LocalName;
+            voiceSelect.appendChild(option);
+        });
+
+        // 更新声音风格选项
+        function updateVoiceStyleOptions() {
+            const selectedVoice = voiceSelect.value;
+            const selectedVoiceStyle = voiceStyles.find(voiceStyle => voiceStyle.ShortName === selectedVoice);
+
+            // 清空现有选项
+            while (voiceStyleSelect.firstChild) {
+                voiceStyleSelect.removeChild(voiceStyleSelect.firstChild);
+            }
+
+            // 添加新选项
+            if (selectedVoiceStyle && selectedVoiceStyle.VoiceStyleNames) {
+                selectedVoiceStyle.VoiceStyleNames.forEach(voiceStyleName => {
+                    const option = document.createElement("option");
+                    option.value = voiceStyleName;
+                    option.text = voiceStyleName;
+                    voiceStyleSelect.appendChild(option);
+                });
+            }
+        }
+
+        // 当声音选项更改时更新声音风格选项
+        voiceSelect.addEventListener("change", updateVoiceStyleOptions);
+
+        function playAudio() {
+            const voice = document.getElementById("voiceSelect").value;
+            const voiceStyle = document.getElementById("voiceStyleSelect").value;
+            const rate = document.getElementById("rateRange").value;
+            const pitch = document.getElementById("pitchRange").value;
+            const text = document.getElementById("ssmlInput").value;
+
+            const audioPlayer = document.getElementById("audioPlayer");
+
+            const url = `https://tts.moeyy.cn/audio?voice=${encodeURIComponent(voice)}&voiceStyle=${encodeURIComponent(voiceStyle)}&rate=${encodeURIComponent(rate)}&pitch=${encodeURIComponent(pitch)}&text=${encodeURIComponent(text)}`;
+            console.log(voiceStyle);
+            audioPlayer.src = url;
+            audioPlayer.onerror = function () {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        alert("Failed to generate audio")
+                        const errorText = "Failed to generate audio: " + data.error;
+
+                    })
+                    .catch(error =>
+                        console.log(error));
+            };
+            audioPlayer.play();
+        }
+        function downloadAudio() {
+            const voice = document.getElementById("voiceSelect").value;
+            const voiceStyle = document.getElementById("voiceStyleSelect").value;
+            const rate = document.getElementById("rateRange").value;
+            const pitch = document.getElementById("pitchRange").value;
+            const text = document.getElementById("ssmlInput").value;
+
+            const url = `https://tts.moeyy.cn/audio?voice=${encodeURIComponent(voice)}&voiceStyle=${encodeURIComponent(voiceStyle)}&rate=${encodeURIComponent(rate)}&pitch=${encodeURIComponent(pitch)}&text=${encodeURIComponent(text)}`;
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'audio.mp3';
+            link.style.display = 'none';
+
+            document.body.appendChild(link);
+
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+
+</html>

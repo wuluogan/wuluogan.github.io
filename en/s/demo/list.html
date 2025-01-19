@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排行榜</title>
+</head>
+
+<body>
+<div class="container">
+    <h2>热门创作者排行榜</h2>
+
+    <ul>
+        <li>
+            <div class="img-box">
+                <img src="https://z1.ax1x.com/2023/10/13/pipuBDg.jpg" />
+            </div>
+
+            <div class="content">
+                <h3 class="rank">
+                    <small>#</small>1
+                </h3>
+
+                <h4>林峰</h4>
+
+                <p>自由职业者艺术家</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="img-box">
+                <img src="https://z1.ax1x.com/2023/10/13/pipusEj.jpg" />
+            </div>
+
+            <div class="content">
+                <h3 class="rank">
+                    <small>#</small>2
+                </h3>
+
+                <h4>赵琦</h4>
+
+                <p>人际交往情感大师</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="img-box">
+                <img src="https://z1.ax1x.com/2023/10/25/piVNw4J.jpg" />
+            </div>
+
+            <div class="content">
+                <h3 class="rank">
+                    <small>#</small>3
+                </h3>
+
+                <h4>宋澈</h4>
+
+                <p>复仇穿越爽文写作家</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="img-box">
+                <img src="https://z1.ax1x.com/2023/10/25/piVNBC9.jpg" />
+            </div>
+
+            <div class="content">
+                <h3 class="rank">
+                    <small>#</small>4
+                </h3>
+
+                <h4>雪儿</h4>
+
+                <p>生活常识形象管理</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="img-box">
+                <img src="https://z1.ax1x.com/2023/10/13/pipu0KS.jpg" />
+            </div>
+
+            <div class="content">
+                <h3 class="rank">
+                    <small>#</small>5
+                </h3>
+
+                <h4>肖晨</h4>
+
+                <p>互联网开发者创业</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+<style>
+    /*google-fonts*/
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul li { list-style: none; }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+
+        min-height: 100vh;
+        background-color: #f5f5f5;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container { padding: 20px; }
+    .container h2 {
+        font-size: 1.75em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    ul {
+        min-width: 300px;
+        /* min-width: 350px; */
+    }
+    ul:hover li {
+        filter: blur(5px);
+        opacity: 0.3;
+    }
+
+    ul li {
+        position: relative;
+
+        display: flex;
+        column-gap: 10px;
+        padding: 10px;
+        margin-block: 10px;
+        overflow: hidden;
+
+        background-color: #fff;
+        border-radius: 10px;
+
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    ul li:hover {
+        box-shadow: -10px 20px 35px rgba(0, 0, 0, 0.15);
+        transform: scale(1.15);
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    ul li .img-box {
+        width: 60px;
+        height: 60px;
+
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    ul li .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    ul li .content .rank {
+        position: absolute;
+        right: -50px;
+
+        color: #03a9f4;
+        font-size: 2em;
+
+        transition: right 0.5s;
+    }
+    ul li .content .rank small {
+        font-weight: 500;
+        opacity: 0.3;
+    }
+    ul li:hover .content .rank {
+        right: 20px;
+    }
+
+    ul li .content h4 {
+        font-weight: 600;
+        line-height: 1.2em;
+    }
+
+    ul li .content p {
+        font-size: 0.75em;
+    }
+
+</style>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算器</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        html, body { width: 60%; height: 80%; }
+        a   { text-decoration: none; }
+        img { vertical-align: middle; }
+        ul, li  { list-style: none; }
+        input, button, textarea { outline: none; border: none;}
+        .fl { float: left;}
+        .fr { float: right;}
+        .clearFix { zoom: 1; }
+        .clearFix:after { content: ''; display: block; height: 0; visibility: hidden; clear: both; }
+
+        .flex-row-col-cen { display: flex; display: -webkit-flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+        body {
+            box-sizing: border-box;
+            padding: 8px;
+            background: #111;
+            color: #fff;
+        }
+
+        /* 结果 */
+        .result-box {
+            height: 28%;
+            font-size: 5em;
+            text-align: right;
+            position: relative;
+        }
+        .result-box > .result {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        /* 按键 */
+        .keys-box {
+            height: 72%;
+            display: flex;
+            display: -webkit-flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        .keys-box > .keys {
+            width: 23.5%;
+            height: 0;
+            padding-bottom: 23.5%;
+            border-radius: 50%;
+            background: orange;
+            text-align: center;
+            font-size: 1.75em;
+            -webkit-transition: all .25s linear;
+            -moz-transition: all .25s linear;
+            transition: all .25s linear;
+
+        }
+        .keys-box > .zero {
+            width: calc(23.5% * 2 + 2%);
+            position: relative;
+        }
+        .keys-box > .zero:before,
+        .keys-box > .zero:after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background: rgb(51, 51, 51);
+            -webkit-transition: all .25s linear;
+            -moz-transition: all .25s linear;
+            transition: all .25s linear;
+        }
+
+        .keys-box > .zero:before {
+            content: "0";
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            left: 0;
+        }
+        .keys-box > .zero:after {
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            right: 0;
+        }
+        /* 调色 */
+        .keys-box .operator {
+            background: rgb(253, 149, 3);
+        }
+        .keys-box .operator:active {
+            background: rgb(249, 206, 151);
+        }
+        .keys-box .operator.selected {
+            background: #fff;
+            color: rgb(253, 149, 3);
+        }
+        .keys-box .number {
+            background: rgb(51, 51, 51);
+        }
+        .keys-box .number:active {
+            background: rgb(126, 126, 126);
+        }
+        .keys-box .handler {
+            background: rgb(165, 165, 165);
+        }
+        .keys-box .handler:active {
+            background: rgb(222, 222, 222);
+        }
+
+        .keys-box > .zero:active:after,
+        .keys-box > .zero:active:before {
+            background: rgb(126, 126, 126);
+        }
+    </style>
+</head>
+<body>
+<!-- 结果 -->
+<div class="result-box">
+    <span class="result">0</span>
+</div>
+<!-- 按键 -->
+<main class="keys-box">
+    <section class="keys handler">AC</section>
+    <section class="keys handler">+/-</section>
+    <section class="keys handler">%</section>
+    <section class="keys operator">÷</section>
+    <section class="keys number">7</section>
+    <section class="keys number">8</section>
+    <section class="keys number">9</section>
+    <section class="keys operator">×</section>
+    <section class="keys number">4</section>
+    <section class="keys number">5</section>
+    <section class="keys number">6</section>
+    <section class="keys operator">-</section>
+    <section class="keys number">1</section>
+    <section class="keys number">2</section>
+    <section class="keys number">3</section>
+    <section class="keys operator">+</section>
+    <section class="keys zero number">0</section>
+    <section class="keys number">.</section>
+    <section class="keys operator">=</section>
+</main>
+<script>
+    // 计算行高
+    function updateLineHieght(keys) {
+        let _height = keys[0].offsetHeight;
+        keys.forEach(key => {
+            key.style.lineHeight = `${_height}px`;
+        });
+    }
+
+    // 调整结果字符串格式
+    function resultFormat(str) {
+        if(str === "错误") {
+            return str;
+        }
+        var s = "";
+        if(/\d+\.0*/.test(str)) {
+            return str;
+        }
+        str = str.replace(/,/g, "");
+        if(!/^0/.test(str)  ) {
+            return parseFloat(str).toLocaleString();
+        }
+        return str;
+    }
+
+    // 清除结果
+    function clearResult(el) {
+        el.textContent = "0";
+    }
+    // 正负转换
+    function conversion(el) {
+        var val = el.textContent;
+        if(/^-/.test(val)) { // 如果是负数
+            val = val.slice(1);
+        }else { // 如果是正数
+            val = `-${val}`;
+        }
+        el.textContent = val;
+    }
+    // 百分比（结果除以100）
+    function percentage(el) {
+        let val = el.textContent;
+        if(val === "0") {return;}
+        val = val.replace(/,/g, "");
+        if(/^0\./.test(val)) {
+            // 解决因js浮点数除以100的异常问题
+            let index = val.indexOf('.') + 1;
+            val = "0.00" + val.slice(index);
+            el.textContent = val;
+        }else if(/^-0\./.test(val)){
+            let index = val.indexOf('.') + 1;
+            val = "-0.00" + val.slice(index);
+            el.textContent = val;
+        }else {
+            el.textContent = val / 100;
+        }
+
+    }
+
+    function removeClass(elements, className) {
+        for(let i = 0, len = elements.length; i < len; i++) {
+            if(elements[i].classList.contains(className)) {
+                elements[i].classList.remove(className);
+                break;
+            }
+        }
+    }
+
+    function caculator({firNumber, secNumber, symbol, result}) {
+        let res = null;
+        switch(symbol) {
+            case "+":{
+                res = firNumber + secNumber;
+            }break;
+            case "-":{
+                res = firNumber - secNumber;
+            }break;
+            case "×": {
+                res = firNumber * secNumber;
+            }break;
+            case "÷": {
+                if(secNumber == 0) {
+                    res = "错误";
+                }else {
+                    res = firNumber / secNumber;
+                }
+            }break;
+        }
+        result.textContent = resultFormat(res.toString());
+    }
+    (function() {
+        // 1. 更新行高，让文本垂直居中
+        let keys = Array.from(document.querySelectorAll('.keys'));
+        updateLineHieght(keys);
+        // 2. 获取DOM元素
+        let result    = document.querySelector('.result');
+        let numbers   = Array.from(document.querySelectorAll('.number'));
+        let handlers  = Array.from(document.querySelectorAll('.handler'));
+        let operators = Array.from(document.querySelectorAll('.operator'));
+        let firNumber = 0, secNumber = 0, symbol = "";
+        // 记录是否清除结果显示,重新录入数字
+        let flag      = false;
+        // 记录计算次数
+        let times     = 0;
+
+        // 3. 事件添加
+        // 3.1 点击数字
+        numbers.forEach(number => {
+            number.onclick = function() {
+                let [resultText, numberText] = [result.textContent, this.textContent];
+                // 如果结果中已经存在一个‘.’，既不能再次输入‘.’
+                if(/\./.test(resultText) && numberText === ".") {
+                    return;
+                }
+                // 如果输入的第一个字符不是‘.’，则清空结果
+                if((resultText === "0" && numberText !== ".") || flag) {
+                    resultText = "";
+                }
+                resultText += this.textContent;
+                result.textContent = resultFormat(resultText);
+                flag = false;
+            }
+        });
+        // 3.2 处理操作
+        handlers.forEach(handler => {
+            handler.onclick = function()  {
+                removeClass(operators, 'selected');
+                switch(this.textContent) {
+                    // 清空结果
+                    case "AC":{
+                        // 涅槃重生
+                        times = 0;
+                        firNumber = secNumber = 0;
+                        clearResult(result);
+                    }break;
+                    // 正负数
+                    case "+/-": {
+                        conversion(result);
+                    }break;
+                    // 百分比
+                    case "%": {
+                        percentage(result);
+                    }break;
+                }
+            }
+        });
+        // 3.3 处理运算
+        operators.forEach(operator => {
+            operator.onclick = function() {
+                if(this.textContent === "=") {
+                    // 计算
+                    // 判断如果重复点击等号，则更新第一个值
+                    if(symbol && times) {
+                        firNumber = parseFloat(result.textContent.replace(/,/g, ""));
+                    }
+                    removeClass(operators, 'selected');
+                    // 如果是第一次点击等号，则更新第二个值
+                    if(!times) {
+                        secNumber = parseFloat(result.textContent.replace(/,/g, ""));
+                    }
+                    caculator({firNumber, secNumber, symbol, result});
+                    times++;
+                }else {
+                    // 记录运算符号
+                    symbol = this.textContent;
+                    // 移除选种样式
+                    removeClass(operators, 'selected');
+                    // 添加选中样式
+                    this.classList.add('selected');
+                    // 记录第一个数字
+                    firNumber = parseFloat(result.textContent.replace(/,/g, ""));
+                    // 更新flag状态
+                    flag = true;
+                    // 清空次数
+                    times = 0;
+                }
+            }
+        });
+    })();
+
+</script>
+</body>
+</html>

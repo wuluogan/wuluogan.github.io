@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwblog=self.webpackChunkwblog||[]).push([[7882],{6341:u=>{u.exports=JSON.parse('{"authors":[{"name":"Kuizuo","title":"ts full stack / Student","url":"https://github.com/kuizuo","imageURL":"/en/img/logo.webp","key":"kuizuo","page":null,"count":0}]}')}}]);

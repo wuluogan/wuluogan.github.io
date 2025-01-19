@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体流动效果</title>
+    <style>
+        .text {
+            --antd-dust-red: #f5222d;
+            --antd-volcano: #fa541c;
+            --antd-sunset-orange: #fa8c16;
+            --antd-calendula-gold: #faad14;
+            --antd-sunrise-yellow: #fadb14;
+            --antd-lime: #a0d911;
+            --antd-polar-green: #52c41a;
+            --antd-cyan: #13c2c2;
+            --antd-daybreak-blue: #1890ff;
+            --antd-geek-blue: #2f54eb;
+            --antd-golden-purple: #722ed1;
+            --antd-magenta: #eb2f96;
+
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            -webkit-box-decoration-break: clone !important;
+            font-weight: bolder;
+            font-size: 28px;
+            background: -webkit-linear-gradient(
+                    135deg,
+                    var(--antd-dust-red) 0%,
+                    var(--antd-volcano) 8.33%,
+                    var(--antd-sunset-orange) 16.667%,
+                    var(--antd-calendula-gold) 25%,
+                    var(--antd-sunrise-yellow) 33.333%,
+                    var(--antd-lime) 41.667%,
+                    var(--antd-polar-green) 50%,
+                    var(--antd-cyan) 58.333%,
+                    var(--antd-daybreak-blue) 66.667%,
+                    var(--antd-geek-blue) 75%,
+                    var(--antd-golden-purple) 83.333%,
+                    var(--antd-magenta) 91.666%,
+                    var(--antd-dust-red) 100%
+            );
+            animation: aurora 3s ease 0s infinite normal none running;
+        }
+
+        @keyframes aurora {
+            0% {
+                -webkit-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg);
+            }
+
+            100% {
+                -webkit-filter: hue-rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<span class="text">你好，掘金</span>
+<br />
+<span class="text">Hello, juejin</span>
+<br />
+<span class="text">こんにちは、ほりかね</span>
+</body>
+
+</html>

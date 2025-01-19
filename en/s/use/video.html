@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WVideo</title>
+    <style>
+
+        /* 去除标签的默认间距 */
+        * { margin: 0; padding: 0; }
+
+        /* 解决body直接子元素设置百分比高度无法获取的问题 */
+        html, body { height: 100%; }
+
+        /* 去除超链接默认下划线 */
+        a   { text-decoration: none; }
+
+        /* 解决因图片撑起容器高度产生偏差的问题  */
+        img { vertical-align: middle; }
+
+        /* 去除列表项目标号 */
+        ul, li  { list-style: none; }
+
+        /* 去除表单元素的边框和轮廓 */
+        input, button, textarea { outline: none; border: none;}
+
+        /* 浮动相关 */
+        .fl { float: left;}
+        .fr { float: right;}
+        .clearFix { zoom: 1; }
+        .clearFix:after { content: ''; display: block; height: 0; visibility: hidden; clear: both; }
+
+        /* 弹性布局 */
+        .flex-row-col-cen { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+
+        body {
+            background: #f5f5f5;
+        }
+        /* 视频列表样式 */
+        .container {
+            width: 95%;
+            min-width: 1200px;
+            margin: 50px auto;
+        }
+        .container > .title {
+            letter-spacing: 3px;
+            font-weight: 250;
+            color: gray;
+            margin-bottom: 25px;
+        }
+
+        .video-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .video-list li {
+            width: 24%;
+            margin-bottom: 30px;
+            transition: all .25s linear;
+        }
+        .video-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 1px 1px 20px 1px lightgray;
+        }
+        .video-list .top-bar {
+            height: 200px;
+            background-size: cover !important;
+            position: relative;
+            cursor: pointer;
+        }
+        .video-list .top-bar img {
+            width: 45px;
+            position: absolute;
+            left: 8px;
+            bottom: 8px;
+        }
+
+
+        .video-list .infos {
+            height: 160px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 2px;
+        }
+        .video-list .infos .title {
+            line-height: 45px;
+            cursor: pointer;
+            transition: all .15s linear;
+        }
+        .video-list .infos .title:hover {
+            color: #ff6700;
+        }
+
+        .video-list .infos  .des {
+            font-size: 12px;
+            color: lightslategray;
+        }
+
+        /* 遮罩样式 */
+        .mask {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: none;
+        }
+        .mask.show {
+            display: block;
+        }
+
+        .mask .wrap {
+            width: 900px;
+            margin: 200px auto;
+        }
+        .mask .top {
+            height: 65px;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+        .mask .title {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+        .mask .close {
+            width: 40px;
+            height: 40px;
+
+            text-align: center;
+            line-height: 38px;
+
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .15s linear;
+            border-radius: 50%;
+        }
+        .mask .close:hover {
+            background: #ff6700;
+            color: #ffffff;
+        }
+        .mask video {
+            width: 100%;
+            height: 500px;;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 视频播放遮罩 -->
+<div class="mask">
+    <div class="wrap">
+        <!-- 标题 -->
+        <div class="top">
+            <p class="title"></p>
+            <p class="close">x</p>
+        </div>
+        <!-- 视频播放器 -->
+        <video controls></video>
+    </div>
+</div>
+<!-- 视频列表 -->
+<div class="container">
+    <ul class="video-list"></ul>
+</div>
+<script>
+    /* 方法封装 */
+    /**
+     * ajax for get
+     * @param {资源地址} url
+     * @param {回调函数} callback
+     */
+    function GET(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = "json";
+        xhr.open("GET", url, true);
+        xhr.send(null);
+        xhr.onload = function () {
+            if (this.status == 200) {
+                callback && callback(this.response);
+            }
+        }
+    }
+
+    function $(sel, isAll) {
+        if (isAll) {
+            return document.querySelectorAll(sel);
+        } else {
+            return document.querySelector(sel);
+        }
+    }
+
+    /**
+     * 加载页面元素
+     * @param {父级元素} parent
+     * @param {显示数据} response
+     */
+    function loadingHtml(parent, response) {
+        var htmlStr = "";
+        response.forEach(function (obj, index, arr) {
+            htmlStr += `<li>
+            <div class="top-bar" data-title="${obj.title}" data-url="${obj.videoUrl}" style="background:url('${obj.imgUrl}')">
+                <img src="./assets/img/play.png" alt="">
+            </div>
+            <div class="infos">
+                <p class="title" data-title="${obj.title}" data-url="${obj.videoUrl}">${obj.title}</p>
+                <p class="des">${obj.des}</p>
+            </div>
+        </li>`;
+
+        })
+        parent.innerHTML = htmlStr;
+    }
+    (function () {
+        // 获取遮罩
+        var mask = $(".mask"),
+            close = $(".close"),
+            title = $(".mask .title"),
+            video = $(".mask video");
+        // 获取数据
+        GET("./assets/json/videos.json", function (response) {
+            // 加载页面元素
+            loadingHtml($(".video-list"), response);
+            // 操作
+            // Array.from == Array.prototype.slice.call
+            var oTops = Array.from($(".video-list .top-bar", true));
+            var oTtitles = Array.from($(".video-list .title", true));
+            // 循环添加事件
+            for (var i = 0; i < response.length; i++) {
+                // 给缩略图添加点击事件
+                oTops[i].onclick = showMask;
+                // 监听鼠标移入图片缩略区域
+                oTops[i].onmouseenter = function () {
+                    this.firstElementChild.src = "./assets/img/play_hov.png";
+                }
+                // 监听鼠标移出图片缩略区域
+                oTops[i].onmouseleave = function () {
+                    this.firstElementChild.src = "./assets/img/play.png";
+                }
+                // 给标题添加点击事件
+                oTtitles[i].onclick = showMask;
+            }
+
+
+        });
+        // 点击关闭按钮
+        close.onclick = function () {
+            // 关闭遮罩
+            mask.classList.remove("show");
+            // 停止视频
+            video.pause();
+        }
+        function showMask() {
+            // 显示遮罩
+            mask.classList.add("show");
+            // 设置标题
+            title.textContent = this.dataset.title;
+            // 设置视频播放地址
+            video.src = this.dataset.url;
+            // 自动播放
+            video.play();
+        }
+
+
+    })();
+
+
+//     # video 对象属性
+//     - audioTracks	返回表示可用音频轨道的 AudioTrackList 对象。
+// - autoplay	设置或返回是否在就绪（加载完成）后随即播放视频。
+// - buffered	返回表示视频已缓冲部分的 TimeRanges 对象。
+// - controller	返回表示视频当前媒体控制器的 MediaController 对象。
+// - controls	设置或返回视频是否应该显示控件（比如播放/暂停等）。
+// - crossOrigin	设置或返回视频的 CORS 设置。
+// - currentSrc	返回当前视频的 URL。
+// - currentTime	设置或返回视频中的当前播放位置（以秒计）。
+// - defaultMuted	设置或返回视频默认是否静音。
+// - defaultPlaybackRate	设置或返回视频的默认播放速度。
+// - duration	返回视频的长度（以秒计）。
+// - ended	返回视频的播放是否已结束。
+// - error	返回表示视频错误状态的 MediaError 对象。
+// - height	设置或返回视频的 height 属性的值。
+// - loop	设置或返回视频是否应在结束时再次播放。
+// - mediaGroup	设置或返回视频所属媒介组合的名称。
+// - muted	设置或返回是否关闭声音。
+// - networkState	返回视频的当前网络状态。
+// - paused	设置或返回视频是否暂停。
+// - playbackRate	设置或返回视频播放的速度。
+// - played	返回表示视频已播放部分的 TimeRanges 对象。
+// - poster	设置或返回视频的 poster 属性的值。
+// - preload	设置或返回视频的 preload 属性的值。
+// - readyState	返回视频当前的就绪状态。
+// - seekable	返回表示视频可寻址部分的 TimeRanges 对象。
+// - seeking	返回用户当前是否正在视频中进行查找。
+// - src	设置或返回视频的 src 属性的值。
+// - startDate	返回表示当前时间偏移的 Date 对象。
+// - textTracks	返回表示可用文本轨道的 TextTrackList 对象。
+// - videoTracks	返回表示可用视频轨道的 VideoTrackList 对象。
+// - volume	设置或返回视频的音量。
+// - width	设置或返回视频的 width 属性的值。
+//
+//     # video 方法
+//     - addTextTrack()	向视频添加新的文本轨道。
+// - canPlayType()	检查浏览器是否能够播放指定的视频类型。
+// - load()	重新加载视频元素。
+// - play()	开始播放视频。
+// - pause()	暂停当前播放的视频。
+</script>
+</body>
+</html>

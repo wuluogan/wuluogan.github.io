@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>md图片提取</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .left-column {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .right-column {
+            width: 50%;
+            padding: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>内容转换页面</h1>
+    <div class="container">
+        <div class="left-column">
+            <label for="inputText">输入内容：</label>
+            <textarea id="inputText"></textarea>
+        </div>
+        <div class="right-column">
+            <label for="outputText">转换后的内容：</label>
+            <textarea id="outputText" readonly></textarea>
+        </div>
+    </div>
+    <button onclick="convert()">转换</button>
+
+    <script>
+        function convert() {
+            const inputText = document.getElementById('inputText').value;
+            // 这里进行您的转换逻辑，例如将输入内容全部转为大写
+
+            const regex = /!\[(.*?)\]\((https:\/\/(?!www.inoreader.com).*?)\)/g;
+            const outputText = [];
+            let match;
+            while ((match = regex.exec(inputText)) !== null) {
+
+                outputText.push(match[2]);
+            }
+            document.getElementById('outputText').value = outputText.join('\n');
+        }
+    </script>
+</body>
+
+</html>

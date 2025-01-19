@@ -1,0 +1,1665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wlg.us.kg/en/book</id>
+    <title>WBlog Blog</title>
+    <updated>2025-01-01T10:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wlg.us.kg/en/book"/>
+    <subtitle>WBlog Blog</subtitle>
+    <icon>https://wlg.us.kg/en/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[周刊202501]]></title>
+        <id>https://wlg.us.kg/en/book/2025/202501</id>
+        <link href="https://wlg.us.kg/en/book/2025/202501"/>
+        <updated>2025-01-01T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[视频]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="视频">视频<a href="https://wlg.us.kg/en/book/2025/202501#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><a href="https://weibo.com/5014788526/P5uiV1H69" target="_blank" rel="noopener noreferrer">爽快了</a></p>
+<p><a href="https://h5.video.weibo.com/show/1034:5113953630748725" target="_blank" rel="noopener noreferrer">转盘绘画你见过吗？</a></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="黑胶唱片到底怎么把声音摩擦出来的"><a href="https://weibo.com/2199837712/P7K55Cjfa" target="_blank" rel="noopener noreferrer">黑胶唱片到底怎么把声音“摩擦”出来的</a><a href="https://wlg.us.kg/en/book/2025/202501#%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E5%88%B0%E5%BA%95%E6%80%8E%E4%B9%88%E6%8A%8A%E5%A3%B0%E9%9F%B3%E6%91%A9%E6%93%A6%E5%87%BA%E6%9D%A5%E7%9A%84" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="网站">网站<a href="https://wlg.us.kg/en/book/2025/202501#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>2、<a href="https://slea.ai/zh-CN" target="_blank" rel="noopener noreferrer">Slea.ai</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121801.webp" alt="img" class="img_ev3q"></p>
+<p>免费的 AI Logo 生成器。</p>
+<p>3、<a href="https://tiktokvoice.net/en/sounds-effect" target="_blank" rel="noopener noreferrer">AI 音效生成器</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121802.webp" alt="img" class="img_ev3q"></p>
+<p>免费生成各种音效，比如雨声、风声。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="开源">开源<a href="https://wlg.us.kg/en/book/2025/202501#%E5%BC%80%E6%BA%90" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hivisionidphotos">HivisionIDPhotos<a href="https://wlg.us.kg/en/book/2025/202501#hivisionidphotos" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>HivisionIDPhotos 是一款轻量级的 AI 证件照制作工具，旨在通过简便的操作生成标准证件照和六寸排版照。</p>
+<p>演示地址：<a href="https://swanhub.co/ZeYiLin/HivisionIDPhotos/demo" target="_blank" rel="noopener noreferrer">https://swanhub.co/ZeYiLin/HivisionIDPhotos/demo</a></p>
+<p>GitHub：<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos" target="_blank" rel="noopener noreferrer">https://github.com/Zeyi-Lin/HivisionIDPhotos</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2025/202501#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>1、<a href="https://www.popularmechanics.com/flight/drones/a30795266/cia-robot-dragonfly/" target="_blank" rel="noopener noreferrer">机器蜻蜓</a></p>
+<p>美国首都华盛顿的中央情报局博物馆，有一只上个世纪70年代制造的机器蜻蜓。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121808.webp" alt="img" class="img_ev3q"></p>
+<p>它其实是一架微型直升机，飞到目标对象附近，窃听对方的谈话。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121809.webp" alt="img" class="img_ev3q"></p>
+<p>这只蜻蜓可以飞200米，然后落下来，通过激光捕捉空气振动，来还原谈话声。</p>
+<p>但是，它不防风，也难以控制，所以从来没有实际用过。</p>
+<p>2、<a href="https://en.wikipedia.org/wiki/Postzegelcode" target="_blank" rel="noopener noreferrer">荷兰的邮资代码</a></p>
+<p>荷兰寄信不用邮票，而是用一种9个字母和数字组成的代码。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024071110.webp" alt="img" class="img_ev3q"></p>
+<p>你花钱买一个代码，以 3 x 3 的格式写在信封上，就能代替邮票，作为付款证明。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024071111.webp" alt="img" class="img_ev3q"></p>
+<p>因为代码的有效期只有五天（以邮戳为准），需要购买后及时寄出，被猜到的可能性很小。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文摘">文摘<a href="https://wlg.us.kg/en/book/2025/202501#%E6%96%87%E6%91%98" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="没有编程生产力这样的东西">没有编程生产力这样的东西<a href="https://wlg.us.kg/en/book/2025/202501#%E6%B2%A1%E6%9C%89%E7%BC%96%E7%A8%8B%E7%94%9F%E4%BA%A7%E5%8A%9B%E8%BF%99%E6%A0%B7%E7%9A%84%E4%B8%9C%E8%A5%BF" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>正如马丁·福勒（Martin Fowler）所观察到的那样，程序员的编程生产力无法有效地衡量，因为它不存在。</p>
+<p>软件开发并不是一项必然会产生任何东西的活动。</p>
+<p>假设你有两个开发人员在同一个项目上工作，并且偶然地，他俩在同一天接受了相同的任务。</p>
+<p>甲写了一个1000行的框架，完美地解决了这个问题。代码编写良好，并经过充分测试，每一步都有详细记录。</p>
+<p>乙则是当天去了公园，一边喂鸽子一边思考问题，然后漫步回到办公室，删除了100行代码，部署了更改......问题就解决了。</p>
+<p>请问谁的生产力更高？</p>
+<p>回答是，这不重要。重要的是乙解决了问题，同时降低了团队的长期维护成本。甲也解决了这个问题，但是他通过增加代码，增加了维护成本，因此（在其他条件相同的情况下）他的解决方案较差。</p>
+<p>我们能说，乙具有更高的生产力吗？显然，很难找到编程生产力的正确衡量指标。</p>
+<p>我认为，<strong>优秀的软件开发者所做的就是解决问题</strong>。但是，生产力的衡量指标，比如代码、文档、数据等等，都只是解决问题的工具，并不是解决问题本身。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="亚马逊河为什么没有桥">亚马逊河为什么没有桥？<a href="https://wlg.us.kg/en/book/2025/202501#%E4%BA%9A%E9%A9%AC%E9%80%8A%E6%B2%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89%E6%A1%A5" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>南美洲的亚马逊河是世界第二长的河流，仅次于非洲的尼罗河。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202501/bg2025010231.webp" alt="img" class="img_ev3q"></p>
+<p>但是，这条河没有一座桥，是唯一一条没有任何桥梁的世界主要河流。这是为什么呢？</p>
+<p>首先，每年的雨季，亚马逊河都会泛滥，河流的宽度会从旱季的5公里变成50公里，就像下图那样，很难造桥。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202309/bg2023092901.webp" alt="img" class="img_ev3q"></p>
+<p>其次，亚马逊河沿岸人烟稀少，只有很少几个城镇。最大一个城市的人口只有50万，不存在前往河对岸的强烈需求。</p>
+<p>最后，亚马逊河两岸都是原始森林，并没有现成道路。如果造桥就需要砍伐大量森林，修建引桥和公路，环境代价很大。近年来，环保意识逐渐高涨，反对造桥的呼声也就越来越大。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202419]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202419</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202419"/>
+        <updated>2024-11-29T21:23:53.521Z</updated>
+        <summary type="html"><![CDATA[视频]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="视频">视频<a href="https://wlg.us.kg/en/book/2024/week_202419#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><a href="https://h5.video.weibo.com/show/1034:5034913984872473" target="_blank" rel="noopener noreferrer">将跳绳与街舞完美融合，这个难度不是一般的大</a></p>
+<p><a href="https://weibo.com/7782884695/OefsDCge4" target="_blank" rel="noopener noreferrer">他在墙壁上画出了栩栩如生的公鸡</a></p>
+<p><a href="https://m.weibo.cn/detail/5034351995915365" target="_blank" rel="noopener noreferrer">新乡大风</a></p>
+<p><a href="https://h5.video.weibo.com/show/1034:5041976827904028" target="_blank" rel="noopener noreferrer">一个被拐26年贵州女孩的“复仇”</a></p>
+<p><a href="https://weibo.com/5630847689/OhnXlBxRG" target="_blank" rel="noopener noreferrer">这个绳结技巧视频在外网火了</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="视频-1">视频<a href="https://wlg.us.kg/en/book/2024/week_202419#%E8%A7%86%E9%A2%91-1" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><a href="https://weibo.com/6502531152/OcQI40Ytp" target="_blank" rel="noopener noreferrer">萨金特就这几笔，画进多少人的心坎儿里了</a></p>
+<p><a href="https://www.bilibili.com/video/BV1nm41117cs/" target="_blank" rel="noopener noreferrer">【《大魔术师》：揭秘这场愚弄人心的把戏】</a></p>
+<p><a href="https://www.bilibili.com/video/BV1xE421j7Uv" target="_blank" rel="noopener noreferrer">【硬核科普】从零开始认识显卡</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="工具">工具<a href="https://wlg.us.kg/en/book/2024/week_202419#%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="imgpilot">Imgpilot<a href="https://wlg.us.kg/en/book/2024/week_202419#imgpilot" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://www.imgpilot.com/" target="_blank" rel="noopener noreferrer">Imgpilot</a> 一个在线将你的手绘通过 AI 变为一张好看的油画的工具，无需登录即可免费使用。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/25a13b17710f44c3b881377ed94f86fe_2192261542853668864.png" alt="25a13b17710f44c3b881377ed94f86fe_2192261" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="chat-with-llama-3">Chat With Llama 3<a href="https://wlg.us.kg/en/book/2024/week_202419#chat-with-llama-3" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://llama3.dev/" target="_blank" rel="noopener noreferrer">Chat With Llama 3</a> 由 Meta 公司提供的 Llama 3 模型在线体验网站，无需登录即可免费体验最新的 Llama 3 70B 模型。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/1a88729e190d40acb947117ce8f4f47b_2192261542853668864.png" alt="1a88729e190d40acb947117ce8f4f47b_2192261" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workers-ai-playground">Workers AI Playground<a href="https://wlg.us.kg/en/book/2024/week_202419#workers-ai-playground" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://playground.ai.cloudflare.com/" target="_blank" rel="noopener noreferrer">Workers AI Playground</a> 由 cloudflare官方的部署的 AI 模型在线游乐场，无需登录即可使用各种开源模型进行对话。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/b98546a6a0054b1d93f7504284702f18_2192261542853668864.png" alt="b98546a6a0054b1d93f7504284702f18_2192261" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="网站">网站<a href="https://wlg.us.kg/en/book/2024/week_202419#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="topcpu">TOPCPU<a href="https://wlg.us.kg/en/book/2024/week_202419#topcpu" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://www.topcpu.net/zh-hk/" target="_blank" rel="noopener noreferrer">TOPCPU</a> 网站收录了各种 CPU、显卡的对比信息与评分数据。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/3dafe62868b949269bc4b3875a0dac2a_2192261542853668864.png" alt="3dafe62868b949269bc4b3875a0dac2a_2192261" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="全国行政区域边界数据"><a href="https://geojson.hxkj.vip/" target="_blank" rel="noopener noreferrer">全国行政区域边界数据</a><a href="https://wlg.us.kg/en/book/2024/week_202419#%E5%85%A8%E5%9B%BD%E8%A1%8C%E6%94%BF%E5%8C%BA%E5%9F%9F%E8%BE%B9%E7%95%8C%E6%95%B0%E6%8D%AE" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202406/bg2024060302.webp" alt="img" class="img_ev3q"></p>
+<p>全国省市区县行政边界数据免费下载，API 接口实时更新，适用于 echarts 等地图应用，查看<a href="https://github.com/TangSY/echarts-map-demo" target="_blank" rel="noopener noreferrer">代码仓库</a>。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-algorithms">The Algorithms<a href="https://wlg.us.kg/en/book/2024/week_202419#the-algorithms" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://the-algorithms.com/zh_Hans" target="_blank" rel="noopener noreferrer">The Algorithms</a> 网站提供了各种算法介绍，以及使用多种编程语言实现的这些算法逻辑。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/a329cc0637de4049a0563ffea31afc4a_2192261542853668864.png" alt="a329cc0637de4049a0563ffea31afc4a_2192261" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="oss-gallery">OSS Gallery<a href="https://wlg.us.kg/en/book/2024/week_202419#oss-gallery" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://oss.gallery/" target="_blank" rel="noopener noreferrer">OSS Gallery</a> 由短链接工具 Dub 推出的一个数据网站，通过短链接的点击量来寻找最受欢迎的开源项目。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/372253d218c04cd692bc98be6216bd66_2192261542853668864.png" alt="372253d218c04cd692bc98be6216bd66_2192261" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="段子">段子<a href="https://wlg.us.kg/en/book/2024/week_202419#%E6%AE%B5%E5%AD%90" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>一滴水如果从足够高的地方落下，能不能打死人？</p>
+<blockquote>
+<p>你淋过雨吗？</p>
+</blockquote>
+<p>如何回应「人的眼睛有 5.76 亿像素，却终究看不懂人心」？</p>
+<blockquote>
+<p>显卡干不了 CPU 的活。</p>
+</blockquote>
+<p>小说《三体》里，外星人用的将三维世界跌向二维世界的二向箔，在原理上最有可能怎么实现？</p>
+<blockquote>
+<p>......你打过蚊子吗？</p>
+</blockquote>
+<p>如何挤出时间锻炼身体？</p>
+<blockquote>
+<p>如果你每天有半个小时上网闲逛的话，你就有时间锻炼身体。</p>
+</blockquote>
+<p>馋和饿在生理上区别是什么？</p>
+<blockquote>
+<p>饿了，你的大脑在喊：给我葡萄糖啊！
+馋了，你的大脑在喊：给我多巴胺啊！</p>
+</blockquote>
+<p>人生四大系：</p>
+<blockquote>
+<p>佛系：都行、可以、没关系；
+儒系：稍等、抱歉、对不起；
+法系：免谈、不见、按规矩；
+仙系：啥、啊、怎么了</p>
+</blockquote>
+<p>如何评价诸葛亮？</p>
+<blockquote>
+<p>不知道为什么这么多人吹他，他在诸葛瑾面前就是个弟弟，在诸葛珪面前跟儿子一样。</p>
+</blockquote>
+<p>有哪些行业内的冷笑话？</p>
+<blockquote>
+<p>一个合格的程序员是不会写出诸如「摧毁地球」这样的程序的，他们会写一个函数叫「摧毁行星」而把地球当一个参数传进去。</p>
+</blockquote>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202426]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202426</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202426"/>
+        <updated>2024-11-29T21:23:53.521Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202426#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2024/0616/e1a0695ej00sf6gqd00aoc000go00s3c.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCly1hqpq4rxb5jj30u06gge5p.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax4.sinaimg.cn/large/006BNqYCly1hqpq4s70kej30fh1kwgtw.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2024/0704/9d50025dj00sg3but002kc000we01azc.jpg" alt="" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="随机数这是一个问题">随机数，这是一个问题<a href="https://wlg.us.kg/en/book/2024/week_202426#%E9%9A%8F%E6%9C%BA%E6%95%B0%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>今天谈谈，怎么生成真正的随机数。</p>
+<p>这个问题超难，但有一些很有趣的内容。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061814.webp" alt="img" class="img_ev3q"></p>
+<p>首先，编程语言提供的随机数，是伪随机数。</p>
+<p>V8 引擎的官网有<a href="https://v8.dev/blog/math-random" target="_blank" rel="noopener noreferrer">一篇文章</a>（下图），特别提醒大家这一点。它内置的随机数不是真随机数，而是伪随机数。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061606.webp" alt="img" class="img_ev3q"></p>
+<p>所谓伪随机数，并非真的随机，而是算法得到的。只要初始的种子值相同，算法会给出一样的结果。</p>
+<p>JavaScript 和许多其他语言，都有这个问题。所以，遇到特别强调随机的场合，都不应该使用语言内置的随机数生成器。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061815.webp" alt="img" class="img_ev3q"></p>
+<p>真随机数需要满足三个条件。</p>
+<blockquote>
+<p><strong>（1）无法预测。</strong> 随机数不能被猜到，所以必须非常大，否则会被暴力破解。</p>
+<p><strong>（2）不能重复。</strong> 每次生成的随机数，不能是一样的。</p>
+<p><strong>（3）均匀分布。</strong> 随机数必须平均散布在所有区间，不能集中在某些区间。</p>
+</blockquote>
+<p><strong>一般来说，只有通过硬件，才能得到真随机数</strong>，单纯的软件算法做不到。</p>
+<p>科学家绞尽脑汁，想出各种办法，通过硬件生成随机数。</p>
+<p>著名的 <a href="https://www.random.org/" target="_blank" rel="noopener noreferrer">Random.org</a> 就是专门生成一个随机数的网站。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061816.webp" alt="img" class="img_ev3q"></p>
+<p>它在全世界部署了多个无线电接收器，专门监听大气无线电波（即大气噪音，可以理解成大气的布朗运动），通过随机的无线电信号来生成随机数。下图是它的早期硬件设备。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061817.webp" alt="img" class="img_ev3q"></p>
+<p>因为有硬件支出，使用它的随机数，需要付费。所以，大家可以看到，真随机数是有成本的，不是跑一下程序就可以了。</p>
+<p>世界最大的 CDN 服务商 Cloudflare ，为了得到真随机数，做得更绝。</p>
+<p>它的三个办公室，每个都有<a href="https://blog.cloudflare.com/harnessing-office-chaos" target="_blank" rel="noopener noreferrer">不一样</a>的随机数生成装置。</p>
+<p><strong>（1）旧金山总部</strong>。一进门就有一堵墙，放满了几十盏熔岩灯。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031204.webp" alt="img" class="img_ev3q"></p>
+<p>熔岩灯内部是融化的蜡，每时每刻都在变化着形状。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202406/bg2024061818.webp" alt="img" class="img_ev3q"></p>
+<p>需要随机数的时候，就对着这堵墙拍一张照片。每张照片都是不一样的，然后计算照片的哈希，将其作为种子值，计算得到一个随机数。</p>
+<p><strong>（2）伦敦办公室。</strong> 那里有一面"单摆墙"，放满了各种单摆装置。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031205.webp" alt="img" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031206.webp" alt="img" class="img_ev3q"></p>
+<p>单摆和它们的影子，每时每刻都在摆动。每次照片的哈希也是不一样的，可以作为随机数的种子值。</p>
+<p><strong>（3）奥斯汀办公室。</strong> 那里的天花板，挂了很多彩色的反光片。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031207.webp" alt="img" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031208.webp" alt="img" class="img_ev3q"></p>
+<p>这些反光片对空气流动十分敏感，开门、关门、空调、温度、湿度，都会让其转动，反射出不同颜色的光。因此，也可以用来当作随机数的种子值。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dll-files"><a href="https://cn.dll-files.com/" target="_blank" rel="noopener noreferrer">dll-files</a><a href="https://wlg.us.kg/en/book/2024/week_202426#dll-files" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>最近一些工作在 Windows 系统上完成，有一些软件总是提示：无法找到xxxx.dll文件...，这个网站很好地解决了我的问题：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/dll-files.jpg" alt="dll-files" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-信任的进化">3. 信任的进化<a href="https://wlg.us.kg/en/book/2024/week_202426#3-%E4%BF%A1%E4%BB%BB%E7%9A%84%E8%BF%9B%E5%8C%96" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>这是一个以游戏为形式的合作博弈论互动讲解手册，非常有意思。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/c5677dee288543a2addc48ee4e60c030_2192261542853668864.png" alt="c5677dee288543a2addc48ee4e60c030_2192261" class="img_ev3q"></p>
+<p><a href="https://dccxi.com/trust/" target="_blank" rel="noopener noreferrer">信任的进化</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-text-to-speech">1. Text to speech<a href="https://wlg.us.kg/en/book/2024/week_202426#1-text-to-speech" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>这是一个免费的文字转语音的工具，无需登录可以免费使用。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/bb431500b74f4365904207f440d6932d_2192261542853668864.png" alt="bb431500b74f4365904207f440d6932d_2192261" class="img_ev3q"></p>
+<p><a href="https://texttospeech.im/zh-CN" target="_blank" rel="noopener noreferrer">Text to speech</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-ocr-space">2. OCR Space<a href="https://wlg.us.kg/en/book/2024/week_202426#2-ocr-space" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>这是免费的在线 OCR（从图像中识别文字）服务，无需登录可以免费使用，并提供免费的 api 接口。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/4d290bb4a6224469aa36d72a9bc70146_2192261542853668864.png" alt="4d290bb4a6224469aa36d72a9bc70146_2192261" class="img_ev3q"></p>
+<p><a href="https://ocr.space/" target="_blank" rel="noopener noreferrer">OCR Space</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="网站">网站<a href="https://wlg.us.kg/en/book/2024/week_202426#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="死亡公司公墓"><a href="https://www.itjuzi.com/deathCompany" target="_blank" rel="noopener noreferrer">死亡公司公墓</a><a href="https://wlg.us.kg/en/book/2024/week_202426#%E6%AD%BB%E4%BA%A1%E5%85%AC%E5%8F%B8%E5%85%AC%E5%A2%93" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>这是由 IT橘子提供的倒闭公司数据库，记录了各种公司存活时间、倒闭原因和烧了多少钱。</p>
+<p><img decoding="async" loading="lazy" src="https://imgs.zhubai.love/74040702feab436aa59179dc1dd2c986_2192261542853668864.png" alt="74040702feab436aa59179dc1dd2c986_2192261" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="epub2kindle"><a href="https://epub2kindle.com/zh/" target="_blank" rel="noopener noreferrer">ePub2Kindle</a><a href="https://wlg.us.kg/en/book/2024/week_202426#epub2kindle" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>在线将ePub文档转换成适用于Kindle设备的AZW3格式</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202415]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202415</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202415"/>
+        <updated>2024-11-29T21:23:53.520Z</updated>
+        <summary type="html"><![CDATA[视频]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="视频">视频<a href="https://wlg.us.kg/en/book/2024/week_202415#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><a href="https://weibo.com/7000669644/O9ppLbT67" target="_blank" rel="noopener noreferrer">最后撑起来那一下是真TM的牛到极致了</a></p>
+<p><a href="https://www.bilibili.com/video/BV1A8411Q7he?t=247.1" target="_blank" rel="noopener noreferrer">你们那儿能上桌吃饭吗？</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202415#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://66img.cc/images/2024/04/10/-120244101219151.gif" alt="-120244101219151.gif" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?url=https://tvax3.sinaimg.cn/large/006BNqYCly1hog84bkcv0j30ge0zkgnh.jpg" alt="" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="工具">工具<a href="https://wlg.us.kg/en/book/2024/week_202415#%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="鸭力巨大---免费在线图片视频压缩工具">鸭力巨大 - 免费在线图片、视频压缩工具<a href="https://wlg.us.kg/en/book/2024/week_202415#%E9%B8%AD%E5%8A%9B%E5%B7%A8%E5%A4%A7---%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://www.yalijuda.com/" target="_blank" rel="noopener noreferrer">https://www.yalijuda.com/</a></p>
+<p>一款免费在线图片、视频压缩工具，无需下载任何软件，即用即走。网站目前支持图片格式有PNG、JPG、JIF，支持视频格式有MP4、avi、Mov等，提供有损、无损、自定义压缩三种压缩模式，基本上能够满足日常需求。 很多次小伙伴找我帮忙压缩视频，我都拿这个搞。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="z2h-字帖"><a href="https://paper.z2h.cn/" target="_blank" rel="noopener noreferrer">z2h 字帖</a><a href="https://wlg.us.kg/en/book/2024/week_202415#z2h-%E5%AD%97%E5%B8%96" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>用正确的方法刻意练习，每个人都能写出一手漂亮的字，自定义字帖字体和内容，可打印导出练字：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/z2h.jpg" alt="z2h" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="在线-sqlite-游乐场"><a href="https://github.com/nalgeon/sqlime" target="_blank" rel="noopener noreferrer">在线 SQLite 游乐场</a><a href="https://wlg.us.kg/en/book/2024/week_202415#%E5%9C%A8%E7%BA%BF-sqlite-%E6%B8%B8%E4%B9%90%E5%9C%BA" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>一个在线的 SQLite 游乐场，可以加载本地或者远程数据库文件，SQL 语言的 JSFiddle。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="oneuptime"><a href="https://github.com/OneUptime/oneuptime" target="_blank" rel="noopener noreferrer">OneUptime</a><a href="https://wlg.us.kg/en/book/2024/week_202415#oneuptime" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024040301.webp" alt="img" class="img_ev3q"></p>
+<p>一个开源的服务可用性检查工具，记录服务的健康状态，如果发现服务下线，立刻发送通知，可以替代 <a href="https://www.statuspage.io/" target="_blank" rel="noopener noreferrer">StatusPage.io</a>。</p>
+<p>3、<a href="https://github.com/dashpresshq/dashpress" target="_blank" rel="noopener noreferrer">DashPress</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024040302.webp" alt="img" class="img_ev3q"></p>
+<p>一个开源工具，只需执行一个命令，就会自动分析数据库结构，生成管理后台，号称不用写代码。</p>
+<p>4、<a href="https://github.com/weijunext/landing-page-boilerplate" target="_blank" rel="noopener noreferrer">Landing page boilerplate</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024040307.webp" alt="img" class="img_ev3q"></p>
+<p>开源的项目落地页模板，参见<a href="https://juejin.cn/post/7350200488455520267" target="_blank" rel="noopener noreferrer">介绍文章</a>。</p>
+<p>6、<a href="https://github.com/heyform/heyform" target="_blank" rel="noopener noreferrer">HeyForm</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024040310.webp" alt="img" class="img_ev3q"></p>
+<p>一个开源的表单生成器，创建调查、问卷、投票等，可以不编写一行代码。</p>
+<p>7、<a href="https://github.com/dafengzhen/youdeyiwu" target="_blank" rel="noopener noreferrer">Youdeyiwu</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024040312.webp" alt="img" class="img_ev3q"></p>
+<p>一个开源的轻量级论坛，追求界面简洁和使用方便，后端使用 Java，前端使用 Next.js。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="资源">资源<a href="https://wlg.us.kg/en/book/2024/week_202415#%E8%B5%84%E6%BA%90" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="中国大学矢量校徽合集">中国大学矢量校徽合集<a href="https://wlg.us.kg/en/book/2024/week_202415#%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%9F%A2%E9%87%8F%E6%A0%A1%E5%BE%BD%E5%90%88%E9%9B%86" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://www.urongda.com/" target="_blank" rel="noopener noreferrer">https://www.urongda.com/</a></p>
+<p>高校校徽的矢量文件下载，目前收集了100多个校徽，还在不断增长中。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024041201.webp" alt="img" class="img_ev3q"></p>
+<p>3、<a href="https://1000userguide.com/" target="_blank" rel="noopener noreferrer">1000UserGuide</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024040901.webp" alt="img" class="img_ev3q"></p>
+<p>该网站整理了300多个免费推广渠道，包括网站、论坛、网址导航、产品目录等，帮助独立开发者推广产品。（<a href="https://github.com/ruanyf/weekly/issues/4240" target="_blank" rel="noopener noreferrer">@naxiaoduo</a> 投稿）</p>
+<p>4、<a href="https://github.com/zhuima/awesome-cloudflare" target="_blank" rel="noopener noreferrer">Awesome Cloudflare</a></p>
+<p>这个仓库收集基于 Cloudflare 服务的各种开源软件。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="goodpalette"><a href="https://goodpalette.io/" target="_blank" rel="noopener noreferrer">goodpalette</a><a href="https://wlg.us.kg/en/book/2024/week_202415#goodpalette" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>强大的一个主题色生成网站。</p>
+<p>你可以通过自己手动选取不同的颜色来生成，而不仅仅只能使用它自带的主题色。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="yesicon"><a href="https://yesicon.app/" target="_blank" rel="noopener noreferrer">yesicon</a><a href="https://wlg.us.kg/en/book/2024/week_202415#yesicon" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><code>217,418</code> 枚高品质矢量图标</p>
+<p>可以把这个看成 <a href="https://link.juejin.cn/?target=https%3A%2F%2Ficones.js.org%2F" target="_blank" rel="noopener noreferrer">icones.js.org/</a>的增强版。</p>
+<p>因为它支持通过中文搜索，而且体验更好。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="earthworm"><a href="https://earthworm.cuixueshe.com/" target="_blank" rel="noopener noreferrer">earthworm</a><a href="https://wlg.us.kg/en/book/2024/week_202415#earthworm" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>让你上瘾的英语学习工具，打破了以往枯燥，无聊的模式，是一个真正的令人上瘾的英语学习工具。</p>
+<p>说起来可能感受不到，连最不爱学习的小学生用了，都不想离开键盘啦！</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202415#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="小姑娘开超市4招就干掉小区所有同行">小姑娘开超市，4招就干掉小区所有同行<a href="https://wlg.us.kg/en/book/2024/week_202415#%E5%B0%8F%E5%A7%91%E5%A8%98%E5%BC%80%E8%B6%85%E5%B8%824%E6%8B%9B%E5%B0%B1%E5%B9%B2%E6%8E%89%E5%B0%8F%E5%8C%BA%E6%89%80%E6%9C%89%E5%90%8C%E8%A1%8C" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<ol>
+<li>
+<p>顾客买完东西结账时，老板说新顾客加他好友可以便宜五块钱很多大妈顾客都加了。</p>
+</li>
+<li>
+<p>晚上七点多，店主在群里说今天要芒果没卖完，可以三折出售之所以这么便宜，是因为第二天就不新鲜了许多顾客都抢着要。</p>
+</li>
+<li>
+<p>晚上十点，老板又说，有一批土鸡蛋要到货，提前预定可以打七折</p>
+</li>
+<li>
+<p>每晚老板在群内发随机红包游戏，抢到金额最大的三个人在店内购买任何产品都可以打八折。</p>
+</li>
+</ol>
+<p>利用人们爱占小便宜的心理，慢慢地就锁定了很多顾客回头消费。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="xz-后门的作者-jia-tan-是谁">xz 后门的作者 Jia Tan 是谁？<a href="https://wlg.us.kg/en/book/2024/week_202415#xz-%E5%90%8E%E9%97%A8%E7%9A%84%E4%BD%9C%E8%80%85-jia-tan-%E6%98%AF%E8%B0%81" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>互联网行业最近的重大事件，莫过于 <a href="https://boehs.org/node/everything-i-know-about-the-xz-backdoor" target="_blank" rel="noopener noreferrer">xz 软件的后门</a>。</p>
+<p>xz 是一种压缩软件，大量用于 Linux 系统，比如系统管理器 systemD 就用它压缩日志。它是 Linux 的基本组件之一，每台服务器几乎都有它。</p>
+<p>今年3月底，有人发现它的新版本有点奇怪，让 SSH 的启动时间慢了500毫秒。进一步调查发现，里面竟然有一个后门。</p>
+<p>这件事震惊了业界，因为新版本即将纳入主要的 Linux 发行版（比如 Debian 和 Fedora），只差几天而已。到了那时，服务器带有后门，后果不堪设想。</p>
+<p>而且，<strong>整个事件经过精心策划，过程长达数年，每一步都毫无破绽</strong>，心思之缜密，耐心之好，能力之强，令人后怕。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024040902.webp" alt="img" class="img_ev3q"></p>
+<p>这个事件开始于2021年4月，一个网名叫做 Jia Tan 的人，第一次向 xz 软件包提交了一个正常的补丁，被顺利合并。</p>
+<p>2021年11月和2022年4月，他又提交了两个正常的补丁，也被合并。</p>
+<p>然后，突然冒出了几个网友，在邮件列表上向管理员建议，xz 项目缺乏人手，响应迟缓，应该给予 Jia Tan 管理员权限。这个建议被采纳了。但是，人们现在发现，这几个网友都是陌生的邮件地址和名字，根本找不到其他的活动痕迹。</p>
+<p>就这样，Jia Tan 成为了管理员，拥有独立发布新版本的权限，先后发了几个版本。虽然他的这些代码可能是无害的，但是扩展了功能，为后面要做的坏事打下了基础。</p>
+<p>2024年2月，他添加了后门。代码做了混淆，而且后门不在源代码里面，要在构建阶段才会生成，很难发现。他发了这个版本以后，就开始发信，催促几个大型发行版，尽快收入这个版本。</p>
+<p><strong>后门曝光后，Jia Tan 就彻底消失了</strong>，没有任何身份信息，也没有其他痕迹，谁也不知道他到底是谁。人们开始搜集线索，试图找出这个人。</p>
+<p>他的网名是汉语拼音，邮件全名是 Jia Cheong Tan，中间的 Cheong 似乎是粤语。他的 GitHub 提交时间采用东八时区。他的 IP 地址是新加坡。</p>
+<p><strong>一切都在指向，他是一个在新加坡的华人。真的是这样吗？</strong></p>
+<p>网名显然是假的，代码提交时间可以更改，至于 IP 地址，已经查明是 VPN 地址。</p>
+<p><strong>有没有一种可能，他伪装成华人，栽赃给中国？</strong></p>
+<p>有人<a href="https://rheaeve.substack.com/p/xz-backdoor-times-damned-times-and" target="_blank" rel="noopener noreferrer">分析了</a>，他在 GitHub 的所有提交。虽然提交时间可以更改，但也不能改得太过分，毕竟要保持提交顺序和及时性，所以还是能看出一点东西。</p>
+<p>他的提交，绝大部分采用东八时区的时间，但是有一些是东二时区和东三时区。</p>
+<p>研究者相信，<strong>他很可能是一个东二时区的欧洲人，伪装成东八时区的中国人</strong>。他更改了计算机的时区，但是偶尔有几次忘记了更改。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202404/bg2024040905.webp" alt="img" class="img_ev3q"></p>
+<p>东二时区的国家（上图的绿色部分），主要是东欧国家，以及一部分北欧国家（芬兰和瑞典）和中东国家（以色列和埃及）。</p>
+<p>他来自东二时区，主要理由有三点。</p>
+<p>（1）他在东二时区的提交日期是冬季，而东三时区的提交日期是夏季。这正好符合欧洲国家和以色列的夏令时切换。</p>
+<p>（2）他明显在手动切换时区。举例来说，2022年10月6日，他先在东八时区的17:00:38进行了一次提交，然后又在东三时区的21:53:09再次提交。两次相差不到十个小时，很难相信这一点时间，他已经从中国来到欧洲写代码。</p>
+<p>（3）他在中国的农历假日（中秋节、清明节、春节）都有提交，尤其是2023年春节假期（1月21日到1月27日），他有五天提交记录（分别是22日、23日、24日、26日、27日），这说明他不过春节。相反地，他在欧洲人很重视的假期（圣诞节和新年）却没有提交记录。</p>
+<p>综上所述，这个 Jia Tan 很可能来自东二时区。不过，这个人（或者组织）非常小心，而且是技术高手，也许永远也发现不了真实身份。</p>
+<p>这件事情提醒我们，开源社区的参与者形形色色，不全是好人，有些人非常阴险，不仅干坏事，还伪装身份，栽赃给他人。因此，我们对他人保持善意的同时，也不能丢失警惕。已经有人提议，重要的开源项目不能接受匿名身份的代码提交者。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1环岛的作用">1、<a href="https://theconversation.com/what-are-roundabouts-a-transportation-engineer-explains-the-safety-benefits-of-these-circular-intersections-215412" target="_blank" rel="noopener noreferrer">环岛的作用</a><a href="https://wlg.us.kg/en/book/2024/week_202415#1%E7%8E%AF%E5%B2%9B%E7%9A%84%E4%BD%9C%E7%94%A8" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>开车时，你可能已经遇到许多环岛。</p>
+<p>你有没有想过，这些路口为什么要造环岛？没有环岛，行车面积不就更大了吗？</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202310/bg2023102603.webp" alt="img" class="img_ev3q"></p>
+<p>本质上，环岛上是一种交通控制措施，相比交通灯控制的传统交叉路口，它们具有多种优势，最重要的一个是安全性。</p>
+<p>首先，环岛迫使司机放慢速度，为了调整车头方向，司机不得降速。</p>
+<p>其次，环岛减少了潜在冲突点的数量。冲突点就是车辆与车辆、车辆与行人可能发生碰撞的位置，它的数量越多，就越容易发生碰撞。</p>
+<p>根据一项研究，环岛只有8个潜在冲突点，而传统的四向交叉路口有32个。</p>
+<p>最后，环岛的车道都是紧密相邻的同心圆，并且还有很多进口和出口，迫使车辆减速让行。</p>
+<p>根据美国公路管理局估计，环岛取代传统的交叉路口时，可将严重交通事故减少80%到90%。</p>
+<p>除了安全性，环岛还有一些其他优点，比如让交通更有秩序，不会出现车辆在交叉路口乱成一团的情形，也能让司机更轻松地掉头。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202016]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202416</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202416"/>
+        <updated>2024-11-29T21:23:53.520Z</updated>
+        <summary type="html"><![CDATA[封面图]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="封面图">封面图<a href="https://wlg.us.kg/en/book/2024/week_202416#%E5%B0%81%E9%9D%A2%E5%9B%BE" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://gd-hbimg.huaban.com/6fc59b7dad38aac0124670085d8e5dcd9eeb64378666-VqsZfL_fw658" alt="超级月亮" class="img_ev3q">
+8月12日是今年最后一次"超级月亮"，摄影师在德国法兰克福拍到了一个超级大的月亮，在公寓楼之间出现。"超级月亮"指的是，满月正好发生在月球轨道的近地点。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="本周话题">本周话题<a href="https://wlg.us.kg/en/book/2024/week_202416#%E6%9C%AC%E5%91%A8%E8%AF%9D%E9%A2%98" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>上周，国外程序员论坛 Hacker News 有一篇热门文章《四十年编程感想》。
+作者说，他8岁学编程，今年46岁，再过两年，就是学习编程四十周年了。他写了一大堆自己的感想，都是肺腑之言。
+我觉得说得挺好，发人深思。他的文章很长，我摘录一些重点内容，与大家分享
+<strong>（1）编程是长期职业</strong></p>
+<p>你开始步入这个行业时，应该意识到，程序员是一个长期职业，你可能会从事20年甚至更长。你应该从长期角度看待编程。</p>
+<p>在长期中，技术来来去去，语言也来来去去，精通一种技术或语言，并不能保证你的长期职业发展。</p>
+<p>你的目标不必局限在学习什么语言或框架，只要吃透基础知识，你可以学会任何你想要的东西。</p>
+<p><strong>（2）多尝试不同的事情</strong></p>
+<p>你的编程生涯很漫长，刚刚开始时，不要急于求成。你只需要动手写代码就可以了，任何代码都没有关系，写完一个软件，再写下一个。</p>
+<p>写不同的软件，尝试不同的事情。你会发现，自己需要学习很多不同的东西。你按什么顺序学习它们并不是大问题。</p>
+<p>不要变得僵化，抱住某个领域不放。几乎任何学科都可以教给你一些东西。如果你太僵化，抗拒学习其他领域的知识，那你就输了。</p>
+<p>多学习一些困难的东西，容易发现自己的问题。</p>
+<p>你可以给自己定一个目标，比如"每周二做一件以前从没有做过的事情"。</p>
+<p>当然，你最终需要深入某个领域。李小龙说过："我不怕练过一万种拳法的人。但是一种拳练了一万遍的人，我怕他。"</p>
+<p><strong>（3）目标是变得更好</strong></p>
+<p>不管使用什么技术，你的目标都应该是动手做出成果，让自己变得更好。</p>
+<p>20年后，你跟别人说："我是一个拥有20年经验的程序员。"别人就会问你："这20年你做了什么？"</p>
+<p>你的职业生涯最终就是回答这个问题：你问自己，这20年我做了什么。</p>
+<p>理想的情况是，20年来，你真正擅长了某件事，而且这件事是社会需要的或者有利可图的，你以某种方式"让它变大"。这样你就会拥有一个成功的职业生涯。</p>
+<p><strong>（4）继续工作</strong></p>
+<p>尽管已经46岁，我仍然喜欢编写软件。虽然成为伟大程序员的概率已经为零了，但是在这个年龄，我依然可以完成一些工作。</p>
+<p>编程既不是短跑，也不是马拉松，而是日记。在日复一日的累积当中，完成你的事业。</p>
+<p>作为一名程序员的关键，就是"继续工作"，做出有价值的产品。</p>
+<p>最早的程序员出现在1957年。经过这么多年，软件依然是一个年轻的行业，这意味着，我们仍然在初级阶段，这个世界还会有无限的有趣工作可以让你变得更好。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="科技动态">科技动态<a href="https://wlg.us.kg/en/book/2024/week_202416#%E7%A7%91%E6%8A%80%E5%8A%A8%E6%80%81" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1确保未拆封">1、确保未拆封<a href="https://wlg.us.kg/en/book/2024/week_202416#1%E7%A1%AE%E4%BF%9D%E6%9C%AA%E6%8B%86%E5%B0%81" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>如何保证货物没有拆封过？</p>
+<p>一位德国程序员提出一个简单的方法：你把东西放在密封袋里面，里面再装入彩色的豌豆或大米。</p>
+<p><img decoding="async" loading="lazy" src="https://gd-hbimg.huaban.com/bd6b4cf5faefaed10826f53ab9ddd1a5854aa7cecb74-dNIlXt_fw658" alt="" class="img_ev3q"></p>
+<p>这些彩色颗粒会形成随机分布，一旦拆封就很难复原。</p>
+<p>你在密封后，拍下照片发给收件人，对方收到货物后，再用软件甚至肉眼，检查一下彩色颗粒的分布是否跟图片一致，就可以确定有没有被拆开过。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2密码硬币">2、密码硬币<a href="https://wlg.us.kg/en/book/2024/week_202416#2%E5%AF%86%E7%A0%81%E7%A1%AC%E5%B8%81" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>澳大利亚发行了一枚五角硬币，纪念澳大利亚信号局成立75周年。</p>
+<p><img decoding="async" loading="lazy" src="https://gd-hbimg.huaban.com/63dd57adba6b054851b09be175d910d75af19f18a8be-eeyTsI_fw658" alt="" class="img_ev3q"></p>
+<p>该局主要工作是维护和破解密码，所以硬币上印了四个密码，一个比一个难。负责人说，如果有人可以破解这四个密码，就可以申请到信号局工作。</p>
+<p><img decoding="async" loading="lazy" src="https://gd-hbimg.huaban.com/844dc517fa93bb633cde8ba5661f3ffa2f877ab2fa66-bMOoP5_fw658" alt="" class="img_ev3q"></p>
+<p>结果，硬币发售当天，四个密码就全被破解了，具体的密码和解码详见<a href="http://senwerks.com/hacktheplanet/Solving-the-Australian-Signals-Directorate-cryptography-challenge-coin.html" target="_blank" rel="noopener noreferrer">这篇文章</a>。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202416#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1知乎水印事件">1、知乎水印事件<a href="https://wlg.us.kg/en/book/2024/week_202416#1%E7%9F%A5%E4%B9%8E%E6%B0%B4%E5%8D%B0%E4%BA%8B%E4%BB%B6" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>网友发现，知乎网页暗藏水印，用来发现是谁截图。这个<a href="https://mp.weixin.qq.com/s/EykLVZA6MQ3kgKvZFKfR9g" target="_blank" rel="noopener noreferrer">事件</a>曝光以后，知乎又把这个功能下线了。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="网站">网站<a href="https://wlg.us.kg/en/book/2024/week_202416#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2从零开始的神经网络">2、从零开始的神经网络<a href="https://wlg.us.kg/en/book/2024/week_202416#2%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><a href="https://aegeorge42.github.io/" target="_blank" rel="noopener noreferrer">Neural Networks from Scratch</a></p>
+<p>一个英文的图文互动教程，使用简单的语言和图片，解释什么是神经网络。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="警句">警句<a href="https://wlg.us.kg/en/book/2024/week_202416#%E8%AD%A6%E5%8F%A5" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>力微休负重，言轻莫劝人。 无钱莫入众，遭难莫寻亲。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202416#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202311/bg2023111204.webp" alt="img" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2024/0425/8c189c5fj00schzef009cc000k000r7c.jpg" alt="8c189c5fj00schzef009cc000k000r7c.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://www.zhangzs.com/wp-content/uploads/2024/04/adbf0305ly1hp7z82c8lnj20ii0vxtb2.jpg" alt="img" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://www.zhangzs.com/wp-content/uploads/2024/04/adbf0305ly1hp5mq8ajcfj20u041l7wh.jpg" alt="adbf0305ly1hp5mq8ajcfj20u041l7wh.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://www.zhangzs.com/wp-content/uploads/2024/04/adbf0305ly1hp38bifc5bj20nr9564qp.jpg" alt="adbf0305ly1hp38bifc5bj20nr9564qp.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://66img.cc/images/2024/04/19/ng-29.jpg" alt="ng-29.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://p.sda1.dev/17/34edb39d48fd06f47cbcf95d041b5aa3/mmexport1713868606911.jpg" alt="mmexport1713868606911.jpg" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="视频">视频<a href="https://wlg.us.kg/en/book/2024/week_202416#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><a href="https://weibo.com/3821861152/OaDQIqr26" target="_blank" rel="noopener noreferrer">谁能想到，中国锤王火到外网了</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="资源">资源<a href="https://wlg.us.kg/en/book/2024/week_202416#%E8%B5%84%E6%BA%90" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="github中国全球用户排名">Github中国/全球用户排名<a href="https://wlg.us.kg/en/book/2024/week_202416#github%E4%B8%AD%E5%9B%BD%E5%85%A8%E7%90%83%E7%94%A8%E6%88%B7%E6%8E%92%E5%90%8D" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>地址：<a href="https://wangchujiang.com/github-rank/index.html" target="_blank" rel="noopener noreferrer">https://wangchujiang.com/github-rank/index.html</a></p>
+<p>GitHub：<a href="https://github.com/jaywcjlove/github-rank" target="_blank" rel="noopener noreferrer">https://github.com/jaywcjlove/github-rank</a></p>
+<p>一个在线查看Github全球/中国用户排名、全球仓库Star排名，通过Github API v3生成的页面数据、排名预览，是网友利用爬虫每天爬这个数据生成 HTML，已经爬了 5 年，现在可以每天自动更新，使用GitHub Actions Workflows通过定时器每天00:00（北京时间上午8:00）触发GitHub工作流程，自动抓取数据，将生成的网页提交给gh- pages分支，并且自动发布npm版本，非常不错。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="语录">语录<a href="https://wlg.us.kg/en/book/2024/week_202416#%E8%AF%AD%E5%BD%95" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p>无善无恶心之体，有善有恶意之动。知善知恶是良知，为善去恶是格物。 ---王阳明</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202413]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202413</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202413"/>
+        <updated>2024-11-29T21:23:53.519Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202413#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://99img.cc/images/2024/03/23/mmexport1711176942267dc213af168df778b.png" alt="mmexport1711176942267dc213af168df778b.pn" title="mmexport1711176942267dc213af168df778b.pn" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://66img.cc/images/2024/03/27/mmexport1711509341317.jpg" alt="mmexport1711509341317.jpg" title="mmexport1711509341317.jpg" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="网站">网站<a href="https://wlg.us.kg/en/book/2024/week_202413#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="haiker"><a href="https://app.haikei.app/" target="_blank" rel="noopener noreferrer">Haiker</a><a href="https://wlg.us.kg/en/book/2024/week_202413#haiker" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><code>Haikei</code> 是一款用于生成 <code>SVG</code> 形状、背景和图案的在线工具，无需注册也能使用：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/haikei.jpg" alt="haikei" title="haikei" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="searchemoji"><a href="https://searchemoji.app/" target="_blank" rel="noopener noreferrer">SearchEmoji</a><a href="https://wlg.us.kg/en/book/2024/week_202413#searchemoji" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><code>Emoji</code> 表情搜索网站，点击即可复制，颜值也不错海开源：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/searchemoji.jpeg" alt="searchemoji" title="searchemoji" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="喵闪字库"><a href="https://www.miao3.cn/" target="_blank" rel="noopener noreferrer">喵闪字库</a><a href="https://wlg.us.kg/en/book/2024/week_202413#%E5%96%B5%E9%97%AA%E5%AD%97%E5%BA%93" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>喵闪字库是一个专业的字体下载网站，收集并分享优秀的免费商用字体、免版权字体，提供所有字体的在线预览和免费字体下载服务。</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/miao3.jpg" alt="miao3" title="miao3" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="svg-path-editor"><a href="https://yqnn.github.io/svg-path-editor/" target="_blank" rel="noopener noreferrer">svg-path-editor</a><a href="https://wlg.us.kg/en/book/2024/week_202413#svg-path-editor" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>在线编辑创建 <code>SVG</code>，同时开源在 <a href="https://github.com/Yqnn/svg-path-editor" target="_blank" rel="noopener noreferrer">github-svg-path-editor</a>：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/svg-path-editor.jpg" alt="svg-path-editor" title="svg-path-editor" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="oldpicrestore"><a href="https://www.oldpicrestore.com/restore?id=1&amp;type=Restore-Photo" target="_blank" rel="noopener noreferrer">oldpicrestore</a><a href="https://wlg.us.kg/en/book/2024/week_202413#oldpicrestore" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>老照片修复工具，同时还提供上色和去背景功能：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/oldpicrestore.jpg" alt="oldpicrestore" title="oldpicrestore" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="uiaceternitycom"><a href="https://ui.aceternity.com/components" target="_blank" rel="noopener noreferrer">ui.aceternity.com</a><a href="https://wlg.us.kg/en/book/2024/week_202413#uiaceternitycom" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>网站包含多种前端动态效果，可以一键复制代码使用，同类网站有：</p>
+<p><a href="https://uiverse.io/" target="_blank" rel="noopener noreferrer">https://uiverse.io/</a>
+<a href="https://www.handsome-css.com/" target="_blank" rel="noopener noreferrer">https://www.handsome-css.com/</a></p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/aceternity.jpg" alt="aceternity" title="aceternity" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="工具">工具<a href="https://wlg.us.kg/en/book/2024/week_202413#%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="v2raya"><a href="https://github.com/v2rayA/v2rayA" target="_blank" rel="noopener noreferrer">v2rayA</a><a href="https://wlg.us.kg/en/book/2024/week_202413#v2raya" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><code>v2rayA</code> 是一个支持全局透明代理的 <code>V2Ray</code> 客户端，同时兼容 <code>SS、SSR、Trojan(trojan-go)、Tuic &amp; Juicity</code> 协议， 致力于提供最简单的操作，满足绝大部分需求，得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/v2rayA.png" alt="v2rayA" title="v2rayA" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="miniflux"><a href="https://github.com/miniflux/v2" target="_blank" rel="noopener noreferrer">miniflux</a><a href="https://wlg.us.kg/en/book/2024/week_202413#miniflux" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><code>Miniflux</code> 是一个极简主义的开源 <code>RSS</code> 阅读器，它使用非常简单，可 <code>Docker</code> 部署，这样就相当于你拥有了自己的 <a href="https://feedly.com/" target="_blank" rel="noopener noreferrer">Feedly</a> 服务，再结合一个漂亮的客户端如 <a href="https://github.com/electh/ReactFlux" target="_blank" rel="noopener noreferrer">ReactFlux</a>，用起来就很舒服 ：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/eyMYhc.png" alt="miniflux" title="miniflux" class="img_ev3q"></p>
+<p>其他类似开源有：</p>
+<ul>
+<li>
+<p><a href="https://tt-rss.org/" target="_blank" rel="noopener noreferrer">Tiny Tiny RSS</a>：一个免费且开源的基于网络的新闻订阅（RSS/Atom）阅读器和聚合器</p>
+</li>
+<li>
+<p><a href="https://github.com/FreshRSS/FreshRSS" target="_blank" rel="noopener noreferrer">FreshRSS</a>：一个自托管的RSS订阅聚合器</p>
+</li>
+<li>
+<p>基于以上项目构建后的客户端：</p>
+<ul>
+<li><a href="https://github.com/yang991178/fluent-reader" target="_blank" rel="noopener noreferrer">fluent-reader</a>：现代化 <code>RSS</code> 阅读器</li>
+<li><a href="https://netnewswire.com/" target="_blank" rel="noopener noreferrer">NetNewsWire</a>：适用于 <code>Mac、iPhone&amp;iPad</code> 的免费开源 <code>RSS</code> 阅读器</li>
+<li>安卓 <a href="https://github.com/seazon/FeedMe/blob/master/doc/zh/README.md" target="_blank" rel="noopener noreferrer">feedme</a>： 一个安卓 <code>RSS</code> 阅读器，支持主流 <code>RSS</code> 服务</li>
+<li><a href="https://github.com/michaelkremenetsky/Refeed" target="_blank" rel="noopener noreferrer">Refeed</a>：好看的现代化客户端</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="talebook"><a href="https://github.com/talebook/talebook" target="_blank" rel="noopener noreferrer">talebook</a><a href="https://wlg.us.kg/en/book/2024/week_202413#talebook" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>这是一个基于Calibre的简单的个人图书管理系统，支持在线阅读。主要特点是：</p>
+<ul>
+<li>美观的界面：由于Calibre自带的网页太丑太难用，于是基于Vue，独立编写了新的界面，支持PC访问和手机浏览；</li>
+<li>支持多用户：为了网友们更方便使用，开发了多用户功能，支持豆瓣（已废弃）、QQ、微博、Github等社交网站的登录；</li>
+<li>支持在线阅读：借助Readium.js 库，支持了网页在线阅读电子书；</li>
+<li>支持批量扫描导入书籍；</li>
+<li>支持邮件推送：可方便推送到Kindle；</li>
+<li>支持OPDS：可使用KyBooks等APP方便地读书；</li>
+<li>支持一键安装，网页版初始化配置，轻松启动网站；</li>
+<li>优化大书库时文件存放路径，可以按字母分类、或者文件名保持中文；</li>
+<li>支持快捷更新书籍信息：支持从百度百科、豆瓣搜索并导入书籍基础信息；</li>
+<li>支持私人模式：需要输入访问码，才能进入网站，便于小圈子分享网站；</li>
+</ul>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/VmLmag.png" alt="talebook" title="talebook" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tran"><a href="https://github.com/Borber/Tran" target="_blank" rel="noopener noreferrer">Tran</a><a href="https://wlg.us.kg/en/book/2024/week_202413#tran" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>简洁, 快速, 划词翻译：</p>
+<ul>
+<li>开箱即用</li>
+<li>永久免费使用</li>
+<li>谷歌翻译镜像</li>
+</ul>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/Tran.jpg" alt="Tran" title="Tran" class="img_ev3q"></p>
+<p>其他开源划词翻译软件推荐：</p>
+<ul>
+<li><a href="https://github.com/pot-app/pot-desktop" target="_blank" rel="noopener noreferrer">pot-desktop</a>：🌈一个跨平台的划词翻译和OCR软件</li>
+<li><a href="https://github.com/tisfeng/Easydict" target="_blank" rel="noopener noreferrer">Easydict</a>：一个简洁优雅的词典翻译 macOS App。开箱即用，支持离线 OCR 识别，支持有道词典，🍎 苹果系统词典，🍎 苹果系统翻译，ChatGPT，Gemini，DeepL，Google，Bing，腾讯，百度，阿里，小牛，彩云和火山翻译。</li>
+<li><a href="https://github.com/inkTimeRecord/TTime" target="_blank" rel="noopener noreferrer">TTime</a>：🚀 一款简洁高效的输入、截图、划词翻译软件</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="res-downloader"><a href="https://github.com/putyy/res-downloader" target="_blank" rel="noopener noreferrer">res-downloader</a><a href="https://wlg.us.kg/en/book/2024/week_202413#res-downloader" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>网络资源嗅探资源下载器，支持: 微信视频号下载、网页抖音无水印下载、网页快手无水印视频下载、酷狗音乐下载等网络资源拦截下载!</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/res-downloader.jpeg" alt="res-downloader" title="res-downloader" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="apk1-installer"><a href="https://github.com/Ium-Lab/Apk.1-Installer" target="_blank" rel="noopener noreferrer">Apk.1-Installer</a><a href="https://wlg.us.kg/en/book/2024/week_202413#apk1-installer" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>由于在 <code>QQ</code> 和微信中发送 <code>APK</code> 文件时，文件名会被腾讯添加后缀.1，此 <code>App</code> 可以省去重命名步骤，直接安装：</p>
+<ul>
+<li>获取安装权限（不需要读取存储权限）</li>
+<li>在QQ或微信里点击文件 → 用其他应用打开 → Apk.1 安装器 → 软件安装程序</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="piclist"><a href="https://github.com/Kuingsmile/PicList" target="_blank" rel="noopener noreferrer">PicList</a><a href="https://wlg.us.kg/en/book/2024/week_202413#piclist" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><code>PicList</code> 是一款高效的跨平台云存储和图床平台管理工具，在 <code>PicGo</code> 的基础上经过深度的二次开发，不仅完整保留了 <code>PicGo</code> 的所有功能，还增添了许多新的特性：例如：</p>
+<ul>
+<li>相册支持同步云端删除文件</li>
+<li>内置图床额外添加了 <code>WebDav</code>、本地图床和 <code>SFTP</code></li>
+<li>增加了完整的云存储管理功能</li>
+<li>等等</li>
+</ul>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/PicList.jpg" alt="PicList" title="PicList" class="img_ev3q"></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202414]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202414</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202414"/>
+        <updated>2024-11-29T21:23:53.519Z</updated>
+        <summary type="html"><![CDATA[趣图]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="趣图">趣图<a href="https://wlg.us.kg/en/book/2024/week_202414#%E8%B6%A3%E5%9B%BE" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-感觉你家律师很有实力的样子"> 感觉你家律师很有实力的样子<a href="https://wlg.us.kg/en/book/2024/week_202414#-%E6%84%9F%E8%A7%89%E4%BD%A0%E5%AE%B6%E5%BE%8B%E5%B8%88%E5%BE%88%E6%9C%89%E5%AE%9E%E5%8A%9B%E7%9A%84%E6%A0%B7%E5%AD%90" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://www.zhangzs.com/wp-content/uploads/2024/03/0071GyEKly1ho5y8iop9tj30zu1w4tl0.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://www.zhangzs.com/wp-content/uploads/2024/03/0071GyEKly1ho5y8j4lajj30zu191q8v.jpg" alt="0071GyEKly1ho5y8j4lajj30zu191q8v.jpg" title="0071GyEKly1ho5y8j4lajj30zu191q8v.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://www.zhangzs.com/wp-content/uploads/2024/03/0071GyEKly1ho5y8ji7c1j30zu0y0aem.jpg" alt="0071GyEKly1ho5y8ji7c1j30zu0y0aem.jpg" title="0071GyEKly1ho5y8ji7c1j30zu0y0aem.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://66img.cc/images/2024/04/11/IMG_8784.gif" alt="IMG_8784.gif" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="项目">项目<a href="https://wlg.us.kg/en/book/2024/week_202414#%E9%A1%B9%E7%9B%AE" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="picx">PicX<a href="https://wlg.us.kg/en/book/2024/week_202414#picx" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>PicX 是一款基于 GitHub API 开发的图床工具，提供图片上传托管、生成图片链接和常用图片工具箱服务。</p>
+<p>仓库地址：<a href="https://github.com/XPoet/picx" target="_blank" rel="noopener noreferrer">https://github.com/XPoet/picx</a>
+演示地址：<a href="https://picx.xpoet.cn/#/upload" target="_blank" rel="noopener noreferrer">https://picx.xpoet.cn/#/upload</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-chart">Create Chart<a href="https://wlg.us.kg/en/book/2024/week_202414#create-chart" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>基于Echarts的可视化数据大屏设计器（包含设计、预览、分享等全部流程）。</p>
+<p>仓库地址：<a href="https://github.com/food-billboard/create-chart" target="_blank" rel="noopener noreferrer">https://github.com/food-billboard/create-chart</a>
+演示地址：<a href="https://food-billboard.github.io/create-chart/index.html#/" target="_blank" rel="noopener noreferrer">https://food-billboard.github.io/create-chart/index.html#/</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="takenote">takenote<a href="https://wlg.us.kg/en/book/2024/week_202414#takenote" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>为开发人员开发的以 Web 形式存在的笔记软件。</p>
+<p>仓库地址：<a href="https://github.com/taniarascia/takenote" target="_blank" rel="noopener noreferrer">https://github.com/taniarascia/takenote</a>
+演示地址：<a href="https://takenote.dev/app" target="_blank" rel="noopener noreferrer">https://takenote.dev/app</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pptist">PPTist<a href="https://wlg.us.kg/en/book/2024/week_202414#pptist" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>基于 Vue3.x + TypeScript 的在线演示文稿（幻灯片）应用，还原了大部分 Office PowerPoint 常用功能，实现在线PPT的编辑、演示。支持导出PPT文件。</p>
+<p>仓库地址：<a href="https://github.com/pipipi-pikachu/PPTist" target="_blank" rel="noopener noreferrer">https://github.com/pipipi-pikachu/PPTist</a>
+演示地址：<a href="https://pipipi-pikachu.github.io/PPTist/" target="_blank" rel="noopener noreferrer">https://pipipi-pikachu.github.io/PPTist/</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="网易云音乐-api">网易云音乐 API<a href="https://wlg.us.kg/en/book/2024/week_202414#%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-api" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>网易云音乐 Node.js API service。</p>
+<p>仓库地址：<a href="https://github.com/Binaryify/NeteaseCloudMusicApi" target="_blank" rel="noopener noreferrer">https://github.com/Binaryify/NeteaseCloudMusicApi</a>
+演示地址：<a href="https://neteasecloudmusicapi-docs.4everland.app/" target="_blank" rel="noopener noreferrer">https://neteasecloudmusicapi-docs.4everland.app/</a></p>
+<p><img decoding="async" loading="lazy" src="https://i-fanr.oss-cn-hangzhou.aliyuncs.com/1684748887668-fb44abe2-5f96-42da-9348-a07f35be8c33.png" alt="image" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="win11react">Win11React<a href="https://wlg.us.kg/en/book/2024/week_202414#win11react" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>win11React 是一个开源项目，旨在使用 React、CSS 和 JavaScript 等标准 Web 技术在 Web 上复制 Windows 11 桌面体验 win11React_CN 是win11React的一个本土化项目，本项目为win11React提供近乎完整的中文翻译。</p>
+<p>仓库地址：<a href="https://github.com/inwinter04/win11React_CN" target="_blank" rel="noopener noreferrer">https://github.com/inwinter04/win11React_CN</a>
+演示地址：<a href="https://win11.iamdt.eu.org/" target="_blank" rel="noopener noreferrer">https://win11.iamdt.eu.org/</a></p>
+<p><img decoding="async" loading="lazy" src="https://i-fanr.oss-cn-hangzhou.aliyuncs.com/1684802514308-0fe621d3-2ec1-498a-8d11-b6fff130dc60.png" alt="image" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="soybean-admin">Soybean Admin<a href="https://wlg.us.kg/en/book/2024/week_202414#soybean-admin" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>一个基于Vue3、Vite3、TypeScript、NaiveUI 和 UnoCSS的清新优雅的中后台模版。</p>
+<p>仓库地址：<a href="https://github.com/honghuangdc/soybean-admin" target="_blank" rel="noopener noreferrer">https://github.com/honghuangdc/soybean-admin</a>
+演示地址：<a href="https://soybean.pro/" target="_blank" rel="noopener noreferrer">https://soybean.pro/</a></p>
+<p><img decoding="async" loading="lazy" src="https://i-fanr.oss-cn-hangzhou.aliyuncs.com/1685493720110-8bd0dcda-0e96-46d5-a099-d149667d8c02.png" alt="img" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tldraw">tldraw<a href="https://wlg.us.kg/en/book/2024/week_202414#tldraw" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>A very good whiteboard.（好用的白板工具。）</p>
+<p>仓库地址：<a href="https://github.com/tldraw/tldraw" target="_blank" rel="noopener noreferrer">https://github.com/tldraw/tldraw</a>
+演示地址：<a href="https://www.tldraw.com/" target="_blank" rel="noopener noreferrer">https://www.tldraw.com/</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="软件">软件<a href="https://wlg.us.kg/en/book/2024/week_202414#%E8%BD%AF%E4%BB%B6" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cider"><a href="https://github.com/ciderapp/Cider" target="_blank" rel="noopener noreferrer">Cider</a><a href="https://wlg.us.kg/en/book/2024/week_202414#cider" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>一款开源跨平台的第三方 <code>Apple Music</code> 客户端。基于 <code>Electron</code> 和 <code>Vue.js</code>：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/cider.jpg" alt="cider" title="cider" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scrcpy"><a href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener noreferrer">scrcpy</a><a href="https://wlg.us.kg/en/book/2024/week_202414#scrcpy" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>在<code>GNU/Linux, Windows 和 macOS</code>上显示并控制通过 USB (或 TCP/IP) 连接的安卓设备，不需要任何 root 权限。</p>
+<p>它专注于：</p>
+<ul>
+<li>轻量 (原生，仅显示设备屏幕)</li>
+<li>性能 (30~60fps)</li>
+<li>质量 (分辨率可达 1920×1080 或更高)</li>
+<li>低延迟 (35~70ms)</li>
+<li>快速启动 (最快 1 秒内即可显示第一帧)</li>
+<li>无侵入性 (不会在设备上遗留任何程序)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="网站">网站<a href="https://wlg.us.kg/en/book/2024/week_202414#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="shan-shui-inf"><a href="http://shan-shui-inf.lingdong.works/" target="_blank" rel="noopener noreferrer">shan-shui-inf</a><a href="https://wlg.us.kg/en/book/2024/week_202414#shan-shui-inf" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>一个在线山水画生成器，能一键生成矢量山水画，你可以自定义画卷长度，可以下载SVG，同时项目也在github开源了，具体见<a href="https://github.com/LingDong-/shan-shui-inf" target="_blank" rel="noopener noreferrer">shan-shui-inf</a>。</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/shanshui-inf.jpg" alt="shanshui-inf" title="shanshui-inf" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="watermarkremover"><a href="https://www.watermarkremover.io/" target="_blank" rel="noopener noreferrer">watermarkremover</a><a href="https://wlg.us.kg/en/book/2024/week_202414#watermarkremover" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>通过AI技术去除图片水印：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/watermarkremover.jpg" alt="watermarkremover" title="watermarkremover" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202414#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="中国历史上最神奇的六大巧合">中国历史上最神奇的六大巧合！<a href="https://wlg.us.kg/en/book/2024/week_202414#%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2%E4%B8%8A%E6%9C%80%E7%A5%9E%E5%A5%87%E7%9A%84%E5%85%AD%E5%A4%A7%E5%B7%A7%E5%90%88" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>一，朱元璋年幼时叫朱重八，重八也可以理解为两个八，也就是十六天。而明朝历代皇帝的数量也刚好是十六位。</p>
+<p>二，隋炀帝扬广为了能够登上皇帝的宝座，竞然谋害了自己的亲哥哥扬勇。让人意想不到的是，1400年从后，隋炀帝的墓穴被一个开发商意外的挖开了。而这位开发商老扳的名字就叫扬勇。</p>
+<p>三，刘邦在芒砀山起义，被一条大蟒蛇拦住了去路，刘邦借着酒劲把这条大蟒蛇拦腰斩成了两段。从此，汉朝40O年的江山从此分为东西各2O0年，而拦腰斩断汉朝的人就叫王莽。</p>
+<p>四，公元前206年，刘邦从秦三世子婴手中夺过江山，建立了西汉。200年以后，王莽从西汉的刘婴手中也夺过了江山。刘婴史称"孺子婴″。</p>
+<p>五，刘备建立了蜀汉，被晋王司马昭所灭，此后凡是以晋为国号的，都灭在了刘姓的手中，刘聪灭了西晋，刘裕灭了东晋。</p>
+<p>六，元朝开国皇帝登基的宫殿叫大明殿，万万没想到，下一个朝代就是明朝，而明朝也建立了一个乾清殿。结果，明朝灭亡之后，就有了清朝。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202412]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202412</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202412"/>
+        <updated>2024-11-29T21:23:53.518Z</updated>
+        <summary type="html"><![CDATA[记录]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="记录">记录<a href="https://wlg.us.kg/en/book/2024/week_202412#%E8%AE%B0%E5%BD%95" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="值得借鉴的35条职场定律">值得借鉴的35条职场定律<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%80%BC%E5%BE%97%E5%80%9F%E9%89%B4%E7%9A%8435%E6%9D%A1%E8%81%8C%E5%9C%BA%E5%AE%9A%E5%BE%8B" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>1、不要把同事当朋友，要当盟友。</p>
+<p>2、不要和同事说过多自己的隐私。</p>
+<p>3、公司组织的比赛一定要参加！</p>
+<p>4、保持微笑，不要喜怒无常。</p>
+<p>5、投资比工作重要，不学习理财投资不买房的若干年后都后悔了。</p>
+<p>6、尽量别得罪人，三十年河东三十年河西……</p>
+<p>7、不要瞧不起你领导，他能是你的领导，一定有你能学习的地方。</p>
+<p>8、你可以有理想，但是时刻记住你的理想跟别人没啥关系。</p>
+<p>9、不要相信公司的奉献精神，他们不想要你的时候可快了。</p>
+<p>10、保持运动，和你是不是忙没有关系。</p>
+<p>11、偷奸耍滑可以耍了的一时，但是总要露馅。</p>
+<p>12、什么30天教你做达人，一个月教你赚100万的攻略都是骗人的，厚积薄发才是真理。</p>
+<p>13、学习是为你自己。人与人之间的差距是逐步拉开的。</p>
+<p>14、大部分的工作只看结果，不看过程。很多事情努力了没做到和没做是一样的。</p>
+<p>15、不要浪费时间在不值得浪费的人身上，自己的时间很宝贵。</p>
+<p>16、学会站在老板或者公司的角度去思考问题。格局很重要。</p>
+<p>17、在成人的社交礼仪里，没有爽快的答应就是拒绝。</p>
+<p>18、抱怨只会显得一个人特别无能。</p>
+<p>19、不要矫情，除非你是牛人，否则的话，永远提醒自己，人才市场有成千上万的人随时可以取代你顶替这个职位。</p>
+<p>20、加班这种事情不可避免，忍不了就辞职，走不了就忍着</p>
+<p>21、无论多么信任的人，别过多袒露你的过去。为你自己好。</p>
+<p>22、尽量不要向同事借钱，一般人家都会很反感，除非你们成为了真正的朋友。</p>
+<p>23、不要为了工作牺牲身体和家庭。</p>
+<p>24、闷不吭声地埋头苦干，并不一定能够给你带来想要的认可。要学会向领导、上司汇报工作进度。</p>
+<p>25、低调做人，高调做事。</p>
+<p>26、老板经营的是他的事业，你经营的是你的人生，所以混不得。</p>
+<p>27、不要放弃每一个可以请教的机会，不论这个人你是否喜欢，职位是否比你高。</p>
+<p>28、觉得是垃圾社交，不想参加就不要去，好好把握下班后自由的时间，别为了迎合别人浪费自己时间</p>
+<p>29、画饼的领导千千万，谁当领导不画饼？但画了饼连糖都不给吃的公司趁早走，不要回头。</p>
+<p>30、不要夸夸而谈，这只会让人发现你的浅薄，对于不懂得事情，要懂得闭上嘴巴。</p>
+<p>31、一定要去大城市，那里才有更多出路和机会。</p>
+<p>32、我们年轻的时候是得吃苦，但是我们不随便吃苦。</p>
+<p>33、不要太安逸，现在哪里还有什么稳定工作。</p>
+<p>34、和公司谈钱时，少讲感情，尽量不讲，拿能力和业绩说话。</p>
+<p>35、不管你这个工作做的有多差，都不要否定自己。你一定要相信，你还是很优秀。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="寒窑赋--吕蒙正">《寒窑赋》- 吕蒙正<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%AF%92%E7%AA%91%E8%B5%8B--%E5%90%95%E8%92%99%E6%AD%A3" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>天有不测风云，人有旦夕祸福。</p>
+<p>蜈蚣百足，行不及蛇；雄鸡两翼，飞不过鸦。</p>
+<p>马有千里之程，无骑不能自往；人有冲天之志，非运不能自通。</p>
+<p>盖闻：</p>
+<p>人生在世，富贵不能淫，贫贱不能移。</p>
+<p>文章盖世，孔子厄于陈邦；武略超群，太公钓于渭水。</p>
+<p>颜渊命短，殊非凶恶之徒；盗跖年长，岂是善良之辈。</p>
+<p>尧帝明圣，却生不肖之儿；瞽叟愚顽，反生大孝之子。</p>
+<p>张良原是布衣，萧何曾为县吏。</p>
+<p>晏子身无五尺，封作齐国宰相；孔明卧居草庐，能作蜀汉军师。</p>
+<p>楚霸虽雄，败于乌江自刎；汉王虽弱，竟有万里江山。</p>
+<p>李广有射虎之威，到老无封；冯唐有乘龙之才，一生不遇。</p>
+<p>韩信未遇之时，无一日三餐，及至遇行，腰悬三尺玉印，一旦时衰，死于阴人之手。</p>
+<p>有先贫而后富，有老壮而少衰。</p>
+<p>满腹文章，白发竟然不中；才疏学浅，少年及第登科。</p>
+<p>深院宫娥，运退反为妓妾；风流妓女，时来配作夫人。</p>
+<p>青春美女，却招愚蠢之夫；俊秀郎君，反配粗丑之妇。</p>
+<p>蛟龙未遇，潜水于鱼鳖之间；君子失时，拱手于小人之下。</p>
+<p>衣服虽破，常存仪礼之容；面带忧愁，每抱怀安之量。</p>
+<p>时遭不遇，只宜安贫守份；心若不欺，必然扬眉吐气。</p>
+<p>初贫君子，天然骨骼生成；乍富小人，不脱贫寒肌体。</p>
+<p>天不得时，日月无光；地不得时，草木不生；水不得时，风浪不平；人不得时，利运不通。</p>
+<p>注福注禄，命里已安排定，富贵谁不欲？人若不依根基八字，岂能为卿为相？</p>
+<p>吾昔寓居洛阳，朝求僧餐，暮宿破窖，思衣不可遮其体，思食不可济其饥，上人憎，下人厌，人道我贱，非我不弃也。</p>
+<p>今居朝堂，官至极品，位置三公，身虽鞠躬于一人之下，而列职于千万人之上，有挞百僚之杖，有斩鄙吝之剑，思衣而有罗锦千箱，思食而有珍馐百味，出则壮士执鞭，入则佳人捧觞，上人宠，下人拥。</p>
+<p>人道我贵，非我之能也，此乃时也、运也、命也。</p>
+<p>嗟呼！</p>
+<p>人生在世，富贵不可尽用，贫贱不可自欺，听由天地循环，周而复始焉。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="如何让领导舍不得你">如何让领导舍不得你<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%A6%82%E4%BD%95%E8%AE%A9%E9%A2%86%E5%AF%BC%E8%88%8D%E4%B8%8D%E5%BE%97%E4%BD%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="忠诚">忠诚<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%BF%A0%E8%AF%9A" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>单位不一定挽留有能力的员工，但对一个忠心耿耿的人，不会有领导愿意让他走，他会成为单位这个铁打营盘中最长久的战士，而且是最有发展前景的员工。</p>
+<ol>
+<li>站在领导的立场上思考问题；</li>
+<li>与上级分享你的想法；</li>
+<li>琢磨为单位创造价值；</li>
+<li>在外界诱惑面前经得起考验。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="负责">负责<a href="https://wlg.us.kg/en/book/2024/week_202412#%E8%B4%9F%E8%B4%A3" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>勇于承担责任的人，对单位有着重要意义，一个人工作能力可以比别人差，但是一定不能缺乏责任感，凡事推三阻四、找客观原因，而不反思自己，一定会失去上级的信任。</p>
+<ol>
+<li>把每一件小事都做好；</li>
+<li>言必信，行必果；</li>
+<li>错就是错，绝对不要找借口；</li>
+<li>让问题的皮球止于你。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="效率">效率<a href="https://wlg.us.kg/en/book/2024/week_202412#%E6%95%88%E7%8E%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>高效的工作习惯是每个渴望成功的人所必备的，也是每个单位都非常看重的。</p>
+<ol>
+<li>心无旁骛，跟穷忙瞎忙说“再见”；</li>
+<li>量化、细化每天的工作；</li>
+<li>拖延是最狠毒的职业杀手；</li>
+<li>防止完美主义成为效率的大敌。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="结果">结果<a href="https://wlg.us.kg/en/book/2024/week_202412#%E7%BB%93%E6%9E%9C" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>“无论黑猫、白猫，抓得到老鼠就是好猫！”无论苦干、巧干，出成绩的员工才会受到众人的肯定。单位重视的是你有多少“功”，而不是有多少“苦”。</p>
+<ol>
+<li>一开始就要想怎样把事情做成；</li>
+<li>办法永远要比问题多；</li>
+<li>聪明地工作而不仅仅是努力工作；</li>
+<li>没有条件，就创造条件。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="沟通">沟通<a href="https://wlg.us.kg/en/book/2024/week_202412#%E6%B2%9F%E9%80%9A" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>不好沟通者，即便自己再有才，也只是一个人的才干；好沟通者，哪怕很平庸，也可以边干边学，最终实现自己的价值。</p>
+<ol>
+<li>沟通和八卦是两回事；</li>
+<li>不说和说得过多都是一种错；</li>
+<li>带着方案去提问题，当面沟通，当场解决；</li>
+<li>培养接受批评的情商；</li>
+<li>内部可以有矛盾，对外一定要一致。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="团队">团队<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%9B%A2%E9%98%9F" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>团队提前，自我退后。不管个人能力多强，只要伤害到团队，单位决不会让你久留——不要认为缺了你一个，团队就无法运转。</p>
+<ol>
+<li>滴水融入大海，个人融入团队；</li>
+<li>服从总体安排；</li>
+<li>遵守纪律才能保证战斗力；</li>
+<li>不做团队的“短板”，如果现在是，就要给自己“增高”。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="进取">进取<a href="https://wlg.us.kg/en/book/2024/week_202412#%E8%BF%9B%E5%8F%96" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>一个人永远要跟上单位的步伐，单位永远要跟上时代的步伐。记住，一定要前进，停就意味着放弃，意味着出局！</p>
+<ol>
+<li>以空杯心态去学习、去汲取；</li>
+<li>不要总生气，而要争气；</li>
+<li>不要一年经验重复用十年；</li>
+<li>挤时间给自己“增高”、“充电”；</li>
+<li>发展自己的“比较优势”。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="低调">低调<a href="https://wlg.us.kg/en/book/2024/week_202412#%E4%BD%8E%E8%B0%83" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>才高不必自傲，不要以为自己不说、不宣扬，别人就看不到你的功劳。所以，别在同事面前炫耀。</p>
+<ol>
+<li>不要邀功请赏；</li>
+<li>克服“大材小用”的心理；</li>
+<li>不要摆架子耍资格；</li>
+<li>凡是人，皆须敬；</li>
+<li>努力做到名实相符，要配得上自己的位置。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="成本">成本<a href="https://wlg.us.kg/en/book/2024/week_202412#%E6%88%90%E6%9C%AC" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>节约不是抠门，而是美德。不要把单位的钱不当钱，单位“锅”里有，员工“碗”里才有；同样，“锅”里多，“碗”里也自然就多。而掌勺的，恰恰就是你自己。</p>
+<ol>
+<li>报销账目，一定要诚信；</li>
+<li>不耍小聪明，不贪小便宜；</li>
+<li>珍惜工作的每一分钟时间；</li>
+<li>每付出成本，都要力争最大收益。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="感恩">感恩<a href="https://wlg.us.kg/en/book/2024/week_202412#%E6%84%9F%E6%81%A9" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>为什么我们能允许自己的过失，却对他人、对单位有这么多的抱怨？再有才华的人，也需要别人给你做事的机会，也需要他人对你或大或小的帮助。你现在的幸福不是你一个人就能成就的。</p>
+<ol>
+<li>单位给了你饭碗；</li>
+<li>工作给你的不仅是报酬，还有学习、成长的机会；</li>
+<li>同事给了你工作中的配合；</li>
+<li>服务对象帮你创造了成绩；</li>
+<li>对手让你看到距离和发展空间；</li>
+<li>批评者让你不断完善自我。</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="在单位一定要注意三点">在单位一定要注意三点<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%9C%A8%E5%8D%95%E4%BD%8D%E4%B8%80%E5%AE%9A%E8%A6%81%E6%B3%A8%E6%84%8F%E4%B8%89%E7%82%B9" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<ol>
+<li>在单位要克勤克敬，兢兢业业，而不是耍赖撒泼、妄自尊大。单位的本质从来不按年龄的大小排序，谁以自己的年龄大小来说事，谁就是真正的傻瓜。</li>
+<li>在单位老年人有老年人的优势，年轻人有年轻人的优势。万万不可以互相轻视。能多干一点就多干一点，总有人会记得你的好。在单位要尽量远离那些鼓动你不工作的人，远离鼓动你闹矛盾的人。</li>
+<li>在单位永远不要说大话，没有人害怕你的大话，大家只会瞧不起你。要学会维护自己的单位，维护自己的工作，维护自己的职业。单位离开谁都能运转，你要努力证明，你对单位很重要。</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="增广贤文">增广贤文<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%A2%9E%E5%B9%BF%E8%B4%A4%E6%96%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>人情似纸张张薄，世事如棋局局新。贫居闹市无人问，富在深山有远亲。
+不信但看宴中酒，杯杯先敬富贵人。门前拴上高头马，不是亲来也是亲。
+门前放根讨饭棍，亲戚故友不上门。世人结交需黄金，黄金不多交不深，
+纵令然诺暂相许，终是悠悠路行心。有钱有酒多兄弟，急难何曾见一人。
+酒肉朋友朝朝有，无钱无势亲不亲。相逢好比初相识，到老终无怨恨心。
+胜者为王败者寇，只重衣冠不重人。三贫三富不到老，十年兴败多少人。
+在官三日人问我，离官三日我问人。古人不见今时月，今月曾经照古人。
+近水楼台先得月，向阳花木易为春。谁人背后无人说，那个人前不说人。
+百炼化身成铁汉，三缄其口学金人。十分伶俐使七分，常留三分与儿孙。
+如若十分都使尽，远在儿孙近在身。长江后浪推前浪，世上新人赶旧人。
+君子乐得做君子，小人枉自做小人。山中自有千年树，世上难逢百岁人。
+岂无远道思亲泪，不及高堂念子心。堂上二老是活佛，何用灵山朝世尊。
+平生不作皱眉事，世上应无切齿人。越奸越狡越贫穷，奸狡原来天不容。
+富贵若从奸狡起，世间呆汉喝西风。求人须求大丈夫，济人须济急时无。
+茫茫四海人无数，那个男儿是丈夫。人情似水分高下，世事如云任卷舒。
+入山不怕伤人虎，只怕人情两面刀。无求到处人情好，不饮随它酒价高。
+知事少时烦恼少，识人多处是非多。秋至满山皆秀色，春来无处不花香。
+贫无达士将金赠，病有高人说药方。美人卖笑千金易，壮士穷途一饭难。
+少时总觉为人易，华年方知立业难。用心计较般般错，退步思量事事难。
+世上闲愁千万斛，不教一点上眉端。毁身每是作恶日，成名皆在行善时。
+莫把真心空计较，唯有大德享万年。谗言败坏真君子，美色消磨狂少年。
+神仙难断阴骘命，皇天不昧苦心人。人恶人怕天不怕，人善人欺天不欺。
+善恶到头终有报，只争来早与来迟。平生不做亏心事，半夜敲门心不惊。
+万事劝人休瞒昧，举头三尺有神明。鬼神可敬不可谄，怨家宜解不宜结。
+人生何处不相逢，莫因小怨动声色。好义固为人所钦，贪利乃为鬼所笑。
+贤者不炫己之长，君子不夺人所好。善业可为须着力，是非闲杂莫劳心。
+良田不由心田置，产业变为冤业折。千年田地八百主，田是主人人是客。
+阴地不如心地好，命运在人不在天。有理问得君王倒，有钱难买子孙贤。
+不求金玉重重贵，但愿儿孙个个贤。枯木逢春犹再岁，人无两度再少年。
+水暖水寒鱼自知，花开花谢春不管。蜗牛角上校雌雄，石火光中争长短。
+留心学到古人难，立脚怕随流欲转。少而寡欲颜常好，老不求官梦也闲。
+妙药难医冤孽病，横财不富命穷人。多情自古空遗恨，好梦由来最易醒。
+命中只有八合米，走尽天下难满升。知恩报恩天下少，反面无情世间多。
+荣宠旁边辱等待，贫贱背后福跟随。各人生死各人了，管人闲事受人磨。
+易涨易退山溪水，易反易覆小人心。红粉佳人休说老，风流浪子莫叫贫。
+龙游浅水遭虾戏，虎落平阳被犬欺。得食猫儿强似虎，褪毛鸾凤不如鸡。
+为人莫作千年计，三十河东四十西。当路莫栽荆棘树，它年免挂子孙衣。
+天上众星皆拱北，世间无水不朝东。笋因落箨方成竹，鱼为奔波始化龙。
+屋漏偏遭连夜雨，船慢又遇顶头风。记得少年骑竹马，看看又是白头翁。
+美人绝色原妖物，乱世多财是祸根。畜牲易度人难度，宁度畜牲不度人。
+天作棋盘星作子，水有源头木有根。昨日花开今日谢，百年人有万年心。
+北邙荒冢无贫富，玉垒浮云变古今。世事茫茫难自料，清风明月冷看人。
+守口不谈新旧事，知心难得两三人。欲知世情须尝胆，会尽人情暗点头。
+是非只为多开口，烦恼皆因强出头。人生七十古来稀，问君还有几春秋。
+莺花犹怕春光老，岂可教人枉度春。一年之计在于春，一日之计在于晨。
+一家之计在于和，一生之计在于勤。一朝天子一朝臣，一辈新鲜一辈陈。
+一苗露水一苗草，一层山水一层人。闷坐书馆闲操心，看来全是论古今。
+书中有真就有假，世人认假不认真。假作真时真亦假，真作假时假也真。
+真真假假难分解，假者自假真自真。回忆世情般般假，借假修真破迷津。
+由来富贵三更梦，何必楚楚苦用心。识透人情惊破胆，看穿世间心胆寒。
+白璧易埋千古恨，黄金难买一身闲。人生究竟归何处，看破放下随万缘。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="软件">软件<a href="https://wlg.us.kg/en/book/2024/week_202412#%E8%BD%AF%E4%BB%B6" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="屏蔽苹果ios升级">屏蔽苹果IOS升级<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%B1%8F%E8%94%BD%E8%8B%B9%E6%9E%9Cios%E5%8D%87%E7%BA%A7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>最近屏蔽苹果IOS升级提示的方法更新了，有需要的可以试试：
+描述文件下载：<a href="https://app.initnil.com/tvOS.mobileconfig" target="_blank" rel="noopener noreferrer">https://app.initnil.com/tvOS.mobileconfig</a>
+备用下载：<a href="https://busy.lanzouv.com/b030j6qni" target="_blank" rel="noopener noreferrer">https://busy.lanzouv.com/b030j6qni</a> ，密码<!-- -->:cceb<!-- -->
+<a href="http://www.sexy0769.com/blog2/articleblog.jsp?myBlogClasses=skill&amp;myBlogID=140" target="_blank" rel="noopener noreferrer">http://www.sexy0769.com/blog2/articleblog.jsp?myBlogClasses=skill&amp;myBlogID=140</a>
+安装步骤：</p>
+<ol>
+<li>
+<p>先移除已失效的描述文件：进入 iPhone 【设置】-【通用】-【描述文件与设备管理】中移除掉已失效的描述文件。如果系统已经自动下载了最新版的 iOS 固件，请在iPhone 【设置】-【通用】-【 iPhone储存空间 】中删除固件并重启手机。</p>
+</li>
+<li>
+<p>Safari浏览器打开下载上面链接提供的描述文件，然后点允许进行下载</p>
+</li>
+<li>
+<p>下载完成以后进入设置-通用-描述文件，打开安装</p>
+</li>
+</ol>
+<p>安装完成以后重启即可。重启设备后，桌面会出现如下“Feedback”应用图标即表示成功。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="资讯">资讯<a href="https://wlg.us.kg/en/book/2024/week_202412#%E8%B5%84%E8%AE%AF" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="纸钢琴">纸钢琴<a href="https://wlg.us.kg/en/book/2024/week_202412#%E7%BA%B8%E9%92%A2%E7%90%B4" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>学习钢琴通常需要一个专门的琴房，如果是普通人家庭，购置和练习钢琴是非常不方便的。
+有人在 GitHub 上发布了一个令人耳目一新的项目（<a href="https://github.com/Mayuresh1611/Paper-Piano" target="_blank" rel="noopener noreferrer">https://github.com/Mayuresh1611/Paper-Piano</a>），尝试零成本地解决这个问题，让你可以随时随地练习钢琴。
+你只要准备两张 A4 纸，水平连接在一起，两端各画两个方框，然后就可以在纸上练习钢琴了。
+这个软件通过摄像头，捕捉你的手指动作，转化成钢琴击键，让电脑发出对应的琴声。
+<img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2024/webp/2642458/1710725302683-e005423b-b5dd-4b00-b2c9-21032c3563e4.webp#averageHue=%2388adb3&amp;clientId=u8551b30f-b921-4&amp;from=paste&amp;id=u3e7af1c3&amp;originHeight=302&amp;originWidth=800&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u138f212b-919b-45e7-b18b-30623e1c0cf&amp;title=" alt="" class="img_ev3q">
+虽然这样不会有击键的感觉，但是不失为一种简单的解决方案。如果配一个仿真键盘，就比较完善了。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202412#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="一周是一年的2">一周是一年的2%<a href="https://wlg.us.kg/en/book/2024/week_202412#%E4%B8%80%E5%91%A8%E6%98%AF%E4%B8%80%E5%B9%B4%E7%9A%842" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>纳特·弗里德曼（Nat Friedman）曾经是 GitHub 的 CEO，现在是一名风险投资家。
+他的<a href="https://nat.org/" target="_blank" rel="noopener noreferrer">个人网站首页</a>，写着一些自己的信条。其中有一条，让我很震动。
+他写道："<strong>一周是一年的2%</strong>。"
+我一直觉得，每周七天是很短的时间，尤其是发布周刊以后，更是过得飞快。
+但是，他的这句话让我意识到，每周其实是一年当中很重要的组成部分。虚度一周就是虚度一年的2%。
+你没有几周可以虚度的。只要多浪费几周，这一年很快过去。
+反过来，过好这一周，那么这一年的2%就有价值了。只要这样多过几周，一年就会变得很充实，有拿得出手的成果。
+我坚持写周刊，每周记录一点东西，整理一些思考，现在想起来，其实就是在督促自己过好这一年的2%。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="乔布斯的遗照">乔布斯的遗照<a href="https://wlg.us.kg/en/book/2024/week_202412#%E4%B9%94%E5%B8%83%E6%96%AF%E7%9A%84%E9%81%97%E7%85%A7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2024/webp/2642458/1710725879002-894dd9ae-7fe9-4ebd-b511-a389518afe5d.webp#averageHue=%23cecece&amp;clientId=u8551b30f-b921-4&amp;from=paste&amp;id=u6b670e71&amp;originHeight=502&amp;originWidth=800&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=ud456999d-7747-41fb-9562-69d45da947a&amp;title=" alt="" class="img_ev3q">
+2011年10月5日，史蒂夫·乔布斯去世，苹果网站用苏格兰摄影师艾伯特·沃森 (Albert Watson) 在2006年拍摄的这张照片来纪念他。
+许多人知道，乔布斯并不太喜欢被人拍摄，这对摄影师是一种挑战。
+拍摄当日，摄影师被告知拍摄时间只有一小时，然而他却胸有成竹地说，只要三十分钟便能完成。
+艾伯特·沃森建议史蒂夫·乔布斯稍微前倾，说道："想象一下，桌子对面有四五个人不同意你的观点，但你知道自己是对的。"
+Steve Jobs 凝视着镜头，眼神十分坚定，给人一种充满信念与智慧的感觉。这就是这幅肖像照的创作过程。
+离开时，史蒂夫·乔布斯看了一眼照片，问他是否可以拥有它，并说这"也许是我拍过的最好的照片"。
+<img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2024/webp/2642458/1710725879148-80710761-cd77-46b2-b80d-29ae3ec269ea.webp#averageHue=%237a7a7a&amp;clientId=u8551b30f-b921-4&amp;from=paste&amp;id=uf1a974ee&amp;originHeight=420&amp;originWidth=674&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u108c886a-cdf0-4fe9-bd98-850fc223114&amp;title=" alt="" class="img_ev3q">
+五年后，艾伯特·沃森接到苹果公司的电话，问他是否仍保留那张乔布斯的照片。他当时感到十分惊讶，同时意识到事情的紧迫性，随即找到照片并发送给苹果公司。
+当天晚上，苹果在官网宣布乔布斯去世的消息，并附上艾伯特·沃森拍摄他的肖像，这张照片在网站上刊登了一个月，之后也成为乔布斯传记的封面，成为21世纪最广为人知的人像照片之一。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202412#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2024/png/2642458/1710730727288-a7559735-7b7f-4d1f-bf2a-e1483b823fb9.png#averageHue=%23f5f5f5&amp;clientId=u6484b065-5929-4&amp;from=paste&amp;height=673&amp;id=ua4591193&amp;originHeight=1080&amp;originWidth=570&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=373601&amp;status=done&amp;style=stroke&amp;taskId=u4645d788-2c18-4b9e-bd09-bda7342b9b1&amp;title=&amp;width=355" alt="image.png" class="img_ev3q">
+<img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2024/png/2642458/1710732019404-61308cc2-99e8-4b8e-9dcb-7cda30a08a19.png#averageHue=%23f5f5f5&amp;clientId=uc37910ce-d700-4&amp;from=paste&amp;id=uc249d3ed&amp;originHeight=376&amp;originWidth=500&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=stroke&amp;taskId=u04f45cf6-3479-4812-a6ca-681b7a23470&amp;title=" alt="" class="img_ev3q"></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202401]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202402</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202402"/>
+        <updated>2024-11-29T21:23:53.517Z</updated>
+        <summary type="html"><![CDATA[鸡鸣驿位于河北省张家口，是中国现存最大的古代驿站遗址，当年供邮差休息和更换马匹。]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2023/webp/2642458/1700187251565-a7294ccb-86c3-4a1d-9131-86fa7b5f5199.webp" alt="" class="img_ev3q">
+鸡鸣驿位于河北省张家口，是中国现存最大的古代驿站遗址，当年供邮差休息和更换马匹。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="趣图">趣图<a href="https://wlg.us.kg/en/book/2024/week_202402#%E8%B6%A3%E5%9B%BE" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2023/png/2642458/1700261150924-6d6f3ca2-d0a9-482c-85e3-beec4b95f56b.png#averageHue=%23f6f5f3&amp;clientId=ud98ca45f-00c0-4&amp;from=paste&amp;height=576&amp;id=u82181faf&amp;originHeight=991&amp;originWidth=1033&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=406110&amp;status=done&amp;style=none&amp;taskId=u413b66b2-702b-4b18-85f8-ded73028c8a&amp;title=&amp;width=600" alt="image.png" class="img_ev3q">
+<img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2023/png/2642458/1700261219863-ad6b0c27-ae55-4be3-8b27-97909690f2f1.png#averageHue=%236e9a61&amp;clientId=ud98ca45f-00c0-4&amp;from=paste&amp;height=641&amp;id=u4df15b82&amp;originHeight=641&amp;originWidth=600&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=523044&amp;status=done&amp;style=none&amp;taskId=u1e2aceed-9b0c-4a96-8d61-c913c8805a6&amp;title=&amp;width=600" alt="image.png" class="img_ev3q">
+<img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2023/jpeg/2642458/1700377540196-700d0c41-9bcd-48bd-b820-72fc7ad60a29.jpeg#averageHue=%2345413f&amp;clientId=u99e966a8-e210-4&amp;from=paste&amp;id=u9ee41a62&amp;originHeight=817&amp;originWidth=640&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u5a7f4819-35d3-4ced-99da-074ff0ee76c&amp;title=" alt="" class="img_ev3q">
+<img decoding="async" loading="lazy" src="https://cdn.nlark.com/yuque/0/2023/png/2642458/1700382505008-540f2044-4a0c-4ef1-a870-1f7811a04e31.png#averageHue=%239a8164&amp;clientId=u99e966a8-e210-4&amp;from=paste&amp;id=u11ec5e15&amp;originHeight=2048&amp;originWidth=1536&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=5416177&amp;status=done&amp;style=none&amp;taskId=u3e5d63f3-353e-4dc9-9cba-7caf765c45f&amp;title=" alt="image.png" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://1.fuliba2021.com/item/6413b97eebf10e5d53d6611a.jpg" alt="https://1.fuliba2021.com/item/6413b97eebf10e5d53d6611a.jpg" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202402#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1解决团队分歧的四种方式">1、解决团队分歧的四种方式<a href="https://wlg.us.kg/en/book/2024/week_202402#1%E8%A7%A3%E5%86%B3%E5%9B%A2%E9%98%9F%E5%88%86%E6%AD%A7%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>团队成员之间，经常会因为不同意见发生分歧。
+有些分歧，最终会达成一致意见；另一些分歧，谁也无法说服谁，难以达成一致。
+团队内部无法达成一致时，可能会出现四种决策方式。
+方式一：我不同意，但一旦决策定了，我就会一起努力。
+亚马逊创始人贝佐斯说：“当我跟一个主管反复讨论后，他不同意我的看法。虽然我不认为他正确，但我愿意陪他赌一把。我们认识几十年了，我觉得他可能比我更接近真相。其实我也不知道自己的决定是否正确，干脆照着下属的想法走。”
+这样有几个好处：
+至少产生了一个大家同意的决策。
+事后不会互相埋怨。
+有利于形成真正的团队精神。
+方式二：双方各退一步，互相“妥协”（Compromise）。
+这种做法是在双方立场之间，找一个中间点作为决策。这个房间我认为12尺高，你认为11尺高，最后大家同意把它的高度定为11.5尺。
+这种决策方式很糟糕，因为11.5尺根本不是真相，只是因为找出真相需要耗费太多的能量，“妥协”让大家以一种节省能量的方式达成共识。
+真正可取的做法是，凡是可以找到真相的事情，都不应该妥协。
+方式三：比谁更固执。
+争论的双方进行持久战，最先坚持不下去的人就会投降。
+这种决策方式既没有得到真相，又大伤团队元气。所以，必须禁止这种方式，不允许用消耗对方的方式达成协议。
+方式四：提供给上级，由上级决定。
+这种方式可以外包决策过程，也不会伤害团队成员之间的感情。缺点是大家没有去尽力找寻真相，团队思想也没有真正达成统一。
+总结：建议采用第一种决策方式“不同意、但尽力去做”。
+这种方式不一定是正确决策，但是对于企业来说，有一个速度问题：决策速度必须要快，不能拖延，团队要始终保持高速度。第一种决策方式，至少可以保证决策会在短时间内产生，把事情向前推进。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2财富的积累">2、财富的积累<a href="https://wlg.us.kg/en/book/2024/week_202402#2%E8%B4%A2%E5%AF%8C%E7%9A%84%E7%A7%AF%E7%B4%AF" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<ol>
+<li>
+<p>制定预算
+制定预算并坚持执行，是理财的基础。
+通过列出收入和支出，你可以更好地了解你的财务状况，并找出可以节省的地方。
+打个比方，如果你发现每个月在餐饮方面的支出过高，你可以寻找更经济的替代方案。
+包括但不限于，适当用自炊代替外卖，不要一次性屯太多新鲜蔬果，等等。</p>
+</li>
+<li>
+<p>储蓄和投资
+储蓄和投资，是积累财富的重要手段。
+将你的收入的一部分储蓄起来，这是相对保守却也比较稳妥的方法。
+如果你有投资的兴趣，或是对投资比较在行，也可以拿出一部分收入用于股票、债券、房地产等领域。
+要注意的是，普通人最好不要贷款投资，不仅风险大，还很考验心态。</p>
+</li>
+<li>
+<p>减少债务
+减少债务，实现财富的正积累，是理财的重要步骤。
+通过偿还贷款、信用卡等债务，你可以降低利息支出并增加可用资金。
+与此同时，你要养成良好的消费习惯，不买超出个人承受范围、不必要的名牌奢侈品。
+只有清偿了债务，你才能摆脱“卡奴”的负担，日后每一笔钱都是为自己而挣。</p>
+</li>
+<li>
+<p>副业收入
+寻找副业是一种开源、增加收入的好方法。
+通过在业余时间寻找额外的收入机会，你可以增加你的收入并加速财富积累。
+副业多种多样，比如做手工、写小说、运营新媒体账号等。
+当然了，你的副业不能影响到你的主业，本末倒置、舍本逐末只会影响最终的总收入。</p>
+</li>
+<li>
+<p>精打细算
+有开源就要有节流，精打细算是理财的基本原则之一。
+通过寻找更经济的替代方案、比较价格等方式，你可以降低支出并节省更多的钱。
+比如，购买化妆品、食品时，先买小份体验尝试，确定合适、合口味再买大份，避免浪费。
+再比如，买大件商品时要记得货比三家，并主动询问是否有打折或优惠券。</p>
+</li>
+<li>
+<p>学习理财知识
+持续学习理财知识，是提高财务管理能力的重要手段。
+通过阅读书籍、参加培训课程等方式，你可以了解更多的理财技巧和方法。
+除了从书上学，你还可以从亲朋身上学，向他们讨教好的经验。
+具备一定的理财知识，不仅有助管理财务，还能有效预防上当受骗。</p>
+</li>
+<li>
+<p>健康生活
+保持身心健康，是增加工作效率、减少理财失误率的重要方式。
+通过合理饮食、适当运动、保持良好的作息习惯等方式，你可以提高自己的身体状况和工作效率。
+当身体和心态不再是干扰项，你在理财投资时就会更冷静、更理性。
+而当挑战来临时，你也将更好地应对，并能较快调整好状态。</p>
+</li>
+<li>
+<p>持之以恒
+坚持不懈、持之以恒是实现目标的关键。
+只有坚持不懈地追求自己的目标，才能最终实现自己的初衷。
+偶尔的放松、奖励性消费是被允许的，前提是要始终坚持自己定下的赚钱、攒钱计划。
+越是沉得住气、耐得住诱惑，你就越有可能变得有钱、有底气！</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="再见2022再也不见">再见2022，再也不见<a href="https://wlg.us.kg/en/book/2024/week_202402#%E5%86%8D%E8%A7%812022%E5%86%8D%E4%B9%9F%E4%B8%8D%E8%A7%81" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>2022，这一年需要总结，更需要铭记。</p>
+<p>这一年
+上半年干旱，下半年新冠。
+熬过高温、挺过限电；
+战过酷暑、守着严寒。
+千言万语，道不尽成年人的无奈；
+万语千言，写不完这一年的心酸。</p>
+<p>这一年
+世界不安宁，局势很混乱。
+俄罗斯入侵了乌克兰，
+佩洛西窜访了阿里山。
+欧洲焦虑能源，中国困于新冠。
+美国挥舞镰刀，收割着全世界；
+泽联斯基左右逢源，到处表演；
+普京举步维艰，底气只剩原子弹。</p>
+<p>这一年
+从南到北，疫情从未断。
+很多人不是在家静默，
+就是被困他乡宾馆酒店。
+旅游基本歇业，快递几度瘫痪；
+油价不断上涨，赚钱特别艰难。
+嘴巴不能停，月供不敢断。
+工作不好找，工资难兑现。
+学校没上几天课，
+公司没上几天班。
+工资要发，房租不减。
+焦虑的多是老板。
+辛辛苦苦十几年，一疫回到解放前。</p>
+<p>这一年
+斯里兰卡破了产，美国频发枪击案。
+缅甸有战事，外蒙有暴乱。
+巴基斯坦洪灾，哈萨克斯坦政变。
+韩国万圣节踩死百人，
+日本富士山又成焦点。
+这一年，英国领导一直换，
+印度土豪也弄了个首相干。</p>
+<p>这一年
+冬奥会谷爱凌一飞冲天；
+张艺谋开幕式再度惊艳。
+中国男足败给了越南；
+中国女足亚洲杯夺冠。
+中国国安足球队，
+败走甘肃泾川县。
+这叫阴盛阳衰，
+男人靠不住，女人撑门面。
+卡塔尔世界杯，
+梅西封神，阿根廷夺了冠。</p>
+<p>这一年
+安倍晋三遇袭身亡，
+英国女王撒手人寰；
+稻盛和夫做了古，
+戈尔巴乔夫上西天。
+扬州老人仙逝，
+骨灰洒在了海里面。</p>
+<p>这一年
+武隆食堂倒塌，死伤过半。
+贵州动车出轨，司机遇难。
+东航客机坠广西，无一生还。
+长沙楼塌，死者来自医学院。
+贵州防疫车祸，官方最终道了歉。
+山洪突发冲走了成都游客，
+泥石流发生在西宁大通县。</p>
+<p>这一年
+最火城市，河北唐山。
+最火县城，徐州丰县；
+八孩女子，身上戴着大铁链，
+唐山打人，震惊了全世界。
+接近年底，焦点又到河南杞县。</p>
+<p>这一年
+体制在降薪，大厂在裁员。
+地产在变天，巨头在破产。
+浅浅的诗火遍全网，
+羊了个羊赚得盆满钵满。
+刘畊宏跳火了健身操，
+董宇辉火了东方甄选。</p>
+<p>这一年
+李易峰嫖娼被抓，吴亦凡已被宣判。
+富士康员工，徒步百里把家还。
+银行储户赋红码，权力泛滥。
+槟榔果子在下架，
+《隐入尘烟》被下线。
+光脚踩酸菜，亮瞎食客双眼。
+海克斯科技，国人大开眼界。
+辛吉飞以一己之力，
+唤醒了大家关注食品的安全。</p>
+<p>这一年
+地球在变暖，季节很混乱。
+秋天更比夏天热，百年一遇大干旱。
+半个中国尽高温，长江流域热得惨。
+广东水患严重，四川地震频繁，
+江河变小溪，湖泊成草原；
+电站没有水，全国都缺电。
+重庆山火，烧红了山城半边天。</p>
+<p>这一年
+小学生毒教材，害人不浅。
+南京的庙里，
+竟供着日军甲级战犯。
+拜登贼心不死，抢走了台积电。
+江西少年胡鑫宇神秘失踪，
+至今没有答案。</p>
+<p>这一年
+防疫层层加码，出行很不方便。
+核酸造假，更是不择手段。
+保安以为自己成了公安；
+物业以为自己是个机关。
+资本浑水摸鱼，企业疯狂发展，
+底层韭菜叫苦连天，
+核酸企业盆满钵满。
+国人为之震怒，
+全网寻找张珊珊。</p>
+<p>这一年
+疫情放开，既是解放，也是灾难。
+从前抢菜防封禁，
+而今抢药等感染。
+药店人来人往，医院人满为患。
+口罩涨价，药品中断，
+一盒布洛芬，邻里分一半。
+千金难求退烧药，急哭多少英雄汉。</p>
+<p>这一年
+全民渡劫，全家感染，
+无人护理，没人做饭；
+老人无人管，孩子没人看。
+高烧三天，难进医院。
+人人变医生，网上找答案。
+无药、无知、无法、无助。
+成年人的崩溃，就在一瞬间。</p>
+<p>这一年
+三年抗疫基本结束，
+据说负债的中国人，占了一大半。
+成年人的无奈，
+只能牙齿掉了往肚子里咽。
+从今往后，
+赚不到钱再也不能怪新冠。</p>
+<p>2022，时运不济，不如来年再战。
+2023，整装待发，继续加油搬砖。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="水的不同叫法">水的不同叫法<a href="https://wlg.us.kg/en/book/2024/week_202402#%E6%B0%B4%E7%9A%84%E4%B8%8D%E5%90%8C%E5%8F%AB%E6%B3%95" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>小水坑为“洼”，大水坑为“池”；
+小而深为“潭”，大而深为“渊”；
+广而浅叫“淀”，广而深叫“湖”；
+湖连湖叫“泊”，泊连泊叫“泽”；
+水的边际叫“涯”，两山夹水叫“涧”；
+一面临水叫“滩”，两面临水叫“湾”，
+三面临水为“渚”，四面临水为“洲”；
+人工开凿叫“渠”，自然形成叫“溪”；
+溪水汇聚为“河”，大河相连叫“江”；
+水面涌动叫“荡”，水面微动为“漾”；
+水流很急为“湍”，水流很缓为“滞”；
+掀起小浪叫“波”，掀起大浪叫“澜”。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="中国">中国<a href="https://wlg.us.kg/en/book/2024/week_202402#%E4%B8%AD%E5%9B%BD" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>两湖两广两河山
+五江(疆)二宁福吉安
+云贵川藏青甘陕
+内蒙台湾北上天</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="资源">资源<a href="https://wlg.us.kg/en/book/2024/week_202402#%E8%B5%84%E6%BA%90" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-tts-online">1、 <a href="https://www.ttson.cn/" target="_blank" rel="noopener noreferrer">TTS-Online</a><a href="https://wlg.us.kg/en/book/2024/week_202402#1-tts-online" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>这是一个免费的文字转语音工具。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-icon-kitchen">2、 <a href="https://icon.kitchen/" target="_blank" rel="noopener noreferrer">Icon Kitchen</a><a href="https://wlg.us.kg/en/book/2024/week_202402#2-icon-kitchen" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>这个工具可以快速生成支持各个平台的应用程序图标，支持各种参数调整，无需登录，可以免费使用。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-老游戏在线玩">3、 <a href="https://zaixianwan.app/" target="_blank" rel="noopener noreferrer">老游戏在线玩</a><a href="https://wlg.us.kg/en/book/2024/week_202402#3-%E8%80%81%E6%B8%B8%E6%88%8F%E5%9C%A8%E7%BA%BF%E7%8E%A9" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>老游戏在线玩是一个经典老游戏在线玩的网站，在电脑和手机浏览器里畅玩 3000+ 中文老游戏，支持触屏、手柄、键盘、存档！包括 FC, SFC, N64, GB, GBC, GBA, NDS, PS, SS 等多种游戏机平台，打开浏览器即可玩小时候童年的经典，非常有趣。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-实时查看你今天摸鱼赚了多少钱">4、 <a href="https://retire.run/" target="_blank" rel="noopener noreferrer">实时查看你今天摸鱼赚了多少钱</a><a href="https://wlg.us.kg/en/book/2024/week_202402#4-%E5%AE%9E%E6%97%B6%E6%9F%A5%E7%9C%8B%E4%BD%A0%E4%BB%8A%E5%A4%A9%E6%91%B8%E9%B1%BC%E8%B5%9A%E4%BA%86%E5%A4%9A%E5%B0%91%E9%92%B1" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>retire.run – 退休，跑 是一款开源的摸鱼神器，打开网站，输入你的月薪，就能实时在浏览器标签栏查看到今天赚到的钱了，非常有趣的一个小工具，上班无聊的时候看看今天的收入，真的是越看越精神，越干越有劲。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-钉钉企典">5、 <a href="https://dingtalk.com/qidian/" target="_blank" rel="noopener noreferrer">钉钉企典</a><a href="https://wlg.us.kg/en/book/2024/week_202402#5-%E9%92%89%E9%92%89%E4%BC%81%E5%85%B8" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>钉钉企典是一款免费的企业信息查询工具，支持查公司、查老板、找客户、探风险等等，查看企业整体情况（包括：法定代表、注册资本、成立时间、公司地址、联系电话、邮箱地址、知识产权、经营信息、司法风险、政务处罚风险等），目前免费为用户提供企业信息与老板信息查询、公司查询、工商信息查询、企业查询、工商查询、企业风险查询等相关信息，让你快速了解企业相关信息，工商信息，高管信息，股东信息，裁判文书，查询公司等等，而且不用注册登录就可以使用。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6免费的在线截图工具">6、<a href="https://www.screenshotmachine.com/" target="_blank" rel="noopener noreferrer">免费的在线截图工具</a><a href="https://wlg.us.kg/en/book/2024/week_202402#6%E5%85%8D%E8%B4%B9%E7%9A%84%E5%9C%A8%E7%BA%BF%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>Screenshot Machine，一个免费的在线截图工具，支持桌面页面截图、平板页面截图和手机页面截图，同时支持整页截图，对于一些页面太长的想要截图的时候，除开利用专业的长页面截图拼接软件，还可以使用在线截图工具 Screenshot Machine，只需要复制网页地址，即可轻松截取网页整页长截图，非常方便。同时网站还提供 API 共开发人员使用，详细可以参考官网。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7文件批量重命名工具">7、<a href="https://webrename.cn/" target="_blank" rel="noopener noreferrer">文件批量重命名工具</a><a href="https://wlg.us.kg/en/book/2024/week_202402#7%E6%96%87%E4%BB%B6%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>在线文件批量重命名工具，无需下载安装，直接在线完成文件批量重命名，支持多种重命名模式，纯本地化客户端完成重命名，数据不会上传到服务器，高效便捷，安全放心。由于受到浏览器内存限制，浏览器无法读取过大的文件，因此工具适合小文件批量重命名，大文件可能会造成文件打包时间过长，甚至浏览器奔溃，具体多大取决于你的机器情况和浏览器的设置。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8easyspider">8、<a href="https://github.com/NaiboWang/EasySpider" target="_blank" rel="noopener noreferrer">EasySpider</a><a href="https://wlg.us.kg/en/book/2024/week_202402#8easyspider" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>EasySpider 是一个免费开源可视化爬虫工具，可以使用图形化界面，无代码可视化的设计和执行爬虫任务。只需要在网页上选择自己想要爬的内容并根据提示框操作即可完成爬虫设计和执行。同时软件还可以单独以命令行的方式进行执行，从而可以很方便的嵌入到其他系统中，非常方便，即使不会代码也很轻松爬去自己想要的数据资源了，目前支持 Windows、macOS和Linux。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9snapdrop">9、<a href="https://snapdrop.net/" target="_blank" rel="noopener noreferrer">Snapdrop</a><a href="https://wlg.us.kg/en/book/2024/week_202402#9snapdrop" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>Snapdrop 是一款开源的跨平台浏览器文件传输在线服务 (局域网文件传输 / 内网文件传输)，灵感来自 Apple 的 Airdrop，使用简单，只需要同时打开一个网页，就能传输文件了，不会在任何服务器端保存数据，P2P 传输，基于浏览器的 WebRTC 接口，手机端与电脑端均可使用。
+GitHub开源地址：<a href="https://github.com/RobinLinus/snapdrop" target="_blank" rel="noopener noreferrer">https://github.com/RobinLinus/snapdrop</a>
+Snapdrop：<a href="https://snapdrop.net/" target="_blank" rel="noopener noreferrer">https://snapdrop.net/</a>
+JiDrop：<a href="https://jidrop.com/" target="_blank" rel="noopener noreferrer">https://jidrop.com/</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10seekflag">10、<a href="https://seekflag.com/" target="_blank" rel="noopener noreferrer">seekflag</a><a href="https://wlg.us.kg/en/book/2024/week_202402#10seekflag" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>可以在这个网站下载所有国家国旗</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="网站">网站<a href="https://wlg.us.kg/en/book/2024/week_202402#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="白马地图"><a href="https://bmaps.cn/" target="_blank" rel="noopener noreferrer">白马地图</a><a href="https://wlg.us.kg/en/book/2024/week_202402#%E7%99%BD%E9%A9%AC%E5%9C%B0%E5%9B%BE" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>一款第三方的 Android 地图导航应用，使用了百度地图、高德地图以及腾讯地图 API 进行服务，可以在地图内随时切换地图源、导航源</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="唐库学习"><a href="http://www.tanglib.com/" target="_blank" rel="noopener noreferrer">唐库学习</a><a href="https://wlg.us.kg/en/book/2024/week_202402#%E5%94%90%E5%BA%93%E5%AD%A6%E4%B9%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>电子书网站，提供世界名著的中英双语对照朗读。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="言论">言论<a href="https://wlg.us.kg/en/book/2024/week_202402#%E8%A8%80%E8%AE%BA" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="换一种心态">换一种心态<a href="https://wlg.us.kg/en/book/2024/week_202402#%E6%8D%A2%E4%B8%80%E7%A7%8D%E5%BF%83%E6%80%81" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>每当你认为别人毁了你的生活时，实际上是你自己毁了你的生活。受害者心态是一种非常有害的心态。</p>
+<p>如果你换一种心态：无论情况多糟糕，这始终是你自己的问题，并且你尽力来解决它。我认为这更有效。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="赚钱最快的四条路">赚钱最快的四条路<a href="https://wlg.us.kg/en/book/2024/week_202402#%E8%B5%9A%E9%92%B1%E6%9C%80%E5%BF%AB%E7%9A%84%E5%9B%9B%E6%9D%A1%E8%B7%AF" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>・第一、信息差，即我知道的，你不知道。
+・第二、认知差，即指我懂的，你不懂。
+・第三、执行差，即你我都懂，但你不做我做。
+・第四、竞争差，即你我都懂，你我都做，但我做得比你好。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="语录">语录<a href="https://wlg.us.kg/en/book/2024/week_202402#%E8%AF%AD%E5%BD%95" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<ul>
+<li>村口的狗叫了，其他的狗也会跟着叫，但它们并不知道为什么，当浑浊成为一种常态，清白也是一种罪过。        ——鲁迅</li>
+<li>打断你一条腿，再给你一副拐杖，最后告诉你，没有我你连路都走不了。      ——鲁迅</li>
+<li>如果动物光吃不胖，它的肚子里一定有蝈虫，如果人民勤劳无法致富，那社会一定有吸血鬼。        ——鲁迅</li>
+<li>人性就是一说到钱权，就立马放大瞳孔，一说到男女性事，就立刻变得兴奋，然后一说到道德、礼仪，良知，个个噤若寒蝉，和我没关系，不关我的事。      ——鲁迅</li>
+<li>任何看似牢不可破的关系，实际在利益面前，多数都不堪一击，落井下石得是自己人，看你笑话的不是外人，不希望你好的是身边人。      ——鲁迅</li>
+<li>搞仕途的人就是这样，扯淡的事，干的很专业。专业的事，干的很扯淡，有利的事，干的很积极，不要脸的事，干的天衣无缝。      ——鲁迅</li>
+<li>奴性极重的人，对同类一定极其凶残。它们从奴隶主那里失去的自尊，需要从同类中得到补偿，他们对上卑躬屈膝，对下却嚣张跋扈。      ——鲁迅</li>
+<li>当有一天你发现周围的人变得客气了，不是他们善良了，也不是素质提高了，而是你的实力变强了。      ——鲁迅
+一个网页 CSS 动画生成器，可视化设定动画，自动生成代码。</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202401]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202401</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202401"/>
+        <updated>2024-11-29T21:23:53.516Z</updated>
+        <summary type="html"><![CDATA[视频]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="视频">视频<a href="https://wlg.us.kg/en/book/2024/week_202401#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><a href="https://weibo.com/5510773324/Mpnaa4bJr" target="_blank" rel="noopener noreferrer">宫廷玉液酒，一百八一杯</a></p>
+<p><a href="https://weibo.com/2430259303/MxmREtBiq" target="_blank" rel="noopener noreferrer">分 手 歌</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="摘录">摘录<a href="https://wlg.us.kg/en/book/2024/week_202401#%E6%91%98%E5%BD%95" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="对联">对联<a href="https://wlg.us.kg/en/book/2024/week_202401#%E5%AF%B9%E8%81%94" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>上联「白塔寺前三座塔，塔、塔、塔」
+下联「我这话里五个这，这，这，这」</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="你知道你所熟知的名言俗语下半句是什么吗">你知道你所熟知的名言俗语下半句是什么吗？<a href="https://wlg.us.kg/en/book/2024/week_202401#%E4%BD%A0%E7%9F%A5%E9%81%93%E4%BD%A0%E6%89%80%E7%86%9F%E7%9F%A5%E7%9A%84%E5%90%8D%E8%A8%80%E4%BF%97%E8%AF%AD%E4%B8%8B%E5%8D%8A%E5%8F%A5%E6%98%AF%E4%BB%80%E4%B9%88%E5%90%97" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>1、久病床前无孝子，下半句是：久贫家中无贤妻。</p>
+<p>2、春宵一刻值千金，下半句是：花有清香月有阴。</p>
+<p>3、近水楼台先得月，下半句是：向阳花木易为春。</p>
+<p>4、恭敬不如从命，下半句是：受训莫如从顺。</p>
+<p>5、小心使得万年船，下半句是：谨慎能捕千秋蝉。</p>
+<p>6、不忘初心，方得始终，下半句是：初心易得，始终难守。</p>
+<p>7、可怜之人必有可恨之处，下半句是：可恨之人必有可悲之苦。</p>
+<p>8、今朝有酒今朝醉，下半句是：明日愁来明日愁。</p>
+<p>9、初生牛犊不怕虎，下半句是：待到长成反怕狼。</p>
+<p>10、尽人事听天命，下半句是：淡心境待时机。</p>
+<p>11、浪子回头金不换，下半句是：衣锦还乡做贤人。</p>
+<p>12、一失足成千古恨，下半句是：再回头是百年人。</p>
+<p>13、解铃还须系铃人，下半句是：心病还须心药医。</p>
+<p>14、书到用时方恨少，下半句是：事非经过不知难。</p>
+<p>15、树欲静而风不止，下半句是：子欲养而亲不待。</p>
+<p>16、朋友妻不可欺，下半句是：朋友夫不可抚。</p>
+<p>17、冰冻三尺非一日之寒，下半句是：积土成山非斯须之作。</p>
+<p>18、欲速，则不达，下半句是：见小利，则大事不成。</p>
+<p>19、此地无银三百两，下半句是：隔壁王二不曾偷。</p>
+<p>20、言必信，行必果，下半句是：硁硁然小人哉。</p>
+<p>21、君子之交淡如水，下半句是：小人之交甘若醴。</p>
+<p>22、色不迷人人自迷，下半句是；情人眼里出西施。</p>
+<p>23、物以稀为贵，下半句是：情因老更慈。</p>
+<p>24、酒肉穿肠过，下半句是：佛祖心中留。</p>
+<p>25、老来多健忘，下半句是：唯不忘相思。</p>
+<p>26、相濡以沫，下半句是：不如相忘于江湖。</p>
+<p>27、饱暖思淫欲，下半句是：饥寒起盗心。</p>
+<p>28、恭敬不如从命，下半句是：受训莫如从顺。</p>
+<p>29、长江后浪推前浪，下半句是：世上新人赶旧人。</p>
+<p>30、人逢喜事精神爽，下半句是；闷向心来瞌睡多。</p>
+<p>31、男儿有泪不轻弹，下半句是：只是未到伤心处。</p>
+<p>32、天涯何处无芳草，下半句是：多情却被无情恼。</p>
+<p>33、人是生而自由的，下半句是：但无往不在枷锁之中。</p>
+<p>34、粗缯大布裹生涯，后半句是：腹有诗书气自华。</p>
+<p>35、水至清则无鱼，后半句是：人至察则无徒。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="如何用鲁迅的口吻表达我了">如何用鲁迅的口吻表达我🐏了<a href="https://wlg.us.kg/en/book/2024/week_202401#%E5%A6%82%E4%BD%95%E7%94%A8%E9%B2%81%E8%BF%85%E7%9A%84%E5%8F%A3%E5%90%BB%E8%A1%A8%E8%BE%BE%E6%88%91%E4%BA%86" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>1、我大抵是阳了，烧的横竖都睡不着，坐起来做了个抗原，这头疼没有由来，黯然看着抗原上的两条杠，一条是我的，另一条也是我的。</p>
+<p>2、屋里出奇的安静，我拖着滚烫又沉重的头喝了一杯热水，窗外天气是阴的，而我不是。</p>
+<p>3、人从来都是会病的。但从来如此，便对吗？这一次，我大抵觉察出些异端了。我家的门口有两间药铺，一间布洛芬已售罄，另一间也已售罄。我躺在床上，横竖睡不着觉。只觉着周身火烧，酸痛难忍。我用抗原试剂一测，试剂上写着什么C、T的英文字符。我仔细看了半夜，才从两条横杠中看见，分明写着“阳了”二字。</p>
+<p>4、世间本没有阳，阳的人多了，我便也成了阳。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022年正能大v被打脸的十个瞬间">2022年，正能大V被打脸的十个瞬间<a href="https://wlg.us.kg/en/book/2024/week_202401#2022%E5%B9%B4%E6%AD%A3%E8%83%BD%E5%A4%A7v%E8%A2%AB%E6%89%93%E8%84%B8%E7%9A%84%E5%8D%81%E4%B8%AA%E7%9E%AC%E9%97%B4" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<ol>
+<li>1月21日，郑州暴雨调查报告全文显示：不同阶段瞒报139人。这个报告狠狠地打了某些正能大V的脸，因为在事件当初，这些正能大V不是瞎编河南暴雨是美地的气象武器，就是说假地铁里的人已救出，不是铁口断定不会隐瞒，就是恶意满满地诬蔑痛失爱女的雨衣爸爸是镜外势力。后来事实打了这些无良的正能大V的脸。而调查报告更是把说出“相信不会隐瞒”的胡编的脸给打肿了。</li>
+<li>俄侵乌之初，正能大V们沸腾了，什么闪电战，什么12小时拿下基辅，什么24小时拿下乌克兰，什么乌克兰的总统泽连斯基逃跑了。结果，他们一个个遭到事实打脸，闪电战一直打到2023年了，战争还没结束，而泽连斯基根本就没跑，不断地露脸拍视频报告行踪，并且一直坚守在乌克兰。</li>
+<li>人饿了要吃饭，这是常识，但当四月的上海有人因为饿了敲盆的时候，正能大V们在传什么敲盆的是镜外势力。正能大V们大概都是从不吃人饭的，所以有此认为。但后来事实证明，敲盆就是简单的要吃饭，为了反最基本的常识，正能大V的脸都不要了。</li>
+<li>正能大V连岳，平时写文章老叫别人不要去美地，美地很危险，不要去日本，去了日本会被类似奥姆真理教的组织毒死。结果一夜之间IP地址全网显示，连岳的公众号IP一栏赫然两个字：日本。直接打了连岳的脸。</li>
+<li>当武汉那个作家写日记火了的时候，六六怼了武汉作家，结果没想到当自己的母亲需要上医院时，却求救无门，在网上发出了猪一样的哀嚎，还遭来了粉粉们的谩骂。</li>
+<li>咸朗平的微博前一脚还在歌唱，结果没多久，自己的母亲因为酸酸延误去世还被骂。</li>
+<li>有些正能大V为了吹嘘疫苗真的是脸不要，有个叫金某荣的大V在视频中说：“西方的很多富人，现在自己花钱跑到阿联酋去打中国国药的灭活疫苗......飞过去办签证，全部打下来25万人民币。”这个正能大V吹得很得意，但也被真实打脸了，真实是西方很多国去阿联酋根本不用办签证，而人家会放着有效的疫苗不打，还不远万里去打你的苗，人家的脑子坏了吗？</li>
+<li>一些正能大V不断地说美地因为疫情死了很多人，过得生不如死，除了这地好，其它地不是水深就是火热。但被卡塔尔世界杯上的人山人海不用戴口罩不用各种码并且满场的欢乐给打脸了。</li>
+<li>11月20日的时候，胡编发微博说“一些人所要的那种‘放开’是不可能的，至少今冬明春的XX决不会那样做。无论他们喜不喜欢，这是我的一个判断。”结果不到半个月，突然放开了。脸被打得啪啪响，12月2号的时候，胡编赶紧发微博又说：“老胡近几个月一直是解除大规模封控和恢复正常生产生活秩序的舆论推动者之一”胡编为了躲开打脸，迅速来个180度大旋转。难怪有人说他没有脸。</li>
+<li>正能大V 们说辉瑞的40岁高管感染新冠在上海去世，生前曾推广过辉瑞特效药，还发出有图有文的“真相”。于是，指责辉瑞药是骗人的，还指责和痛骂认同辉瑞药的人是汉奸，是卖X贼，但识英语的网友们又用事实打了这些正能大V们的脸。事实是去世的人是一家叫百时美施贵宝的公司，而不叫辉瑞。这脸打得好重，不仅让大家看清了正能大V们的险恶用心，还打出了一个可笑的事实，那就是某些正能大V们连英语都不认识。</li>
+</ol>
+<p>这些被打脸的，几乎个个都是不要脸。而世上最可怕的一种人之一，就是不要脸的人，因为不要脸，脑子也可以不要，人性也可以不要，人心也可以不要，所以这些人看起来特别不像人，像魑魅魍魉，像禽兽不如，什么谎都敢说，什么恶都能作。旧的一年即将过去，盘点这些，我绝不是吃饱了没事干，也不是故意羞辱他们，我不过就是想写出来，让大家看得更清晰，并且去思考问题，看看那些在网上叫得最大声，流量最多的一些正能大V，到底是不是人？而他们往往口中最爱喊着爱X，而他们真的爱X吗？脸都不要，你相信他们是真的爱这爱那吗？</p>
+<p>也有人说，负能量们也会遭打脸，没错，但负能量被打脸，根本不能和正能们相提并论，因为负能们做事依据的都是人性人心，依据的都是讲常识讲道理，即便打脸打的也是人脸，做的依然是正确的事。比如放开之初，缪晓辉医生告诉大家不用备药，结果也被大家满街找药给打脸了，但并不能改变缪医生的出发点是正确的，因为常识告诉我们，一般的情况下怎么会缺那种最普通的药呢？而正能与负能都被打脸的还有一个不同，那就是，正能们从不会为自己被打脸道歉。而缪医生却道歉了。</p>
+<p>看看盘点的那些正能大V们吧，他们有为哪次被打脸而道歉过？不仅没有，而多数还继续在丧失人性人心的路上一路狂奔。</p>
+<p>康德说：“一个人做一件事，不管他出于什么样的理由，必须为由此产生的后果负责。”但这些正能大V们从不为自己说过的假、造过的谣、以及丧心病狂产生的后果而负责。所以他们真的不是人。其实，他们是不是人不要紧，但他们却能影响很多人，影响人的脑子，让脑子失去判断能力，让人性失去，变成没人性的人。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="水的不同叫法">水的不同叫法<a href="https://wlg.us.kg/en/book/2024/week_202401#%E6%B0%B4%E7%9A%84%E4%B8%8D%E5%90%8C%E5%8F%AB%E6%B3%95" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>小水坑为“洼”，大水坑为“池”；
+小而深为“潭”，大而深为“渊”；
+广而浅叫“淀”，广而深叫“湖”；
+湖连湖叫“泊”，泊连泊叫“泽”；
+水的边际叫“涯”，两山夹水叫“涧”；
+一面临水叫“滩”，两面临水叫“湾”，
+三面临水为“渚”，四面临水为“洲”；
+人工开凿叫“渠”，自然形成叫“溪”；
+溪水汇聚为“河”，大河相连叫“江”；
+水面涌动叫“荡”，水面微动为“漾”；
+水流很急为“湍”，水流很缓为“滞”；
+掀起小浪叫“波”，掀起大浪叫“澜”。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="中国">中国<a href="https://wlg.us.kg/en/book/2024/week_202401#%E4%B8%AD%E5%9B%BD" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>两湖两广两河山
+五江(疆)二宁福吉安
+云贵川藏青甘陕
+内蒙台湾北上天</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202439]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202439</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202439"/>
+        <updated>2024-09-23T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202439#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cdnv2.ruguoapp.com/lmutBGIZD_yKyaYbNMmCXGhk5DOQv3.png" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cdnv2.ruguoapp.com/ltSAITGf5Z56Ofkrb2k4HWMMQfUYv3.png" alt="ltSAITGf5Z56Ofkrb2k4HWMMQfUYv3.png" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cdnv2.ruguoapp.com/lvGjC7WhWyFgSUFVUZQgNfUiP24Ev3.png" alt="lvGjC7WhWyFgSUFVUZQgNfUiP24Ev3.png" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文摘">文摘<a href="https://wlg.us.kg/en/book/2024/week_202439#%E6%96%87%E6%91%98" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1为什么没有更多的人使用-linux">1、<a href="https://world.hey.com/dhh/why-don-t-more-people-use-linux-33b75f53" target="_blank" rel="noopener noreferrer">为什么没有更多的人使用 Linux？</a><a href="https://wlg.us.kg/en/book/2024/week_202439#1%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89%E6%9B%B4%E5%A4%9A%E7%9A%84%E4%BA%BA%E4%BD%BF%E7%94%A8-linux" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>下面是著名程序员、Rails 框架的作者 DHH 的最新文章。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202409/bg2024091801.webp" alt="img" class="img_ev3q"></p>
+<p>几周前，我看到一条推文问道："如果 Linux 这么好，为什么没有更多的人使用它？"</p>
+<p>这个问题听上去很有道理。你们都说 Linux 好，它甚至是免费的，那为什么没有大规模采用呢？</p>
+<p>但是，如果你仔细想一想，就会发现生活中到处是这样的情况。</p>
+<p>如果锻炼如此有益健康，为什么没有更多的人去做呢？</p>
+<p>如果阅读如此有教育意义，为什么没有更多的人这样做呢？</p>
+<p>如果垃圾食品对你如此有害，为什么还有那么多人吃它？</p>
+<p>......</p>
+<p>世界上充满了值得尝试的事情和事物，但大多数时候却被大多数人忽视。现实世界的真实情况是，变得肥胖和无知要比保持健康和学习更容易。</p>
+<p><strong>大多数人总是选择最容易、最不需要努力的事情。</strong></p>
+<p>Linux 就不容易，比微软和苹果的商业产品对使用者的要求更高。为了用好它，你需要学习一些东西，还要自己尝试解决问题。</p>
+<p>我完全理解为什么大多数计算机用户对 Linux 不感兴趣，因为他们只想浏览网页或使用应用程序，并不希望成为计算机的高级用户。</p>
+<p>但是，程序员不一样，对于他们，深入了解计算机是工作必需。这就是为什么程序员往往使用 Linux，也应该使用 Linux 的原因。</p>
+<p>Linux 就跟生活中很多其他事情一样，<strong>选择它不是因为容易，而是因为它值得</strong>。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202436]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202436</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202436"/>
+        <updated>2024-09-02T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202436#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCly1ht5jq0os9uj30gc0zkdh3.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://p.sda1.dev/19/2361f6824d900401f7fdc88398326ac2/640.webp%20_7_.png" alt="" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202436#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="老人言">老人言<a href="https://wlg.us.kg/en/book/2024/week_202436#%E8%80%81%E4%BA%BA%E8%A8%80" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>1、亲不过父母，近不过夫妻。
+2、没有三分利，谁肯起五更。
+3、好人老睡成病人，病人老睡成死人。
+4、三十不浪四十浪，五十正在浪头上。
+5、贤妻何愁家不富，子孝何必父出力。
+6、不懂装懂，一世饭桶。
+7、有钱不狂妄，没钱不弯腰。
+8、饿死不打亲戚工，穷死不耕丈人田。
+9、遇到烂人不理会，遇到破事别纠缠。
+10、画虎画皮难画骨，知人知面不知心。
+11、马老腿慢，人老嘴慢。
+12、玩人丧德，玩物丧志。
+13、齿软不赴丧，肉软不吃凉。
+14、宁可当众亮丑，不可脸上贴金。
+15、为人不做亏心事，半夜敲门心不惊 。
+16、得之我幸，失之我命。
+17、相识满天下，知心能几人。
+18、话多不如话少，话少不如话好。
+19、人能百忍则无忧，事不三思终有悔。
+20、人情似纸张张薄，世事如棋局局新。
+21、舍不得苗，抱不到瓢。
+22、不看家中妻，但看身上衣。
+23、蝇子见不得血，赃官见不得钱。
+24、无欲自然心如水，有营何止事如毛。
+25、体虚招病，心虚招鬼。
+26、认理不认人，帮理不帮亲。
+27、人害人害不倒，天害人草不生。
+28、宁在人前全不会，不在人前会不全。
+29、人怕出名猪怕壮，牛怕鞭子狗怕棒。
+30、书到用时方恨少，事非经过不知难</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202435]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202435</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202435"/>
+        <updated>2024-08-26T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202435#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2024/0829/2e43b0cej00siz88500hpc000j600otc.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2024/0829/2c006b1fj00siz88j0142c000u001o0c.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2024/0829/bd047543j00siz88r00i0c000j600vqc.jpg" alt="" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="有趣">有趣<a href="https://wlg.us.kg/en/book/2024/week_202435#%E6%9C%89%E8%B6%A3" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="伦敦动物园的涂鸦画">伦敦动物园的涂鸦画<a href="https://wlg.us.kg/en/book/2024/week_202435#%E4%BC%A6%E6%95%A6%E5%8A%A8%E7%89%A9%E5%9B%AD%E7%9A%84%E6%B6%82%E9%B8%A6%E7%94%BB" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>班克斯（Banksy）是英国著名的街头涂鸦画家。他会偷偷在半夜的街头，留下自己的作品。</p>
+<p>他的最新作品画在伦敦动物园的卷帘门上。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202408/bg2024081704.webp" alt="img" class="img_ev3q"></p>
+<p>画的内容是一只大猩猩拉起卷帘门，释放出一只海狮和多只鸟，其他动物似乎在里面观望。</p>
+<p>伦敦动物园表示，这幅作品"绝对精彩"，将会保存下来。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202408/bg2024081705.webp" alt="img" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="电源开关符号的演变">电源开关符号的演变<a href="https://wlg.us.kg/en/book/2024/week_202435#%E7%94%B5%E6%BA%90%E5%BC%80%E5%85%B3%E7%AC%A6%E5%8F%B7%E7%9A%84%E6%BC%94%E5%8F%98" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>电源开关符号是一个圆圈中带有垂直线。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202312/bg2023121304.webp" alt="img" class="img_ev3q"></p>
+<p>这个符号从何而来？</p>
+<p>最早的时候，电源开关是一个杠杆或滑块，可以在两个位置中（"ON"和"OFF"）移动。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202312/bg2023121305.webp" alt="img" class="img_ev3q"></p>
+<p>随着开关变得更小、更加全球化，这两个英文单词被 1 和 0 取代，1 代表"on"，0 代表"off"。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202312/bg2023121306.webp" alt="img" class="img_ev3q"></p>
+<p>微处理器的出现，使得电子设备可以判断你的意思是"on"还是"off"。因此，按钮现在不需要区分 on 和 off 了，两个位置可以合成一个。</p>
+<p>它的图标就是把两个词合在一起，具体做法就是把1放在0里面了。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202312/bg2023121307.webp" alt="img" class="img_ev3q"></p>
+<p>这个圆形图标非常适合圆形按钮，变得无处不在。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202434]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202434</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202434"/>
+        <updated>2024-08-19T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202434#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://p.sda1.dev/18/33a9d7a5f14c5b0ab81a51a3bc0d3cce/dw4gn%20_51_.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://p.sda1.dev/18/46532ae2033cdb742a7176c868414508/dw4gn%20_63_.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCly1hsu1154p6wj30oc0p477n.jpg" alt="福利吧fuliba123.net (5)" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://s1.juimg.top/uploads/2024/07/02cc5c134dca5b6.jpg" alt="img" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://s1.juimg.top/uploads/2024/07/de55b658390a9eb.jpg" alt="img" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202434#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="为大脑充电的方法让你保持高效的学习力">为大脑充电的方法，让你保持高效的学习力<a href="https://wlg.us.kg/en/book/2024/week_202434#%E4%B8%BA%E5%A4%A7%E8%84%91%E5%85%85%E7%94%B5%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%A9%E4%BD%A0%E4%BF%9D%E6%8C%81%E9%AB%98%E6%95%88%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%8A%9B" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>如果你像很多人一样，学习可以迅速消耗你的精力。在钻研课本或课堂笔记的同时保持专注和动力是很有挑战性的，这就是为什么积极地为你的大脑充电是如此重要。了解一些保持学习效率的同时为头脑充电的简单技巧，你就能打破单调的学习生活，重新振作起来，充满活力。</p>
+<p><em><strong>1. 保持水分</strong></em></p>
+<p>保持水分对保持大脑健康和最佳功能至关重要。此外，适当的补水有助于刺激认知能力，但它也可以提高警觉性和注意力，支持短期记忆，促进更好的决策。全天保持充足的水分有助于身体循环，从而减少疲劳，这对大脑功能尤其有益。相反，脱水会导致“脑雾”，或无法集中注意力或专注于任务。每天喝大量健康的液体对大脑的最佳表现至关重要。</p>
+<p><em><strong>2. 保证充足睡眠</strong></em></p>
+<p>每晚充足的睡眠对我们的整体健康，包括我们的大脑健康至关重要。研究表明，睡眠可以提高创造力，提高注意力，并能解决问题。据美国国家睡眠基金会称，每晚睡足8小时有助于增强记忆力，使大脑能够有效地处理和存储信息。在睡眠期间，身体还会产生褪黑素等激素，促进细胞再生，预防阿尔茨海默病等疾病。睡眠不足会导致记忆力下降和认知功能减退。</p>
+<p><em><strong>3.给大脑补充营养</strong></em></p>
+<p>健康饮食是你可以采取的最重要的步骤之一，为你的整体健康。健康的饮食不仅能改善你的身体健康，还能对你的心理健康和认知功能产生积极的影响。研究表明，那些吃富含抗氧化剂、维生素、矿物质和必需脂肪酸的营养食品的人更有可能在认知测试中表现得更好。换句话说，我们吃的东西的质量直接影响我们思考和解决问题的能力。</p>
+<p><em><strong>4. 经常锻炼</strong></em></p>
+<p>锻炼是一天中给精神和身体补充能量的好方法。它可以刺激神经活动，增强认知功能，让你的大脑更有效地工作。体育活动会增加皮质醇、多巴胺和血清素水平，这有助于你的大脑保持警觉，为任何事情做好准备。这反过来又能提高注意力、解决问题的能力和创造力。此外，人们发现经常锻炼可以降低压力水平，改善心理健康，因为它有助于释放调节情绪的内啡肽。</p>
+<p>当白天需要补充能量时，不妨试试以下方法：</p>
+<blockquote>
+<p>在家里放一首自己喜欢的歌，跳一段自己喜欢的舞</p>
+<p>绕着街区散步20分钟</p>
+<p>骑上你的自行车或固定自行车30分钟</p>
+<p>在泳池里游几圈</p>
+<p>跑步45分钟</p>
+</blockquote>
+<p><em><strong>5. 摆脱压力</strong></em></p>
+<p>压力会显著影响我们集中注意力和有效学习的能力。超负荷的压力甚至是微小的日常压力都会模糊我们的思维，使我们难以处理和保留信息。压力导致的皮质醇水平升高进一步损害了认知功能，使我们更难集中注意力和记住事情。为了抵消这种影响，重要的是在学习过程中休息一下，保持水分，得到足够的休息，进行积极的自言自语，练习深呼吸等专注技巧。</p>
+<p><em><strong>6. 改善你的社交生活</strong></em></p>
+<p>健康的社交生活是学生成功的关键部分。从表面上看，与朋友和家人共度时光似乎与学业成功无关。然而，研究表明，保持牢固的人际关系并保持社交活跃的学生学习成绩有所提高。保持持续的人际接触和有意义的对话有助于压力管理，提高注意力和专注力。此外，社交可以激发创造力，这可以给学生提供如何最好地解决学术问题和作业的想法。</p>
+<p><em><strong>7.给自己来点奖励</strong></em></p>
+<p>期待未来的奖励可以激励你继续学习。你可以在完成作业后犒劳自己一杯咖啡或一个甜甜圈，也可以在提交期末论文后周末去旅行。有吸引力的身体或精神奖励可以鼓励你在准备即将到来的考试和作业时坚持下去，尤其是当这些任务需要很长时间的时候。</p>
+<p>奖励不仅有利于激励自己，还能在困难时期出现压力时起到额外的激励作用。通过激励自己努力工作，在参加重要考试或完成高难度项目时，付出额外努力很可能会带来更有希望的结果。</p>
+<p><em><strong>8.跳出常规</strong></em></p>
+<p>坚持一贯的习惯固然有好处，但打破常规也能更新你的学习策略。打破常规可以让你对学习材料有一个全新的认识。例如，尝试改变你的学习地点或缩短学习时间，增加休息时间，让自己更有动力和警觉性。你可以在上午精力充沛时学习更具挑战性的内容，而把更容易处理的任务留到晚些时候，因为那时你可能会感觉更累一些。做一些不同的事情还能刺激你的大脑以新的方式思考材料，不仅能改善你的学习方法，还能提高你的记忆力。</p>
+<p><em><strong>9. 冥想和放松</strong></em></p>
+<p>研究表明，定期冥想对学术研究非常有益，可以提高注意力和集中力，减轻压力，并鼓励创造力。冥想包括专注于呼吸，通过加强大脑神经元之间的通路来促进思路清晰，从而更好地保持记忆和表现技能。它还可以帮助我们克服在学习新材料或任务时可能遇到的心理障碍。</p>
+<p><em><strong>10. 做些有创意的事情</strong></em></p>
+<p>参与创造性活动，如绘画、写作或演奏乐器，可以让你的思维从僵化的学业压力中解脱出来。参与这些活动不仅能缓解压力，还能让大脑探索新的视角，刺激新神经元的形成，从而增强认知和解决问题的能力。此外，创造性的活动还能培养成就感。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202433]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202433</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202433"/>
+        <updated>2024-08-12T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202433#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://www.qpic.ws/images/2024/08/06/CRtGPA.jpg" alt="CRtGPA.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://www.qpic.ws/images/2024/08/06/CRtIpe.jpg" alt="CRtIpe.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://cdnv2.ruguoapp.com/FpZ9zRaSmJvDCaBs4MDPEXbdsbz5v3.jpg" alt="FpZ9zRaSmJvDCaBs4MDPEXbdsbz5v3.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://66img.cc/images/2024/08/12/DM_20240812154213_013.jpg" alt="DM_20240812154213_013.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://p.sda1.dev/18/123703069a160f727978e955b3827b5c/03451.webp" alt="03451.webp" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://p.sda1.dev/18/f7fd44f1f9efec9c768578ec351d3c8c/03463.webp" alt="03463.webp" class="img_ev3q"></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202432]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202432</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202432"/>
+        <updated>2024-08-06T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[文摘]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文摘">文摘<a href="https://wlg.us.kg/en/book/2024/week_202432#%E6%96%87%E6%91%98" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="经验">经验<a href="https://wlg.us.kg/en/book/2024/week_202432#%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>1、遇到穷人，一律说钱不重要，快乐就好。</p>
+<p>2、遇到女人，一律说对方瘦了，更漂亮了。</p>
+<p>3、遇到病人，一律夸对方气色好了，很快就会康复了。</p>
+<p>4、遇到带孩子的，一律夸小孩聪明好看。</p>
+<p>5、亲友富人多，就荣归故里，高调做事互相整合资源。</p>
+<p>6、亲友穷人多，就锦衣夜行，尽量低调，防止被人惦记。</p>
+<p>7、出门办事尽量带现金，不要红包转账。</p>
+<p>8、走关系办成的事，烂在肚子里都不要说。</p>
+<p>9、重要的场合，一定要正装出席。</p>
+<p>10、不要在公共场合数大额现金，容易招来祸事。</p>
+<p>11、请贵客吃饭，带一个女生一同前往，能很快"破冰"。</p>
+<p>12、老板酒桌上的承诺，90%都不是真的。</p>
+<p>13、汽车非常干净的人，通常不是很好客。</p>
+<p>14、能力不是最重要，关系才是王道。要懂得维护好自己的人脉。</p>
+<p>15、 跟异性喝酒，喝到一半就假装醉倒，保持一半的清醒。</p>
+<p>16、混好了，别人看不惯你;混不好，别人看不起你。</p>
+<p>17、跟越厉害的人打交道，越要用价值开路，就是你能给对方带来什么好处。</p>
+<p>18、给人家提供价值，说点别人爱听的，这就是聊天的真谛。</p>
+<p>19、不管什么阶层，什么圈里都存在鄙视链。</p>
+<p>20、99%的人可以用银子解决，剩下的1 %可以用金子解决。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="股票买卖">股票买卖<a href="https://wlg.us.kg/en/book/2024/week_202432#%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><strong>买入策略</strong></p>
+<ol>
+<li><strong>定期投资</strong>：每月或每季度固定投资一定金额，可以减少市场时机选择的风险，长期平滑购买成本，取决于生活长期必须之外的剩余流水。</li>
+<li><strong>价值投资</strong>：当股票价格低于其内在价值时买入，可以使用市盈率(P/E)、市净率(P/B)等指标，与行业平均水平比较，比如说这些指标低于 5 年平均值 10% 以上时考虑买入。</li>
+<li><strong>逢低加仓</strong>：在市场或个股大幅下跌时逐步买入，比如说下跌 10%的时候买入小部分，下跌 20%时候增加买入，这里前期是你分析下来这只股票没有什么问题。</li>
+</ol>
+<p><strong>卖出策略</strong></p>
+<ol>
+<li><strong>止盈</strong>：当股票达到预设的盈利目标时卖出，设置阶梯式止盈点，如盈利 20%时卖出 25%的持仓，盈利 40%时再卖出 25%。这里很容易被上涨情绪给欺骗，认为一直会涨，导致最后反而没有赚到。</li>
+<li><strong>止损</strong>：设置最大可接受损失比例，通常设置在购买价格的 10% 左右，但可根据个股波动性调整。这里很多人在亏钱的时候也会有一种必胜的心理，想着只是暂时的。</li>
+<li><strong>基本面变化</strong>：当公司基本面发生重大不利变化时考虑卖出，比如说连续几个季度业绩下滑、管理层变动、竞争格局恶化等，此外这里也需要考虑国家政策风险。</li>
+<li><strong>资产再平衡</strong>：如每半年将投资组合调整回目标配置比例，比如复盘时候某只股票占比超过目标配置 5%以上，可考虑部分卖出，这个操作对于长期投资很有必要。</li>
+<li><strong>估值过高</strong>：股票估值明显高于其合理价值时考虑卖出，当 P/E 比率超过行业平均 50%或历史平均 50%时，考虑减持。</li>
+</ol>
+<p><strong>特别注意</strong></p>
+<ol>
+<li><strong>设置触发提醒</strong>：利用股票交易软件设置价格提醒，当股票达到预设的买入或卖出价位时获得通知。</li>
+<li><strong>保持情绪控制</strong>：避免因恐惧或贪婪而做出非理性决策。坚持预先制定的策略。</li>
+<li><strong>定期审视</strong>：每季度回顾一次投资策略和持仓，确保与您的投资目标一致。</li>
+<li><strong>分批操作</strong>：无论买入还是卖出，都考虑分多次完成，以降低时机选择的风险。</li>
+<li><strong>关注宏观因素</strong>：考虑经济周期、利率变化、行业趋势等宏观因素对买卖决策的影响。</li>
+</ol>
+<p><strong>最后没有完美的买卖时机，关键是建立一个系统化的方法，并始终坚持纪律，这个被情绪坑过后才知道特别重要</strong>，投资需谨慎。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202431]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202431</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202431"/>
+        <updated>2024-07-29T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202431#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://www.qpic.ws/images/2024/07/21/CUdMmb.jpg" alt="" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://www.qpic.ws/images/2024/07/21/CUd46u.jpg" alt="CUd46u.jpg" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://p.sda1.dev/18/21cc2f5d26952089ce8b2e190e8c23a1/%E8%80%8C%E5%AE%9A%20_3_.png" alt="" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="资讯">资讯<a href="https://wlg.us.kg/en/book/2024/week_202431#%E8%B5%84%E8%AE%AF" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="windows-蓝屏"><a href="https://www.macrumors.com/2024/07/22/microsoft-blames-european-commission-for-outage/" target="_blank" rel="noopener noreferrer">Windows 蓝屏</a><a href="https://wlg.us.kg/en/book/2024/week_202431#windows-%E8%93%9D%E5%B1%8F" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>上周，Windows 系统出现全球故障，几百万台电脑发生蓝屏，无法启动。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024072301.webp" alt="img" class="img_ev3q"></p>
+<p>原因是安全软件公司 CrowdStrike 的更新包，引发了内核故障。</p>
+<p>这就很奇怪了，为什么一个第三方应用软件，可以修改内核？</p>
+<p>微软的解释是，多年前，欧盟认为微软自家的安全软件 Windows Defender 有垄断嫌疑，微软必须向其他安全软件开放同样的内核访问权限，所以 CrowdStrike 才能修改内核。</p>
+<p>相比之下，苹果公司始终不开放内核权限，所以这次故障不影响 Mac 系统。但是，欧盟已经把矛头对准了苹果。</p>
+<p>幸亏汽车、飞机不使用 Windows 系统，否则行驶中突然蓝屏，真得害死人。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="阿里云公共-dns-免费版限速"><a href="https://www.landiannews.com/archives/105048.html" target="_blank" rel="noopener noreferrer">阿里云公共 DNS 免费版限速</a><a href="https://wlg.us.kg/en/book/2024/week_202431#%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%AC%E5%85%B1-dns-%E5%85%8D%E8%B4%B9%E7%89%88%E9%99%90%E9%80%9F" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024072008.webp" alt="img" class="img_ev3q"></p>
+<p>阿里云的免费 DNS 自9月30日开始限速，单个 IP 的请求数不能超过 20QPS，超过需要使用付费版。它开了公共 DNS 限速的先河。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="墨西哥的面积"><a href="https://unchartedterritories.tomaspueyo.com/p/25-fascinating-facts-about-mexico" target="_blank" rel="noopener noreferrer">墨西哥的面积</a><a href="https://wlg.us.kg/en/book/2024/week_202431#%E5%A2%A8%E8%A5%BF%E5%93%A5%E7%9A%84%E9%9D%A2%E7%A7%AF" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>墨西哥是一个面积很大的国家，大到出乎你的想象。</p>
+<p>欧洲的30个国家，可以一起放进墨西哥，包括德国、英国、爱尔兰、奥地利、捷克、匈牙利等等。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024071901.webp" alt="img" class="img_ev3q"></p>
+<p>历史上，墨西哥的面积甚至更大，比现在大一倍多。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024071902.webp" alt="img" class="img_ev3q"></p>
+<p>上图中，绿色部分是过去的墨西哥，两根红线是现在的墨西哥国界。</p>
+<p>墨西哥的领土主要被美国抢走。今天的得克萨斯州、加利福尼亚州、内华达州和犹他州全境，以及亚利桑那州、科罗拉多州、新墨西哥州和怀俄明州的部分地区，历史上都属于墨西哥。</p>
+<p>1846年到1848年爆发的美墨战争，以墨西哥割让这些领土告终。</p>
+<p>下图是美国和墨西哥的边境。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024072204.webp" alt="img" class="img_ev3q"></p>
+<p>上图中，左侧是美国的圣地亚哥市，基本上是农村；右侧是墨西哥的蒂华纳市，完全是都市。</p>
+<p>两边的反差这么大，主要是墨西哥北部的经济完全依靠美国，越靠近美国的地方，经济越繁荣。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="雷军年度演讲"><a href="https://finance.sina.com.cn/tech/roll/2024-07-23/doc-incfcpey8084281.shtml" target="_blank" rel="noopener noreferrer">雷军年度演讲</a><a href="https://wlg.us.kg/en/book/2024/week_202431#%E9%9B%B7%E5%86%9B%E5%B9%B4%E5%BA%A6%E6%BC%94%E8%AE%B2" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>王传福多年前关于造车的一句话给了我很大的勇气。</p>
+<p>他说很多企业因为不了解，会把技术想象到令人畏惧的高度，这种畏惧正是对手给后来者营造了一种产业恐吓。他们不断地告诉你做不成，投入很大，研发很难，直到你放弃。其实你解决不了的不是因为你没有能力，而是你缺乏勇气。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202431#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="普通人有哪些副业可以赚钱">普通人有哪些副业可以赚钱？<a href="https://wlg.us.kg/en/book/2024/week_202431#%E6%99%AE%E9%80%9A%E4%BA%BA%E6%9C%89%E5%93%AA%E4%BA%9B%E5%89%AF%E4%B8%9A%E5%8F%AF%E4%BB%A5%E8%B5%9A%E9%92%B1" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>近几个月，AI大模型的应用非常火爆，卖课的各位老师，也在反复强调AI会让大量人失业，同时2024年的招聘也变得异常苛刻，出卖劳动力卖不上价钱。</p>
+<p>为了活着，就要思考一下，普通人可以做哪些副业增加收入？以及AI对这些副业有什么影响。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-网络兼职自由撰稿网上教学或翻译服务">1. 网络兼职：自由撰稿、网上教学或翻译服务<a href="https://wlg.us.kg/en/book/2024/week_202431#1-%E7%BD%91%E7%BB%9C%E5%85%BC%E8%81%8C%E8%87%AA%E7%94%B1%E6%92%B0%E7%A8%BF%E7%BD%91%E4%B8%8A%E6%95%99%E5%AD%A6%E6%88%96%E7%BF%BB%E8%AF%91%E6%9C%8D%E5%8A%A1" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p><strong>自由撰稿</strong>会长期存在，但需要精品内容，AI可以在查阅资料方面节省作者的时间，比如本文大概10%的内容就是AI生成的。</p>
+<p><strong>网上教学</strong>是很好的副业，如果课程干货满满，还可以做类似知识星球的订阅制。</p>
+<p><strong>翻译服务</strong>未来基本会被AI取代，大模型现阶段的翻译能力，已经很强大了</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-电商在网上开店如淘宝京东或拼多多开店">2. 电商：在网上开店，如淘宝、京东或拼多多开店<a href="https://wlg.us.kg/en/book/2024/week_202431#2-%E7%94%B5%E5%95%86%E5%9C%A8%E7%BD%91%E4%B8%8A%E5%BC%80%E5%BA%97%E5%A6%82%E6%B7%98%E5%AE%9D%E4%BA%AC%E4%B8%9C%E6%88%96%E6%8B%BC%E5%A4%9A%E5%A4%9A%E5%BC%80%E5%BA%97" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>中国的电商是红海，卖一些虚拟产品或服务还有些搞头，纯副业倒卖实体商品，可能就得走走黄牛路线了；</p>
+<p>如果是Steam爱好者，可以套一下G胖的钱袋子，我有个哥们儿开了可以海外交易的卡，而在Steam倒余额，买卖游戏，基本8折，几百块的独立游戏，8折的利润空间，也还算可以。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-手工艺品制作与销售">3. 手工艺品制作与销售<a href="https://wlg.us.kg/en/book/2024/week_202431#3-%E6%89%8B%E5%B7%A5%E8%89%BA%E5%93%81%E5%88%B6%E4%BD%9C%E4%B8%8E%E9%94%80%E5%94%AE" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>如果你擅长手工艺，可以制作商品在线上或在手工艺市场销售，手工作坊的特色是，商品相对独特，产量低，能保证一定的利润空间，但受众也比较窄。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4-股票或者基金投资">4. 股票或者基金投资<a href="https://wlg.us.kg/en/book/2024/week_202431#4-%E8%82%A1%E7%A5%A8%E6%88%96%E8%80%85%E5%9F%BA%E9%87%91%E6%8A%95%E8%B5%84" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>学习投资知识后，可以尝试股票市场或基金投资，A股负责收学费，美股负责做时间的朋友。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="5-房地产投资">5. 房地产投资<a href="https://wlg.us.kg/en/book/2024/week_202431#5-%E6%88%BF%E5%9C%B0%E4%BA%A7%E6%8A%95%E8%B5%84" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>如果你有很多房，租赁房产或通过短租平台出租空闲房间，土地是财富之母，东亚的地租地狱，确实一本万利。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="6-摄影">6. 摄影<a href="https://wlg.us.kg/en/book/2024/week_202431#6-%E6%91%84%E5%BD%B1" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>如果能拍出好作品，可以考虑通过出售照片或提供摄影服务来赚钱。</p>
+<p>摄影的前期投入也比较大，兼职摄影的话，回本的周期很长。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="7-网络影视剪辑">7. 网络影视剪辑<a href="https://wlg.us.kg/en/book/2024/week_202431#7-%E7%BD%91%E7%BB%9C%E5%BD%B1%E8%A7%86%E5%89%AA%E8%BE%91" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>如果你是一个剪辑师，可以为需要视频内容的企业或个人提供剪辑服务。</p>
+<p>做youtuber或up主是灵活就业的重灾区，youtuber可能还有一些创作收入，b站up主基本已经卷爆了。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="8-外包接单编程">8. 外包接单编程<a href="https://wlg.us.kg/en/book/2024/week_202431#8-%E5%A4%96%E5%8C%85%E6%8E%A5%E5%8D%95%E7%BC%96%E7%A8%8B" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>如果你有编程技能，可以提供软件开发或网站建设服务。</p>
+<p>很多企业喜欢外包软件开发，电鸭这类远程工作的社区，也能找到一些外包开发的项目。</p>
+<p>如果是层层外包的网站开发的话，WordPress就能解决大多数问题。App开发如果没有原生的要求，React native也能搞定大多数需求。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="9-做个人独立开发者">9. 做个人独立开发者<a href="https://wlg.us.kg/en/book/2024/week_202431#9-%E5%81%9A%E4%B8%AA%E4%BA%BA%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E8%80%85" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>由于版号的原因，独立游戏基本无法在大陆发行，上架到Steam更现实一些，独立游戏是一个壳子，可以装任何内容，放个《完蛋！我被美女包围了》，也能顺利上架Steam盈利。</p>
+<p><strong>做独立软件</strong>，中国的App备案进一步拉高了手机App开发的门槛。</p>
+<p>按照我做开源软件的经验，对于个人开发者而言，做免费软件，几乎没有动力维护下去，老老实实做付费软件，才是长期之道。</p>
+<p>在中国做付费软件，也有好处，人口基数大，相对小众的需求，也能找到用户，比如纯记录足迹的App，只要价格不是太离谱，也有用户付费。</p>
+<p>做独立开发者，要远离大而全的功能，一个人根本无法维护太多的功能。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="10-健身教练">10. 健身教练<a href="https://wlg.us.kg/en/book/2024/week_202431#10-%E5%81%A5%E8%BA%AB%E6%95%99%E7%BB%83" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>锻炼身体是稳赚不亏的，如果你对健身有热情和知识，可以成为私人健身教练。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="11-外卖和网约车">11. 外卖和网约车<a href="https://wlg.us.kg/en/book/2024/week_202431#11-%E5%A4%96%E5%8D%96%E5%92%8C%E7%BD%91%E7%BA%A6%E8%BD%A6" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>在业余时间开展外卖配送或网约车服务。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="12-游戏代练">12. 游戏代练<a href="https://wlg.us.kg/en/book/2024/week_202431#12-%E6%B8%B8%E6%88%8F%E4%BB%A3%E7%BB%83" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>游戏界的搬砖党，基本无法享受游戏的乐趣，但有钱赚。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="小结">小结<a href="https://wlg.us.kg/en/book/2024/week_202431#%E5%B0%8F%E7%BB%93" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>在当前经济环境下，拥有多样化的收入来源可以作为一种风险管理策略，副业常常能让你接触到不同领域的人，扩大你的社交和职业网络。这种交流可以带来新的机遇，无论是业务上的合作还是更广泛的职业机会。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="某社群一夜赚千万它在割韭菜么">某社群一夜赚千万，它在割韭菜么？<a href="https://wlg.us.kg/en/book/2024/week_202431#%E6%9F%90%E7%A4%BE%E7%BE%A4%E4%B8%80%E5%A4%9C%E8%B5%9A%E5%8D%83%E4%B8%87%E5%AE%83%E5%9C%A8%E5%89%B2%E9%9F%AD%E8%8F%9C%E4%B9%88" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>是不是割韭菜，20%取决于它，80%取决于自己。</p>
+<p>最近生财有术彻底火出圈了，社群收费1656起，2万多人报名，一夜赚千万。</p>
+<p>有人欢呼，有人羡慕，有人咒骂……</p>
+<p>“它在割韭菜!”，这样的声音不绝于耳。</p>
+<p>有负面是正常的，我本来是一个局外人，不必过多参与这场讨论。但王叔今天想借此机会讨论一下，到底什么是割韭菜?</p>
+<blockquote>
+<p><strong>为什么你总是被割韭菜?以及韭菜如何自救!</strong></p>
+</blockquote>
+<p>听完之后，你再判断，它到底有没有割韭菜。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="01-什么是割韭菜">01 什么是割韭菜?<a href="https://wlg.us.kg/en/book/2024/week_202431#01-%E4%BB%80%E4%B9%88%E6%98%AF%E5%89%B2%E9%9F%AD%E8%8F%9C" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>互联网创业5年来，大大小小的镰刀见过不少，确实有不少人是昧着良心在收割。总结一下，基本都是这几种。</p>
+<p><strong>成交前：</strong></p>
+<p>①故弄玄虚</p>
+<p>故意把项目遮遮掩掩的，玩神秘连名字都不让你知道的，100%是割韭菜。好项目不怕让人知道，甚至是大多数人都知道。他不想让你知道，就是想利用信息差收割。</p>
+<p>②夸大宣传</p>
+<p>各种晒成交截图、收款截图，宣传只要付费就能轻松赚钱的，100%是割韭菜。赚钱从来没有容易的事，宣传“轻松赚钱”的，本身就是利用了韭菜懒惰又贪婪的恶性。</p>
+<p><strong>成交后：</strong></p>
+<p>①价值不对等</p>
+<p>市面上烂大街9.9的东西，卖你999。这是利用你的无知收割你。</p>
+<p>②服务不对等</p>
+<p>说好的一对一服务，不赚钱包退款，要达到XX效果，结果就拉群上了3节课，后面不闻不问。这是利用你的信任收割你。</p>
+<p>圈内常见的基本就这几种，欢迎各位补充。手头正想买某某项目的，也请对号入座，帮你避坑。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="02-为什么你总是被割韭菜">02 为什么你总是被割韭菜?<a href="https://wlg.us.kg/en/book/2024/week_202431#02-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E6%80%BB%E6%98%AF%E8%A2%AB%E5%89%B2%E9%9F%AD%E8%8F%9C" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>总是有些人为了赚钱，在不停地买项目。我很好奇，他们为什么花那么多钱去买项目，赚钱就是买个好项目么?</p>
+<p>有人说是因为焦虑，有人说是看着他做得挺赚钱，有人说是希望找个人带带……总之就是把希望全部寄托在别人身上，希望花个几百几千，买个“好项目”，就能轻松赚钱。</p>
+<p>但是当项目买到手，课程看完，难以上手，发现不是那么回事。大骂割韭菜，恨自己运气不好，看走了眼。然后继续去找项目，找新的镰刀来收割自己，下次一定能买个好项目。</p>
+<p>这不是买项目，这是买彩票!我倒不是否认市面上所有的培训/社群，都是在割韭菜，但是这种思维进去，100%要被割韭菜!</p>
+<p>是不是割韭菜，80%取决于你是不是韭菜思维。不愿学习，不能吃苦，不能坚持……寄希望于买项目/进圈子，就能轻松赚钱。一旦有了这种思维，不管买什么，哪怕是9.9买一顿巴菲特午餐，也一定是割韭菜!因为它远远达不到你的期望，也永远不可能达到你的期望。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="03-韭菜如何自救">03 韭菜如何自救?<a href="https://wlg.us.kg/en/book/2024/week_202431#03-%E9%9F%AD%E8%8F%9C%E5%A6%82%E4%BD%95%E8%87%AA%E6%95%91" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>韭菜自救第一步，永远不要把希望寄托在任何项目与任何大佬上。赚钱最核心的一定是靠自己努力。</p>
+<p>韭菜自救第二步，从日赚30做起。市面上多可做的事情很多，免费的教程也很多，先不靠任何人，从日赚30开始试试，这真的一点也不难!!不要听别人说这个风口过了，那个项目不行了，再垃圾的项目，日赚30绝对不难。</p>
+<p>开始创业，9.9打包卖资料，从公众号/知乎引流，从日赚三五十开始，一步步走到今天。钱多钱少无所谓，重要的是我要从中历练自己，从实践中理解什么是“流量”，什么是“项目”。</p>
+<p>赚钱就是赚差价，但你知道是“差”在哪儿么?</p>
+<blockquote>
+<p>信息差：你不知道，我知道，所以我赚钱;</p>
+<p>执行差：你不做，我做，所以我赚钱;</p>
+<p>竞争差：我做你也做，但我做的比你好，所以我赚钱。</p>
+</blockquote>
+<p>别再只追求“信息差”，一个劲地买项目了，思维该升级一下了。信息差只是赚钱赛道的入场券，强执行和不断竞争才是持续赚钱的核心!!</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="写在最后">写在最后<a href="https://wlg.us.kg/en/book/2024/week_202431#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h4>
+<p>每个人有每个人的答案。这世上从来没有救命稻草，唯一能救你的，只有你自己。自助者，天助之;自弃者，天弃之，任何人都不能阻止你出人头地!</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202430]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202430</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202430"/>
+        <updated>2024-07-22T08:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="图片">图片<a href="https://wlg.us.kg/en/book/2024/week_202430#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://www.qpic.ws/images/2024/07/16/CNNTNc.jpg" alt="CNNTNc.jpg" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="视频">视频<a href="https://wlg.us.kg/en/book/2024/week_202430#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<p><a href="https://weibo.com/1904098061/Ootw68uxg" target="_blank" rel="noopener noreferrer">赛场上的摄影师都是幕后英雄</a></p>
+<p><a href="https://weibo.com/1595766492/OnehpvCgf" target="_blank" rel="noopener noreferrer">日照金山独一无二的非遗漆扇</a></p>
+<p><a href="https://weibo.com/5648729445/Ootz8AotH" target="_blank" rel="noopener noreferrer">给小猫咪买一条比它大N倍的鱼</a></p>
+<p><a href="https://weibo.com/6586305031/OmVIB6QY3" target="_blank" rel="noopener noreferrer">干饭人的至暗时刻</a></p>
+<p><a href="https://weibo.com/5718010523/Om8UzbpD3" target="_blank" rel="noopener noreferrer">太美了都，硬控我六分钟</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="资讯">资讯<a href="https://wlg.us.kg/en/book/2024/week_202430#%E8%B5%84%E8%AE%AF" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gpt-4o-mini模型"><a href="https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/" target="_blank" rel="noopener noreferrer">GPT-4o mini模型</a><a href="https://wlg.us.kg/en/book/2024/week_202430#gpt-4o-mini%E6%A8%A1%E5%9E%8B" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>号称性价比最高的小型模型。</p>
+<ul>
+<li>GPT-4o mini 在 MMLU 上得分 82%，目前在 LMSYS 排行榜上在聊天偏好方面表现优于 GPT-4</li>
+<li>其价格为每百万输入标记 15 美分，每百万输出标记 60 美分，比以往的前沿模型便宜一个数量级，比 GPT-3.5 Turbo 便宜 60%以上。</li>
+</ul>
+<p>GPT-4o mini 以其低成本和延迟，使广泛的任务成为可能，例如链式或并行多个模型调用的应用（例如，调用多个 API），向模型传递大量上下文（例如，完整的代码库或对话历史），或通过快速、实时的文本响应与客户互动（例如，客户支持聊天机器人）。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="google短网址即将下线"><a href="https://9to5google.com/2024/07/18/googl-links/" target="_blank" rel="noopener noreferrer">Google短网址即将下线</a><a href="https://wlg.us.kg/en/book/2024/week_202430#google%E7%9F%AD%E7%BD%91%E5%9D%80%E5%8D%B3%E5%B0%86%E4%B8%8B%E7%BA%BF" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>谷歌在 2019 年 3 月停止生成新的 goo.gl 网址后，这些链接将在 2025 年 8 月 25 日停止工作。</p>
+<p>当 <a href="https://goo.gl/" target="_blank" rel="noopener noreferrer">https://goo.gl/</a>* 停止工作时，自从创建新链接以来已经超过六年。2025 年 8 月 25 日，“这些 URL 将不再返回响应”（404）。</p>
+<p>所以，为什么很多人都偏向于自部署的开源软件，其中一部分原因就是担心服务不可靠，到时候迁移起来麻烦吧。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文章">文章<a href="https://wlg.us.kg/en/book/2024/week_202430#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="为什么你的副业项目赚不到钱"><a href="https://dev.to/wasp/5-reasons-why-your-side-projects-fail-to-make-money-and-how-to-avoid-them-4l5m" target="_blank" rel="noopener noreferrer">为什么你的副业项目赚不到钱</a><a href="https://wlg.us.kg/en/book/2024/week_202430#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E7%9A%84%E5%89%AF%E4%B8%9A%E9%A1%B9%E7%9B%AE%E8%B5%9A%E4%B8%8D%E5%88%B0%E9%92%B1" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><strong>① 不尝试一下</strong></p>
+<p>对失败的恐惧经常阻止我们迈出第一步。不要让这种恐惧阻止你！尝试并失败总比根本不尝试要好。</p>
+<p>当你有一个副业项目的想法时，就去做吧！让你的好奇心和激情驱使你，不要让失败的恐惧阻止你。失败并从错误中学习，一遍又一遍 — 这是成长的最佳方式。</p>
+<p><strong>② 错误的ieda</strong></p>
+<p>在副业项目中的一个常见陷阱是匆忙进行构思过程。彻底的头脑风暴过程对确保你的想法的可行性至关重要。</p>
+<ol>
+<li>验证你的想法：你需要至少有一些保证，即有市场需求。</li>
+<li>确保您的想法解决了一个问题</li>
+<li>评估您的资源：您是否具备将您的想法转化为业务所需的技能、时间和资金？</li>
+</ol>
+<p><strong>③ 无限建设</strong></p>
+<p>追求完美，这往往会导致无休止的调整和延迟。记住，“完成比完美更重要。” 完成你的项目并让它面世是至关重要的。如果你的项目没被任何人看到，那只是一个想法。</p>
+<p><strong>④ 没有反馈</strong></p>
+<p>通过与一小群用户测试您的产品来开始。这些用户可以是一群朋友、家人，甚至是一个专门的焦点小组。他们的反馈对于发现任何问题或改进的领域都是宝贵的。</p>
+<p><strong>⑤ 低调的发布</strong></p>
+<p>你已经建立好了，接下来呢？是时候向世界展示了。然而，请记住，时机是关键。如果你进行了一个低调且计划不周的发布，你将得不到你所需的用户（也不会有收入）</p>
+<p>选择合适的平台：Reddit ，Dev Hunt、Product Hunt 和 Hacker News（YC）等</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="笑话">笑话<a href="https://wlg.us.kg/en/book/2024/week_202430#%E7%AC%91%E8%AF%9D" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<ol>
+<li>一天K歌回来，老公喝醉了，听说醉后都会说实话。于是问道：“以后有钱了干嘛?”老公：“要娶五个老婆！” 我怒了：“为什么不学韦小宝娶七个回来？” 老公恍惚道：“太累，我需要双休！”</li>
+</ol>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202027]]></title>
+        <id>https://wlg.us.kg/en/book/2024/week_202427</id>
+        <link href="https://wlg.us.kg/en/book/2024/week_202427"/>
+        <updated>2023-07-01T08:00:00.000Z</updated>
+        <summary type="html"><![CDATA[工具]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="工具">工具<a href="https://wlg.us.kg/en/book/2024/week_202427#%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="copybook-generator"><a href="https://github.com/jaywcjlove/copybook-generator" target="_blank" rel="noopener noreferrer">copybook-generator</a><a href="https://wlg.us.kg/en/book/2024/week_202427#copybook-generator" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>「宝宝字帖」是一款功能强大的字帖生成工具，专为满足不同用户的书写练习需求而设计：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/copybook-generator.jpg" alt="copybook-generator" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rtranslator"><a href="https://github.com/niedev/RTranslator" target="_blank" rel="noopener noreferrer">RTranslator</a><a href="https://wlg.us.kg/en/book/2024/week_202427#rtranslator" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p><code>RTransator</code> 是一个(几乎)开源的、免费的、离线的 <code>Android</code> 实时翻译应用程序。</p>
+<p>连接到有这个应用程序的人，连接蓝牙耳机，把手机放在你的口袋里，你就可以像对方说你的语言一样进行交谈。</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/RTranslator.jpg" alt="RTranslator" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="bilivideo_down"><a href="https://github.com/kangpeiqin/bilivideo_down" target="_blank" rel="noopener noreferrer">bilivideo_down</a><a href="https://wlg.us.kg/en/book/2024/week_202427#bilivideo_down" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>一款基于 <code>Flutter</code> 开发的跨平台面端 B 站视频下载器：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/bilivideo_down.jpg" alt="bilivideo_down" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="weibo-archiver"><a href="https://github.com/Chilfish/Weibo-archiver" target="_blank" rel="noopener noreferrer">Weibo-archiver</a><a href="https://wlg.us.kg/en/book/2024/week_202427#weibo-archiver" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>将微博导出备份的油猴脚本，为号被完全夹没前未雨绸缪 😭</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/68747470733a2f2f702e6368696c666973682e746f702f776569626f2f666561747572652e77656270.webp" alt="Weibo-archiver" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="网站">网站<a href="https://wlg.us.kg/en/book/2024/week_202427#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="uilibhub"><a href="https://uilibhub.com/zh" target="_blank" rel="noopener noreferrer">uilibhub</a><a href="https://wlg.us.kg/en/book/2024/week_202427#uilibhub" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>探索最佳 <code>UI</code> 库，助力 <code>React &amp; Vue</code> 高效开发：
+<img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/uilibhub.jpg" alt="uilibhub" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="kkdaxue"><a href="https://www.kkdaxue.com/" target="_blank" rel="noopener noreferrer">kkdaxue</a><a href="https://wlg.us.kg/en/book/2024/week_202427#kkdaxue" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>高考志愿网站，发现各专业前辈们的学习建议：
+<img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/kkdaxue.jpg" alt="kkdaxue" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="undraw"><a href="https://undraw.co/illustrations" target="_blank" rel="noopener noreferrer">unDraw</a><a href="https://wlg.us.kg/en/book/2024/week_202427#undraw" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>这个网站提供了很多免费的插画，无需登录可以下载 SVG 格式的文件。&nbsp;
+<img decoding="async" loading="lazy" src="https://imgs.zhubai.love/4a95dde058af40928809bbaad7eb268a_2192261542853668864.png" alt="4a95dde058af40928809bbaad7eb268a_2192261" class="img_ev3q"></p>
+<p>&nbsp;</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="项目">项目<a href="https://wlg.us.kg/en/book/2024/week_202427#%E9%A1%B9%E7%9B%AE" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="swashbucklerdiary"><a href="https://github.com/Yu-Core/SwashbucklerDiary" target="_blank" rel="noopener noreferrer">SwashbucklerDiary</a><a href="https://wlg.us.kg/en/book/2024/week_202427#swashbucklerdiary" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>「侠客日记」是一个开源、跨平台的本地日记 APP，支持 Android、Windows、macOS 和 Web 等平台。其特点包括极简风格的 UI 设计、Markdown 即时渲染、隐私模式、标签分类展示、支持图片音视频、数学公式等多种格式，数据本地存储无需联网，并且支持多种格式文件导出及同一局域网下同步传输。</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/SwashbucklerDiary.jpg" alt="SwashbucklerDiary" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="opencore-legacy-patcher"><a href="https://github.com/dortania/OpenCore-Legacy-Patcher" target="_blank" rel="noopener noreferrer">OpenCore-Legacy-Patcher</a><a href="https://wlg.us.kg/en/book/2024/week_202427#opencore-legacy-patcher" class="hash-link" aria-label="Direct link to heading" title="Direct link to heading">​</a></h3>
+<p>旨在为不受苹果支持的 <code>Mac</code> 提供 <code>macOS Big Sur</code> 等更新版本的安装和使用，让你的旧 Mac 电脑可以体验最新的 macOS 系统：</p>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/OpenCore-Legacy-Patcher.jpg" alt="OpenCore-Legacy-Patcher" class="img_ev3q"></p>]]></content>
+    </entry>
+</feed>

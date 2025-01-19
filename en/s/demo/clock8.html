@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间</title>
+</head>
+
+<body>
+<div class="box">
+    <div id="time">
+        <div class="circle" style="--clr: #279746">
+            <div class="dots hr-dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="hh"></circle>
+            </svg>
+            <div id="hours">00</div>
+        </div>
+        <div class="circle" style="--clr: #f86a34">
+            <div class="dots min-dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="mm"></circle>
+            </svg>
+            <div id="minutes">00</div>
+        </div>
+        <div class="circle" style="--clr: #4285f4">
+            <div class="dots sec-dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="ss"></circle>
+            </svg>
+            <div id="seconds">00</div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    // 时分秒数字
+    let hours = document.querySelector("#hours");
+    let minutes = document.querySelector("#minutes");
+    let seconds = document.querySelector("#seconds");
+    // 时分秒外圈
+    let hh = document.querySelector("#hh");
+    let mm = document.querySelector("#mm");
+    let ss = document.querySelector("#ss");
+    // 每秒更新
+    setInterval(() => {
+        // 获取时分秒，数字补0，逢24变00
+        let h = new Date().getHours() >= 10 && new Date().getHours() != 24 ? new Date().getHours() : new Date().getHours() == 24 ? '00' : '0' + new Date().getHours();
+        let m = `${new Date().getMinutes()}`.padStart(2, 0);
+        let s = `${new Date().getSeconds()}`.padStart(2, 0);
+        // 更新内容
+        hours.innerHTML = h + '\n<div class="tip">HOURS</div>';
+        minutes.innerHTML = m + '\n<div class="tip">MINUTES</div>';
+        seconds.innerHTML = s + '\n<div class="tip">SECONDS</div>';
+        // 外圈计算
+        // 总周长- (总周长 / 时分秒100%的对应数字 * 当前时分秒)   =   总周长 - 当前时间占比的的长度
+        hh.style.strokeDashoffset = 440 - (440 / 24 * h);
+        mm.style.strokeDashoffset = 440 - (440 / 60 * m);
+        ss.style.strokeDashoffset = 440 - (440 / 60 * s);
+    }, 1000);
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .box {
+        margin: 20px auto 0;
+        background-color: #2f363e;
+        width: 600px;
+    }
+
+    #time {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        padding: 60px;
+    }
+
+    #time .circle {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #time .circle svg {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform: rotate(270deg);
+    }
+
+    #time .circle svg circle {
+        width: 100%;
+        height: 100%;
+        fill: transparent;
+        stroke: #191919;
+        stroke-width: 4;
+        transform: translate(5px, 5px);
+    }
+
+    #time .circle svg circle:nth-child(2) {
+        stroke: var(--clr);
+        stroke-dasharray: 440;
+    }
+
+    #time div {
+        position: absolute;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+
+    #time div .tip {
+        position: absolute;
+        font-size: 0.35em;
+        font-weight: lighter;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #time .ap {
+        position: relative;
+        font-size: 1em;
+        transform: translateY(-20px);
+    }
+
+    .dots {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .dots::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: var(--clr);
+        border-radius: 50%;
+        box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+    }
+</style>
+
+</html>

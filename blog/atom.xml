@@ -1,17 +1,267 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.wlgs.site/blog</id>
     <title>WBlog Blog</title>
-    <updated>2025-03-19T15:00:04.000Z</updated>
+    <updated>2025-04-28T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.wlgs.site/blog"/>
     <subtitle>WBlog Blog</subtitle>
     <icon>https://blog.wlgs.site/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>https://blog.wlgs.site/blog/welcome</id>
-        <link href="https://blog.wlgs.site/blog/welcome"/>
-        <updated>2025-03-19T15:00:04.000Z</updated>
+        <title type="html"><![CDATA[周刊 202518]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202518</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202518"/>
+        <updated>2025-04-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://cdn.fliggy.com/upic/1745756932.jpg?x-oss-process=image/resize,w_3600/format,webp" alt="" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202518#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://66img.cc/i/2025/04/23/68088c5ba214a.gif" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://66img.cc/i/2025/04/23/68088cb4f05ae.gif" alt="" class="img_iEQV"></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202517]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202517</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202517"/>
+        <updated>2025-04-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[开源]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCgy1i0kvrguxy0j30u00xiwho.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0424/6ef42869j00sv7xb700owc000go00nrc.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://66img.cc/i/2025/04/24/680981e7bb036.gif" alt="" class="img_iEQV"></p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="开源">开源<a href="https://blog.wlgs.site/blog/2025/weekly-202517#%E5%BC%80%E6%BA%90" class="hash-link" aria-label="开源的直接链接" title="开源的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="chatlog"><a href="https://github.com/sjzar/chatlog" target="_blank" rel="noopener noreferrer">chatlog</a><a href="https://blog.wlgs.site/blog/2025/weekly-202517#chatlog" class="hash-link" aria-label="chatlog的直接链接" title="chatlog的直接链接">​</a></h3>
+<p>微信聊天记录工具，帮助大家轻松使用自己的聊天数据：</p>
+<ul>
+<li>从本地数据库文件获取聊天数据</li>
+<li>支持 Windows / macOS 系统</li>
+<li>支持微信 3.x / 4.0 版本</li>
+<li>提供 Terminal UI 界面 &amp; 命令行工具</li>
+<li>提供 HTTP API 服务，支持查询聊天记录、联系人、群聊、最近会话等信息</li>
+<li>支持 MCP SSE 协议，可与支持 MCP 的 AI 助手无缝集成</li>
+<li>支持多媒体消息，支持解密图片、语音</li>
+<li>支持自动解密数据，简化使用流程</li>
+<li>支持多账号管理，可在不同账号间切换</li>
+</ul>
+<p><img decoding="async" loading="lazy" src="https://images-1252557999.file.myqcloud.com/uPic/NSigD0.png" alt="chatlog" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="网站">网站<a href="https://blog.wlgs.site/blog/2025/weekly-202517#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="网站的直接链接" title="网站的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="chaz-3d--nokia-3250"><a href="https://chaz.fun/phone/3250/" target="_blank" rel="noopener noreferrer">CHAZ 3D – Nokia 3250</a><a href="https://blog.wlgs.site/blog/2025/weekly-202517#chaz-3d--nokia-3250" class="hash-link" aria-label="chaz-3d--nokia-3250的直接链接" title="chaz-3d--nokia-3250的直接链接">​</a></h3>
+<p>CHAZ 3D – Nokia 3250是一个在线Nokia 3250 3D体验网站，该3D体验展示诺基亚3250经典手机的交互式模型，支持拖拽旋转、捏合缩放以及长按电源键实现开关机操作。用户可在操作区域内通过屏幕触控感受手机基本功能。</p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="vmshell"><a href="https://mysql.vmshell.com/" target="_blank" rel="noopener noreferrer">VmShell</a><a href="https://blog.wlgs.site/blog/2025/weekly-202517#vmshell" class="hash-link" aria-label="vmshell的直接链接" title="vmshell的直接链接">​</a></h3>
+<p>VmShell 提供永久免费的公共 MySQL 数据库服务，数据库位于 mysql.vmshell.com，端口号为 3306，用户可以使用注册时设置的用户名和密码进行连接</p>
+<p>注册地址：<a href="https://mysql.vmshell.com/register.php" target="_blank" rel="noopener noreferrer">https://mysql.vmshell.com/register.php</a></p>
+<p>数据库地址数据库地址：mysql.vmshell.com
+端口号：3306</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202516]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202516</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202516"/>
+        <updated>2025-04-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202516#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0414/230c8aa4j00supe4s003fc000u001q1c.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0417/1b6d2f13g00suuwsc03y0c000f000b9c.gif" alt="" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="视频">视频<a href="https://blog.wlgs.site/blog/2025/weekly-202516#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="视频的直接链接" title="视频的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="网友整理的太好了一口气读完中国历史"><a href="https://m.weibo.cn/detail/5155860575420472" target="_blank" rel="noopener noreferrer">网友整理的太好了！一口气读完中国历史</a><a href="https://blog.wlgs.site/blog/2025/weekly-202516#%E7%BD%91%E5%8F%8B%E6%95%B4%E7%90%86%E7%9A%84%E5%A4%AA%E5%A5%BD%E4%BA%86%E4%B8%80%E5%8F%A3%E6%B0%94%E8%AF%BB%E5%AE%8C%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2" class="hash-link" aria-label="网友整理的太好了一口气读完中国历史的直接链接" title="网友整理的太好了一口气读完中国历史的直接链接">​</a></h4>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="文摘">文摘<a href="https://blog.wlgs.site/blog/2025/weekly-202516#%E6%96%87%E6%91%98" class="hash-link" aria-label="文摘的直接链接" title="文摘的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="1旅行50年的一点经验">1、<a href="https://kk.org/thetechnium/50-years-of-travel-tips/" target="_blank" rel="noopener noreferrer">旅行50年的一点经验</a><a href="https://blog.wlgs.site/blog/2025/weekly-202516#1%E6%97%85%E8%A1%8C50%E5%B9%B4%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C" class="hash-link" aria-label="1旅行50年的一点经验的直接链接" title="1旅行50年的一点经验的直接链接">​</a></h4>
+<p>作者：凯文·凯利</p>
+<p>我已经认真旅行了50多年，学到了很多东西。</p>
+<p>旅行有两种模式。一种是休息模式，人们通过旅行来逃避常规的工作，进行放松和重振精神。这种模式下，你会去轻松的地方，悠闲地度过假期。</p>
+<p>另一种是体验模式，你旅行是为了发现新事物，获得新体验，投入一场结果不确定的冒险，遇见异类。这种旅行是一种学习，我的经验主要适合这种模式。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202502/bg2025022005.webp" alt="img" class="img_iEQV"></p>
+<p>很多人旅行有一个误区，就是想看遍所有地方。因为你很可能再也不会来了，所以忍不住想最大化你的行程。既然我们在 X，而 Y 和 Z 又很近，我们不妨去看看 Y 和 Z 吧......</p>
+<p>其实，在更少的地方待更长的时间，远比把时间花在一堆地方好得多。你更应该放慢旅行的速度，多休息。</p>
+<p>旅行最难忘的时刻----与陌生人的交谈、被邀请参观、发现隐藏的地点----通常发生在你停下来的时候。</p>
+<p>你可以前往旅行成本最低的地方，从而同样的预算，就可以待更长的时间。而且，便宜的、非主流的目的地通常值得一游。</p>
+<p>为了获得最佳的旅行体验，你要么投入很多钱，要么投入很多时间。这两种选择中，时间比金钱好得多。因为金钱可以买到时间，但金钱买不到时间所能提供的东西。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[弹珠游戏]]></title>
+        <id>https://blog.wlgs.site/blog/2025/弹珠游戏</id>
+        <link href="https://blog.wlgs.site/blog/2025/弹珠游戏"/>
+        <updated>2025-04-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[家遭变故，只有一个人可以继续念书，最终的抉择，由弹珠游戏胜负决定。]]></summary>
+        <content type="html"><![CDATA[<p>家遭变故，只有一个人可以继续念书，最终的抉择，由弹珠游戏胜负决定。</p>
+<p>一</p>
+<p>柳清和柳安从未见过母亲如此严肃的样子。她端坐在餐桌对面，摩挲着肿胀的指关节，来回端量姐弟二人。几个孩子叫嚷着穿过巷子，一只大黄狗在门口逗留，朝屋内探了探，吐着舌头离开了。“凭良心讲，”母亲终于开口，“我对你俩一向公平。”柳清皱起眉头，说：“妈，别绕弯子，赶快讲。”柳安环视客厅，想找出反驳母亲的证据。窗台上趴着两只铁皮青蛙，发条都坏了；鞋架上两双回力鞋是同一天买的，款式和颜色相同，唯独尺码不同。柳清有的，自己也有。母亲说得没错，她端平了这两碗水。</p>
+<p>“不对。”柳安站起身，从柳清的椅背上摘下挎包，撂在桌上，说：“柳清的包上绣着朵花呢，我的没有。”柳清夺回包，说：“你的又没有磨破，到时候叫咱妈给你补一朵就是了。”柳安说：“我不要花，我要孙悟空。”</p>
+<p>“说正事，”母亲用手肘捶了下桌面，“我没法去厂子干活了。”</p>
+<p>二人同时发愣，掂量着这句话的分量。母亲说：“要不是老柳走得早，咱们现在也不至于考虑往后的问题。”</p>
+<p>“什么问题？”柳清和柳安同时开口。母亲说：“柳安，那段时间你总是没把心思放在学习上，我正担心着，没想到你竟和柳清考了一样的分数。”她看向柳清，“如果老柳还在，他无论如何都会支持你继续跳舞······”母亲停住话头，双手摊放在桌上，说：“哎，我该怎么向他交代啊。”</p>
+<p>三人面面相觑了一会儿，母亲起身去厨房倒水。柳安趴在桌沿，支支吾吾地说：“她是不是要把咱俩送走一个？像二班刘辉的家里那样。”柳清说：“傻帽，咱俩有一个没书念了。”</p>
+<p>上个月，两人都拿到录取通知书，是城里同一所重点高中。这张纸还没在枕头底下捂热，今天就得进垃圾桶了。母亲的身体每况愈下，前些天一连打了三个盘子，她说自己只是不小心。常言体内有疾，手指先知，柳清早已察觉到问题，却没想到母亲下岗得如此突然。</p>
+<p>母亲找来姐弟历年的奖状，铺在桌子两旁，来回清点，生怕有疏漏。结果是柳清占上风，二十三张，比柳安多一张。柳安弓身拿起柳清的一张奖状，说：“进步之星？分明是凑数的，三张加起来都不如我一张优秀班干部奖。”母亲说：“哪能这样算？好歹都是荣誉。”</p>
+<p>柳安跑上楼，取来一张纸。“既然如此，这张也算荣誉。”他在母亲面前摊开。这是以前父亲为柳安颁发的奖状，父亲剪下春联的一片边角料，用漂亮的楷体毛笔字写着：当代诗圣。“要是咱爸没走，我还能得好几张。”柳安撅起嘴望向窗外。“你还有脸讲这个？”柳清说，“要不是你，咱爸今天就能带我去文化宫看表演了。”</p>
+<p>“不许提这件事。”母亲再次用手肘撞响桌子，“今天必须商量出结果，不然谁也别吃饭。”柳安说：“那我先提一嘴，听说舞蹈艺考的培训费很贵的，至少五位数，咱妈就算能分身也赚不来这笔钱。”柳清说：“我将来要跳上春晚的，等赚了大钱，加倍还给咱妈。你呢？写那些狗屁不通的烂诗，一斤顶多卖两毛。”</p>
+<p>“你能跳上春晚，我就不能写进作协啦？”柳安抬高声音，“做梦也得讲求公平的，妈你说是不是？”母亲说：“你俩闹了这么多年闹够没有？这件事必须和和气气地解决。”她端起杯子嘬一口水，喉咙发出清晰的吞咽声，“算了算了，今天先这样。”</p>
+<p>二</p>
+<p>柳清回到卧室锁上门，对着床前的落地镜发呆。镜子是以前父亲买的，柳清每天放学回家都要对镜练舞：立定，旋转，起跳，足尖点地，重现奶奶当年的舞姿，跳完《天鹅湖》跳《红色娘子军》。她眼神自信，姿态灵动，颇有奶奶在文工团时的风姿。每每这样舞起来便目空一切了，直到饥饿时才停下。父亲离世前一直尽力支持她的爱好，带她找老师，买各式舞裙。父亲从不奢求柳清跳出什么名堂，只为了看她在台上傻笑的样子。柳清却满怀理想，一心站上大舞台，给父亲争光。可是柳清觉得母亲刚才分明偏向柳安，自己的舞蹈梦岌岌可危了。她想起床底那双沾着血渍的足尖鞋。倘若不能继续念书，这些年的血都白流了。</p>
+<p>这时门被敲响。母亲在外面小声说：“柳清，我进来一下。”柳清说：“我没心情，你找柳安去吧。”母亲叹了口气，走去了柳安的房间。不一会儿，柳清听见他们争执起来。她朝门外探出头看了看。柳安的房间在过道对面，门上贴了一幅海明威伏案写作的海报画，左下角是一张便签，用透明胶封住，写着：柳清禁止入内。母亲的声音从门后传来：“不管结果怎样，我都希望你俩好好相处，别总是闹别扭。”柳安说：“我和她冤家路窄，你就别费这心了。”</p>
+<p>柳清和柳安的关系早在四年以前就破裂了。起初母亲并没在意，以为他们之间的冷漠只是父亲过世的余波。对于柳安耽误父亲上晚班一事，柳清一直怀恨在心。</p>
+<p>四年前的冬至那天，柳清拿到了少年舞蹈竞赛的奖金。她邀上柳安，来到北街服装批发市场，买下了父亲相中已久的一件深棕色飞行夹克。以前父亲路过时总要拿起它放在身上比对一番，露出满意的神色，对自己说：“啊，这颜色好，料子也好。”可他从不舍得为自己花钱，永远都是比对一下就满足了。姐弟两人到店里时，那件夹克已经断码，只剩一件，卡其色。柳安觉得颜色太浅，工作时容易蹭脏，柳清说父亲才不舍得穿去干活。两人在店里争论很久，终于决定买下。</p>
+<p>父亲傍晚从工地回家，看见挂历的钉子上挂着一件夹克，幸福地笑了，额头的泥灰都藏进了波浪般的皱纹里。穿上身发现码数偏小，袖口够不到手腕，衬衫的下摆长长地露在外面。父亲说：“不用退，过些年我的骨头一缩水，正好合身。”</p>
+<p>柳安趁着父亲的高兴劲，说：“玩一局弹珠吧，你都多久没陪咱们了。”以前父亲清闲的时候，打弹珠是三人必不可少的娱乐项目，但自从他跟了刘工头之后，夜里加班成了家常便饭，弹珠局总是二缺一。若是少了父亲的参与，这场游戏就变了味，两人胡乱地弹球，为争输赢不择手段，最后总要闹得不愉快。</p>
+<p>柳安揪住父亲的衣袖不放。柳清一脸不悦，说父亲累了一天，应该好好休息，不然没力气上晚班。父亲看了看钟，说不碍事，把两人推出了屋。</p>
+<p>父亲的准头一向很好，与其说是比赛，倒不如说是父亲的个人才艺表演。他用结实的大拇指打出弹珠，一枚接一枚地命中目标，姐弟两人都输到只剩一枚时，父亲就会故意打歪，找借口说：“路灯太暗，没看准。”</p>
+<p>这天父亲发挥照常，一连吃下了柳安的十九枚弹珠。他又找理由道：“起风了，下一个肯定得打歪。”柳安说：“回回都让着我们，多没意思？最后一颗了，痛快地赢我一局吧。”父亲说：“赢了又能怎样？你俩开心最重要。”只见他拇指一弹，弹珠慢悠悠地往前滚，停在了柳安那枚弹珠半寸远的地方。父亲站起时犯头晕，捶了捶脑袋，笑着说：“给你们留点翻盘的希望不好吗？”父亲把弹珠袋抛向柳安。两人看着他走进屋里换衣服。</p>
+<p>那天夜里十点半，父亲被工友架着肩膀送回家中。他额头上一颗颗汗粒就像是撒了一地的玻璃弹珠。母亲问他是怎么了，他摇摇头，说只是有些累。父亲躺在沙发上睡了，再也没有醒来。</p>
+<p>四年后的今天，柳清依然能清晰地回想起父亲打出的每一道轨迹，每一次撞击都是那样清脆；父亲蹲下时，夹克被他的脊背绷得很紧；她还记得父亲临走前把夹克衫脱下，轻轻地掸灰，支好衣架挂回了挂历的钉子上。这一挂就是四年，背面的日历停留在1991年12月。</p>
+<p>对母亲和柳安来说，这件夹克衫是个念想。柳清则不同，这是她钉在墙上的恨，对柳安的恨。要不是他那晚消耗了父亲的精力，家中的一切都会顺顺当当。母亲不至于积劳成疾，自己也不用面临辍学的窘境。</p>
+<p><strong>三</strong></p>
+<p>会议连续开了三天依然没有结果。母亲让两人列举各自的优势，制定今后的学习计划，设想未来的收入。讨论结果是柳安长大了要脚踩徐志摩，柳清要单挑杨丽萍。直到母亲的法槌敲响桌子，两人才从虚妄的幻想回到现实。</p>
+<p>柳安知道自己毫无优势，在柳清面前只能靠语气稍稍占些上风。他早已厌倦这样的吹牛游戏。柳清多次参加校内外表演，屡获褒奖。而自己呢？自诩有文采，却从未被刊物录用稿件，甚至拿不出一篇高分作文。文学这种东西是超越时代的，今天写的垃圾，说不定会在将来被人奉为瑰宝呢。母亲和柳清哪懂得这个道理？唯独父亲愿意陪他写作，逐字逐句地推敲，给予中肯的评价。可是父亲已不在，抽屉中的几叠稿纸失去了最好的读者。这能怪谁？还不是自己犯下的罪过。</p>
+<p>有一天吃完早饭，母亲还想继续开会，柳清当即找借口出门，柳安也找理由推辞，躲回卧室。柳安决心做最后的挣扎，他整理出近一年的诗稿，分成五份，每份五组短诗，塞进五枚信封。只要其中一首诗被出版社印成铅字，便能在母亲面前挺直腰杆。但想到等待的漫长，希望的渺茫，又将诗稿取出。也许柳清说得对，这些烂诗只适合挂上秤杆，按斤两衡量价值。</p>
+<p>他记得第一次投稿是同父亲去的邮局。父亲为信封贴上邮票，两人各攥住信封的一角，对准邮筒。父亲说：“一，二，三。好了，未来的大作家很快要诞生咯。”四个月后，柳安收到了退回的稿件，父亲的预言没有成真。那天柳安久久地蹲在巷口的树下，生着闷气。父亲走来，说：“我刚刚又想了一遍，知道原因了。”柳安抬起头，看见父亲将两手背在身后，深情地朗诵道：</p>
+<p>“秋日的寂静中，枫树轻轻摇曳。红色的舞裙，一片片坠落。枯枝划破北风，我听见天空的呜咽。”</p>
+<p>父亲意犹未尽地品味了一会儿，捡起一片叶子，说：“我觉得这一节太伤感，看不见希望。”柳安说：“枯枝败叶的季节里哪有什么希望。”父亲说：“这就不对了，日子都是苦中带甜的，绝望和希望也能并存嘛。”</p>
+<p>柳安把这首诗改写了无数遍，蚂蚁般的字爬一张张稿纸，始终解不开“希望”的奥秘。父亲离世以后，柳安更是觉得世上充满遗憾和感伤，所谓的“希望”都随着父亲埋进了土堆。</p>
+<p>柳安终于将诗稿塞进信封。如果石沉大海，自己也认命了。他拿着信走到楼梯拐角，听见客厅里多了个人，是秦老师的声音。她在母亲面前称赞柳清的天赋，细数她获得的奖项。母亲陪着笑，不时说一句：“我知道，我知道。”秦老师撂下狠话：“柳清要是跳不进北京舞蹈学院的大门，我这辈子的老师算白当，你不能这么糊涂呀。”母亲说：“那我家柳安怎么办？让他辍学也是糊涂呀。”</p>
+<p>柳安小心地退后两步。他没想到柳清居然这么快请来了救兵，有些懊丧。楼下传来玻璃的碎裂声。柳安手中的信没拿稳，掉落在台阶，滑到了客厅。这时柳清大声道：“将来谁更有出息，明摆着的。”楼下安静了好一阵。</p>
+<p>“柳安，”秦老师说，“我知道你在上面，过来一下。”柳安下楼拾起信，塞进衣袋，绕开地面的碎渣，慢慢地挪到秦老师身边。秦老师捧起柳安的手，露出慈祥的表情。“你和柳清都是好孩子，将来一样有出息。”秦老师慢吞吞地说，“可你妈妈现在老啦，总得有人把这个家支起来不是吗？理想固然重要，但要先吃饱饭，经济基础决定上层建筑嘛。”柳安避开了她的眼睛，说：“为什么非得是我？”</p>
+<p>柳清两手叉腰，不言不语。母亲把地面的碎渣铲进簸箕，也没再开口。午间的阳光把巷子的地面照得发亮，屋里却凉飕飕的。一阵风吹进窗子，墙壁上父亲的夹克摇摆起来，似乎想表达什么。母亲正要走上前将夹克重新挂稳当，那颗钉子突然挣脱墙壁，夹克连同挂历掉落在地。一枚淡绿色的玻璃珠从夹克的衣袋里滚出来，跑到了柳安脚边。</p>
+<p>母亲“哎呀”一声，瞪大眼睛，露出惶恐的神情。柳清说：“咱爸显灵了。”</p>
+<p>母亲对秦老师客气地笑了笑，请她改日再来。临走时秦老师对柳清叮嘱道：“千万要记得，你是舞的奴仆，这双脚走到哪就要跳到哪。”柳清点头说知道了。等秦老师走远，母亲关上大门，赶忙拾起弹珠，说：“你们觉得，这老家伙想表达什么？”柳清说：“他选了柳安呗。”母亲说：“我这就去请孙婆婆来看看。”</p>
+<p>“没必要，”柳清说，“我去厂里踩缝纫机就是了。”</p>
+<p><strong>四</strong></p>
+<p>父亲显灵这件事在柳清看来纯粹是偶然，但她恰好借此了结母亲的优柔寡断。母亲的天平再这样摇摆下去，父亲真得从坟里蹦出来。家里失去了经济来源，没理由继续拖延。柳清本打算去制衣厂接替母亲的岗位，但想到自己还有一技之长，说不定能走出别的路子，就像秦老师说的，走到哪跳到哪。柳清找了家职业介绍所，求中介为她安排一份与跳舞沾边的工作。中介说：“在商场扮玩偶算不算？”柳清摇头，说自己愿意等。她每天一早守在介绍所的卷闸门前，失望之后就在附近闲逛，找一片树荫练舞。第五天，工作有了着落。“西二街那边有个戏班子招人，”中介说，“只要二十五岁以下的，说是跳什么……”他不怀好意地笑了笑，“法国风情舞。”</p>
+<p>柳清很快迎来了第一场商业演出，那是在肉菜市场前的空地上开展的洗发水促销活动。柳清接过主办方准备的演出服时，心凉了半截。一件露脐小背心，舞裙很短，只能勉强遮住臀部，而且红得艳俗。这要是被熟人看见，传到秦老师耳朵里可怎么办？往后都没脸见她了。</p>
+<p>化妆师说：“又不是搞艺术，别挑剔了，老百姓爱看什么就穿什么。”柳清要求化妆师给她画得浓一些，要让人认不出自己。化妆师为她戴上一顶假发，说：“你都变身法国女郎了，谁还认得出来？”柳清觉得镜中的自己简直是个瓷娃娃，有些瘆人，头上的金色假发让她想起了母亲厂里的缝纫线。</p>
+<p>柳清在演出开始前一分钟才走出化妆棚。舞台布置得很寒碜，远不如学校里的。背景墙是一位外国姑娘撩拨头发的广告图，旁边配文：法国洗发香波，专注受损发质修复。</p>
+<p>与另外四位舞者登台后，柳清紧张地盯着地面，感觉这松松垮垮的舞台板随时会崩塌。身旁的姐姐说：“今晚最年轻漂亮的就是你了，自信点呀。”柳清冷笑一声。与其自信，她更应该自怜。主持人用中气十足的嗓门宣布表演开始，音响播放起《路灯下的小姑娘》，台下的两百来位观众纷纷吹响口哨。柳清不好意思将舞裙甩起来，主持人不停朝她使眼色，她这才加大了动作幅度。舞蹈表演结束后，主持人搬来五个箱子，让柳清她们到观众席售卖洗发水。观众一窝蜂地拥上来，似乎只对这五位金发女郎感兴趣。有人趁机捏一下她们的胳膊，碰一下手背。柳清慌了，忘记主办方要求她们不能说话的规定，她尖叫道：“把你们的臭手拿开。”观众立刻拉下脸来，说：“原来你们是假洋人，卖的肯定也是假洋货。”</p>
+<p>促销活动在一阵嘘声中收场，主办方很是不满。多亏领舞的姐姐说了些好话，帮柳清保住了酬劳。散场后，柳清问领舞：“跳这种舞有什么意义？分明是为了满足男人的眼珠子。”领舞说：“我当年在省团跳舞的时候就想开了。你以为观众看的是水袖？是云步？他们鼓掌只是因为我长得漂亮。所以跳什么舞都一样。”柳清这时想起了秦老师的那番话，冷笑了一声。舞的奴仆？我今天是马戏团的奴仆，是一只猴子。</p>
+<p>回到家里时柳清感觉有些尴尬。“法国舞女”的新身份在这清贫简朴的家中显得极不相称。柳安快步下到楼梯口，看见柳清后停住了脚步，惊慌地说：“还以为咱妈回来了。”他正要上楼，柳清从口袋里取出几张二十元递向柳安，冷冷地说：“等下，把这个交给咱妈，攒着当你的学费。”柳安站着不动。柳清说：“再跟她说一声，我去制衣厂干活了。”说罢将钱压在桌面的杯子下，回卧室了。</p>
+<p>五</p>
+<p>柳清身上的廉价香水味没能逃过柳安的鼻子。他知道柳清在撒谎，却怎么也猜不出那笔钱的真实来路。次日一早，他等柳清出门就偷偷尾随着。柳清走去西二街，拐进一条逼仄的小巷，敲开了发廊隔壁一扇玻璃门。柳安小心翼翼地躲在一辆三轮车后面，观察着屋内的动静。玻璃门贴着“漫舞文化”的字样，隐约听见里面播放着迪斯科舞曲，几位二十来岁的姑娘挤在一张大沙发上，抽烟闲聊。柳清坐在她们一旁，似乎有些拘谨。不时有人经过，隔着玻璃打量。待到下午，她们几人终于离开沙发，排成一列，在一位高个子女士的指导下练舞。柳清的身体显得僵硬，放不开，每跳一段就被领舞训斥。</p>
+<p>她们在傍晚时分走了出来。柳安躲进拐角，看见柳清跟在队伍末尾。她们没有散伙，而是往北街的方向前进。服装批发市场对面的广场上临时搭建了一座舞台，前面挤满人群。柳清她们走进一个红色棚屋，在里面待了很久，出来时变成了相貌相仿的金发女郎，柳安只能依靠个头辨认柳清。她妆容惨白，表情狰狞，似乎在抵抗着身体的不适。</p>
+<p>天色完全暗下来后，舞台上的音响装置震动了整座广场。柳安挤进嘈杂的人堆里，踮起脚凝视舞台。当柳清跟着节奏舞动裙摆，柳安立即低下了头，感觉脸在发烫。他不敢想象父亲看见这一幕会有何感受。</p>
+<p>柳安被拍了拍肩膀，回过头发现是同班的陈斌和阿飞。陈斌嘲弄道：“没想到你爱看这个。”柳安说：“只是碰巧路过。”阿飞说：“得了吧，别不承认。”柳安岔开话头：“我听说你俩进轴承厂了，干得咋样？还要人不？”陈斌说：“有书不念，来干苦活，疯啦？你不是说将来想考什么文学系吗？”柳安说：“屁个文学，再这样下去我真得疯。”陈斌和阿飞不解其意地打量他。“我是认真的，”柳安对陈斌说，“叫你爸也带我进厂子吧。”</p>
+<p>这时柳清她们跳完了开场舞，换了一身更惹眼的装扮重新登台，主持人不停地活跃气氛，观众拍手叫好。柳安感到一阵眩晕，找借口说自己得回家吃饭，赶忙告辞了。他今天的确没吃一口饭。跑回家的路上，柳安拼了命地想忘掉柳清在台上的样子，却怎么也挥之不去。</p>
+<p>柳清回家已是晚上九点。柳安听见她推开卧室门的声音，立马走出去，扶着柳清的门框。“不许进来，”柳清大声道。</p>
+<p>“我就站在这，”柳安说：“我和陈斌商量了，叫他爸带我进厂。”柳清说：“没必要，上你的学去吧。”</p>
+<p>“不要，”柳安说，“咱爸以前总说你跳芭蕾的时候笑得最好看，我也这么觉得。”柳清吃惊地看着柳安，说：“刚刚你都看见了？”柳安说：“我不会和咱妈讲的。”柳清抬起手，铆足力气打了他一耳光。柳安摸着脸，委屈地说：“咱爸显灵那天，咱们都理解错他的意思了。”柳清说：“你爱怎么想就怎么想，我不信这些。就这么着吧。”</p>
+<p>“不行，我不想看你那样。”柳安说，“老规矩，每人二十颗珠子，明天一局定胜负。”</p>
+<p>“幼稚。”柳清推开柳安，把门锁上。消气之后，她觉得刚刚出手有些重，想和柳安赔个不是。她走到柳安的门前站了一会儿，没有敲。海报左下角的便签不见了，换成了一张稿纸，写着一首短诗——</p>
+<p>秋日的寂静中，枫树轻轻摇曳/红色的舞裙，一片片坠落/泥土深处，藏着来年的梦。</p>
+<p>六</p>
+<p>小卖部的六爷被一阵哄闹声打断午睡。透过一排八角糖果罐，看见十几个崽子在树荫下围成圈。六爷扯起嗓门说：“别老鹰捉小鸡了，等下你们都要被烤成烧鸡。”</p>
+<p>“捉什么小鸡啊，”一个孩子喊道，“这是生死局。”六爷急忙跨出店门，发现人群的焦点是柳家两位小状元。他们面对面站立，怒目而视，各自手持一袋弹珠。一只装满空气的塑料袋在人群外面随风打转。</p>
+<p>“赌什么？”六爷走到母亲身旁问。母亲含糊地解释了一番，六爷还是摸不着头脑，说：“不应该是谁赢了就去念书吗？怎么是输了去念书？”母亲说：“一言难尽呐。”六爷思索一阵，似乎明白了。他挤到人圈里，看着柳清，急忙用草扇给她扇风。“柳清，你糊涂呀，为什么和他比这个？我那枚‘神枪手’在他手里呢。”柳清瞥一眼六爷，继续死盯着柳安，说：“我不怕，开战吧。”</p>
+<p>大家检查两人布袋里的弹珠，都是二十枚，随后宣布比赛开始。他们按照以往的规矩在地上摆放各自的弹珠，用石头剪刀布决定先手。柳清赢了。她单膝跪地，用拇指对准弹珠蓄力，“啪”一声，正中柳安的弹珠。柳清拾起战利品，开始下一轮射击。她接连命中目标，觉得索然无味，突然后悔答应与柳安对局。即便分出胜负也毫无意义，无非是闹了一出笑话。她站起身说：“算了吧，我想回去。”柳安说：“不行，要是不决出胜负来，咱妈又要为难了。”柳清说：“可我早就决定好了。”柳安说：“我也决定好了。大不了谁也别去念书。”母亲紧张起来，那种置身事外的轻松表情消失了。柳安说：“你要是看得起我，那就堂堂正正地赢我。”</p>
+<p>柳清“切”一声，继续展开攻势。在打出第十枚的时候，弹珠被地面的碎石干扰了路线，跑歪了。柳安迫不及待地反攻，也在打出第十枚的时候失手。两人就这样展开了焦灼的拉锯战。柳安不断地挑选凹凸不平的路面放置弹珠，没想到柳清照中无误。战场的范围不断扩大，他们从小卖部打到了公路旁。“急死我了，”六爷走回小卖部，从糖罐里掏来一把水果糖，举在半空，“我今天阔一回，看谁能赢到这糖。”大伙儿兴奋起来，将地面拍打出节奏。</p>
+<p>“我不稀罕，”柳安取出鲜红色的“神枪手”，像只猫科动物似的趴在地上，使劲瞄着三米远的淡绿色猎物。“神枪手”的准头从未让柳安失望，他习惯用它打出决定胜负的一击。可今天柳安求胜心切，试图用“神枪手”吃下柳清的最后三枚弹珠。</p>
+<p>柳清又连输两枚，把布袋里最后一枚弹珠放在地上。她站起后觉得身体失去了重量，地面的热浪似乎能把她抬上天去。六爷说：“你输了也好。等你将来成了舞蹈家，可别忘了咱们。”</p>
+<p>柳安的脑袋被晒得发晕。当他瞄准最后一枚弹珠时，一种奇妙的感觉冒了出来，自己仿佛在拙劣地模仿着父亲某年某天的击球动作。地面上暖乎乎的热气似乎是父亲的气息，这种感觉让柳安痴迷。他保持着姿势，细细地体会与父亲融为一体的感觉。</p>
+<p>众人屏气凝神，看着“神枪手”以缓慢的速度前进，停在了目标前面一寸远的地方。这个结果让所有人始料未及。</p>
+<p>“柳安你搞什么？”六爷说，“这次不算，再打一次。”柳清拍了拍裤子上的灰，说：“算了，我认输。”扭头推开人堆往回走。柳安拳头捶地，吼道：“你回来。”柳清继续走着，后脑勺突然一阵刺痛。“神枪手”落在地上弹跳了几下。是柳安扔来的。柳安说：“给你留点翻盘的希望不好吗？”柳清拾起弹珠，瞄准柳安脑门，却犹豫了，将手放下。“你们闪开。”她蹲下身子，愤怒地打出弹珠，拉开了新一轮的角逐。</p>
+<p>比赛结束时太阳已经西斜，巷子里家家户户都起了炉灶。柳清、柳安和母亲一起往回走着。十三粒水果糖被他们分成了三份，母亲一粒，柳清和柳安各六粒。“就知道逞英雄，”柳清嚼着糖说，“你的技术比咱爸差远了。这样让来让去的，哪能有结果？”柳安说：“你还不是一样？”柳清“切”了一声，拍了下柳安的脑袋。</p>
+<p>“我有办法，”柳安说，“你去学校上一周课，我再替你上一周，回来交换学到的东西。”柳清翻了个白眼，说：“幼稚。”柳安说：“那就再比一场”柳清说：“随你。”</p>
+<p>“比谁先回到家，谁输了就去念书。”柳安说罢撒腿往巷子深处跑去。“耍赖皮！”柳清追着喊道，“再不停下，我就把你的烂诗念给整条街的人听！”柳安说：“当心我把你的事情告诉咱妈。”两人追跑打闹起来，柳清用灵活的舞步躲闪柳安，在巷子里画出了优美的蛇形曲线。</p>
+<p>望着跑远的姐弟二人，母亲十指相扣，小声道：“老柳啊，他们都长大了，你在那头就放心吧。”</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202514]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202514</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202514"/>
+        <updated>2025-04-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202514#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0306/46853526g00ssozr3020lc0006400f8c.gif" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCly1i03ci99o16j31ak0u0782.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0402/24767d4fj00su35cz005dc000j600dgc.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://www.dapenti.com:99/dapenti/97c365e5/5e03b99d.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0408/ec200fbbj00sue8fv0040c000j600ezc.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0408/1546fdd8j00suebj30021c000mi01cec.jpg" alt="" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="开源">开源<a href="https://blog.wlgs.site/blog/2025/weekly-202514#%E5%BC%80%E6%BA%90" class="hash-link" aria-label="开源的直接链接" title="开源的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="network_proxy_flutter"><a href="https://github.com/wanghongenpin/network_proxy_flutter" target="_blank" rel="noopener noreferrer">network_proxy_flutter</a><a href="https://blog.wlgs.site/blog/2025/weekly-202514#network_proxy_flutter" class="hash-link" aria-label="network_proxy_flutter的直接链接" title="network_proxy_flutter的直接链接">​</a></h4>
+<p>项目说明：开源免费抓包工具，支持 Windows、Mac、Android、IOS、Linux 全平台系统。</p>
+<p><img decoding="async" loading="lazy" src="https://t.eryajf.net/imgs/2024/03/1711251332166.png" alt="img" class="img_iEQV"></p>
+<p>有如下特性</p>
+<ul>
+<li>手机扫码连接: 不用手动配置 Wifi 代理，包括配置同步。所有终端都可以互相扫码连接转发流量。</li>
+<li>域名过滤: 只拦截您所需要的流量，不拦截其他流量，避免干扰其他应用。</li>
+<li>请求重写: 支持重定向，支持替换请求或响应报文，也可以根据增则修改请求或或响应。</li>
+<li>请求屏蔽: 支持根据 URL 屏蔽请求，不让请求发送到服务器。</li>
+<li>脚本: 支持编写 JavaScript 脚本来处理请求或响应。</li>
+<li>搜索：根据关键词响应类型多种条件搜索请求</li>
+<li>其他：收藏、历史记录、工具箱等</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2025/Untitled]]></title>
+        <id>https://blog.wlgs.site/blog/2025/Untitled</id>
+        <link href="https://blog.wlgs.site/blog/2025/Untitled"/>
+        <updated>2025-04-04T10:55:11.145Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202504]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202504</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202504"/>
+        <updated>2025-04-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[更新中...]]></summary>
+        <content type="html"><![CDATA[<p>更新中...</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202504#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0331/18491e95j00stzfmo00tlc000r9010cc.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0331/203774eej00stzlbk002tc000r801cgc.jpg" alt="" class="img_iEQV"></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202513]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202513</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202513"/>
+        <updated>2025-03-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202513#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0328/d578840fg00stturk01cdc0008c00etc.gif" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax4.sinaimg.cn/large/006BNqYCly1hzswa7eheyj30hw1hc43y.jpg" alt="" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="技巧">技巧<a href="https://blog.wlgs.site/blog/2025/weekly-202513#%E6%8A%80%E5%B7%A7" class="hash-link" aria-label="技巧的直接链接" title="技巧的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="图片防盗链最终解决方案">图片防盗链最终解决方案<a href="https://blog.wlgs.site/blog/2025/weekly-202513#%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" class="hash-link" aria-label="图片防盗链最终解决方案的直接链接" title="图片防盗链最终解决方案的直接链接">​</a></h3>
+<p>网络中收集的一些<strong>图片镜像缓存服务</strong>，在很多时候可以起到不错的用途。</p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://i3.wp.com/   </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Wordpress提供的图像缓存服务前缀可改i0-i3，需要去掉http/https协议。</p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://cdn.cdnjson.com/ </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>cdnjson提供的图像缓存服务，可以加速新浪微博/知乎/imgur等开启防盗链的图片，要加http/https协议。</p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://image.baidu.com/search/down?url= </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>百度的接口不是很稳定，太大的图片经常无法加载，可用于5m以内小图，要加http/https协议。</p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://pic.2ge.org/cdn/?url= </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>勿埋我心提供的图像缓存服务,随机一些可用的图片缓存服务，达到负载均衡的效果,要加http/https协议。</p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://cors.zme.ink/ </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>基于Cloudflare Workers搭建的跨域代理缓存服务，可以缓存所有内容，可加http/https协议，不加也行。</p>
+<p>如果想加速更多后缀，可以使用网友提供的<a href="https://b.dalao.ru/g/" target="_blank" rel="noopener noreferrer">文件加速服务</a>，可加速任意直链文件，要加http/https协议。</p>
+<blockquote>
+<p>图像缓存可以用来做什么？</p>
+</blockquote>
+<ul>
+<li>可以将有防盗链的图片引用到网页，并成功显示。</li>
+<li>可以将http图片引用到https页面而不出现证书问题。</li>
+<li>可以将xxx的图片，成功加载。</li>
+<li>可以将比较慢的图片资源，加快显示。</li>
+</ul>
+<blockquote>
+<p>在html meta中添加no-referrer会影响统计，而在img里加入no-referrer则不会，可过大部分403错误。</p>
+</blockquote>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;img src="" referrerPolicy="no-referrer" /&gt; </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<blockquote>
+<p>使用方法</p>
+</blockquote>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://pic.2ge.org/cdn/?url=https://iui.su/logo.png </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://i3.wp.com/iui.su/logo.png </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://image.baidu.com/search/down?url=iui.su/logo.png </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://cdn.cdnjson.com/iui.su/logo.png </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://img.noobzone.ru/getimg.php?url=iui.su/logo.png </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="防盗链图片演示">防盗链图片演示<a href="https://blog.wlgs.site/blog/2025/weekly-202513#%E9%98%B2%E7%9B%97%E9%93%BE%E5%9B%BE%E7%89%87%E6%BC%94%E7%A4%BA" class="hash-link" aria-label="防盗链图片演示的直接链接" title="防盗链图片演示的直接链接">​</a></h2>
+<p><a href="https://gd-hbimg.huaban.com/2101c265305fd1332e057de8493ff5127056f79f10b9f0-InBf4e" target="_blank" rel="noopener noreferrer">https://gd-hbimg.huaban.com/2101c265305fd1332e057de8493ff5127056f79f10b9f0-InBf4e</a></p>
+<p>该图片是花瓣网图片，存在防盗链直接贴在网页中无法显示，在img标签中no-referrer后可以正常显示了。</p>
+<p><img decoding="async" loading="lazy" src="https://gd-hbimg.huaban.com/2101c265305fd1332e057de8493ff5127056f79f10b9f0-InBf4e" alt="2101c265305fd1332e057de8493ff5127056f79f" class="img_iEQV"></p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">http://pic1.zhimg.com/v2-8b657dff159debf1cff463d61b7dcafd_r.jpg </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><img decoding="async" loading="lazy" src="https://cdn.cdnjson.com/pic1.zhimg.com/v2-8b657dff159debf1cff463d61b7dcafd_r.jpg" alt="1" class="img_iEQV"></p>
+<p>该图片是知乎图片，存在防盗链直接贴在网页中无法显示，在图片外链前面加上图片镜像服务后可以正常显示了。</p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://i.imgur.com/hWghm6oh.jpg </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>该图片是知名图床<strong>imgur</strong>的图片，至今已有10多年历史，由于上面不限制上传图片类型所以在中国无法打开，在图片外链前面加上图片镜像服务后就可以正常显示了。imgur可以用</p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://cdn.cdnjson.com/ </span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><img decoding="async" loading="lazy" src="https://cdn.cdnjson.com/https://i.imgur.com/hWghm6oh.jpg" alt="图片防盗链最终解决方案" class="img_iEQV"></p>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">https://images.weserv.nl/?url=</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>可当作备用，部分图片无法使用。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Welcome1]]></title>
+        <id>https://blog.wlgs.site/blog/welcome1</id>
+        <link href="https://blog.wlgs.site/blog/welcome1"/>
+        <updated>2025-03-19T22:14:28.349Z</updated>
         <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
 <p>Here are a few tips you might find useful.</p>
@@ -23,20 +273,175 @@
 <li><code>2019-05-30-welcome/index.md</code></li>
 </ul>
 <p>A blog post folder can be convenient to co-locate blog post images:</p>
-<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://blog.wlgs.site/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_iEQV"></p>
 <p>The blog supports tags as well!</p>
 <p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://github.com/yangshun</uri>
-        </author>
-        <category label="Facebook" term="Facebook"/>
+        <category label="facebook" term="facebook"/>
         <category label="Hello" term="Hello"/>
         <category label="Docusaurus" term="Docusaurus"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202512]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202512</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202512"/>
+        <updated>2025-03-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202512#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0319/e6888d25j00stdbh0018tc000u001t0c.jpg" alt="" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="文摘">文摘<a href="https://blog.wlgs.site/blog/2025/weekly-202512#%E6%96%87%E6%91%98" class="hash-link" aria-label="文摘的直接链接" title="文摘的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="1耐力是一种优势">1、耐力是一种优势<a href="https://blog.wlgs.site/blog/2025/weekly-202512#1%E8%80%90%E5%8A%9B%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BC%98%E5%8A%BF" class="hash-link" aria-label="1、耐力是一种优势的直接链接" title="1、耐力是一种优势的直接链接">​</a></h4>
+<p>人们常常低估耐力的作用，只把它理解成比别人更努力、更持久。</p>
+<p>实际上，耐力也是坚守自己的价值观和目标的能力，即使在看上去很难做到的时候，也不放弃。</p>
+<p>在缺乏明显进展的情况下，坚持去实现目标的能力，这就是耐力。</p>
+<p>在一个充满诱惑分散你注意力的世界中保持专注，克服困难，继续前进，你需要耐力。</p>
+<p>耐力是人们可以培养的最有用的品质之一。它比力量、智力、速度、魅力等特质，具有更大的适用性，日常生活很多时候都能用到。</p>
+<p>更聪明的人某些时候会表现出色，比你更快地解决难题。但只要凭着耐力，你可以解决更多的问题。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[卖米]]></title>
+        <id>https://blog.wlgs.site/blog/2025/mi</id>
+        <link href="https://blog.wlgs.site/blog/2025/mi"/>
+        <updated>2025-02-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[天刚蒙蒙亮，母亲就把我叫起来了：“琼宝，今天是这里的场，我们担点米到场上卖了，好弄点钱给你爹买药。”]]></summary>
+        <content type="html"><![CDATA[<p>天刚蒙蒙亮，母亲就把我叫起来了：“琼宝，今天是这里的场，我们担点米到场上卖了，好弄点钱给你爹买药。”</p>
+<p>我迷迷糊糊睁开双眼，看看窗外，日头还没出来呢。我实在太困，又在床上赖了一会儿。</p>
+<p>隔壁传来父亲的咳嗽声，母亲在厨房忙活着，饭菜的香气混合着淡淡的油烟味飘过来，慢慢驱散了我的睡意。我坐起来，穿好衣服，开始铺床。</p>
+<p>“姐，我也跟你们一起去赶场好不好？你买冰棍给我吃！”</p>
+<p>弟弟顶着一头睡得乱蓬蓬的头发跑到我房里来。</p>
+<p>“毅宝，你不能去，你留在家里放水。”隔壁传来父亲的声音，夹杂着几声咳嗽。</p>
+<p>弟弟有些不情愿地冲隔壁说：“爹，天气这么热，你自己昨天才中了暑，今天又叫我去，就不怕我也中暑！”</p>
+<p>“人怕热，庄稼不怕？都不去放水，地都干了，禾苗都死了，一家人喝西北风去？”父亲一动气，咳嗽得越发厉害了。</p>
+<p>弟弟冲我吐吐舌头，扮了个鬼脸，就到父亲房里去了。</p>
+<p>只听见父亲开始叮嘱他怎么放水，去哪个塘里引水，先放哪丘田，哪几个地方要格外留神别人来截水，等等。</p>
+<p>吃过饭，弟弟就找着父亲常用的那把锄头出去了。我和母亲开始往谷箩里装米，装完后先称了一下，一担八十多斤，一担六十多斤。</p>
+<p>我说：“妈，我挑重的那担吧。”</p>
+<p>“你学生妹子，肩膀嫩，还是我来。”</p>
+<p>母亲说着，一弯腰，把那担重的挑起来了。</p>
+<p>我挑起那担轻的，跟着母亲出了门。</p>
+<p>“路上小心点！咱们家的米好，别便宜卖了！”父亲披着衣服站在门口嘱咐道。</p>
+<p>“知道了，你快回床上躺着吧。”母亲艰难地把头从扁担旁边扭过来，吩咐道，“饭菜在锅里，中午你叫毅宝热一下吃！”</p>
+<p>赶场的地方离我家大约有四里路，我和母亲挑着米，在窄窄的田间小路上走走停停，足足走了一个钟头才到。</p>
+<p>场上的人已经不少了，我们赶紧找了一块空地，把担子放下来，把扁担放在地上，两个人坐在扁担上，拿草帽扇着。</p>
+<p>一大早就这么热，中午就更不得了，我不由得替弟弟担心起来。</p>
+<p>他去放水，是要在外头晒上一整天的。</p>
+<p>我往四周看了看，发现场上有许多人卖米，莫非他们都等着用钱？</p>
+<p>场上的人大都眼熟，都是附近十里八里的乡亲，人家也是种田的，谁会来买米呢？</p>
+<p>我问母亲，母亲说：“有专门的米贩子会来收米的。他们开了车到乡下来赶场，收了米，拉到城里去卖，能挣好些哩。”</p>
+<p>我说：“凭什么都给他们挣？我们也拉到城里去卖好了！”其实自己也知道不过是气话。</p>
+<p>果然，母亲说：“咱们这么一点米，又没车，真弄到城里去卖，挣的钱还不够路费呢！早先你爹身体好的时候，自己挑着一百来斤米进城去卖，隔几天去一趟，倒比较划算一点。”</p>
+<p>我不由心里一紧，心疼起父亲来。</p>
+<p>从家里到城里足足有三十多里山路呢，他挑着那么重的担子走着去，该多么辛苦！就为了多挣那几个钱，把人累成这样，多不值啊！</p>
+<p>但又有什么办法呢？家里除了种地，也没别的收入，不卖米，拿什么钱供我和弟弟上学？
+我想着这些，心里一阵阵难过起来。</p>
+<p>看看旁边的母亲，头发有些斑白了，黑黝黝的脸上爬上了好多皱纹，脑门上密密麻麻都是汗珠，眼睛有些红肿。</p>
+<p>“妈，你喝点水。”</p>
+<p>我把水壶递过去，拿草帽替她扇着。</p>
+<p>米贩子们终于开着车来了。他们四处看着卖米的人，走过去仔细看米的成色，还把手插进米里，抓上一把米细看。</p>
+<p>“一块零五。”</p>
+<p>米贩子开价了。</p>
+<p>卖米的似乎嫌太低，想讨价还价。</p>
+<p>“不还价，一口价，爱卖不卖！”</p>
+<p>米贩子态度很强硬，毕竟，满场都是卖米的人，只有他们是买家，不趁机压价，更待何时？</p>
+<p>母亲注意着那边的情形说：“一块零五？也太便宜了，上场还卖到一块一呢。”</p>
+<p>正说着，有个米贩子朝我们这边走过来了。</p>
+<p>他把手插进大米里，抓了一把出来，迎着阳光细看着。</p>
+<p>“这米好咧！又白又匀净，又筛得干净，一点沙子也没有！”母亲堆着笑，语气里有几分自豪。
+的确，我家的米比场上哪个人卖的米都要好。</p>
+<p>那人点了点头，说：“米是好米，不过这几天城里跌价，再好的米也卖不出好价钱来。一块零五，卖不卖？”</p>
+<p>母亲摇摇头：“这也太便宜了吧？上场还卖一块一呢。再说，你是识货的，一分钱一分货，我这米肯定好过别家的！”</p>
+<p>那人又看了看米，犹豫了一下，说：“本来都是一口价，不许还的，看你们家米好，我加点，一块零八，怎么样？”</p>
+<p>母亲还是摇头：“不行，我们家这米，少说也要卖到一块一。你再加点？”</p>
+<p>那人冷笑一声，说：“今天肯定卖不出一块一的行情，我出一块零八你不卖，等会散场的时候你一块零五都卖不出去！”</p>
+<p>“卖不出去，我们再担回家！”那人的态度激恼了母亲。</p>
+<p>“那你就等着担回家吧。”那人冷笑着，丢下这句话走了。</p>
+<p>我在旁边听着，心里算着：一块零八到一块一，每斤才差两分钱。</p>
+<p>这里一共150斤米，总共也就三块钱的事情，路这么远，何必再挑回去呢？我的肩膀还在痛呢。
+我轻轻对母亲说：“妈，一块零八就一块零八吧，反正也就三块钱的事。再说，还等着钱给爹买药呢。”</p>
+<p>“那哪行？”母亲似乎有些生气了，“三块钱不是钱？再说了，也不光是几块钱的事，做生意也得讲点良心，咱们辛辛苦苦种出来的米，质量也好，哪能这么贱卖了？”</p>
+<p>我不敢再说话，我知道种田有多么累。</p>
+<p>光说夏天放水，不就把爹累得病倒了？</p>
+<p>弟弟也才十一二岁的毛孩子，还不得找着锄头去放水！</p>
+<p>毕竟，这是一家人的生计啊！</p>
+<p>又有几个米贩子过来了，他们也都只出一块零五。有一两个出到一块零八，也不肯再加。
+母亲仍然不肯卖。</p>
+<p>看看人渐渐少了，我有些着急了。</p>
+<p>母亲一定也很心急吧，我想。</p>
+<p>“妈，你去那边树下凉快一下吧！”我说。</p>
+<p>母亲一边擦汗，一边摇头：“不行，我走开了，来人买米怎么办？你又不会还价！”
+我有些惭愧。</p>
+<p>“百无一用是书生”，虽然在学校里功课好，但这些事情上就比母亲差远了。</p>
+<p>又有好些人来买米，因为我家的米实在是好，大家都过来看，但谁也不肯出到一块一。
+看看日头到头顶上了，我觉得肚子饿了，便拿出带来的饭菜和母亲一起吃起来。
+母亲吃了两口就不吃了，我知道她是担心米卖不出去，心里着急。</p>
+<p>母亲叹了口气：“还不知道卖得掉卖不掉呢。”
+我趁机说：“不然就便宜点卖好了。”
+母亲说：“我心里有数。”
+下午人更少了，日头又毒，谁愿意在场上晒着呢。
+看看母亲，衣服都粘在背上了，黝黑的脸上也透出晒红的印迹来。
+“妈，我替你看着，你去溪里泡泡去。”
+母亲还是摇头：“不行，我有风湿，不能在凉水里泡。你怕热，去那边树底下躲躲好了。”
+“不用，我不怕晒。”
+“那你去买根冰棍吃好了。”</p>
+<p>母亲说着，从兜里掏出两毛钱零钱来。
+我最喜欢吃冰棍了，尤其是那种叫“葡萄冰”的最好吃，也不贵，两毛钱一根。
+但我今天突然不想吃了：“妈，我不吃，喝水就行。”
+最热的时候也过去了，转眼快散场了。
+卖杂货的小贩开始降价甩卖，卖菜，卖西瓜的也都吆喝着：“散场了，便宜卖了！”
+我四处看看，场上已经没有几个卖米的了，大部分人已经卖完回去了。
+母亲也着急起来，一着急，汗就出得越多了。</p>
+<p>终于有个米贩子过来了：“这米卖不卖？一块零五，不讲价！”
+母亲说：“你看我这米，多好！上场还卖一块一呢……”
+不等母亲说完，那人就不耐烦地说：“行情不同了！想卖一块一，你就等着往回担吧！”
+奇怪的是，母亲没有生气，反而堆着笑说：“那，一块零八，你要不要？”
+那人从鼻子里哼了一声，说：“你这个价钱，不是开场的时候也难得卖出去，现在都散场了，谁买？做梦吧！”
+母亲的脸一下子白了，动着嘴唇，但什么也没说。</p>
+<p>一旁的我忍不住插嘴了：“不买就不买，谁稀罕？不买你就别站在这里挡道！”
+“哟，大妹子，你别这么大火气。”
+那人冷笑着说，“留着点气力等会把米担回去吧！”
+等那人走了，我忍不住埋怨母亲：“开场的时候人家出一块零八你不卖，这会好了，人家还不愿意买了！”
+母亲似乎有些惭愧，但并不肯认错：“本来嘛，一分钱一分货，米是好米，哪能贱卖了？出门的时候你爹不还叮嘱叫卖个好价钱？”</p>
+<p>“你还说爹呢！他病在家里，指着这米换钱买药治病！人要紧还是钱要紧？”
+母亲似乎没有话说了，等了一会儿，低声说：“一会儿人家出一块零五也卖了吧。”
+可是再没有人来买米了，米贩子把买来的米装上车，开走了。
+散场了，我和母亲晒了一天，一粒米也没卖出去。
+“妈，走吧，回去吧，别愣在那儿了。”
+我收拾好毛巾、水壶、饭盒，催促道。
+母亲迟疑着，终于起了身。
+“妈，我来挑重的。”
+“你学生妹子，肩膀嫩……”
+不等母亲说完，我已经把那担重的挑起来了。</p>
+<p>母亲也没有再说什么，挑起那担轻的跟在我后面，踏上了回家的路。
+肩上的担子好沉，我只觉得压着一座山似的。
+突然脚下一滑，我差点摔倒。
+我赶紧把剩下的力气都用到腿上，好不容易站稳了，但肩上的担子还是倾斜了一下，洒了好多米出来。
+“啊，怎么搞的？”母亲也放下担子走过来，嘴里说，“我叫你不要挑这么重的，你偏不听，这不是洒了。多可惜！真是败家精！”</p>
+<p>败家精是母亲的口头禅，我和弟弟干了什么坏事她总是这么数落我们。
+但今天我觉得格外委屈，也不知道为什么。
+“你在这等会儿，我回家去拿个簸箕来把地上的米扫进去。浪费了多可惜！拿回去可以喂鸡呢！”母亲也不问我扭伤没有，只顾心疼洒了的米。
+我知道母亲的脾气，她向来是“刀子嘴，豆腐心”的，虽然也心疼我，嘴里却非要骂我几句。
+想到这些，我也不委屈了。
+“妈，你回去还要来回走个六七里路呢，时候也不早了。”我说。
+“那地上的米怎么办？”
+我灵机一动，把头上的草帽摘下来：“装在这里面好了。”
+母亲笑了：“还是你脑子活，学生妹子，机灵。”</p>
+<p>说着，我们便蹲下身子，用手把洒落在地上的米捧起来，放在草帽里，然后把草帽顶朝下放在谷箩里，便挑着米继续往家赶。
+回到家里，弟弟已经回来了，母亲便忙着做晚饭，我跟父亲报告卖米的经过。
+父亲听了，也没抱怨母亲，只说：“那些米贩子也太黑了，城里都卖一块五呢，把价压这么低！这么挣庄稼人的血汗钱，太没良心了！”</p>
+<p>我说：“爹，也没给你买药，怎么办？”
+父亲说：“我本来就说不必买药的嘛，过两天就好了，花那个冤枉钱做什么！”
+晚上，父亲咳嗽得更厉害了。
+母亲对我说：“琼宝，明天是转步的场，咱们辛苦一点，把米挑到那边场上去卖了，好给你爹买药。”
+“转步？那多远，十几里路呢！”我想到那漫长的山路，不由有些发怵。
+“明天你们少担点米去。每人担50斤就够了。”父亲说。</p>
+<p>“那明天可不要再卖不掉担回来哦！”我说，“十几里山路走个来回，还挑着担子，可不是说着玩的！”
+“不会了不会了。”母亲说，“明天一块零八也好，一块零五也好，总之都卖了！”
+母亲的话里有许多辛酸和无奈的意思，我听得出来，但不知道怎么安慰她。</p>
+<p>我自己心里也很难过，有点想哭。
+我想，别让母亲看见了，要哭就躲到被子里哭去吧。
+可我实在太累啦，头刚刚挨到枕头就睡着了，睡得又香又甜。</p>
+<blockquote>
+<p>-- 张培祥</p>
+<p>1979年生于湖南醴陵一个山区农户，1997年考入北京大学法学院，是北大有名的才女，2003年非典期间患白血病，三个月后，年仅24岁的张培祥去世。</p>
+</blockquote>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[巴菲特演讲]]></title>
@@ -343,7 +748,7 @@
         <updated>2025-01-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Linus Torvalds 曾写了一本书提到，当初创造 Linux 只是因为好玩，却意外掀起一场革命。Git 是 Linus 的第二代表作，同样也是意外的革命，是现在软体工程师的标配，但至少对 Linus 本人来说，它的起源可就没这么好玩了。]]></summary>
         <content type="html"><![CDATA[<p>Linus Torvalds 曾写了一本<a href="https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620732/" target="_blank" rel="noopener noreferrer">书</a>提到，当初创造 Linux 只是因为好玩，却意外掀起一场革命。Git 是 Linus 的第二代表作，同样也是意外的革命，是现在软体工程师的标配，但至少对 Linus 本人来说，它的起源可就没这么好玩了。</p>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="linus-扩展不了">Linus 扩展不了<a href="https://blog.wlgs.site/blog/2025/git#linus-%E6%89%A9%E5%B1%95%E4%B8%8D%E4%BA%86" class="hash-link" aria-label="Direct link to Linus 扩展不了" title="Direct link to Linus 扩展不了">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="linus-扩展不了">Linus 扩展不了<a href="https://blog.wlgs.site/blog/2025/git#linus-%E6%89%A9%E5%B1%95%E4%B8%8D%E4%BA%86" class="hash-link" aria-label="Linus 扩展不了的直接链接" title="Linus 扩展不了的直接链接">​</a></h2>
 <p>1998 年是 Linux 风光的一年，许多大公司，如昇阳、IBM 和甲骨文，都纷纷投入 Linux 的业务。那年春天，Linus 的二女儿出生，他们一家从芬兰搬到美国加州也差不多一年，生活步入正轨。虽然 Linux 还尚未给 Linus 带来什么收益，但 Linus 也可算是事业家庭两得意。</p>
 <p>反观 Linux Kernel 的开发者社群，随著愈来愈多人加入开发，既有的合作方式开始力不从心。Linus 开始显得没办法跟上开发者们修改程式码的速度，逐渐成为瓶颈。</p>
 <p>1998 年 9 月 28 日，Linus 和往常一样，读著 Linux Kernel 邮件列表上的信。</p>
@@ -372,7 +777,7 @@
 <p>（这个新工具是）一个分散式版本控管系统⋯⋯</p>
 </blockquote>
 <p>Larry 当时正好在开发一套新的版控软体，叫做 BitKeeper。</p>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="bitkeeper-的起源">BitKeeper 的起源<a href="https://blog.wlgs.site/blog/2025/git#bitkeeper-%E7%9A%84%E8%B5%B7%E6%BA%90" class="hash-link" aria-label="Direct link to BitKeeper 的起源" title="Direct link to BitKeeper 的起源">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="bitkeeper-的起源">BitKeeper 的起源<a href="https://blog.wlgs.site/blog/2025/git#bitkeeper-%E7%9A%84%E8%B5%B7%E6%BA%90" class="hash-link" aria-label="BitKeeper 的起源的直接链接" title="BitKeeper 的起源的直接链接">​</a></h2>
 <p>在 1990 年代早期，昇阳导入了一套名为 Network Software Environment (NSE) 的内部工具来管理程式码，但 NSE 太慢了，使用体验极差，有些工程师甚至为此愤而离职。</p>
 <p>Larry McVoy 不仅是个资深的作业系统开发者，过去也做过许多效能相关的工作，所以昇阳的主管就找上了 Larry 来调教一下 NSE 的效能。</p>
 <p>Larry 一看 NSE 的程式码吓了一跳，“这东西很多地方当初设计时都没有考量到效能。”他还发现 NSE 的底层其实是 SCCS，SCCS 是 1970 年代的版本控管软体，出现比 CVS 和 Subversion 还早。与其修改体质不良 NSE，Larry 选了另一条路：他用 Perl 写了 NSElite，在 SCCS 之上实作了 resync/resolve 指令，基本上类似现今 Git 的 clone/pull/push 指令。</p>
@@ -380,7 +785,7 @@
 <p>TeamWare 大概是最早的分散式版控系统，后来昇阳 Solaris 作业系统的开发全是借助于它。工程师们用过 TeamWare 都表示回不去了：不同于 CVS 和 Subversion，TeamWare 让你将整个专案复制到你自己的机器，你可以尽情地在本地端提交变更，等到准备好再将你自己本地的版本合并回远端版本。</p>
 <p>这八人团队的成员本来是写 C 语言的，当时 C++ 是新的火热语言，他们边学 C++ 边开发 TeamWare。在 TeamWare 还未完成前，Larry 曾尝试继续开发 NSElite，但这无疑是给 TeamWare 团队难堪：一个人用 Perl 竟然比八个人用 C++ 还来得快，VP 见状便告诉 Larry：“这件事已经上报给 Scooter（即 Scott McNealy，昇阳的执行长），如果你再发布一次，你就被解雇了。”</p>
 <p>为此，1991 年，Larry 停止 NSElite 的开发，但建造一个分散式版控软体的念头始终在他心中挥之不去。他本来以为会有其他商用软体会跟进 TeamWare 的脚步，但并没有。1997 年 Larry 开始著手开发一款名为 BitKeeper 的分散式版控软体。然而，直到 1998 年 9 月，当他看到邮件列表上 Linus 处于崩溃边缘，这才真正激励他开始认真看待 BitKeeper 这个专案。</p>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="linux-kernel-采用-bitkeeper">Linux Kernel 采用 BitKeeper<a href="https://blog.wlgs.site/blog/2025/git#linux-kernel-%E9%87%87%E7%94%A8-bitkeeper" class="hash-link" aria-label="Direct link to Linux Kernel 采用 BitKeeper" title="Direct link to Linux Kernel 采用 BitKeeper">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="linux-kernel-采用-bitkeeper">Linux Kernel 采用 BitKeeper<a href="https://blog.wlgs.site/blog/2025/git#linux-kernel-%E9%87%87%E7%94%A8-bitkeeper" class="hash-link" aria-label="Linux Kernel 采用 BitKeeper的直接链接" title="Linux Kernel 采用 BitKeeper的直接链接">​</a></h2>
 <p>1998 年秋天某日，Larry 邀请了 Linus Torvalds、David Miller、Richard Henderson 来家中，吃完晚餐后，他们席地而坐，开始协商对策要如何减少 Linus 的工作量。他们在地板画了三、四个小时的图，这些图大致上就是 TeamWare 在昇阳内部行之有年的运作方式，Larry 对此十分熟悉。</p>
 <p>在这个框架中，开发者们可利用 BitKeeper 各自开发，不互相干扰，而且在 Linus 这边做最后整合时，能够不失去修改的历史记录，让 Linus 能看出一个变更的来龙去脉，审查程式码时更容易。</p>
 <p>“好吧，如果你做出来，而且跑起来跟你说的一样，我就会用它。”Linus 说道。<br>
@@ -393,10 +798,10 @@
 <p>2002 年 1 月，Linus 工作量太大的问题又再度浮现，开发者送出的修补不是等很久才迟迟回应，不然就是被忽略。有人写了一篇“<a href="https://lkml.iu.edu/hypermail/linux/kernel/0201.3/1000.html" target="_blank" rel="noopener noreferrer">小小的提议</a>”尝试改善这个问题。讨论串中，有人随口<a href="https://lkml.iu.edu/hypermail/linux/kernel/0201.3/1427.html" target="_blank" rel="noopener noreferrer">提到</a>“bitkeeper 真是个好工具”，唤醒了三年前，Larry 家中的那顿晚餐，在 Linus 脑中种下的那颗种子。Linus <a href="https://lkml.iu.edu/hypermail/linux/kernel/0201.3/1513.html" target="_blank" rel="noopener noreferrer">问道</a>：“有多少人在用 bitkeeper 做 kernel 开发？”</p>
 <p>果不其然，当时已经有些 Kernel 开发者早就在使用 BitKeeper。Linux PowerPC (PPC) 团队早在 1999 年 12 月就开始试用 BitKeeper，BitMover 为了帮助他们，架设了 bkbits.net 伺服器。</p>
 <p>过没几天，2002 年 2 月 5 日，邮件列表上就看到 Linus 开始在<a href="https://lkml.iu.edu/hypermail/linux/kernel/0202.0/0989.html" target="_blank" rel="noopener noreferrer">测试 BitKeeper</a>。此后，Linux Kernel 主要开发者们也跟进开始采用 BitKeeper。你不一定要用 BitKeeper 才能参与开发，但如果你是 BitKeeper 的使用者，流程大概是：</p>
-<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 下载仓储（repository）&lt;/span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk clone bk://linux.bkbits.net/linux-2.5 linux-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk clone linux-2.5 alpha-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 从另一个地方下载变更&lt;/span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd alpha-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk pull bk://gkernel.bkbits.net/alpha-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 编辑档案并将变更上传回远端&lt;/span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk vi fs/inode.c </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk push bk://gkernel@bkbits.net/alpha-2.5 </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 下载仓储（repository）&lt;/span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk clone bk://linux.bkbits.net/linux-2.5 linux-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk clone linux-2.5 alpha-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 从另一个地方下载变更&lt;/span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd alpha-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk pull bk://gkernel.bkbits.net/alpha-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 编辑档案并将变更上传回远端&lt;/span&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk vi fs/inode.c </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bk push bk://gkernel@bkbits.net/alpha-2.5 </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/span&gt;&lt;/span&gt;</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>若要将变更送给 Linus，你就再寄封信到邮件列表上，内容大致是：</p>
-<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">Here is an update for something something...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Please pull from: bk://gkernel.bkbits.net/alpha-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">example/file1.c | 6 ++++++</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">example/file2.c | 4 ----</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2 files changed, 6 insertions(+), 4 deletions(-)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">-----</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="没有免费的-bitkeeper-了">没有免费的 BitKeeper 了<a href="https://blog.wlgs.site/blog/2025/git#%E6%B2%A1%E6%9C%89%E5%85%8D%E8%B4%B9%E7%9A%84-bitkeeper-%E4%BA%86" class="hash-link" aria-label="Direct link to 没有免费的 BitKeeper 了" title="Direct link to 没有免费的 BitKeeper 了">​</a></h2>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">Here is an update for something something...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Please pull from: bk://gkernel.bkbits.net/alpha-2.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">example/file1.c | 6 ++++++</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">example/file2.c | 4 ----</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2 files changed, 6 insertions(+), 4 deletions(-)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">-----</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="没有免费的-bitkeeper-了">没有免费的 BitKeeper 了<a href="https://blog.wlgs.site/blog/2025/git#%E6%B2%A1%E6%9C%89%E5%85%8D%E8%B4%B9%E7%9A%84-bitkeeper-%E4%BA%86" class="hash-link" aria-label="没有免费的 BitKeeper 了的直接链接" title="没有免费的 BitKeeper 了的直接链接">​</a></h2>
 <p>Larry McVoy 让 Linux Kernel 开发者免费使用 BitKeeper，但免费是有代价的。例如，他们的免费用户的使用执照里规定：</p>
 <ul>
 <li>你不可以关掉 Open Logging──此机制会将使用纪录传送至 BitMover 伺服器。</li>
@@ -410,9 +815,9 @@
 <p>有鉴于此，Samba 和 rsync 的作者，澳洲程式设计师 Andrew Tridgell（简称 Tridge），在 2005 年 2 月开始著手写一个免费的 BitKeeper 客户端程式，要解决自由软体用户面临的问题。</p>
 <p>Tridge 做了以下尝试。</p>
 <p>“这里有一个 BitKeeper 位址，bk://thunk.org:5000，用 telnet 连上去试试看。”</p>
-<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">$ telnet thunk.org 5000</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Trying 69.25.196.29...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Connected to thunk.org.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Escape character is '^]'.</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">$ telnet thunk.org 5000</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Trying 69.25.196.29...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Connected to thunk.org.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Escape character is '^]'.</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>“连上去了，何不输入 help 命令？”</p>
-<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">? - print this help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">abort - abort resolve</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">check - check repository</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">clone - clone the current repository</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">help - print this help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">httpget - http get command</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[...]</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">? - print this help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">abort - abort resolve</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">check - check repository</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">clone - clone the current repository</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">help - print this help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">httpget - http get command</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[...]</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>“BitKeeper 伺服器居然这么好心，列出所有指令。”<br>
 <!-- -->“所以 clone 应该就是下载仓储用的指令吧？”</p>
 <p>他接著输入 clone，发现输出仅是一连串 SCCS 格式的档案。至此，“反向工程”的工作已大功告成，剩下的只是把程式写出来。</p>
@@ -431,7 +836,7 @@
 <blockquote>
 <p>用不著跟我说 subversion 了，如果你真的想给建议，去看看 monotone，它应该是最可行的替代方案。</p>
 </blockquote>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="monotone">Monotone<a href="https://blog.wlgs.site/blog/2025/git#monotone" class="hash-link" aria-label="Direct link to Monotone" title="Direct link to Monotone">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="monotone">Monotone<a href="https://blog.wlgs.site/blog/2025/git#monotone" class="hash-link" aria-label="Monotone的直接链接" title="Monotone的直接链接">​</a></h2>
 <p>Monotone 的原作者是 Graydon Hoare。2001 年，住在加拿大的 Graydon 和他澳洲朋友为了让跨时区合作更容易一些，他们打造了一个类似现在的持续整合（CI）系统（当时 CI 还不是显学），确保程式码无时无刻都通过测试。</p>
 <p>2002 年，Graydon 开始对版本控管结合 CI 产生兴趣，当时他找到只有 <a href="https://aegis.sourceforge.net/" target="_blank" rel="noopener noreferrer">Aegis</a> 有这样的概念。同时，Graydon 又看到朋友使用 BitKeeper，他想到 Aegis 结合分散式版控应该是不错的机会，Monotone 就此应运而生。</p>
 <p>值得一提，Graydon 后来加入 Mozilla，并创造了 Rust 程式语言。</p>
@@ -445,7 +850,7 @@
 <p>Linus 其实没有对 Monotone 贡献过任何程式码，或者据我所知，他也没有对 git 以外的任何版控软体贡献过程式码。除了“这太慢了！”之外，他也没有提出什么实质建议 ;-)。他之所以名列为贡献者，是因为在与他的讨论中，我找到了一个测试案例，追踪到一个重大性能瓶颈。我曾犹豫是否应该把他的名字列上去，因为这可能会让人产生奇怪的想法，但我想，如果是其他人我也会这么做，所以⋯⋯（耸肩）。</p>
 </blockquote>
 <p>与此同时，受到 Monotone 的设计启发，Linus 也从零开始，开始著手写了一些 C 程式码。</p>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="git-v001-初探">Git v0.01 初探<a href="https://blog.wlgs.site/blog/2025/git#git-v001-%E5%88%9D%E6%8E%A2" class="hash-link" aria-label="Direct link to Git v0.01 初探" title="Direct link to Git v0.01 初探">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="git-v001-初探">Git v0.01 初探<a href="https://blog.wlgs.site/blog/2025/git#git-v001-%E5%88%9D%E6%8E%A2" class="hash-link" aria-label="Git v0.01 初探的直接链接" title="Git v0.01 初探的直接链接">​</a></h2>
 <p>2005 年 4 月 7 日，Linus 上传了一个名叫 Git 的东西，他在邮件列表<a href="https://lkml.iu.edu/hypermail/linux/kernel/0504.0/2022.html" target="_blank" rel="noopener noreferrer">写道</a>：</p>
 <blockquote>
 <p>这边有一个小小的挑战要给疯狂的骇客们，如果你有想玩玩看很乱（但<strong>非常</strong>快）的东西，看一下 kernel.org:/pub/linux/kernel/people/torvalds/</p>
@@ -453,9 +858,9 @@
 </blockquote>
 <p>这是 Linus 第一次在公开场合提到 Git。</p>
 <p><a href="https://web.archive.org/web/20050410050628/http://kernel.org/pub/linux/kernel/people/torvalds/" target="_blank" rel="noopener noreferrer">该网址</a>有以下档案和目录：</p>
-<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">git.git/                  09-Apr-2005 16:09    -</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sparse.git/               07-Apr-2005 20:07    -</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git-0.01.tar.bz2          07-Apr-2005 14:25   39K</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git-0.01.tar.bz2.sign     07-Apr-2005 14:25  248</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git-0.01.tar.gz           07-Apr-2005 14:25   40K</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sparse-git.tar.bz2        08-Apr-2005 17:26   15M</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">git.git/                  09-Apr-2005 16:09    -</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sparse.git/               07-Apr-2005 20:07    -</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git-0.01.tar.bz2          07-Apr-2005 14:25   39K</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git-0.01.tar.bz2.sign     07-Apr-2005 14:25  248</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git-0.01.tar.gz           07-Apr-2005 14:25   40K</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sparse-git.tar.bz2        08-Apr-2005 17:26   15M</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p><code>git-0.01.tar.bz2</code> 里的 C 程式码加起来大约 1000 行：</p>
-<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">---------------------------------------------------------------------</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">File                             blank        comment           code</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---------------------------------------------------------------------</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./read-cache.c                      31             14            219</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./update-cache.c                    32             23            198</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./commit-tree.c                     23             26            128</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./show-diff.c                        8              5             73</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./cache.h                           17             23             53</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./write-tree.c                      11              7             53</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./read-tree.c                        4              5             39</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./init-db.c                          4             14             38</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./Makefile                          14              0             26</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./cat-file.c                         2              5             21</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---------------------------------------------------------------------</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SUM:                               146            122            848</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---------------------------------------------------------------------</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain">---------------------------------------------------------------------</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">File                             blank        comment           code</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---------------------------------------------------------------------</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./read-cache.c                      31             14            219</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./update-cache.c                    32             23            198</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./commit-tree.c                     23             26            128</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./show-diff.c                        8              5             73</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./cache.h                           17             23             53</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./write-tree.c                      11              7             53</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./read-tree.c                        4              5             39</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./init-db.c                          4             14             38</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./Makefile                          14              0             26</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./cat-file.c                         2              5             21</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---------------------------------------------------------------------</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SUM:                               146            122            848</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---------------------------------------------------------------------</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>有别于现在的 Git 有一个单一执行档 <code>git</code>，Linus 最早上传的 Git ，编译后会产生七个独立执行档：</p>
 <ul>
 <li><code>init-db</code></li>
@@ -489,8 +894,8 @@
 <p>Git 也是如此，它的资料模型比 CSV、Subversion、BitKeeper 都要简单。它储存的东西基本上就是改变前和改变后的树，如此而已。它没有在管哪个档案、在哪一行做了什么改变，它也不需要，因为改变前后的树就埋有这些资讯。</p>
 <p>Linus 用两天写出来的 Git 原型，功能简单，没有多馀的验证，没有关联式资料库，只有 C 程式码、SHA-1 杂凑、系统呼叫，完全针对 Linus 自己的需求订制。而 Monotone 专案当时迈入第三年，功能完善，还要应付各种场合需求。再加上 Monotone 原作者 Graydon 加了一堆未优化的程式码后跑去度假，家里没大人。因此在速度上，Monotone 当时自然是比不过 Git 。</p>
 <p>Linus 当初上传的档案 <code>sparse-git.tar.bz2</code>，应该是史上第一个 Git 仓储。<a href="https://sparse.docs.kernel.org/en/latest/" target="_blank" rel="noopener noreferrer">Sparse</a> 是 Linus 于 2003 年写的一个 C 语言的静态分析器。如果你还对 Linus 出的挑战题有兴趣，<code>sparse-git.tar.bz2</code> 解压缩后稍微修改就可以用现今的 <code>git log</code> 命令去读取变更纪录：</p>
-<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain"># 假设你在 sparse-git 目录下</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mv .dircache .git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mkdir .git/refs</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git log</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="git-早期贡献者">Git 早期贡献者<a href="https://blog.wlgs.site/blog/2025/git#git-%E6%97%A9%E6%9C%9F%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="Direct link to Git 早期贡献者" title="Direct link to Git 早期贡献者">​</a></h2>
+<div class="codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-text codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token plain"># 假设你在 sparse-git 目录下</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mv .dircache .git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mkdir .git/refs</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git log</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="git-早期贡献者">Git 早期贡献者<a href="https://blog.wlgs.site/blog/2025/git#git-%E6%97%A9%E6%9C%9F%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="Git 早期贡献者的直接链接" title="Git 早期贡献者的直接链接">​</a></h2>
 <p>初版 Git 引来热烈讨论，过没几天，Linus 就开设了 Git 专用的邮件列表，这让 Linux Kernel 邮件列表能够稍微回归正题。头一个月，Git 邮件列表就出现了约 2600 则讯息，而 Linux Kernel，史上合作人数最多的软体专案，同期每月有 7000-9000 则讯息。</p>
 <p>对在版本控管领域耕耘已久的专家们来说，Git 只是“另一个专案”，因为 Linus 最初上传的 Git 只有一些低阶操作，连 clone 和 merge 的命令都没有，离真正可用的版控软体还差得远。而 Linus 在说 Git 多快多棒时，无意间贬低了其他版控软体，这让以 BitTorrent 闻名的 Bram Cohen 很不满意，<a href="https://lore.kernel.org/git/Pine.LNX.4.44.0504261301520.4678-100000@wax.eds.org/" target="_blank" rel="noopener noreferrer">杠上 Linus</a>。</p>
 <p>Bram 当时正在推广他自己的同类产品 Codeville。Codeville 在当时已经是个成熟的版控软体，媲美 Monotone，并且内建十分聪明的合并演算法。看到 Linus 如何与 Git 的早期追随者讨论合并演算法，Bram 觉得 Linus 根本就是门外汉在重造轮子，称 Git 只是个“<a href="https://bramcohen.livejournal.com/17319.html?thread=151207#t151207:~:text=Git%20is%20a-,weekend%20hack,-which%20looks%20like" target="_blank" rel="noopener noreferrer">周末小专案</a>”。</p>
@@ -499,7 +904,7 @@
 <p>在软体开发用语中，将低阶基础建设比喻成水管工程的用法已不可考，但“陶瓷”一词用来指高阶的包装工作最早起源自 <a href="https://lore.kernel.org/git/4262938E.8010107@timesys.com/" target="_blank" rel="noopener noreferrer">Git 邮件列表</a>。至今，Git 内部仍使用 <a href="https://git-scm.com/book/fa/v2/Git-Internals-Plumbing-and-Porcelain" target="_blank" rel="noopener noreferrer">plumbing 和 porcelain</a> 二词来称呼低阶和高阶命令。</p>
 <p>此外，Petr 还架设了 Git 第一个专案首页 git.or.cz，以及源码托管服务 repo.or.cz。这两个网址一直算是 Git 的“官方”网站──直到 GitHub 取代了它们。</p>
 <p>Petr 是从外部贡献，在 Git 基础之上向上堆叠，向外架设服务。另一个早期贡献者，滨野纯（Junio Hamano）则是从内部切入，直接贡献 Git 本身。后来他是更从 Linus 手上接下 Git 维护人的工作，直到今天。</p>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="接班人">接班人<a href="https://blog.wlgs.site/blog/2025/git#%E6%8E%A5%E7%8F%AD%E4%BA%BA" class="hash-link" aria-label="Direct link to 接班人" title="Direct link to 接班人">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="接班人">接班人<a href="https://blog.wlgs.site/blog/2025/git#%E6%8E%A5%E7%8F%AD%E4%BA%BA" class="hash-link" aria-label="接班人的直接链接" title="接班人的直接链接">​</a></h2>
 <p>滨野纯（Junio Hamano）是一个来自日本的软体工程师。大概是 1995 年，毕业后工作不到一年，他就被他任职的公司 Twin Sun 派到洛杉矶，从此在美国定居。在那里，他遇到了当时也在同公司工作的 Paul Eggert。</p>
 <p>Paul Eggert 维护过许多自由或开源软体专案，包括 RCS（一个更早的版控软体）和 Tar。目前，他是 UCLA 大学的教授，也是<a href="https://zh.wikipedia.org/zh-tw/%E6%97%B6%E5%8C%BA%E4%BF%A1%E6%81%AF%E6%95%B0%E6%8D%AE%E5%BA%93" target="_blank" rel="noopener noreferrer">时区资讯资料库</a>的维护人。</p>
 <p>滨野纯受到 Paul 的影响，对开源软体的世界产生兴趣。尽管他并非 Kernel 开发者，他仍订阅了 Linux Kernel 等开源专案的邮件列表，纯粹<strong>因为好玩</strong>。</p>
@@ -543,7 +948,7 @@
 </blockquote>
 <p>后来，在滨野纯的带领下，Git 1.0.0 正式在 12 月 21 日释出。<strong>19 年</strong>后的今天（本文发布于 2024 年 7 月），滨野纯任职于谷歌，至今他仍是 Git 的维护人。</p>
 <p>本文提及 Linus 的次数比滨野纯多，不过 Git 之所以是现在的样子，最大功臣还是默默耕耘多年的滨野纯和其他开发者。“1% 的天分加上 99% 的努力”或许是老梗，但在 Git 与 Linux Kernel 等成功专案里都是事实。</p>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="github-与-ruby-人">GitHub 与 Ruby 人<a href="https://blog.wlgs.site/blog/2025/git#github-%E4%B8%8E-ruby-%E4%BA%BA" class="hash-link" aria-label="Direct link to GitHub 与 Ruby 人" title="Direct link to GitHub 与 Ruby 人">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="github-与-ruby-人">GitHub 与 Ruby 人<a href="https://blog.wlgs.site/blog/2025/git#github-%E4%B8%8E-ruby-%E4%BA%BA" class="hash-link" aria-label="GitHub 与 Ruby 人的直接链接" title="GitHub 与 Ruby 人的直接链接">​</a></h2>
 <p>虽然 Git 在早期引来不少关注，但仍是小众。2006 年 1 月，X Window System 团队放弃 CVS，改用 Git，滨野纯<a href="https://lore.kernel.org/git/7vzmlgt5zt.fsf@assigned-by-dhcp.cox.net/" target="_blank" rel="noopener noreferrer">得知</a>后还感到很惊喜，他没料到像 X Window System 这像的大专案会愿意大费周章转换版控系统。</p>
 <p>自 BitKeeper 之后，分散式版管系统如雨后春笋般冒出，除了 Monotone 之外，还有 Mercurial、Darcs、Bazaar、Arch、Fossil 等。声势最不容小覻的是 Mercurial，作者 Olivia Mackall 晚了 Git 几天发布它，但功能已比当时的 Git 完整，而且更为使用者友善，之后更有 Google Code 和 BitBucket 的背书。总之，版控市场犹如战国时代，每家都占有一席之地。</p>
 <p>真正把 Git 推上巅峰、变成主流的是 GitHub。或者根据 Linus 所述，是 Ruby 人，<a href="https://www.youtube.com/watch?v=0m4hlWx7oRk&amp;t=1080s" target="_blank" rel="noopener noreferrer">一群奇怪的人</a>，让 Git 一夕爆红。</p>
@@ -556,7 +961,7 @@
 <p><img decoding="async" loading="lazy" src="https://blog.brachiosoft.com/posts/git//github.png" alt="GitHub，2008 年 8 月" class="img_iEQV"></p>
 <p>GitHub，2008 年 8 月</p>
 <p>Ruby 的杀手级应用 Rails，在 GitHub 开站前夕就从 Subversion 移到了 GitHub，这无疑是帮 Git 在 Ruby 社群注入更大量的强心针。因为当时在写 Ruby 的人，八成都是在开发 Rails 应用。看到自己赖以为生的框架也用 GitHub ，更多 Ruby 人也欣然跟随。</p>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="git-与-github-有冲突的合并">Git 与 GitHub 有冲突的合并<a href="https://blog.wlgs.site/blog/2025/git#git-%E4%B8%8E-github-%E6%9C%89%E5%86%B2%E7%AA%81%E7%9A%84%E5%90%88%E5%B9%B6" class="hash-link" aria-label="Direct link to Git 与 GitHub 有冲突的合并" title="Direct link to Git 与 GitHub 有冲突的合并">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="git-与-github-有冲突的合并">Git 与 GitHub 有冲突的合并<a href="https://blog.wlgs.site/blog/2025/git#git-%E4%B8%8E-github-%E6%9C%89%E5%86%B2%E7%AA%81%E7%9A%84%E5%90%88%E5%B9%B6" class="hash-link" aria-label="Git 与 GitHub 有冲突的合并的直接链接" title="Git 与 GitHub 有冲突的合并的直接链接">​</a></h2>
 <p>Scott Chacon 不是一个寻常的 Git + Ruby 人，除了写 Ruby 程式外，他还是一个出色的讲师／写手／传道者。他会录制影片、写文件，教大家怎么使用 Git。不只如此，他对 Git 内部运作也有深入研究，曾经写过《Git Internals》这本电子书。</p>
 <p>三年来，Git 的“官方”首页一直是 Petr Baudis 在 2005 年架设的 git.or.cz，而 Scott 想设计一个更为新手友善的 Git 首页。2008 年 7 月，他将 git.or.cz 上的内容整理过后，开设了一个新的首页 <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">git-scm.com</a>，并在 Git 邮件列表上<a href="https://lore.kernel.org/git/d411cc4a0807251035i7aed2ec9wef7e8f1b3ae4c585@mail.gmail.com/" target="_blank" rel="noopener noreferrer">询问</a> Git 核心开发成员（尤其是 Petr）的意见。</p>
 <p>Git 在 Ruby 社群里虽然已流行了一阵子，但 Git 邮件列表上却鲜少出现 Ruby 人的踪迹。Git 核心开发成员，大部分是资深的 C 程式设计师，出没在邮件列表；而 Ruby 人，大部分是年轻一代的网页开发者，出没在实体聚会、网页式的论譠及 GitHub，搞不好一辈子都没用过邮件列表。两个族群互不来往，而 Scott 在 Git 邮件列表上那篇关于 git-scm.com 的讯息，是两个族群早期的少数几次接触之一。</p>
@@ -566,7 +971,7 @@
 <p>2008 年 10 月，谷歌赞助了第一届 GitTogether 会议，Git 和 GitHub 两组人马 20 馀人齐聚在谷歌总部山景城。他们放下之前的成见，因为他们很清楚，合作才会让彼此变得更强大。</p>
 <p><img decoding="async" loading="lazy" src="https://blog.brachiosoft.com/posts/git//gittogether.jpg" alt="GitTogether 2008" class="img_iEQV"></p>
 <p>GitTogether 2008</p>
-<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="后记">后记<a href="https://blog.wlgs.site/blog/2025/git#%E5%90%8E%E8%AE%B0" class="hash-link" aria-label="Direct link to 后记" title="Direct link to 后记">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="后记">后记<a href="https://blog.wlgs.site/blog/2025/git#%E5%90%8E%E8%AE%B0" class="hash-link" aria-label="后记的直接链接" title="后记的直接链接">​</a></h2>
 <p>无法与 Git 和 GitHub 竞争，BitKeeper 后来被迫退出市场，它的团队在 2016 年将其程式码开源。这个祖父级的版控软体，曾经是 Git、Mercurial、Monotone 等软体的灵感来源，如今成了历史文物，供人观赏与研究。被问到有何感想，Larry McVoy 这么<a href="https://news.ycombinator.com/item?id=26205688" target="_blank" rel="noopener noreferrer">回应</a>：</p>
 <blockquote>
 <p>事后诸葛亮最简单了。BitKeeper 的生意经营得很好，我们运营了 18 年，赚的钱足够让我和我的商业伙伴退休，不过还不够让每个人都可以选择退休。</p>
@@ -579,151 +984,569 @@
 <p>历史上从来没有一个版控软体能如此称霸市场，下一个能取代 Git 的会是什么？不少人说可能会与 AI 有关，但没人说得准，不过可以确信的是，过程中一定会有一连串的偶发事件和一群杰出的骇客。</p>]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[卖米]]></title>
-        <id>https://blog.wlgs.site/blog/2025/mi</id>
-        <link href="https://blog.wlgs.site/blog/2025/mi"/>
+        <title type="html"><![CDATA[回乡过年：十点观察与感悟]]></title>
+        <id>https://blog.wlgs.site/blog/2025/hxgn</id>
+        <link href="https://blog.wlgs.site/blog/2025/hxgn"/>
         <updated>2025-01-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[天刚蒙蒙亮，母亲就把我叫起来了：“琼宝，今天是这里的场，我们担点米到场上卖了，好弄点钱给你爹买药。”]]></summary>
-        <content type="html"><![CDATA[<p>天刚蒙蒙亮，母亲就把我叫起来了：“琼宝，今天是这里的场，我们担点米到场上卖了，好弄点钱给你爹买药。”</p>
-<p>我迷迷糊糊睁开双眼，看看窗外，日头还没出来呢。我实在太困，又在床上赖了一会儿。</p>
-<p>隔壁传来父亲的咳嗽声，母亲在厨房忙活着，饭菜的香气混合着淡淡的油烟味飘过来，慢慢驱散了我的睡意。我坐起来，穿好衣服，开始铺床。</p>
-<p>“姐，我也跟你们一起去赶场好不好？你买冰棍给我吃！”</p>
-<p>弟弟顶着一头睡得乱蓬蓬的头发跑到我房里来。</p>
-<p>“毅宝，你不能去，你留在家里放水。”隔壁传来父亲的声音，夹杂着几声咳嗽。</p>
-<p>弟弟有些不情愿地冲隔壁说：“爹，天气这么热，你自己昨天才中了暑，今天又叫我去，就不怕我也中暑！”</p>
-<p>“人怕热，庄稼不怕？都不去放水，地都干了，禾苗都死了，一家人喝西北风去？”父亲一动气，咳嗽得越发厉害了。</p>
-<p>弟弟冲我吐吐舌头，扮了个鬼脸，就到父亲房里去了。</p>
-<p>只听见父亲开始叮嘱他怎么放水，去哪个塘里引水，先放哪丘田，哪几个地方要格外留神别人来截水，等等。</p>
-<p>吃过饭，弟弟就找着父亲常用的那把锄头出去了。我和母亲开始往谷箩里装米，装完后先称了一下，一担八十多斤，一担六十多斤。</p>
-<p>我说：“妈，我挑重的那担吧。”</p>
-<p>“你学生妹子，肩膀嫩，还是我来。”</p>
-<p>母亲说着，一弯腰，把那担重的挑起来了。</p>
-<p>我挑起那担轻的，跟着母亲出了门。</p>
-<p>“路上小心点！咱们家的米好，别便宜卖了！”父亲披着衣服站在门口嘱咐道。</p>
-<p>“知道了，你快回床上躺着吧。”母亲艰难地把头从扁担旁边扭过来，吩咐道，“饭菜在锅里，中午你叫毅宝热一下吃！”</p>
-<p>赶场的地方离我家大约有四里路，我和母亲挑着米，在窄窄的田间小路上走走停停，足足走了一个钟头才到。</p>
-<p>场上的人已经不少了，我们赶紧找了一块空地，把担子放下来，把扁担放在地上，两个人坐在扁担上，拿草帽扇着。</p>
-<p>一大早就这么热，中午就更不得了，我不由得替弟弟担心起来。</p>
-<p>他去放水，是要在外头晒上一整天的。</p>
-<p>我往四周看了看，发现场上有许多人卖米，莫非他们都等着用钱？</p>
-<p>场上的人大都眼熟，都是附近十里八里的乡亲，人家也是种田的，谁会来买米呢？</p>
-<p>我问母亲，母亲说：“有专门的米贩子会来收米的。他们开了车到乡下来赶场，收了米，拉到城里去卖，能挣好些哩。”</p>
-<p>我说：“凭什么都给他们挣？我们也拉到城里去卖好了！”其实自己也知道不过是气话。</p>
-<p>果然，母亲说：“咱们这么一点米，又没车，真弄到城里去卖，挣的钱还不够路费呢！早先你爹身体好的时候，自己挑着一百来斤米进城去卖，隔几天去一趟，倒比较划算一点。”</p>
-<p>我不由心里一紧，心疼起父亲来。</p>
-<p>从家里到城里足足有三十多里山路呢，他挑着那么重的担子走着去，该多么辛苦！就为了多挣那几个钱，把人累成这样，多不值啊！</p>
-<p>但又有什么办法呢？家里除了种地，也没别的收入，不卖米，拿什么钱供我和弟弟上学？
-我想着这些，心里一阵阵难过起来。</p>
-<p>看看旁边的母亲，头发有些斑白了，黑黝黝的脸上爬上了好多皱纹，脑门上密密麻麻都是汗珠，眼睛有些红肿。</p>
-<p>“妈，你喝点水。”</p>
-<p>我把水壶递过去，拿草帽替她扇着。</p>
-<p>米贩子们终于开着车来了。他们四处看着卖米的人，走过去仔细看米的成色，还把手插进米里，抓上一把米细看。</p>
-<p>“一块零五。”</p>
-<p>米贩子开价了。</p>
-<p>卖米的似乎嫌太低，想讨价还价。</p>
-<p>“不还价，一口价，爱卖不卖！”</p>
-<p>米贩子态度很强硬，毕竟，满场都是卖米的人，只有他们是买家，不趁机压价，更待何时？</p>
-<p>母亲注意着那边的情形说：“一块零五？也太便宜了，上场还卖到一块一呢。”</p>
-<p>正说着，有个米贩子朝我们这边走过来了。</p>
-<p>他把手插进大米里，抓了一把出来，迎着阳光细看着。</p>
-<p>“这米好咧！又白又匀净，又筛得干净，一点沙子也没有！”母亲堆着笑，语气里有几分自豪。
-的确，我家的米比场上哪个人卖的米都要好。</p>
-<p>那人点了点头，说：“米是好米，不过这几天城里跌价，再好的米也卖不出好价钱来。一块零五，卖不卖？”</p>
-<p>母亲摇摇头：“这也太便宜了吧？上场还卖一块一呢。再说，你是识货的，一分钱一分货，我这米肯定好过别家的！”</p>
-<p>那人又看了看米，犹豫了一下，说：“本来都是一口价，不许还的，看你们家米好，我加点，一块零八，怎么样？”</p>
-<p>母亲还是摇头：“不行，我们家这米，少说也要卖到一块一。你再加点？”</p>
-<p>那人冷笑一声，说：“今天肯定卖不出一块一的行情，我出一块零八你不卖，等会散场的时候你一块零五都卖不出去！”</p>
-<p>“卖不出去，我们再担回家！”那人的态度激恼了母亲。</p>
-<p>“那你就等着担回家吧。”那人冷笑着，丢下这句话走了。</p>
-<p>我在旁边听着，心里算着：一块零八到一块一，每斤才差两分钱。</p>
-<p>这里一共150斤米，总共也就三块钱的事情，路这么远，何必再挑回去呢？我的肩膀还在痛呢。
-我轻轻对母亲说：“妈，一块零八就一块零八吧，反正也就三块钱的事。再说，还等着钱给爹买药呢。”</p>
-<p>“那哪行？”母亲似乎有些生气了，“三块钱不是钱？再说了，也不光是几块钱的事，做生意也得讲点良心，咱们辛辛苦苦种出来的米，质量也好，哪能这么贱卖了？”</p>
-<p>我不敢再说话，我知道种田有多么累。</p>
-<p>光说夏天放水，不就把爹累得病倒了？</p>
-<p>弟弟也才十一二岁的毛孩子，还不得找着锄头去放水！</p>
-<p>毕竟，这是一家人的生计啊！</p>
-<p>又有几个米贩子过来了，他们也都只出一块零五。有一两个出到一块零八，也不肯再加。
-母亲仍然不肯卖。</p>
-<p>看看人渐渐少了，我有些着急了。</p>
-<p>母亲一定也很心急吧，我想。</p>
-<p>“妈，你去那边树下凉快一下吧！”我说。</p>
-<p>母亲一边擦汗，一边摇头：“不行，我走开了，来人买米怎么办？你又不会还价！”
-我有些惭愧。</p>
-<p>“百无一用是书生”，虽然在学校里功课好，但这些事情上就比母亲差远了。</p>
-<p>又有好些人来买米，因为我家的米实在是好，大家都过来看，但谁也不肯出到一块一。
-看看日头到头顶上了，我觉得肚子饿了，便拿出带来的饭菜和母亲一起吃起来。
-母亲吃了两口就不吃了，我知道她是担心米卖不出去，心里着急。</p>
-<p>母亲叹了口气：“还不知道卖得掉卖不掉呢。”
-我趁机说：“不然就便宜点卖好了。”
-母亲说：“我心里有数。”
-下午人更少了，日头又毒，谁愿意在场上晒着呢。
-看看母亲，衣服都粘在背上了，黝黑的脸上也透出晒红的印迹来。
-“妈，我替你看着，你去溪里泡泡去。”
-母亲还是摇头：“不行，我有风湿，不能在凉水里泡。你怕热，去那边树底下躲躲好了。”
-“不用，我不怕晒。”
-“那你去买根冰棍吃好了。”</p>
-<p>母亲说着，从兜里掏出两毛钱零钱来。
-我最喜欢吃冰棍了，尤其是那种叫“葡萄冰”的最好吃，也不贵，两毛钱一根。
-但我今天突然不想吃了：“妈，我不吃，喝水就行。”
-最热的时候也过去了，转眼快散场了。
-卖杂货的小贩开始降价甩卖，卖菜，卖西瓜的也都吆喝着：“散场了，便宜卖了！”
-我四处看看，场上已经没有几个卖米的了，大部分人已经卖完回去了。
-母亲也着急起来，一着急，汗就出得越多了。</p>
-<p>终于有个米贩子过来了：“这米卖不卖？一块零五，不讲价！”
-母亲说：“你看我这米，多好！上场还卖一块一呢……”
-不等母亲说完，那人就不耐烦地说：“行情不同了！想卖一块一，你就等着往回担吧！”
-奇怪的是，母亲没有生气，反而堆着笑说：“那，一块零八，你要不要？”
-那人从鼻子里哼了一声，说：“你这个价钱，不是开场的时候也难得卖出去，现在都散场了，谁买？做梦吧！”
-母亲的脸一下子白了，动着嘴唇，但什么也没说。</p>
-<p>一旁的我忍不住插嘴了：“不买就不买，谁稀罕？不买你就别站在这里挡道！”
-“哟，大妹子，你别这么大火气。”
-那人冷笑着说，“留着点气力等会把米担回去吧！”
-等那人走了，我忍不住埋怨母亲：“开场的时候人家出一块零八你不卖，这会好了，人家还不愿意买了！”
-母亲似乎有些惭愧，但并不肯认错：“本来嘛，一分钱一分货，米是好米，哪能贱卖了？出门的时候你爹不还叮嘱叫卖个好价钱？”</p>
-<p>“你还说爹呢！他病在家里，指着这米换钱买药治病！人要紧还是钱要紧？”
-母亲似乎没有话说了，等了一会儿，低声说：“一会儿人家出一块零五也卖了吧。”
-可是再没有人来买米了，米贩子把买来的米装上车，开走了。
-散场了，我和母亲晒了一天，一粒米也没卖出去。
-“妈，走吧，回去吧，别愣在那儿了。”
-我收拾好毛巾、水壶、饭盒，催促道。
-母亲迟疑着，终于起了身。
-“妈，我来挑重的。”
-“你学生妹子，肩膀嫩……”
-不等母亲说完，我已经把那担重的挑起来了。</p>
-<p>母亲也没有再说什么，挑起那担轻的跟在我后面，踏上了回家的路。
-肩上的担子好沉，我只觉得压着一座山似的。
-突然脚下一滑，我差点摔倒。
-我赶紧把剩下的力气都用到腿上，好不容易站稳了，但肩上的担子还是倾斜了一下，洒了好多米出来。
-“啊，怎么搞的？”母亲也放下担子走过来，嘴里说，“我叫你不要挑这么重的，你偏不听，这不是洒了。多可惜！真是败家精！”</p>
-<p>败家精是母亲的口头禅，我和弟弟干了什么坏事她总是这么数落我们。
-但今天我觉得格外委屈，也不知道为什么。
-“你在这等会儿，我回家去拿个簸箕来把地上的米扫进去。浪费了多可惜！拿回去可以喂鸡呢！”母亲也不问我扭伤没有，只顾心疼洒了的米。
-我知道母亲的脾气，她向来是“刀子嘴，豆腐心”的，虽然也心疼我，嘴里却非要骂我几句。
-想到这些，我也不委屈了。
-“妈，你回去还要来回走个六七里路呢，时候也不早了。”我说。
-“那地上的米怎么办？”
-我灵机一动，把头上的草帽摘下来：“装在这里面好了。”
-母亲笑了：“还是你脑子活，学生妹子，机灵。”</p>
-<p>说着，我们便蹲下身子，用手把洒落在地上的米捧起来，放在草帽里，然后把草帽顶朝下放在谷箩里，便挑着米继续往家赶。
-回到家里，弟弟已经回来了，母亲便忙着做晚饭，我跟父亲报告卖米的经过。
-父亲听了，也没抱怨母亲，只说：“那些米贩子也太黑了，城里都卖一块五呢，把价压这么低！这么挣庄稼人的血汗钱，太没良心了！”</p>
-<p>我说：“爹，也没给你买药，怎么办？”
-父亲说：“我本来就说不必买药的嘛，过两天就好了，花那个冤枉钱做什么！”
-晚上，父亲咳嗽得更厉害了。
-母亲对我说：“琼宝，明天是转步的场，咱们辛苦一点，把米挑到那边场上去卖了，好给你爹买药。”
-“转步？那多远，十几里路呢！”我想到那漫长的山路，不由有些发怵。
-“明天你们少担点米去。每人担50斤就够了。”父亲说。</p>
-<p>“那明天可不要再卖不掉担回来哦！”我说，“十几里山路走个来回，还挑着担子，可不是说着玩的！”
-“不会了不会了。”母亲说，“明天一块零八也好，一块零五也好，总之都卖了！”
-母亲的话里有许多辛酸和无奈的意思，我听得出来，但不知道怎么安慰她。</p>
-<p>我自己心里也很难过，有点想哭。
-我想，别让母亲看见了，要哭就躲到被子里哭去吧。
-可我实在太累啦，头刚刚挨到枕头就睡着了，睡得又香又甜。</p>
+        <summary type="html"><![CDATA[我的家乡是水浒故里，八百里水泊梁山水域部分就在我们那儿。]]></summary>
+        <content type="html"><![CDATA[<p>我的家乡是水浒故里，八百里水泊梁山水域部分就在我们那儿。</p>
+<p>曾经风靡一时的大中华区奥迪村事件就发生在我们镇，用不太恰当但又很贴切的话形容，这里 “江湖气很重”。</p>
+<p>就像李雪健老师经典台词说的：“江湖不是打打杀杀，江湖是人情世故” 。</p>
+<p>所以，下面只是我回村过年时不成熟的观察和感悟，仅代表个人观点，不喜勿喷。</p>
+<p><img decoding="async" loading="lazy" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/mjl8GCpsL9bBgnLHAwhBWxlGMDq87NjCBeTBF3suZaAfVpx6ibhZnY3qtAuh2WiahNbXyQzGFiaUHZaaD7kjZUYNg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片" class="img_iEQV"></p>
+<p>回村这近 6 天，我有了这些深刻的观察和思考：</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="1没有比健康的长寿更重要的事"><strong>1、没有比健康的长寿更重要的事！</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#1%E6%B2%A1%E6%9C%89%E6%AF%94%E5%81%A5%E5%BA%B7%E7%9A%84%E9%95%BF%E5%AF%BF%E6%9B%B4%E9%87%8D%E8%A6%81%E7%9A%84%E4%BA%8B" class="hash-link" aria-label="1没有比健康的长寿更重要的事的直接链接" title="1没有比健康的长寿更重要的事的直接链接">​</a></h2>
+<p>没有什么比健康的长寿更重要的事了。</p>
+<p>在生活里，利欲熏心、利益纷争实在没有意义且毫无必要，能健康地晚点进 “盒里” 才是人生真谛。</p>
+<p>而且，我的观察——年龄越大，对早年的记忆就越深刻，也越值得回味。</p>
+<p>作为晚辈，认真洗耳恭听长辈们的话就是最大的孝顺，对老人而言，陪伴就是最长情的告白。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="2降低自己的姿态一切皆好办"><strong>2、降低自己的姿态，一切皆好办！</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#2%E9%99%8D%E4%BD%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%A7%BF%E6%80%81%E4%B8%80%E5%88%87%E7%9A%86%E5%A5%BD%E5%8A%9E" class="hash-link" aria-label="2降低自己的姿态一切皆好办的直接链接" title="2降低自己的姿态一切皆好办的直接链接">​</a></h2>
+<p>降低自己的姿态，很多事情都会好办。</p>
+<p>我本身不会抽烟，但兜里总会装着玉溪（在村里貌似算中档烟，村里最好的烟是华子）和打火机。遇到认识的人就递上一支烟并帮忙点上，这种社交礼仪很管用。</p>
+<p>它一来代表懂事，二来代表自己是个 “社会人”，三则代表懂得从众。</p>
+<p>从众是和大家打成一片的方式，本就没有对错之分。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="3为什么总是张家长李家短"><strong>3、为什么总是张家长、李家短？</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%80%BB%E6%98%AF%E5%BC%A0%E5%AE%B6%E9%95%BF%E6%9D%8E%E5%AE%B6%E7%9F%AD" class="hash-link" aria-label="3为什么总是张家长李家短的直接链接" title="3为什么总是张家长李家短的直接链接">​</a></h2>
+<p>为什么农村总是张家长、李家短的呢？</p>
+<p>因为在农村确实没太多事可做，地都承包出去了，我们那儿又没有过年打牌、打麻将的传统。</p>
+<p>所以，只有这些家长里短的小事，才成了大家的共同话题，总不能去议论巴以冲突、乌克兰局势吧。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="4农村人最大的困境在于因为看见所以相信"><strong>4、农村人最大的困境在于：因为看见，所以相信。</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#4%E5%86%9C%E6%9D%91%E4%BA%BA%E6%9C%80%E5%A4%A7%E7%9A%84%E5%9B%B0%E5%A2%83%E5%9C%A8%E4%BA%8E%E5%9B%A0%E4%B8%BA%E7%9C%8B%E8%A7%81%E6%89%80%E4%BB%A5%E7%9B%B8%E4%BF%A1" class="hash-link" aria-label="4农村人最大的困境在于因为看见所以相信的直接链接" title="4农村人最大的困境在于因为看见所以相信的直接链接">​</a></h2>
+<p>农村最大的困境在于 “因为看见，所以相信”，存在看车识人的价值观，觉得开什么车就等于有多少钱，不开车就有各种 “一言难尽” 的可能。</p>
+<p>农村的困局就在于视野永远局限、“狭隘”。</p>
+<p>只有极少数人在意孩子未来的发展和高考分数。</p>
+<p>倘若现在还不重视教育，不重视情商、逆商的培养，未来肯定会出大问题。</p>
+<p>要打破这种局限，需要自身观念和认知的转变。但实话说，这几乎不可能！</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="5一边把手机丢给孩子一边抱怨孩子不好好学习"><strong>5、一边把手机丢给孩子，一边抱怨孩子不好好学习</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#5%E4%B8%80%E8%BE%B9%E6%8A%8A%E6%89%8B%E6%9C%BA%E4%B8%A2%E7%BB%99%E5%AD%A9%E5%AD%90%E4%B8%80%E8%BE%B9%E6%8A%B1%E6%80%A8%E5%AD%A9%E5%AD%90%E4%B8%8D%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0" class="hash-link" aria-label="5一边把手机丢给孩子一边抱怨孩子不好好学习的直接链接" title="5一边把手机丢给孩子一边抱怨孩子不好好学习的直接链接">​</a></h2>
+<p>一边把手机丢给孩子，一边抱怨孩子不好好学习，这是很多农村家庭的现状。</p>
+<p>孩子沉迷游戏和视频，问题的根源不在孩子，而在监护人 —— 家长。</p>
+<p>自控力和自律的培养，首要责任在于家长。要让孩子不玩手机，家长首先得放下手机。家长可以多陪伴孩子进行户外活动，或者一起阅读，为孩子树立良好的榜样。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="6所谓丢人是自己把面子看得太重"><strong>6、所谓“丢人”是自己把面子看得太重！</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#6%E6%89%80%E8%B0%93%E4%B8%A2%E4%BA%BA%E6%98%AF%E8%87%AA%E5%B7%B1%E6%8A%8A%E9%9D%A2%E5%AD%90%E7%9C%8B%E5%BE%97%E5%A4%AA%E9%87%8D" class="hash-link" aria-label="6所谓丢人是自己把面子看得太重的直接链接" title="6所谓丢人是自己把面子看得太重的直接链接">​</a></h2>
+<p>所谓 “丢人”，不过是自己把面子看得太重。</p>
+<p>我这几年深刻认识到，年龄越大，面子越不重要，面子是自己挣的，不是别人给的。</p>
+<p>这次我骑三轮走亲戚，挺有挑战性的。</p>
+<p><img decoding="async" loading="lazy" src="https://mmbiz.qpic.cn/sz_mmbiz_png/mjl8GCpsL9bBgnLHAwhBWxlGMDq87NjCVics9CTRBjYnbaxG97ykPjyGF0vItyhveKa5QMCcambComABZtbFOUg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片" class="img_iEQV"></p>
+<p>我有几年没走亲戚了，没开车回家，走亲戚确实不方便，家里的三轮成了主要交通工具，我几乎成了全村年轻人里骑三轮走亲戚唯一的人。</p>
+<p>这让我想起鲁迅先生笔下站着喝酒唯一的孔乙己。</p>
+<p>很多同龄返乡的读书人都放不下心里的包袱。</p>
+<p>就像我自己心里也会想：</p>
+<ul>
+<li>邻居怎么看？</li>
+<li>村里的人怎么看？</li>
+<li>村里开奥迪的初中毕业同学怎么看？</li>
+</ul>
+<p>但说实话，我们太把自己当回事，太在意别人的观点了，其实除了自己和家人，真的没有人那么在意我们。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="7你怎么样你观察的世界就怎么样"><strong>7、你怎么样？你观察的世界就怎么样！</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#7%E4%BD%A0%E6%80%8E%E4%B9%88%E6%A0%B7%E4%BD%A0%E8%A7%82%E5%AF%9F%E7%9A%84%E4%B8%96%E7%95%8C%E5%B0%B1%E6%80%8E%E4%B9%88%E6%A0%B7" class="hash-link" aria-label="7你怎么样你观察的世界就怎么样的直接链接" title="7你怎么样你观察的世界就怎么样的直接链接">​</a></h2>
+<p>你是什么样，你观察到的世界就是什么样。</p>
+<p>经济形势再不好，也总有好的行业和个体。抱怨解决不了任何问题，大过年的也没人喜欢听唠叨。</p>
+<p>只要我们自己积极正能量，世界看起来就会正能量很多。</p>
+<p>而破局的办法，还得靠自己想。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="8这个世界盼着你好的只有父母家人"><strong>8、这个世界盼着你好的只有父母、家人</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#8%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E7%9B%BC%E7%9D%80%E4%BD%A0%E5%A5%BD%E7%9A%84%E5%8F%AA%E6%9C%89%E7%88%B6%E6%AF%8D%E5%AE%B6%E4%BA%BA" class="hash-link" aria-label="8这个世界盼着你好的只有父母家人的直接链接" title="8这个世界盼着你好的只有父母家人的直接链接">​</a></h2>
+<p>这个世界上，真正盼着你好的只有父母和家人。</p>
+<p>人走茶凉往往只在一瞬间，我们在谈论别人的同时，别人也在谈论我们。不在意别人的评价，才是更好的活法。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="9财散人聚财聚人散"><strong>9、财散人聚，财聚人散</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#9%E8%B4%A2%E6%95%A3%E4%BA%BA%E8%81%9A%E8%B4%A2%E8%81%9A%E4%BA%BA%E6%95%A3" class="hash-link" aria-label="9财散人聚财聚人散的直接链接" title="9财散人聚财聚人散的直接链接">​</a></h2>
+<p>家家都有本难念的经，除非有刘强东那样的家底，否则亲戚间很难做到全方位帮扶。</p>
+<p>我们普通老百姓走亲戚，能做的就是认真聆听，如果条件允许，留下点力所能及的现金，这其实是给予对方更深层次的 “情绪价值”。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="10上学打工从长计议"><strong>10、上学？打工？从长计议</strong><a href="https://blog.wlgs.site/blog/2025/hxgn#10%E4%B8%8A%E5%AD%A6%E6%89%93%E5%B7%A5%E4%BB%8E%E9%95%BF%E8%AE%A1%E8%AE%AE" class="hash-link" aria-label="10上学打工从长计议的直接链接" title="10上学打工从长计议的直接链接">​</a></h2>
+<p>从真实的就业形势就能看出教育的重要性。一位回乡的滴滴司机说，他所在的 160 人的滴滴群里，接近 120 人都是大专以上学历，这很夸张，但却是事实。</p>
+<p>前些年混得风生水起的建筑行业，如今有的从业者为了生计都干起了滴滴（返程滴滴司机和我同岁，之前建筑行业去年开始没活了）。</p>
+<p>已经有同龄小伙伴开始抱怨当初没有好好学习。现在各行各业都越来越重视孩子的教育（我的观察：包括之前的地痞流氓小混混），这是当下最大的现实。</p>
+<p>其实，上学也好，工作也罢，本质目的都是为了更好地生活，关键在于我们自身要有上进心。</p>
+<p>，时长01:00</p>
+<p>回村过年的时光转瞬即逝，在这短暂却充满烟火气的日子里，我愈发深刻地体会到，珍视眼前和当下，遵从自己的内心，才是生活的真谛。</p>
+<p>这一趟回程，不仅让我重新审视了老家的乡村生活，也让我对人生有了新的感悟，这些收获将伴随我走向未来的每一段路。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊202502]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202502</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202502"/>
+        <updated>2025-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax3.sinaimg.cn/large/006BNqYCly1hybsqelazoj30my0zktbm.jpg" alt="" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="视频">视频<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="视频的直接链接" title="视频的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="爽快了"><a href="https://weibo.com/5014788526/P5uiV1H69" target="_blank" rel="noopener noreferrer">爽快了</a><a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E7%88%BD%E5%BF%AB%E4%BA%86" class="hash-link" aria-label="爽快了的直接链接" title="爽快了的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="转盘绘画你见过吗"><a href="https://h5.video.weibo.com/show/1034:5113953630748725" target="_blank" rel="noopener noreferrer">转盘绘画你见过吗？</a><a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E8%BD%AC%E7%9B%98%E7%BB%98%E7%94%BB%E4%BD%A0%E8%A7%81%E8%BF%87%E5%90%97" class="hash-link" aria-label="转盘绘画你见过吗的直接链接" title="转盘绘画你见过吗的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="黑胶唱片到底怎么把声音摩擦出来的"><a href="https://weibo.com/2199837712/P7K55Cjfa" target="_blank" rel="noopener noreferrer">黑胶唱片到底怎么把声音“摩擦”出来的</a><a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E9%BB%91%E8%83%B6%E5%94%B1%E7%89%87%E5%88%B0%E5%BA%95%E6%80%8E%E4%B9%88%E6%8A%8A%E5%A3%B0%E9%9F%B3%E6%91%A9%E6%93%A6%E5%87%BA%E6%9D%A5%E7%9A%84" class="hash-link" aria-label="黑胶唱片到底怎么把声音摩擦出来的的直接链接" title="黑胶唱片到底怎么把声音摩擦出来的的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="这样的婚礼不错新娘新郎自己就是司仪"><a href="https://m.weibo.cn/detail/5132951307950931" target="_blank" rel="noopener noreferrer">这样的婚礼不错，新娘新郎自己就是司仪</a><a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E8%BF%99%E6%A0%B7%E7%9A%84%E5%A9%9A%E7%A4%BC%E4%B8%8D%E9%94%99%E6%96%B0%E5%A8%98%E6%96%B0%E9%83%8E%E8%87%AA%E5%B7%B1%E5%B0%B1%E6%98%AF%E5%8F%B8%E4%BB%AA" class="hash-link" aria-label="这样的婚礼不错新娘新郎自己就是司仪的直接链接" title="这样的婚礼不错新娘新郎自己就是司仪的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="张卡罗讨厌婚礼"><a href="https://h5.video.weibo.com/show/1034:5076260108566537" target="_blank" rel="noopener noreferrer">张卡罗：讨厌婚礼</a><a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E5%BC%A0%E5%8D%A1%E7%BD%97%E8%AE%A8%E5%8E%8C%E5%A9%9A%E7%A4%BC" class="hash-link" aria-label="张卡罗讨厌婚礼的直接链接" title="张卡罗讨厌婚礼的直接链接">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="网站">网站<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E7%BD%91%E7%AB%99" class="hash-link" aria-label="网站的直接链接" title="网站的直接链接">​</a></h2>
+<p>2、<a href="https://slea.ai/zh-CN" target="_blank" rel="noopener noreferrer">Slea.ai</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121801.webp" alt="img" class="img_iEQV"></p>
+<p>免费的 AI Logo 生成器。</p>
+<p>3、<a href="https://tiktokvoice.net/en/sounds-effect" target="_blank" rel="noopener noreferrer">AI 音效生成器</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121802.webp" alt="img" class="img_iEQV"></p>
+<p>免费生成各种音效，比如雨声、风声。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="开源">开源<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E5%BC%80%E6%BA%90" class="hash-link" aria-label="开源的直接链接" title="开源的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="hivisionidphotos">HivisionIDPhotos<a href="https://blog.wlgs.site/blog/2025/weekly-202502#hivisionidphotos" class="hash-link" aria-label="HivisionIDPhotos的直接链接" title="HivisionIDPhotos的直接链接">​</a></h3>
+<p>HivisionIDPhotos 是一款轻量级的 AI 证件照制作工具，旨在通过简便的操作生成标准证件照和六寸排版照。</p>
+<p>演示地址：<a href="https://swanhub.co/ZeYiLin/HivisionIDPhotos/demo" target="_blank" rel="noopener noreferrer">https://swanhub.co/ZeYiLin/HivisionIDPhotos/demo</a></p>
+<p>GitHub：<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos" target="_blank" rel="noopener noreferrer">https://github.com/Zeyi-Lin/HivisionIDPhotos</a></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片-1">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E5%9B%BE%E7%89%87-1" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p>1、<a href="https://www.popularmechanics.com/flight/drones/a30795266/cia-robot-dragonfly/" target="_blank" rel="noopener noreferrer">机器蜻蜓</a></p>
+<p>美国首都华盛顿的中央情报局博物馆，有一只上个世纪70年代制造的机器蜻蜓。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121808.webp" alt="img" class="img_iEQV"></p>
+<p>它其实是一架微型直升机，飞到目标对象附近，窃听对方的谈话。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121809.webp" alt="img" class="img_iEQV"></p>
+<p>这只蜻蜓可以飞200米，然后落下来，通过激光捕捉空气振动，来还原谈话声。</p>
+<p>但是，它不防风，也难以控制，所以从来没有实际用过。</p>
+<p>2、<a href="https://en.wikipedia.org/wiki/Postzegelcode" target="_blank" rel="noopener noreferrer">荷兰的邮资代码</a></p>
+<p>荷兰寄信不用邮票，而是用一种9个字母和数字组成的代码。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024071110.webp" alt="img" class="img_iEQV"></p>
+<p>你花钱买一个代码，以 3 x 3 的格式写在信封上，就能代替邮票，作为付款证明。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202407/bg2024071111.webp" alt="img" class="img_iEQV"></p>
+<p>因为代码的有效期只有五天（以邮戳为准），需要购买后及时寄出，被猜到的可能性很小。</p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCly1hx1kg65ihqj30ri7zyb29.jpg" alt="" class="img_iEQV"></p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="错误的数学"><a href="https://www.charlespetzold.com/blog/2025/01/Very-Wrong-Math.html" target="_blank" rel="noopener noreferrer">错误的数学</a><a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E9%94%99%E8%AF%AF%E7%9A%84%E6%95%B0%E5%AD%A6" class="hash-link" aria-label="错误的数学的直接链接" title="错误的数学的直接链接">​</a></h3>
+<p>一位美国网友注意到，一家设计公司在社交媒体上，发布了下面的图片。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202501/bg2025011201.webp" alt="img" class="img_iEQV"></p>
+<p>图片声称，33000英尺（1万米）高空的飞机，比5000英尺（1500米）的飞机，在飞向同样目的地时，花费的时间是后者的4倍（假定飞行速度相同）。</p>
+<p>这位网友第一反应是，这是在开笑话吗？它为什么忽略地球半径。</p>
+<p>地球半径（设为 R）大约是1800万英尺，这意味着外圈长度只比内圈，多了不到1%。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202501/bg2025011202.webp" alt="img" class="img_iEQV"></p>
+<p>而且，由于33000英尺高空的空气阻力减小，该高度的飞行时间实际上可能更少。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="文摘">文摘<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E6%96%87%E6%91%98" class="hash-link" aria-label="文摘的直接链接" title="文摘的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="没有编程生产力这样的东西">没有编程生产力这样的东西<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E6%B2%A1%E6%9C%89%E7%BC%96%E7%A8%8B%E7%94%9F%E4%BA%A7%E5%8A%9B%E8%BF%99%E6%A0%B7%E7%9A%84%E4%B8%9C%E8%A5%BF" class="hash-link" aria-label="没有编程生产力这样的东西的直接链接" title="没有编程生产力这样的东西的直接链接">​</a></h3>
+<p>正如马丁·福勒（Martin Fowler）所观察到的那样，程序员的编程生产力无法有效地衡量，因为它不存在。</p>
+<p>软件开发并不是一项必然会产生任何东西的活动。</p>
+<p>假设你有两个开发人员在同一个项目上工作，并且偶然地，他俩在同一天接受了相同的任务。</p>
+<p>甲写了一个1000行的框架，完美地解决了这个问题。代码编写良好，并经过充分测试，每一步都有详细记录。</p>
+<p>乙则是当天去了公园，一边喂鸽子一边思考问题，然后漫步回到办公室，删除了100行代码，部署了更改......问题就解决了。</p>
+<p>请问谁的生产力更高？</p>
+<p>回答是，这不重要。重要的是乙解决了问题，同时降低了团队的长期维护成本。甲也解决了这个问题，但是他通过增加代码，增加了维护成本，因此（在其他条件相同的情况下）他的解决方案较差。</p>
+<p>我们能说，乙具有更高的生产力吗？显然，很难找到编程生产力的正确衡量指标。</p>
+<p>我认为，<strong>优秀的软件开发者所做的就是解决问题</strong>。但是，生产力的衡量指标，比如代码、文档、数据等等，都只是解决问题的工具，并不是解决问题本身。</p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="亚马逊河为什么没有桥">亚马逊河为什么没有桥？<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E4%BA%9A%E9%A9%AC%E9%80%8A%E6%B2%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89%E6%A1%A5" class="hash-link" aria-label="亚马逊河为什么没有桥？的直接链接" title="亚马逊河为什么没有桥？的直接链接">​</a></h3>
+<p>南美洲的亚马逊河是世界第二长的河流，仅次于非洲的尼罗河。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202501/bg2025010231.webp" alt="img" class="img_iEQV"></p>
+<p>但是，这条河没有一座桥，是唯一一条没有任何桥梁的世界主要河流。这是为什么呢？</p>
+<p>首先，每年的雨季，亚马逊河都会泛滥，河流的宽度会从旱季的5公里变成50公里，就像下图那样，很难造桥。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202309/bg2023092901.webp" alt="img" class="img_iEQV"></p>
+<p>其次，亚马逊河沿岸人烟稀少，只有很少几个城镇。最大一个城市的人口只有50万，不存在前往河对岸的强烈需求。</p>
+<p>最后，亚马逊河两岸都是原始森林，并没有现成道路。如果造桥就需要砍伐大量森林，修建引桥和公路，环境代价很大。近年来，环保意识逐渐高涨，反对造桥的呼声也就越来越大。</p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="照明的历史"><a href="https://bigthink.com/the-past/genius-and-blood-how-cheap-light-transformed-civilization/" target="_blank" rel="noopener noreferrer">照明的历史</a><a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E7%85%A7%E6%98%8E%E7%9A%84%E5%8E%86%E5%8F%B2" class="hash-link" aria-label="照明的历史的直接链接" title="照明的历史的直接链接">​</a></h3>
+<p>工业革命之前，世界是漆黑的，灯光极其昂贵，火是唯一的人造光源。</p>
+<p>历史上，人造光一直是富人和有权势的人的特权，生产和维护既费力又肮脏，可用性和质量都很差。穷人很难获得人造光，总是生活在黑暗中。</p>
+<p>古代房屋在夜晚有蜡烛照明，是巨大财富的标志。当时，蜂蜡制成的优质蜡烛是最好的光源，但天然蜂蜡的供应有限，加上手工制作的繁琐，除了最富有的人之外，其他人都买不到优质蜡烛。</p>
+<p>一位作家写道："打开你的冰箱门，你召唤出的光线比18世纪大多数家庭所享受的光线总量还要多。"</p>
+<p>后来人们发现，鲸油（鲸鱼的皮下脂肪）是更好的蜡烛材料，燃烧时发出干净、稳定的光，是工业革命早期了最好的照明，但它也非常昂贵。</p>
+<p>捕鲸业为世界带来了照明，但也将一些鲸鱼物种推向了灭绝的边缘。仅在1700年至1800年间，为了得到鲸油，就至少有300,000头鲸鱼被屠杀。</p>
+<p>1800年代初，欧洲和美国出现了燃气照明，燃烧煤气来发光。然而，燃气照明的安装和维护费用昂贵，而且有危险。所以，煤气灯一般不用在家里，而用在工商业和大城市的路灯。</p>
+<p>煤气灯很亮，比之前的任何灯至少亮20倍。使用燃气照明是人类第一次体验明亮的照明。</p>
+<p>1846年，天然气生产的副产品煤焦油（简称煤油）做成灯，用来照明。煤油开始取代鲸油，导致照明成本直线下降，并且燃烧时明亮、无味。</p>
+<p>正是因为煤油，夜间第一次变得明亮了，天黑后也能生产和娱乐。</p>
+<p>19世纪后半期，托马斯·爱迪生（Thomas Edison）发明了电灯，电照明的时代从此来临。</p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="长期软件开发">长期软件开发<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E9%95%BF%E6%9C%9F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91" class="hash-link" aria-label="长期软件开发的直接链接" title="长期软件开发的直接链接">​</a></h3>
+<p>有些领域的软件会持续运行几十年，比如发电厂、起搏器、飞机、桥梁、重型机械的软件。它们可能几年都不会改动，然后推出一个新的大版本。</p>
+<p>如果一个软件的开发周期长达几十年，需要长期维护，那么最好做到下面几点。</p>
+<p>（1）尽量减少依赖。</p>
+<p>软件的依赖项越多，长期越难以维护。依赖包括开发时依赖和运行时依赖，都是越少越好。</p>
+<p>现在，很多软件在运行时会调用云服务，这也不利于长期维护。</p>
+<p>（2）完备的测试用例。</p>
+<p>测试对于重构、删除/添加功能，会提供极大的帮助。当你中断3年后，重新开始开发，测试也会让你快速了解系统。</p>
+<p>（3）减少复杂性。</p>
+<p>复杂性是软件开发的头号敌人，会让最好的程序员和团队都铩羽而归。</p>
+<p>由于熵增定律和人类行为，除非你有意识地遏制，否则复杂性总是会增加。</p>
+<p>因此，你需要养成严格的开发习惯：尽早和频繁地重构，删除不必要的或重复的代码，花时间简化。</p>
+<p>（4）编写简单无趣的代码。</p>
+<p>代码越简单越好，重点是代码的运行逻辑要显而易见。你永远不会后悔编写了简单的代码。</p>
+<p>那些看上去很聪明、很高深的代码，会让后期的调试和理解变得复杂。特别注意那些高性能代码，只有当你正确理解它们时，它们才有效。</p>
+<p>另外，那些眼下时髦、被热炒的明星技术，如果没有得到充分验证，也需要规避。</p>
+<p>你最好只使用至少有10年历史的可靠技术。有一条规则是，某项技术的寿命与它们当前的年龄成正比，即存在越久的东西越可能继续存在。</p>
+<p>（5）日志、遥测和文档</p>
+<p>如果软件不是持续更新，开发者的注意力就会转到其他地方，不会立即跟进，所以需要有日志和遥测，能把运行过程记录下来。</p>
+<p>文档则可以帮助我们理解几年前、甚至十几年前，编写原始代码时的想法。可能的话，记录所有事物，不仅仅是代码，还有理念、想法和为什么。</p>
+<p>（6）团队</p>
+<p>团队人员变化是很常见的。在许多地方，在一个团队呆三年，就已经很久了。虽然你可以用良好的文档和出色的测试，来抵消这种人员变化，但这很困难。</p>
+<p>软件长寿的最简单办法之一，就是让开发成员长期稳定，保持工作十年。这意味着，你必须给你的程序员提供良好待遇，否则人们会离开。</p>
+<p>在某些地方，软件是外包公司或咨询顾问写的，他们将代码丢到你的系统中后离开。对于长期运行的软件，这是非常糟糕的安排。</p>
+<p>（7）开源</p>
+<p>让你的代码暴露在外界的眼光，是保持代码可靠的好方法。一个有趣的事实是，只有质量良好的代码，人们才愿意对外分享，也就是说，如果不开源，人们会愿意在组织内部接受质量更差的代码。</p>
+<p>开源代码有更高的标准、更多的测试，这是让代码不过时的绝佳机制。</p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="年终笔记四则">年终笔记四则<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E5%B9%B4%E7%BB%88%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%88%99" class="hash-link" aria-label="年终笔记四则的直接链接" title="年终笔记四则的直接链接">​</a></h3>
+<p>下面是过去的笔记，我读到有意思的文章时，记录下来的感想，每一则都不长。</p>
+<p>前几天翻阅，觉得可以放在一起，重新发布，今天先发四则。</p>
+<p><strong>一、工作也有利息</strong></p>
+<p>银行存款有利息，存得越久，利息越多。</p>
+<p>工作也是一样，也有利息。如果今年的工作可以节省明年或未来的工作时间，就是一份有利息的工作。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202501/bg2025011621.webp" alt="img" class="img_iEQV"></p>
+<p>工作有利息，意味着你未来的工作时间会变少，多出来的时间，就可以去做别的事情，创造更多的价值。</p>
+<p>这提示我们：</p>
+<p>（1）不要轻易更换工作领域，否则以前积累的利息就作废了。只有在同一个工作领域，才可能产生长期积累，以前的工作为以后打基础，最终产生巨大的利息。</p>
+<p>（2）在职业生涯的早期，积累效果最好，最容易产生复利。开始积累越晚，产生复利就越少。</p>
+<p>（3）有些劳动没有积累效果，不会产生利息，比如重复性的机械劳动（快递、咖啡店员、门卫......），你明年还是要重复做这些事情。</p>
+<p>（4）最好的人生策略就是，找到你深感兴趣、可以长期做下去的领域，在上面投入大量的工作时间（包括质量和数量），然后随着年龄增长，享受以前工作的复利。</p>
+<p><strong>二、巴菲特的选人标准</strong></p>
+<p>巴菲特说，他考察候选人，就看<a href="https://www.inc.com/marcel-schwantes/warren-buffett-hiring-top-talent-characteristics.html" target="_blank" rel="noopener noreferrer">三个"i"</a>。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202207/bg2022071611.webp" alt="img" class="img_iEQV"></p>
 <blockquote>
-<p>-- 张培祥</p>
-<p>1979年生于湖南醴陵一个山区农户，1997年考入北京大学法学院，是北大有名的才女，2003年非典期间患白血病，三个月后，年仅24岁的张培祥去世。</p>
-</blockquote>]]></content>
+<ul>
+<li>integrity（正直）</li>
+<li>intelligence（智慧） 智能（智慧）</li>
+<li>initiative（主动）</li>
+</ul>
+</blockquote>
+<p>这三个"i"当中，"主动"最重要。"正直"和"智慧"的人到处都是，但如果不主动，不是自己想去做些什么，就什么也不会发生。</p>
+<p><strong>三、快乐机</strong></p>
+<p>1974年，一个美国哲学家提出一个假设，如果世界上有"<a href="https://en.wikipedia.org/wiki/Experience_machine" target="_blank" rel="noopener noreferrer">快乐机</a>"，只要插上电源，就能带来源源不断的快乐，并且无法分辨，这种机器快乐与现实世界的快乐有何不同。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202202/bg2022022609.webp" alt="img" class="img_iEQV"></p>
+<p>哲学家说，我们就可以观察人们的选择。</p>
+<p>如果大多数人选择快乐机，而不是现实生活，这就证明人生的目标是体验尽可能多的快乐（享乐主义）。</p>
+<p>当时因为不可能造出快乐机，所以无法验证他的假设是否正确。现在不一样了，有了游戏机、VR 头盔、短视频平台......</p>
+<p><strong>四、未来的三种关键能力</strong></p>
+<p>未来，你需要三种能力。</p>
+<p>（1）专业能力。你需要有一个专长。</p>
+<p>（2）写作能力。未来是远程工作，团队成员分散在各地，以写作----而不是当面交流----作为主要的沟通手段。</p>
+<p>（3）视频制作能力。以前，文字能影响大众，现在视频是最强的大众传播渠道。如果你能制作好看的视频，将想法和产品可视化，就更容易让更多用户看见。</p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="人性潜规则">人性潜规则<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E4%BA%BA%E6%80%A7%E6%BD%9C%E8%A7%84%E5%88%99" class="hash-link" aria-label="人性潜规则的直接链接" title="人性潜规则的直接链接">​</a></h3>
+<p>1、AA制的吃饭，要懂得四舍五入，比如49元就给50元。
+2、装修不找熟人。
+3、99%希望你喝西北风，没人会等待你的成功。
+4、莫与恶狗争道，不与浑人讲道理。
+5、父母年纪大了，多报喜不报忧，自己的烦恼，尽量不要对父母说，只会让父母跟着烦恼，还解决不了问题。
+6、在外人面前，一定要给足另一半面子。
+7、不用拆穿那些吹牛的人，其实人家都知道。
+8、你对别人的好，就像给别人一颗糖，一吃就没了；而你的不好，就像留下的一道伤疤，会一直存在。
+9、不要劝别人节俭，每个人的消费观不一样。
+10、 有些人你帮他七分，他反而觉得你还欠他三分。
+11、女性最不喜欢讲道理，所以，不要跟自己的妻子讲道理，道理赢了，其实你输了。
+12、一个人没有经济能力，才是万劫不复。
+13、高手，往往没有情绪。
+14、早不洗头，饿不洗澡;男不离韭，女不离藕。
+15、喝酒，不一口闷，眼睛有余光！
+16、心软不忘原则，善良自带锋芒，敢于拒绝，敢于反抗。
+17、领导心情好的时候，多说对自己有利的事情。
+18、学历是铜牌，能力是银牌，人脉是金牌，思维是王牌。
+19、人不要怕事，90%的人你都得罪得起
+20、没有实力，你认识谁都没有用。
+21、老婆不喜欢的朋友，自己也会渐行渐远。
+22、朋友越少，日子越好，朋友越多，吃亏越多。
+23、社会中，谁的胆子大，谁的机会就越多。
+24、谈对象的时候，晚上9点以后约你出去，他的想法并不单纯。
+25、不孝顺父母的不可教, 永远是真理
+26、大家都喜欢老实人，却都不会尊重老实人。
+27、一个人和你打招呼的时候，无意中和你提起一件事，那这件事一定是他最关心的。
+28、丈母娘住院，不要送梨!
+29、不要过度依赖任何人，包括家人和朋友，保持一定的独立性。
+30、越小的地方，人情世故越多。
+31、 走关系才办成的事，永远不往外说出去。
+32、不要随便给别人提建议，90%的人能改变他的不是道理，而是南墙。
+33、如果喝的是茅台，每人记得配一瓶矿泉水。
+34、一个人说他不好的人，可以不当回事，但大部分人都说他不好的人，不要离他太近。
+35、人不要脸，天下无敌。
+36、有关于别人的事情更不能多说，就说不知道或者不清楚，以免给自己招来麻烦。
+37、遇到比自己境遇更好的人请你吃饭时，在饭局中暗中支付账单，这样会为将来铺就更宽广的人脉之路。
+38、不和同事做朋友，也不和朋友做同事，就怕最后做不成朋友。
+39、 有本事的人都不要脸，没本事的人都要脸
+40、靠近一个人要慢慢来，以便更全面地了解对方。
+41、半年没联系的异地朋友，基本上不可信任。
+42、五人以上的酒局，尽量少参加。
+43、 别人说话没有人接，你能回应一句，别人会很感激。
+44、不跟任何人说，你的经济状况。
+45、一颗好心，永远比不上一张好嘴;会做的不如会说的，会说的不如会装的。
+46、男人没有实力，就不要追老师，医生，银行上班的女孩。
+47、如果你给了某人一颗糖，他立马还你一颗枣，这样的人适合合作，但不适合做朋友。
+48、想惩罚一个人，就无视他，不理他，不管他干什么，在哪里都当他不存在。
+49、很多人，一辈子都没活明白，谁也改变不了谁。
+50、开会时领导说的“大家还有什么意见要提”时，可千万不要真的提意见，小心以后连开会的资格都没有了。
+51、不要用1000块钱请人吃一顿饭，要用1000块钱请人吃10次饭，别人会很感激你。
+52、良知这种东西不是每个人都有，有的人没有就是没有，不要强求。
+53、亲戚之间最好勿开玩笑，一句无心之语，便可能令人家记你一辈子。
+54、村里活到九十多岁的老人，最大的特点就是不多管闲事。
+55、你不优秀，认识谁都没有用。不是朋友多了路好走，而是你路走好了，朋友就会多。</p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="驴子老虎和狮子的寓言">驴子、老虎和狮子的寓言<a href="https://blog.wlgs.site/blog/2025/weekly-202502#%E9%A9%B4%E5%AD%90%E8%80%81%E8%99%8E%E5%92%8C%E7%8B%AE%E5%AD%90%E7%9A%84%E5%AF%93%E8%A8%80" class="hash-link" aria-label="驴子、老虎和狮子的寓言的直接链接" title="驴子、老虎和狮子的寓言的直接链接">​</a></h3>
+<p>有一天，驴子和老虎发生了争论。</p>
+<p>驴子说："草是蓝色的。"</p>
+<p>老虎回答："不对，草是绿色的。"</p>
+<p>他们各执己见，互不相让，争论越来越激烈。</p>
+<p>最后，两人决定将这个问题提交给狮子法官。</p>
+<p>他们来到狮子面前，驴子大叫大嚷："法官大人，草难道不是蓝色的吗？"</p>
+<p>狮子回答："如果你真的这么认为，草就是蓝色的。"</p>
+<p>驴子不依不饶："老虎不同意这一点，还出言不逊，请惩罚他。"</p>
+<p>狮子随后宣布："老虎将受到三天面壁思过的惩罚。"</p>
+<p>驴子非常高兴，心满意足地离开了，嘴里不停地念叨着："草是蓝的，草是蓝的......"</p>
+<p>老虎十分气愤："法官大人，草难道不是绿色的吗？"</p>
+<p>狮子回答："草确实是绿色的。"</p>
+<p>老虎困惑不解："那你为什么要惩罚我呢？"</p>
+<p>狮子回答："惩罚你与草是蓝的还是绿的这个问题无关，而是因为像你这样的高级生物，竟然浪费时间和驴子争论这样简单的问题。最重要的是，你还用这个问题来烦我，只是为了验证你已经知道是真的事情。"</p>
+<p>这个寓言就结束了，讲的其实是，应该如何处理争论。</p>
+<p><strong>它的观点很简单，就是不要争论</strong>。一来，有些人根本无法说服，他们不关心真相或现实，只关心自己的信念和观点获得胜利。</p>
+<p>他们会竭尽全力，捍卫自己是正确的，与这样的人争论，就是浪费时间。</p>
+<p>二来，一旦开始争论，难免情绪压倒理智。当你胜负心高涨，一心想赢过对方，你的智力就会急剧下降。</p>
+<p>我一直对自己、对这个博客有一个想法，也希望让大家知道：不说教，尽量提供事实，如果要说出观点，必须是那些根据事实显而易见的观点。与他人讨论时，主要是澄清事实，尽量不辩论对错，如果对方无法说服，那就算了，让他赢。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊202503]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202503</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202503"/>
+        <updated>2025-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202503#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax4.sinaimg.cn/large/006BNqYCly1hylf53wzryj30lc0lcdfz.jpg" alt="福利吧fuliba123.com (18)" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="资源">资源<a href="https://blog.wlgs.site/blog/2025/weekly-202503#%E8%B5%84%E6%BA%90" class="hash-link" aria-label="资源的直接链接" title="资源的直接链接">​</a></h2>
+<p>2、<a href="https://artsandculture.google.com/experiment/3d-pottery/nwHg1D0riJ1ltA" target="_blank" rel="noopener noreferrer">3D 陶器动手做</a></p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202502/bg2025022501.webp" alt="img" class="img_iEQV"></p>
+<p>谷歌的网页小游戏，在网页上做一个 3D 陶器，挺有趣的。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊202505]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202505</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202505"/>
+        <updated>2025-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[图片]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="图片">图片<a href="https://blog.wlgs.site/blog/2025/weekly-202505#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2024/1213/cca7846cg00sofa3603xhc000740092c.gif" alt="cca7846cg00sofa3603xhc000740092c.gif" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2024/1213/4d5027bfg00sofa36075wc0008w00cmc.gif" alt="4d5027bfg00sofa36075wc0008w00cmc.gif" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCly1hy9vn2td00j30z00olmz5.jpg" alt="" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax3.sinaimg.cn/large/006BNqYCly1hvv08jikxkj30v90u0goz.jpg" alt="福利吧fuliba123.net (26)" class="img_iEQV"></p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCly1hw53x730tmj30j61rw78a.jpg" alt="" class="img_iEQV"></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="视频">视频<a href="https://blog.wlgs.site/blog/2025/weekly-202505#%E8%A7%86%E9%A2%91" class="hash-link" aria-label="视频的直接链接" title="视频的直接链接">​</a></h2>
+<p><a href="https://h5.video.weibo.com/show/1034:5104365879623802" target="_blank" rel="noopener noreferrer">00后大学生勇闯社会第一年</a></p>
+<p><a href="https://weibo.com/5883600795/Pc6pQ2Ya5" target="_blank" rel="noopener noreferrer">绝对是2025年放炮四大才子</a></p>
+<p><a href="https://weibo.com/7865439172/Pc8pO5Aly" target="_blank" rel="noopener noreferrer">本山老师发言 这要上脱口秀大会还不得杀疯喽</a></p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="文摘">文摘<a href="https://blog.wlgs.site/blog/2025/weekly-202505#%E6%96%87%E6%91%98" class="hash-link" aria-label="文摘的直接链接" title="文摘的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="新加入一个互联网公司俺很有干劲">新加入一个互联网公司，俺很有干劲<a href="https://blog.wlgs.site/blog/2025/weekly-202505#%E6%96%B0%E5%8A%A0%E5%85%A5%E4%B8%80%E4%B8%AA%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E4%BF%BA%E5%BE%88%E6%9C%89%E5%B9%B2%E5%8A%B2" class="hash-link" aria-label="新加入一个互联网公司，俺很有干劲的直接链接" title="新加入一个互联网公司，俺很有干劲的直接链接">​</a></h4>
+<p>第一天入职时，一个一起入职的同事从包里掏出键盘准备干活，这时俺说：你是写PHP的吧?」。</p>
+<p>这哥们大惊，问：「你咋知道的?」</p>
+<p>俺说，你看，你键盘上的4键都要磨没了。</p>
+<p>这哥们五体投地，叹道：「这还是第一次有人在我掏出键盘时就看出这一点!」</p>
+<p>当时其他人看俺眼神都变了。</p>
+<p>第二天，路过一个同事桌旁，俺说：「你是写Python的吧?」</p>
+<p>这哥们大惊，他屏幕上是颈椎按摩°操视频，没有一行代码，问：「你咋知道的?」</p>
+<p>俺说： 「不好意思刚才把你桌上的游标卡尺°碰掉了」，然后捡起卡尺放回他桌上。</p>
+<p>我弯腰时感受到了整个公司钦佩的目光。</p>
+<p>第三天，去拿零食时，俺对一个一起来拿零食的同事说：「你是写C++的吧?」</p>
+<p>这哥们大惊，问：「你咋知道的?」</p>
+<p>俺说：</p>
+<p>我看你每隔一段时间就走过来拿零食，同时电脑风扇开始狂转，这必定是在编译C++o」</p>
+<p>同事大声赞叹，零食区响起了热烈的掌声。</p>
+<p>第四天，因为俺职以来一行代码都没写，被开除了。</p>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="我和相亲的女孩是玩笑还是天作之合">我和相亲的女孩，是玩笑还是天作之合<a href="https://blog.wlgs.site/blog/2025/weekly-202505#%E6%88%91%E5%92%8C%E7%9B%B8%E4%BA%B2%E7%9A%84%E5%A5%B3%E5%AD%A9%E6%98%AF%E7%8E%A9%E7%AC%91%E8%BF%98%E6%98%AF%E5%A4%A9%E4%BD%9C%E4%B9%8B%E5%90%88" class="hash-link" aria-label="我和相亲的女孩，是玩笑还是天作之合的直接链接" title="我和相亲的女孩，是玩笑还是天作之合的直接链接">​</a></h4>
+<p>贴一个某堂网友“LOVE*真”的相亲故事</p>
+<p>感觉太苦了！爱情来之不易，真心祝福！</p>
+<p>为了方便观看，以下文章按照发展顺序打乱重组！</p>
+<p><strong>我的故事</strong></p>
+<p>我的命运即好也惨。</p>
+<p>首先，我93年的，我妈生我都是在菜田里生的我</p>
+<p>因为那两年计划生育打的严格，被政府知道的话，都没我给你们发帖了。</p>
+<p>再一个，爸妈那时候没有办结婚证，属于非法（事实婚姻）。</p>
+<p>我落地就没见过婆婆爷爷，上小学开家长会也是三婶给我去开</p>
+<p>我爸要干活，我妈一次都没去过。</p>
+<p>直到我懂事了，我才知道我爸爸的不容易，以及我妈妈的命运。</p>
+<p>我爸是一个木匠，自从娶了我妈，生了我，就没咋个休息过，真的累了一辈子。</p>
+<p>我对这个世界没有怨恨，只有对老天爷，对命运的怨恨。</p>
+<p>我妈妈是一个一加一等于几都不知道的人，找不到路，特别老实，只会洗洗衣服做做饭喂喂鸡鸭猪！</p>
+<p>（她并不是出生就是如此）我也是长大了才知道具体原因。</p>
+<p>（我妈是抱养的）所以我有两个外婆，抱养我妈的外婆怀了我舅舅后，就把我妈扔粪池里！</p>
+<p>还是隔壁邻居把我妈捞起来，我妈因此大脑受了刺激，才会变成这样。</p>
+<p>后面认识了亲外婆，我妈是她第六个女儿，我上面还有五个姨娘</p>
+<p>你们是不知道，从小我就不喜欢聚餐走亲访友，压力太大</p>
+<p>上面五个姨娘与我们家都不在一个层次的人，我同辈的，更是喜欢比较，哪个学习如何如何。</p>
+<p>现在几个姨娘的子女确实都牛逼</p>
+<p>两个姐姐，一个现在开大奔，两家公司</p>
+<p>一个姐姐法学硕士，两个哥哥都在一个企业，其中一个哥哥也是靠另一个哥哥进去的</p>
+<p>一个哥哥是真的牛逼，某国企的人事部部长！</p>
+<p>五姨娘给我说过，喊那个哥哥把我弄进去，混个五险，哪怕最底层的工作。</p>
+<p>自从外婆死后，和姨娘们很少联系了</p>
+<p>就过年去一下，平时人家过生啥的也不会喊你。我也乐得清闲。</p>
+<p>我性格要强，穷死不打亲戚工，饿死不当上门女婿。</p>
+<p>2008年地震后，老家的房子坍塌了</p>
+<p>我爸在外面干活，手臂皮都晒掉了，没有贷款一分钱修起来</p>
+<p>我爸真的给我做了很好的榜样，天意弄人，房子修好，爸爸就癌症。</p>
+<p>老爸走的时候，没有关心我，只让我把妈妈照顾好，不要让人欺负我妈，那年我19岁。</p>
+<p>老爸是元旦节走的，没多久过年了，一个堂姐给我妈拿了一件牛奶</p>
+<p>第二天，堂姐的奶奶就来找我妈拿走了，说不是给我妈的</p>
+<p>我回去了，我妈给我说了这件事，我永远忘不了这个事</p>
+<p>你们能想象这多埋汰人？我急得被窝里哭，我妈又啥都不懂。</p>
+<p>我爸走后，一个院子里有个男的在我妈午休的时候去骚扰我妈，我妈喊我三婶才制止的</p>
+<p>我当时真的想杀了那个人，姐姐婶娘拦着我，说我进去了你妈咋办。</p>
+<p>那一年真的是我的黑暗年。后面又说给我妈找下家</p>
+<p>我拦不住，真的拦不住。</p>
+<p>找了之后，我就没回去过，直到我妈误喝农药去世，那边也没有和我妈生</p>
+<p>现在我妈还和我爸葬在一起。</p>
+<p>出来打拼那几年，我认为他们都不看好我</p>
+<p>我就是要努力挣钱买房，把我妈接城里</p>
+<p>三年时间，自己攒了十三万，回老家地级市一问，首付都不够？</p>
+<p>最后创业，2020年刚开张就遇到疫情，我刚好还是餐饮业，那铺面送人都没人接手。</p>
+<p>后面又接到妈妈去世的消息</p>
+<p>我当时都想好死法了，去色达，找个没人的地方，药一吃，身体秃鹫吃了算了，不打扰任何人</p>
+<p>后面还是被姨娘拦下了，直接给我来一句：<strong>我们送走你爸妈，你还想我们送走你全家？</strong></p>
+<p>我是为了这句话一直苟活着！</p>
+<p>但踏马的老天爷，又让我遇见这个女孩</p>
+<p>我真的挺迷茫，我有时候不知道我值不值得她，因为她真的太好了。</p>
+<p><strong>我和她的故事</strong></p>
+<p>我和她是相亲认识的，不过没花一分钱！</p>
+<p>我是在我们一个地级市的广场上免费写纸条挂上去[类似公园相亲纸条]</p>
+<p>被她看到了，然后加我了。</p>
+<p>刚开始我以为是骗子，后面经过聊天确定不是，不过我一开始有点看不懂她了</p>
+<p>最开始先文字聊天，半天回一条信息，除了天天早上6点多雷打不动的【起床了】三个字外</p>
+<p>就只有中午和晚上能聊几句。后面语音了两次，话都不敢说，十分胆小，说是怕吵到大姨。</p>
+<p>直到上个月，她有点不高兴了</p>
+<p>那天发信息，我说你怎么现在几天才回一次信息，她居然回复：“你都不见我”</p>
+<p>那一刻我是真的懵逼，我说一个微信都聊不好，见面能聊啥？</p>
+<p>（尽管我是这样说，好友加了半年的我们还是见面了）</p>
+<p>第一次见面的地点在她居住附近的肯德基里面</p>
+<p>她长的平凡，不丑也不漂亮</p>
+<p>她给我的感觉就是很胆小，很自卑，从她进店坐我旁边，就不咋个敢抬头</p>
+<p>我点了两杯卡布奇诺和两个汉堡一个鸡腿，我没吃</p>
+<p>她吃鸡腿是一点点手撕着吃，吃了一个鸡腿就饱了，两个汉堡我让她打包带回去</p>
+<p>在和她的聊天中，我慢慢了解了她的故事</p>
+<p><strong>她的故事</strong></p>
+<p>她妈妈去世了，有个弟弟，比她小一岁，她弟弟和爸爸在新疆工地工作，她在老家这边照顾婆婆。</p>
+<p>她婆婆住大姨家的，所以她也跟着住大姨家</p>
+<p>每天六点左右就会给我发信息（起床了）</p>
+<p>我见面以后问她，为啥你每天那么早起来？</p>
+<p>她说，起来做早饭，然后再去上班。</p>
+<p>她在县城一个家具厂踩缝纫机，早上八点到晚上八点，三千块钱一个月。</p>
+<p>我说你大姨把你当佣人吗？你不仅要煮饭，还要干农活（夏天她真的在割谷子）</p>
+<p>她说，毕竟住在别人家，总得做点什么，我也喜欢干活。</p>
+<p>她谈过一次恋爱，谈了五年，妈妈生病以后，她照顾妈妈，那个男的就离开她了。</p>
+<blockquote>
+<p>我告诉她我谈的恋爱最长的是两年，当时我妈妈还在，女方让我当上门女婿，我不干</p>
+<p>她听了以后居然给我来了一句“你这么瘦还上门，也干不了活啊。”</p>
+<p>我没有觉得这是歧视，只觉得她挺可爱的。</p>
+</blockquote>
+<p>我问她学历，这时候她真的自卑到极致了，低着头，非常难为情的说没有上过初中。</p>
+<p>我说这有啥，我和你一样，我也是小学毕业，这没啥不好意思的。</p>
+<p>我接着问，你弟弟呢？她说大学！我就知道她家是一个典型的重男轻女家庭。</p>
+<p>我说你弟弟一个大学文凭也跑工地去搬砖</p>
+<p>她说没法，找不到工作，他也不想结婚。（其实我也有点怕遇到扶弟魔）</p>
+<p>她用着一个我不知道的手机牌子，至少用了两三年的样子</p>
+<p>她没有涂一个指甲，（方方面面）无不证明她真的很单纯。</p>
+<p>最后分别的时候，她问我喜欢什么？</p>
+<p>我说我不喜欢什么，你不用管我，我下次来找你，给你带面膜，你要学会爱惜自己。</p>
+<p>在这之后，我们微信聊天，我和她说明了我的情况，让她看是否可以在一起</p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax2.sinaimg.cn/large/006BNqYCly1hv85pl3y1lj30to3kohdu.jpg" alt="image" class="img_iEQV"></p>
+<p>她告诉我：如果我们能在一起，以后的活路她全部做了！</p>
+<p>我不是为了她这句话才愿意跟她交往的</p>
+<p>只能说我两个各自有点相同，都是苦命人，也是命运的安排吧。</p>
+<p>不管是加了微信，还是见面交往后，直到现在，她都没有找我要过一次钱和礼物</p>
+<p>我们第二次见面是她的生日！</p>
+<p>我那天问她生日多久，她说22号，我说给你过生日，她还回不好意思。</p>
+<p>我说礼物都买好了，她问过我是什么，我没告诉她。</p>
+<p>见面后，她先给了我一个银手镯</p>
+<p>然后我给他买的是银玉手链，我觉得神奇，她也觉得是商量好了一样……</p>
+<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax4.sinaimg.cn/large/006BNqYCly1hv85pm2tm0j31841kshdt.jpg" alt="image" class="img_iEQV"></p>
+<p>后面一起去看电影，她还要出电影票钱以及小吃的钱，我都没让她给。</p>
+<p>冬天来了，她要换被套，我也给她买</p>
+<p>选四件套的时侯，她问我哪个好看？</p>
+<p>我选了一个粉色带点白色的，她不是很喜欢</p>
+<p>我问咋了？她居然回我：怕我以后说她没有洗干净……</p>
+<p>我真的懵逼了好一会…….</p>
+<p>她非常非常节约，那天她感冒了，包了16块钱药</p>
+<p>还给我炫耀，你看，16块钱这么多药，把我整得苦笑不得，我就只有点头，嗯嗯，划得着。</p>
+<p>那天又一起出去逛了一下，她也给我说了，（这些人）买房干嘛？</p>
+<p>有个住的地方就可以了，何必那么大压力买房？</p>
+<p>后面聊到她做饭的问题，她说在家一直都是她做饭，她爸她弟啥都不做</p>
+<p>还给我说，以后你也一样，这些活都是我做！</p>
+<p>我说不用，衣服现在都是洗衣机，以后我做饭你洗碗，你做饭我洗碗。</p>
+<p>我这句话一说，把她高兴坏了，一个劲的问我，连着问我两遍真的？真的？</p>
+<p>我说肯定真，把她高兴的那劲，跟过年一样，我都纳闷，有必要吗。。。。。。</p>
+<p>那天她姨家来客人了，还给我发信息，问我吃不吃，有糖，有瓜子，有水果</p>
+<p>我说可以吃节甘蔗。没想到她居然两个衣服包包装满了给我带过来</p>
+<p>真的让我苦笑不得，像极了小时候偷东西出来给喜欢的人吃。</p>
+<p>我和她都是小学文化，都是苦命人，都是农村人，三观基本一致</p>
+<p>我1.68，她1.66，我96斤，她93斤</p>
+<p>关键是我两个的名字，都是三个字的名字</p>
+<p>太踏马的有缘了，我都觉得不真实</p>
+<p>祝有情人终成眷属！！！
+<img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax1.sinaimg.cn/large/006BNqYCly1hv85pmddpoj30ir0mw7c6.jpg" alt="image" class="img_iEQV"></p>
+<p>更新一则后续，男主与女主最终还是因为金钱等问题分手</p>
+<p>男主和以前认识的一个离异少妇复合…</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[周刊 202511]]></title>
+        <id>https://blog.wlgs.site/blog/2025/weekly-202511</id>
+        <link href="https://blog.wlgs.site/blog/2025/weekly-202511"/>
+        <updated>2025-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[文章]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="文章">文章<a href="https://blog.wlgs.site/blog/2025/weekly-202511#%E6%96%87%E7%AB%A0" class="hash-link" aria-label="文章的直接链接" title="文章的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="卷王">卷王<a href="https://blog.wlgs.site/blog/2025/weekly-202511#%E5%8D%B7%E7%8E%8B" class="hash-link" aria-label="卷王的直接链接" title="卷王的直接链接">​</a></h3>
+<p>我最喜欢我的发型，因为它天生自然卷，而且是内卷。</p>
+<p>公司在十八层，为了能坐上电梯，我每次走到三层去等往下的电梯，先坐到1楼再上去。</p>
+<p>为了能带薪拉屎，我每次提前半个小时占坑，一边等shi意一边刷抖音，外面兄弟急得满头大汗，我静静享受这片刻悠闲。</p>
+<p>我的手机通讯软件只有钉钉，因为最喜欢它的已读功能，和谁聊天也是，别假装没看到。</p>
+<p>微信只用来凌晨两点发个朋友圈功能，比如：今天又是凌晨两点下班，年轻就该奋斗，工作群因我更加闪烁，明天的我将继续拼搏！</p>
+<p>平常我最喜欢写总结报告，所以在我的影响下，团队已经从周报进化成日报，格式从WORD进化成PPT。</p>
+<p>我发日报一定要在晚上一点发，周报一定要在周末发。</p>
+<p>这还不够，我现在每天在群里发三次汇报，早上发规划和目标，中午发进展和风险，晚上发总结和思考。</p>
+<p>对了，最近流行短视频，我下次开会建议大家都把工作电脑录屏，最后剪成视频给领导看。</p>
+<p>白天我喜欢开会，时间一般约大家中午十二点、下午六点和晚上九点。</p>
+<p>我喜欢熬夜，经常半夜才有灵感，所以习惯半夜工作，并且有什么不了解的事情立马和同事沟通。</p>
+<p>我和同事沟通从来不私聊，不管问题大小直接把对方和对方的经理拉进群里咨询问题，这样效率才高。</p>
+<p>问完问题如果对方三分钟不回复，立马@对方领导。</p>
+<p>我是一名程序员，平常也喜欢看同事代码找Bug。</p>
+<p>找到之后我会留着在周末发到有领导的群里，一是引起同事对Bug的重视，二是引起领导对我的重视。</p>
+<p>哦，同事不会也看我的代码？</p>
+<p>不会的，他们自己代码都优化不过来。</p>
+<p>另外，做项目我最讨厌分一期二期什么的，现在市场竞争这么激烈，加加班就直接全部赶出来了。</p>
+<p>产品给我提需求，再小的需求都要提供需求文档、产品原型，不然不符合开发流程，按钮换个颜色我都需要项目背景。</p>
+<p>测试给我提Bug，再小的Bug我都需要测试报告、测试用例。对了，用例一定要全。一个平台有问题其他平台都有问题吗？安卓几百个机型都测试了吗？测试报告不全我坚决不改。</p>
+<p>产品和测试的工作不完善，我也立马同步给对方领导，这样项目延期产品背锅，线上故障测试背锅，我只是一个写代码的我能有什么错呢？</p>
+<p>上线我一定要在凌晨两点，最好在周末凌晨两点，这样才显得项目重要，另外项目涉及到的其他团队必须全部在场，他要问能不能远程支持，我直接问他项目上线出了问题你能付全责？</p>
+<p>早上一定第一个坐到工位，同事来了要微笑问候：才来啊！</p>
+<p>中午同事喊我吃饭，直接回：工作还没忙完，你先去吧。</p>
+<p>吃完午饭从不午休，一定要敲代码，而且用机械键盘，键盘声犹如警钟，令那些睡午觉的同事震耳发聩。如果同事睡着了我也毫不犹豫叫醒他，并且一脸抱歉问道：不好意思，这个确实比较着急，您帮忙看下？</p>
+<p>晚上同事下班我也一定要关心一句：这么早就走啊。声音要洪亮，感情要真诚，对方才会觉得尴尬并且理亏，半夜我再问他工作事情他才会回应及时。</p>
+<p>节假日我也喜欢在公司，如果有同事发旅游朋友圈我立马在下面评论：麻烦看下钉钉，工作有事沟通。</p>
+<p>即便时间久了，同事们都讨厌我，但是领导喜欢我不就行了？</p>
+<p>再说我能有什么坏心眼吗？打工人最大心愿不就是希望老板每天都能换辆跑车吗？虽然我连共享单车的月卡都不舍得开。</p>
+<p>一家公司待不下去了，下家公司面试我也只关心能不能放张床，或者打地铺也行，这样如果项目做不完，我可以在公司睡一觉起来接着做，节省了路上时间。</p>
+<p>说起来，我也很容易找到工作，可能这个社会就适合我这种伤敌一千自损一万的卷王吧。</p>
+<p>所以用不了多久，越来越多的人会加入我的步伐，到时候必然卷中自有卷中手，不卷到死誓不休。</p>
+<p>说到这了，朋友，你想和我一起卷吗？</p>
+<h3 class="anchor anchorWithStickyNavbar_Ut0j" id="写给渐渐老去的自己">写给渐渐老去的自己<a href="https://blog.wlgs.site/blog/2025/weekly-202511#%E5%86%99%E7%BB%99%E6%B8%90%E6%B8%90%E8%80%81%E5%8E%BB%E7%9A%84%E8%87%AA%E5%B7%B1" class="hash-link" aria-label="写给渐渐老去的自己的直接链接" title="写给渐渐老去的自己的直接链接">​</a></h3>
+<p>亲爱的自己，岁月太过无情，
+增长了你的年龄，磨平了你的棱角。
+你从一个涉世未深的少年，
+变成了身心疲惫的中年，
+经历了太多的苦难，
+堆积了太深的心酸。</p>
+<p>亲爱的自己，看看镜子，
+是不是发现了眼角的细纹，
+是不是看到了一丝的白发。
+一脸的倦容，憔悴的眼神，
+是你为生活付出的证明。</p>
+<p>亲爱的自己，我们日渐老去，
+社会的现实，人心的残酷，
+让我们越来越能看透，
+任何人都靠不住，
+只能靠自己一步步努力，
+指望别人，只有输的份，
+依赖自己，才有可能赢。</p>
+<p>亲爱的自己，
+有没有在某一刻
+你会感到格外的孤单和无助，
+有没有在一瞬间，
+你会对身边的人产生抵触，
+随着年龄的增长
+孤独感增强，防备心变大，
+不敢再轻易相信什么人，
+就怕千疮百孔的心再受一次伤。</p>
+<p>亲爱的自己，
+别不服输，别太逞强，
+你不再是曾经的少年，
+身体不比从前，
+不要拼命加班，不要总是熬夜，
+金钱虽好，买不回身体原件，
+职位再高，比不上身体健康。</p>
+<p>亲爱的自己，
+日子一天天过去，
+容颜一天天衰老，
+人生在眨眼闭眼之间，
+流逝的很快。
+所以，一定要好好爱自己，
+困了，早点去睡，
+累了，好好休息。
+别给自己太大的压力。</p>
+<p>亲爱的自己，
+希望等到真正老去的那一天，
+你依然能身体强壮，手脚灵活，
+怀揣着一颗年轻的心，
+轻轻松松的过余生，
+无忧无虑的享晚年！</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="有趣">有趣<a href="https://blog.wlgs.site/blog/2025/weekly-202511#%E6%9C%89%E8%B6%A3" class="hash-link" aria-label="有趣的直接链接" title="有趣的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="苹果门店为什么将-macbook-摆放角度调整为-76-度">苹果门店为什么将 MacBook 摆放角度调整为 76 度？<a href="https://blog.wlgs.site/blog/2025/weekly-202511#%E8%8B%B9%E6%9E%9C%E9%97%A8%E5%BA%97%E4%B8%BA%E4%BB%80%E4%B9%88%E5%B0%86-macbook-%E6%91%86%E6%94%BE%E8%A7%92%E5%BA%A6%E8%B0%83%E6%95%B4%E4%B8%BA-76-%E5%BA%A6" class="hash-link" aria-label="苹果门店为什么将 MacBook 摆放角度调整为 76 度？的直接链接" title="苹果门店为什么将 MacBook 摆放角度调整为 76 度？的直接链接">​</a></h4>
+<p>你是不是第一反应觉得这是为了让屏幕显示效果更好？哈哈，真相其实大大出乎你的意料！ 76 度反倒是屏幕显示效果不好，顾客为了看清楚屏幕，就会忍不住走上前去，亲手调整 MacBook 的角度。这样一来，就能直接感受到 MacBook 那高级的质感，瞬间印象深刻！更妙的是，这种触碰还会让人产生一种「心理所有权效应」，想象自己已经拥有了这台 MacBook 之后的美好生活，大大提高了购买意愿。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.fliggy.com/uPic/R5E2qs21.png?x-oss-process=image/resize,w_3600/format,webp" alt="format,webp" class="img_iEQV"></p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[网文编年史]]></title>
@@ -760,71 +1583,37 @@
 <p>欢迎各位分享，让我们一同见证历史的继续…</p>]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[MDX Blog Post]]></title>
-        <id>https://blog.wlgs.site/blog/mdx-blog-post</id>
-        <link href="https://blog.wlgs.site/blog/mdx-blog-post"/>
-        <updated>2021-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
-        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">MDX</a>.</p>
-<div class="theme-admonition theme-admonition-tip admonition_GBfc alert alert--success"><div class="admonitionHeading_TGWU"><span class="admonitionIcon_nXe0"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_URc8"><p>Use the power of React to create interactive blog posts.</p></div></div>
-<!-- -->
-<p>For example, use JSX to create an interactive button:</p>
-<div class="language-js codeBlockContainer_mEuD theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_SGSi"><pre tabindex="0" class="prism-code language-js codeBlock_gY7v thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_ZssL"><span class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></span></code></pre><div class="buttonGroup_bCe7"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_XugX" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_Bfc2"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Wp90"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<button>Click me!</button>]]></content>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-        <category label="Docusaurus" term="Docusaurus"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Long Blog Post]]></title>
-        <id>https://blog.wlgs.site/blog/long-blog-post</id>
-        <link href="https://blog.wlgs.site/blog/long-blog-post"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
-<p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://github.com/yangshun</uri>
-        </author>
-        <category label="Hello" term="Hello"/>
-        <category label="Docusaurus" term="Docusaurus"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>https://blog.wlgs.site/blog/first-blog-post</id>
-        <link href="https://blog.wlgs.site/blog/first-blog-post"/>
-        <updated>2019-05-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet...]]></summary>
-        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
-<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://github.com/yangshun</uri>
-        </author>
-        <category label="Hola" term="Hola"/>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <title type="html"><![CDATA[谈装修应该如何从零开始，应该注意些什么事项]]></title>
+        <id>https://blog.wlgs.site/blog/2025/zxygzysm</id>
+        <link href="https://blog.wlgs.site/blog/2025/zxygzysm"/>
+        <updated>2025-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[作为一个室内装修从业人员，我一直认为装修是一场理性和感性的双向奔赴。说理性，要看装修预算；说感性，是因为家必不可辜负。所以，理性和感性的互相让步，互相包容，互相理解，才会打造出一个我们钟爱的温暖的窝。]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>作为一个室内装修从业人员，我一直认为装修是一场理性和感性的双向奔赴。说理性，要看装修预算；说感性，是因为家必不可辜负。所以，理性和感性的互相让步，互相包容，互相理解，才会打造出一个我们钟爱的温暖的窝。</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="一准备工作">一、准备工作<a href="https://blog.wlgs.site/blog/2025/zxygzysm#%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C" class="hash-link" aria-label="一、准备工作的直接链接" title="一、准备工作的直接链接">​</a></h2>
+<p>装修之前，我们有两项工作是必须要处理的。即：</p>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="1风格确定">1.风格确定<a href="https://blog.wlgs.site/blog/2025/zxygzysm#1%E9%A3%8E%E6%A0%BC%E7%A1%AE%E5%AE%9A" class="hash-link" aria-label="1.风格确定的直接链接" title="1.风格确定的直接链接">​</a></h4>
+<p>装修最怕的就是盲目，不知道自己喜欢什么样的风格，或者选择苦难症，这也喜欢那也喜欢。风格确定不下来，你的成本预算一定是差异很大的。比如目前的现代简约风和奶油风侘寂风，价格差异就很大。还有就是，如果自己风格待定，去寻求设计师的帮助，也会给你后面的成本预算带来很大的风险。总之，装修之前，无论怎样，房屋的整体风格框架，我们必须做到心里有数。</p>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="2成本预算">2.成本预算<a href="https://blog.wlgs.site/blog/2025/zxygzysm#2%E6%88%90%E6%9C%AC%E9%A2%84%E7%AE%97" class="hash-link" aria-label="2.成本预算的直接链接" title="2.成本预算的直接链接">​</a></h4>
+<p>这里说的成本预算不是我们以为的包含电器/软装等全部成本，而是大概的 <code>硬装成本</code> 。只要你知道自己能付出的硬装成本大概有多少，后面你会减少被坑的风险。什么是硬装成本？即水电/瓷砖/油漆/门窗等基础硬装基础成本。这个成本预算其实自己很容易做，只需要百度即可知道大概价格。地域差价不会很高。后续我会单独出一篇文章写如何做装修成本预算。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="二前期沟通">二、前期沟通<a href="https://blog.wlgs.site/blog/2025/zxygzysm#%E4%BA%8C%E5%89%8D%E6%9C%9F%E6%B2%9F%E9%80%9A" class="hash-link" aria-label="二、前期沟通的直接链接" title="二、前期沟通的直接链接">​</a></h2>
+<p>当我们知道了自己的装修风格和装修预算，就需要去做前期沟通了，不是很必要去询问太多装修过的朋友和亲戚。因为你永远不知道，装修过程中到底是业主的背锅还是装修公司在背锅。因为装修是一个漫长的过程，细节很碎，有可能双方都有问题导致装修不顺，所以你得到的答案会千奇百怪。</p>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="1多跑几家装修公司">1.多跑几家装修公司<a href="https://blog.wlgs.site/blog/2025/zxygzysm#1%E5%A4%9A%E8%B7%91%E5%87%A0%E5%AE%B6%E8%A3%85%E4%BF%AE%E5%85%AC%E5%8F%B8" class="hash-link" aria-label="1.多跑几家装修公司的直接链接" title="1.多跑几家装修公司的直接链接">​</a></h4>
+<p>不管你是土豪，还是平民百姓，不管你同学朋友亲戚是不是做装修的，都恳请大家多询问几家装修公司。问什么？举个简单例子，你去问装修公司，我家100个平方，现代简约风格，半包价格大概是多少？全包价格大概是多少？那我告诉你，这么去问，你问不出任何东西来。问什么？当然是问材料，问装修周期，问有啥优惠活动，问施工方法这些，就是别问价格。问完以后，你直接说，自己的<code>硬装预算</code>，大概是多少，让他们上门测量和出设计图报价，你得到的信息，一定比你直接问价格要好得多，效率也要高得多。所以，这里也挖一个坑，为什么说要告诉装修公司硬装预算。因为这里面又涉及到了半包问题，设计到了瓷砖/门窗等价格问题。只要你自己不确定，装修公司怎么可能给到你一个大概的价格。</p>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="2多听听设计师的意见">2.多听听设计师的意见<a href="https://blog.wlgs.site/blog/2025/zxygzysm#2%E5%A4%9A%E5%90%AC%E5%90%AC%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E6%84%8F%E8%A7%81" class="hash-link" aria-label="2.多听听设计师的意见的直接链接" title="2.多听听设计师的意见的直接链接">​</a></h4>
+<p>设计师水平是有高低之分的，但大部分设计师还是希望自己的作品能够被认可的。所以当你把你的需求告诉设计师，可以是你提供的一些图片...一定要听听他的分析。听完以后，你就知道这个设计师水平行还是不行了。如果没有自己见解或者只会妥协的设计师，在后期装修过程中，也不会为你争取太多利益。就比如，你很喜欢一个设计，但是设计师告诉你，根据你家的户型来看，也许不合适，也许不搭配，也许不适用，咱们听听劝，不要盲目追求喜欢就一定要，因为它真的未必适合。所以装修就是在谈恋爱啊，适合别人，不一定适合你啊。设计师拿到你的户型和需求预算，一定会有一个大框架在里面的，第一遍出稿后，尽量去看细节。因为细节决定你以后的居住舒适程度。比如是不是通铺大砖，是不是做开放式布局等。</p>
+<h4 class="anchor anchorWithStickyNavbar_Ut0j" id="3少刷点抖音小红书">3.少刷点抖音小红书<a href="https://blog.wlgs.site/blog/2025/zxygzysm#3%E5%B0%91%E5%88%B7%E7%82%B9%E6%8A%96%E9%9F%B3%E5%B0%8F%E7%BA%A2%E4%B9%A6" class="hash-link" aria-label="3.少刷点抖音小红书的直接链接" title="3.少刷点抖音小红书的直接链接">​</a></h4>
+<p>无论签约前还是签约后，少刷这两个平台的装修类作品。什么5万全包，什么终生质保，什么送家具电器....还有就是分享各类装修设计的。我承认，有一部分确实值得借鉴，但这些一定是你在自己构想自己家装修的时候，就要去看的，而不是等到即将签约或者已经签约了去看，那只会影响你对自己前期的判断，也会影响装修公司的施工进程和难度。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="三装修公司的选择">三、装修公司的选择<a href="https://blog.wlgs.site/blog/2025/zxygzysm#%E4%B8%89%E8%A3%85%E4%BF%AE%E5%85%AC%E5%8F%B8%E7%9A%84%E9%80%89%E6%8B%A9" class="hash-link" aria-label="三、装修公司的选择的直接链接" title="三、装修公司的选择的直接链接">​</a></h2>
+<p>这个真没有太多的建议，都说装修市场水深，十家就有九家坑。但实际情况是，只要我们不贪图便宜，不真的因为怕麻烦全部放手不管，其实最后落地都没有很大的问题。因为装修，没有百分百好评，只有百分之八九十到位。因为装修公司干的活，其实就是各工种之间的衔接沟通。<code>本质上，它就是材料商与工人之间的桥梁</code>。但工人有技术差异，材料有好坏，这就决定了装修公司不可能保证一定实现你心目中完美的家，只能说基本符合。我这不是在给装修公司或者行业找补，实际情况就是，全程装修一定会有问题，百分百会遇到各类问题，有大有小而已。</p>
+<p>我们作为业主，遇到这些情况，一定要先清楚自己当初签署的合同内容，只要符合，可以适当妥协，如果不符合，停工整改。吵架生气是最没用的，因为工人不会管你这些，装修公司更不会管，合同有进度款，你不施工工人也有别的活，于它而言，无非就是再和你耗时间而已。所以为啥我们一定要在签署合同的时候准确认知装修周期。签好三个月完工，就一定要督促好装修公司。该理性延迟就延迟，是它的问题，就一定要学会根据合同办事。</p>
+<p>装修公司，不要问它师傅是不是自己的，你管这干嘛？百分之九十九的公司，都没有自己的公司，百分之九十九的公司只拥有施工小队长，施工小队长找的师傅，明白吗？养师傅的公司，要么在亏本，要么正在准备亏本。你只要确保师傅是认真负责的师傅，没事找师傅聊个天，给根烟，活干的比你多付几千几万都要好。<code>因为装修落地，靠的是施工师傅</code>。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="四装修的过程">四、装修的过程<a href="https://blog.wlgs.site/blog/2025/zxygzysm#%E5%9B%9B%E8%A3%85%E4%BF%AE%E7%9A%84%E8%BF%87%E7%A8%8B" class="hash-link" aria-label="四、装修的过程的直接链接" title="四、装修的过程的直接链接">​</a></h2>
+<p>装修过程，我们一定一定一定要做好每个阶段的验收，不验收不要给进度款，也不要让它进行下一步施工。因为痛苦的开始，往往就是不管不顾，让装修公司闷头苦干，最后收尾你发现基础工作哪儿哪儿都是问题。<code>最重要的就是水电工种。</code>因为后期问题百分之七八十来自于这个工种。因为这个工种，必须具备一定的专业水平，而目前很多都是自学或者师傅带个一两年就开整的。没有强制规定和专业培训过的师傅，大家尽量少用。水电师傅最好是就职过大的装修公司的最好。</p>
+<p>还有就是，也不要盲目信任设计师，装修过程中，最值得信赖的一定是施工师傅。在施工过程中，如果聊天你会得到更加专业可靠的建议和意见，也会帮你看装修公司用的材料到底好还是不好，甚至因为你的热情或者用心，比别人更用心的帮助你装好你的房子。说个不成熟也是事实的话，无论业主也好还是装修公司老板也好，装修师傅永远是最牛逼的，你可以不尊重设计师小队长公司老板，但别不尊重装修师傅。</p>
+<h2 class="anchor anchorWithStickyNavbar_Ut0j" id="五验收">五、验收<a href="https://blog.wlgs.site/blog/2025/zxygzysm#%E4%BA%94%E9%AA%8C%E6%94%B6" class="hash-link" aria-label="五、验收的直接链接" title="五、验收的直接链接">​</a></h2>
+<p>验收没什么好说的，找细节就行了。这个验收标准，还得依据实际装修情况和条件来看，有的时候适当的放松我们的标准其实是必要的。但与一个要特比注意，验收过程中，最好做好拍照和视频等资料保存。<code>因为它涉及到你后面的售后问题</code>，比如定制柜我们是自己订的，但和墙壁或者顶面、地面存在缝隙，到底是找装修公司还是定制柜？</p>
+<p>装修是一项漫长而又艰难的战争，也是一场对美好愿望的憧憬和奔赴。这一篇文章，其实写的比较粗放，本来是想写的细节一点，但是发现如果展开的话，一篇文章根本写不完。所以后续会把里面的一些单项拉出来细写。</p>]]></content>
     </entry>
 </feed>

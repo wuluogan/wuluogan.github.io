@@ -350,15 +350,21 @@ FISH.prototype = {
     }
 };
 function fish() {
-    var div = document.createElement('div');
+    // 检查是否已存在容器（避免重复执行）
+    if (document.getElementById('fish-container')) return;
+
+    const div = document.createElement('div');
     div.id = "fish-container";
-    div.style.height = "200px";
-    div.style.width = "100%";
-    div.style.pointerEvents = "none";
-    div.style.position = "fixed";
-    div.style.bottom = 0;
-    div.style.left = 0;
-    div.style.zIndex = -1;
+    Object.assign(div.style, {
+      height: "200px",
+      width: "100%",
+      pointerEvents: "none",
+      position: "fixed",
+      bottom: "0",
+      left: "0",
+      //zIndex: "-1",
+      overflow: "hidden" // 新增防止内容溢出
+    });
     document.body.appendChild(div);
 
     RENDERER.init();

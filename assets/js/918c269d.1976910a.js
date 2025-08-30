@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwblog=self.webpackChunkwblog||[]).push([[6301],{59302:e=>{e.exports=JSON.parse('{"tags":[{"label":"\u5468\u520a","permalink":"/week/tags/week","description":"\u5468\u520a\u8bb0\u5f55","count":2}]}')}}]);

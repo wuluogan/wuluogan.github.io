@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwblog=self.webpackChunkwblog||[]).push([[8334],{38567:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/week","page":1,"postsPerPage":5,"totalPages":4,"totalCount":17,"nextPage":"/week/page/2","blogDescription":"\u5468\u520a","blogTitle":"\u5468\u520a"}}')}}]);

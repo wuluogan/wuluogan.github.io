@@ -4,10 +4,51 @@
         <title>WBlog Blog</title>
         <link>https://blog.wlgs.site/weekly</link>
         <description>WBlog Blog</description>
-        <lastBuildDate>Mon, 08 Sep 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 14 Sep 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh</language>
+        <item>
+            <title><![CDATA[周刊202538]]></title>
+            <link>https://blog.wlgs.site/weekly/weekly-202538</link>
+            <guid>https://blog.wlgs.site/weekly/weekly-202538</guid>
+            <pubDate>Sun, 14 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[图片]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" src="https://gw.alipayobjects.com/zos/k/iw/237.jpg?x-oss-process=image/resize,w_3600/format,webp" alt="" class="img__I0M"></p>
+<h2 class="anchor anchorWithStickyNavbar_Donx" id="图片">图片<a href="https://blog.wlgs.site/weekly/weekly-202538#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://cdn4.telesco.pe/file/fZmZbWH22rzbNwzqNL3lyzBXIphWpSK1fEl5SY1gfffu-dMbY8JdwMQc6iZ0PZn3d5Zd781bGd14G6SkSN1S5LKDSbt-7f-eUWiGLtyxxh0Gghj3t4YeCir_u4Ngz2cfxxdyolN3TJX9oagwPGXO_OWKdcO40b1Wp0WRUy7ACf06-I1NfoDy3JtDSJbMTFn1qmwF4qhaSyg4Y6KHMBFPor0QOpWAkhJHibIQBRth56TE3Kk88tcqcIvK3fBngVEc5RMdT32VeugvwyQ8f2VoTT6ss-UpxtNTIS28L2mXIiHNyQ75kr_AaOvY2Edcp3lPWfZCqcv0rR6nhaEqnnoeqA.jpg" alt="img" class="img__I0M"></p>
+<h2 class="anchor anchorWithStickyNavbar_Donx" id="资讯">资讯<a href="https://blog.wlgs.site/weekly/weekly-202538#%E8%B5%84%E8%AE%AF" class="hash-link" aria-label="资讯的直接链接" title="资讯的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_Donx" id="apache更改了徽标">Apache更改了徽标<a href="https://blog.wlgs.site/weekly/weekly-202538#apache%E6%9B%B4%E6%94%B9%E4%BA%86%E5%BE%BD%E6%A0%87" class="hash-link" aria-label="Apache更改了徽标的直接链接" title="Apache更改了徽标的直接链接">​</a></h4>
+<p><a href="https://linuxiac.com/the-apache-software-foundation-unveils-new-oak-leaf-logo/" target="_blank" rel="noopener noreferrer">Apache 软件基金会</a>（简写 ASF） 是世界最大的开源软件组织之一，最近更改了徽标，从羽毛变成了像树叶。</p>
+<p>"apache"这个词，原是一个北美印第安部落的名字，羽毛就是该部落的象征。有人批评，这种象征太刻板，用在当代不合适。</p>
+<p>所以这次就改成了像树叶，更中性，也比喻开源软件的韧性、开放性和责任感。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091302.webp" alt="img" class="img__I0M"></p>
+<h4 class="anchor anchorWithStickyNavbar_Donx" id="灯珠生成随机数">灯珠生成随机数<a href="https://blog.wlgs.site/weekly/weekly-202538#%E7%81%AF%E7%8F%A0%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%95%B0" class="hash-link" aria-label="灯珠生成随机数的直接链接" title="灯珠生成随机数的直接链接">​</a></h4>
+<p>真正的随机数需要硬件生成，并不便宜。</p>
+<p>一个国外研究团队最近证明，<a href="https://discovery.kaust.edu.sa/en/article/25936/micro-leds-boost-random-number-generation/" target="_blank" rel="noopener noreferrer">Micro-LED 灯珠</a> 可以当作随机数生成器。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091702.webp" alt="img" class="img__I0M"></p>
+<p>他们发现，LED 发出的电磁波强度波动（单位时间的光子数量）是随机的，而且随机数的生成速率很高。</p>
+<p>由于 LED 灯珠很便宜，如果这个发现证明有实用价值，随机数生成的难题也许就解决了。</p>
+<h4 class="anchor anchorWithStickyNavbar_Donx" id="修复-mac-的最后兜底方案">修复 Mac 的最后兜底方案<a href="https://blog.wlgs.site/weekly/weekly-202538#%E4%BF%AE%E5%A4%8D-mac-%E7%9A%84%E6%9C%80%E5%90%8E%E5%85%9C%E5%BA%95%E6%96%B9%E6%A1%88" class="hash-link" aria-label="修复 Mac 的最后兜底方案的直接链接" title="修复 Mac 的最后兜底方案的直接链接">​</a></h4>
+<p>当你的 Mac 有问题需要修复，比如黑屏开不了机，或者是你的电脑死活更新不了系统，然后使用了恢复模式也解决不了的话，可以试试 DFU 这个最终模式来修复，最终效果很好。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.fliggy.com/upic/haz5ei.png?x-oss-process=image/resize,w_3600/format,webp" alt="format,webp" class="img__I0M"></p>
+<p>需要你准备另外一台 Mac 电脑，使用 TypeC 数据线线连接两台电脑，辅助电脑需要连接靠近屏幕的这个接口，待修复电脑长按关机键关机，辅助电脑安装 Apple Configurator，然后关键来了，需要在待修复电脑 右 Shift + 左 Control + 左 Option + 电源键 同时按住 10 秒，然后松开除电源键外的 3 个按键继续按 7S 左右，有一种打老虎机按键感觉，亏苹果想得出来，在辅助电脑上 Apple Configurator 软件上会出现 DFU 模式，这里不要点击恢复，会清除电脑，在菜单栏找到 操作 → 高级 → 修复设备(Revive)，然后等待即可。</p>
+<p>这个解法对于最终修复 Mac 系统问题有奇效，大伙可以收藏备用。</p>
+<h2 class="anchor anchorWithStickyNavbar_Donx" id="文摘">文摘<a href="https://blog.wlgs.site/weekly/weekly-202538#%E6%96%87%E6%91%98" class="hash-link" aria-label="文摘的直接链接" title="文摘的直接链接">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_Donx" id="澳大利亚的人造地中海">澳大利亚的人造地中海<a href="https://blog.wlgs.site/weekly/weekly-202538#%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E7%9A%84%E4%BA%BA%E9%80%A0%E5%9C%B0%E4%B8%AD%E6%B5%B7" class="hash-link" aria-label="澳大利亚的人造地中海的直接链接" title="澳大利亚的人造地中海的直接链接">​</a></h4>
+<p>1.4亿年前，澳大利亚的内陆地区曾经是一片封闭的内海。后来，海水干涸，那里变成了一片干旱荒芜的荒漠。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202508/bg2025083003.webp" alt="img" class="img__I0M"></p>
+<p>由于内陆的地势比沿海低15米，历史上有人设想过重新蓄水，恢复内陆的"地中海"。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202508/bg2025083004.webp" alt="img" class="img__I0M"></p>
+<p>但是，澳大利亚并没有那么多淡水，而且内陆的水分蒸发大于降雨，所以这个计划无法实现。</p>
+<p>进入21世纪后，随着工程能力的进步，有人重新提出了这个计划，设想修建一条600公里的管道，将海水引入内陆。</p>
+<p>管道沿途都铺设太阳能板（澳大利亚的太阳能极其丰富），产生电能，作为水泵的动力，将水不断泵入内陆。</p>
+<p>这样的话，一旦内陆形成湖泊，降雨量也会随之增加，彻底改变干旱缺水的现状。而且，还能建立航运业，设立新兴的滨海城市，提升经济与移民潜力。</p>
+<p>但是，不少人反对这个计划，引入海水以后，内陆土地将彻底盐碱化，无法耕种。另外，输水管道建设成本巨大，初步预估超过2000亿元。</p>
+<p>澳大利亚人还在权衡，是否要推动这个疯狂的计划。近年来，随着全球气温上升，内陆一年比一年酷热，越来越不适合生存。支持声现在有所抬头，狂掷几千亿，建造一片海，毕竟这是改变内陆气候唯一可能的方法。</p>
+<p><img decoding="async" loading="lazy" src="https://cdn.beekka.com/blogimg/asset/202508/bg2025083005.webp" alt="img" class="img__I0M"></p>]]></content:encoded>
+            <category>Weekly</category>
+        </item>
         <item>
             <title><![CDATA[周刊202537]]></title>
             <link>https://blog.wlgs.site/weekly/weekly-202537</link>
@@ -1164,61 +1205,6 @@ B说，俩蛇精，千年道行，在别墅底下，就喜欢你儿子，上身�
             <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Donx" id="图片">图片<a href="https://blog.wlgs.site/weekly/weekly-202504#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
 <p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0331/18491e95j00stzfmo00tlc000r9010cc.jpg" alt="" class="img__I0M"></p>
 <p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0331/203774eej00stzlbk002tc000r801cgc.jpg" alt="" class="img__I0M"></p>]]></content:encoded>
-            <category>Weekly</category>
-        </item>
-        <item>
-            <title><![CDATA[周刊202513]]></title>
-            <link>https://blog.wlgs.site/weekly/weekly-202513</link>
-            <guid>https://blog.wlgs.site/weekly/weekly-202513</guid>
-            <pubDate>Fri, 21 Mar 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[图片]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_Donx" id="图片">图片<a href="https://blog.wlgs.site/weekly/weekly-202513#%E5%9B%BE%E7%89%87" class="hash-link" aria-label="图片的直接链接" title="图片的直接链接">​</a></h2>
-<p><img decoding="async" loading="lazy" src="https://cms-bucket.ws.126.net/2025/0328/d578840fg00stturk01cdc0008c00etc.gif" alt="" class="img__I0M"></p>
-<p><img decoding="async" loading="lazy" src="https://image.baidu.com/search/down?thumburl=https://baidu.com&amp;url=https://tvax4.sinaimg.cn/large/006BNqYCly1hzswa7eheyj30hw1hc43y.jpg" alt="" class="img__I0M"></p>
-<h2 class="anchor anchorWithStickyNavbar_Donx" id="技巧">技巧<a href="https://blog.wlgs.site/weekly/weekly-202513#%E6%8A%80%E5%B7%A7" class="hash-link" aria-label="技巧的直接链接" title="技巧的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_Donx" id="图片防盗链最终解决方案">图片防盗链最终解决方案<a href="https://blog.wlgs.site/weekly/weekly-202513#%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" class="hash-link" aria-label="图片防盗链最终解决方案的直接链接" title="图片防盗链最终解决方案的直接链接">​</a></h3>
-<p>网络中收集的一些<strong>图片镜像缓存服务</strong>，在很多时候可以起到不错的用途。</p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://i3.wp.com/   </span><br></span></code></pre></div></div>
-<p>Wordpress提供的图像缓存服务前缀可改i0-i3，需要去掉http/https协议。</p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://cdn.cdnjson.com/ </span><br></span></code></pre></div></div>
-<p>cdnjson提供的图像缓存服务，可以加速新浪微博/知乎/imgur等开启防盗链的图片，要加http/https协议。</p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://image.baidu.com/search/down?url= </span><br></span></code></pre></div></div>
-<p>百度的接口不是很稳定，太大的图片经常无法加载，可用于5m以内小图，要加http/https协议。</p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://pic.2ge.org/cdn/?url= </span><br></span></code></pre></div></div>
-<p>勿埋我心提供的图像缓存服务,随机一些可用的图片缓存服务，达到负载均衡的效果,要加http/https协议。</p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://cors.zme.ink/ </span><br></span></code></pre></div></div>
-<p>基于Cloudflare Workers搭建的跨域代理缓存服务，可以缓存所有内容，可加http/https协议，不加也行。</p>
-<p>如果想加速更多后缀，可以使用网友提供的<a href="https://b.dalao.ru/g/" target="_blank" rel="noopener noreferrer">文件加速服务</a>，可加速任意直链文件，要加http/https协议。</p>
-<blockquote>
-<p>图像缓存可以用来做什么？</p>
-</blockquote>
-<ul>
-<li>可以将有防盗链的图片引用到网页，并成功显示。</li>
-<li>可以将http图片引用到https页面而不出现证书问题。</li>
-<li>可以将xxx的图片，成功加载。</li>
-<li>可以将比较慢的图片资源，加快显示。</li>
-</ul>
-<blockquote>
-<p>在html meta中添加no-referrer会影响统计，而在img里加入no-referrer则不会，可过大部分403错误。</p>
-</blockquote>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;img src="" referrerPolicy="no-referrer" /&gt; </span><br></span></code></pre></div></div>
-<blockquote>
-<p>使用方法</p>
-</blockquote>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://pic.2ge.org/cdn/?url=https://iui.su/logo.png </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://i3.wp.com/iui.su/logo.png </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://image.baidu.com/search/down?url=iui.su/logo.png </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://cdn.cdnjson.com/iui.su/logo.png </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://img.noobzone.ru/getimg.php?url=iui.su/logo.png </span><br></span></code></pre></div></div>
-<h2 class="anchor anchorWithStickyNavbar_Donx" id="防盗链图片演示">防盗链图片演示<a href="https://blog.wlgs.site/weekly/weekly-202513#%E9%98%B2%E7%9B%97%E9%93%BE%E5%9B%BE%E7%89%87%E6%BC%94%E7%A4%BA" class="hash-link" aria-label="防盗链图片演示的直接链接" title="防盗链图片演示的直接链接">​</a></h2>
-<p><a href="https://gd-hbimg.huaban.com/2101c265305fd1332e057de8493ff5127056f79f10b9f0-InBf4e" target="_blank" rel="noopener noreferrer">https://gd-hbimg.huaban.com/2101c265305fd1332e057de8493ff5127056f79f10b9f0-InBf4e</a></p>
-<p>该图片是花瓣网图片，存在防盗链直接贴在网页中无法显示，在img标签中no-referrer后可以正常显示了。</p>
-<p><img decoding="async" loading="lazy" src="https://gd-hbimg.huaban.com/2101c265305fd1332e057de8493ff5127056f79f10b9f0-InBf4e" alt="2101c265305fd1332e057de8493ff5127056f79f" class="img__I0M"></p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">http://pic1.zhimg.com/v2-8b657dff159debf1cff463d61b7dcafd_r.jpg </span><br></span></code></pre></div></div>
-<p><img decoding="async" loading="lazy" src="https://cdn.cdnjson.com/pic1.zhimg.com/v2-8b657dff159debf1cff463d61b7dcafd_r.jpg" alt="1" class="img__I0M"></p>
-<p>该图片是知乎图片，存在防盗链直接贴在网页中无法显示，在图片外链前面加上图片镜像服务后可以正常显示了。</p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://i.imgur.com/hWghm6oh.jpg </span><br></span></code></pre></div></div>
-<p>该图片是知名图床<strong>imgur</strong>的图片，至今已有10多年历史，由于上面不限制上传图片类型所以在中国无法打开，在图片外链前面加上图片镜像服务后就可以正常显示了。imgur可以用</p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://cdn.cdnjson.com/ </span><br></span></code></pre></div></div>
-<p><img decoding="async" loading="lazy" src="https://cdn.cdnjson.com/https://i.imgur.com/hWghm6oh.jpg" alt="图片防盗链最终解决方案" class="img__I0M"></p>
-<div class="language-text codeBlockContainer_lFgc theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_x5WI"><pre tabindex="0" class="prism-code language-text codeBlock_wUdx thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_H_lr"><span class="token-line" style="color:#393A34"><span class="token plain">https://images.weserv.nl/?url=</span><br></span></code></pre></div></div>
-<p>可当作备用，部分图片无法使用。</p>]]></content:encoded>
             <category>Weekly</category>
         </item>
     </channel>

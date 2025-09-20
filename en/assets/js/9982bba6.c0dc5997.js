@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[722],{8917:e=>{e.exports=JSON.parse('{"tags":[{"label":"Weekly","permalink":"/en/weekly/tags/weekly","description":"Facebook tag description","count":26}]}')}}]);

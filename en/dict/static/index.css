@@ -1,0 +1,84 @@
+.books-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.book-card {
+    border-radius: 12px;
+    background-color: var(--container-highlight);
+    color: var(--text-color);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    /* background-color: #333; */
+    border-color: var(--primary-color);
+}
+
+.book-card img {
+    border-radius: 8px;
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+}
+
+.book-card .book-info {
+    flex: 1;
+    padding: 10px 0;
+}
+
+.book-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.book-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+}
+
+.book-subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--text-color-dark);
+}
+
+.lesson-count {
+    background: rgba(29, 84, 185, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .books-nav {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .book-card {
+        text-align: center;
+    }
+    .book-card img {
+        margin: 15px;
+        max-height: 35vw;
+    }
+    .book-card .book-info {
+        text-align: center;
+    }
+}
